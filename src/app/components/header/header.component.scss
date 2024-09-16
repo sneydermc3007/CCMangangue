@@ -1,0 +1,116 @@
+@import './../../../styles.scss';
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15%;
+    background-color: $secondary-color;
+
+    height: 25px;
+
+    .logo img {
+        height: 20px;
+    }
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+    
+        a {
+            text-decoration: none;
+            color: $white;
+            font-weight: bold;
+        }
+    }
+}
+
+.horizontal-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $tertiary-color;
+    padding: 10px 15%;
+
+    .left-segment {
+        display: flex;
+        align-items: center;
+        column-gap: 1em;
+    
+        .logo img {
+            width: 300px;
+            height: 40px;
+        }
+    
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+    
+            li {
+                position: relative;
+    
+                a {
+                    display: block;
+                    padding: 10px 20px;
+                    color: white;
+                    text-decoration: none;
+    
+                    &:hover { background-color: $quaternary-color; }
+                }
+    
+                ul {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background-color: $quinary-color;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+    
+                    li a {
+                        padding: 10px 20px;
+                        white-space: nowrap;
+                    }
+                }
+    
+                &:hover ul { display: block; }
+            }
+        }
+    }
+
+    .right-segment {
+        display: flex;
+        column-gap: 1em;
+
+        input {
+            background: transparent;
+            height: 35px;
+            border-radius: 5px;
+            border: 2px solid $white;
+    
+            padding: 0 10px;
+            font-size: 1em;
+            color: $white;
+
+            &::placeholder { color: $white; }
+        }
+    
+        button {
+            background: $nonary-color;
+            color: $white;
+            width: 150px;
+            height: 35px;
+    
+            font-size: 1em;
+            
+            border-radius: 20px;
+            border: 2px solid $nonary-color;
+        }
+    }
+}

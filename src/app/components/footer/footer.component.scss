@@ -4,14 +4,14 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    // position: absolute;
-    // bottom: 0;
+    //position: absolute;
+    bottom: 0;
     padding: 10px 15%;
 
-    background-color: $secondary-color;
+    background-color: $primary-color;
     color: white;
     font-size: 1em;
-    // width: 100%;
+    width: 100%;
 
     .footer-left {
         // width: 60%;
@@ -33,6 +33,12 @@ footer {
         display: grid;
         grid-template-rows: repeat(3, 33.33%);
 
+        img:nth-child(1) { 
+            width: 488px;
+            // height: 86px;
+            object-fit: contain;
+        }
+
         div:nth-child(2) {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -52,7 +58,7 @@ footer {
                 color: white;
                 transition: all 0.6s;
 
-                &:hover { color: $septenary-color; }
+                &:hover { color: $quaternary-color; }
 
                 width: 50px;
                 height: 50px;

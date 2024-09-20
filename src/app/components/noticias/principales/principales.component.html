@@ -1,0 +1,20 @@
+<p-carousel
+  [value]="noticias"
+  [showIndicators]="false"
+  [showNavigators]="false"
+  [circular]="true"
+  [autoplayInterval]="4000"
+>
+  <ng-template pTemplate="item" let-noticia>
+    <div class="card-container">
+      <div class="card-content">
+        <img [src]="noticia.image" alt="Noticia" class="card-image" />
+        <div class="card-text">
+          <h2>{{ noticia.title }}</h2>
+          <p> {{ noticia.description | shortenText:100 }} </p>
+          <button class="btn-read-more">Leer nota aquí</button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

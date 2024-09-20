@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
 
-/* You can add global styles to this file, and also import other style files */
-$primary-color: #7400B8;
-$secondary-color: #6930C3;
-$tertiary-color: #5E60CE;
-$quaternary-color: #5390D9;
-$quinary-color: #4EA8DE;
-$senary-color: #48BFE3;
-$septenary-color: #56CFE1;
-$octonary-color: #64DFDF;
-$nonary-color: #72EFDD;
-$denary-color: #80FFDB;
+$gobierno-color: #292b94;
+
+$primary-color: #000099;
+$secondary-color: #5390D9;
+$tertiary-color: #4EA8DE;
+$quaternary-color: #56CFE1;
+$quinary-color: #72EFDD;
+
+$extra-color: #078930;
 
 $white: #FFFFFF;
+$anti-white: #F0F0F0;
+
 $black: #000000;
 
 $font-family: 'Poppins', sans-serif;

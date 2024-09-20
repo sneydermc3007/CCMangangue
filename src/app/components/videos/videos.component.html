@@ -1,0 +1,22 @@
+<div class="video-grid">
+  <ng-container *ngFor="let video of videos">
+    <figure class="video-card">
+      <iframe [src]="video.url | safe" frameborder="0" allowfullscreen></iframe>
+      <figcaption class="video-overlay">
+        <h5> Conoce mi historia </h5>
+        <i class="fa-duotone fa-solid fa-play fa-2xl" (click)="showVideo(video)"></i>
+      </figcaption>
+    </figure>
+  </ng-container>
+</div>
+
+<div class="modal-backdrop" *ngIf="isModalOpen"></div>
+<div class="modal-container" *ngIf="isModalOpen">
+  <div class="modal-header">
+    <button class="modal-close" (click)="closeModal()">&#10005;</button>
+  </div>
+  <div class="modal-content">
+    <iframe *ngIf="selectedVideo" [src]="selectedVideo.url | safe" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+

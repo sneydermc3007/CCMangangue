@@ -1,0 +1,65 @@
+<main class="contenido">
+  <div class="card">
+    <p-galleria
+      [value]="images"
+      [showItemNavigators]="true"
+      [showThumbnails]="false"
+      [showIndicators]="true"
+      [showIndicatorsOnItem]="true"
+      [responsiveOptions]="responsiveOptions"
+      [containerStyle]="{ 'max-width': '70%', margin: '0 auto' }"
+    >
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.itemImageSrc" [alt]="item.alt" class="galleria-image" />
+      </ng-template>
+    </p-galleria>
+  </div>
+
+  <section class="noticias">
+    <app-principales></app-principales>
+    <app-segundarias></app-segundarias>
+  </section>
+
+  <section class="tramites">
+<!--    <p-accordion>-->
+<!--      <p-accordionTab header="Servicios ofrecidos" [@tabContent]>-->
+<!--        <div class="option-container">-->
+<!--          <div class="option">-->
+<!--            <i class="pi pi-refresh"></i> Renueva en línea-->
+<!--          </div>-->
+<!--          <div class="option">-->
+<!--            <i class="pi pi-cog"></i> Crear mi empresa-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </p-accordionTab>-->
+<!--    </p-accordion>-->
+  </section>
+
+  <section class="empresarial">
+    <app-actividad-empresarial></app-actividad-empresarial>
+  </section>
+
+  <section class="videos">
+    <app-videos></app-videos>
+  </section>
+
+  <section class="interes">
+    <h2>Sitios de interes</h2>
+    <p-carousel
+      [value]="sitiosInteres"
+      [numVisible]="3"
+      [circular]="false"
+      [showIndicators]="false"
+      [showNavigators]="false"
+      [autoplayInterval]="3000"
+    >
+      <ng-template let-sitios pTemplate="item">
+        <div class="card-container">
+          <div class="card-content">
+            <img [src]="sitios.img" class="card-image" />
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </section>
+</main>

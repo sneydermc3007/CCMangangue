@@ -1,6 +1,7 @@
 @import "./../styles.scss";
 
-.floating-button {
+.floating-chat,
+.floating-assistant {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -40,6 +41,14 @@
     border-bottom-color: $extra-color;
     animation: spin-counterclockwise 1s linear infinite;
   }
+}
+
+.floating-assistant {
+  right: 0px;
+  left: 20px;
+
+  background-color: $extra-color;
+  &:hover { background-color: $secondary-color; }
 }
 
 @keyframes spin-clockwise {

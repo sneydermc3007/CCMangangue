@@ -1,8 +1,14 @@
 <app-header></app-header>
 <router-outlet/>
-<div class="floating-button">
+
+<div class="floating-chat">
   <i class="fa-solid fa-comments fa-xl" (click)="callBot()"></i>
 </div>
 <div #chatContainer></div>
+
+<div class="floating-assistant">
+  <i class="fa-solid fa-handshake-angle fa-xl" (click)="callAssistenteVirtual()"></i>
+</div>
+<div #assistantVirtualContainer></div>
 
 <app-footer></app-footer>

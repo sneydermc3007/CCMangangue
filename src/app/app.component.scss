@@ -1,0 +1,53 @@
+@import "./../styles.scss";
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $secondary-color;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 10;
+
+  i { color: bisque; }
+
+  &:hover { background-color: $extra-color; }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    width: 80px;
+    height: 80px;
+    z-index: -1;
+  }
+
+  &::before {
+    border-top-color: $secondary-color;
+    border-left-color: $secondary-color;
+    animation: spin-clockwise 1s linear infinite;
+  }
+
+  &::after {
+    border-right-color: $extra-color;
+    border-bottom-color: $extra-color;
+    animation: spin-counterclockwise 1s linear infinite;
+  }
+}
+
+@keyframes spin-clockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-counterclockwise {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}

@@ -93,7 +93,7 @@ header {
 
         input {
             background: transparent;
-            height: 35px;
+            height: 40px;
             border-radius: 5px;
             border: 2px solid $white;
 
@@ -102,6 +102,13 @@ header {
             color: $white;
 
             &::placeholder { color: $white; }
+        }
+
+        i {
+            position: absolute;
+            top: 50%;
+            left: 85%;
+            color: $white;
         }
     }
 }

@@ -1,14 +1,14 @@
 @import './../../../styles.scss';
 
 main {
-  margin: 1rem 0;
+  margin: 0;
   display: grid;
   grid-gap: 20px;
 }
 
 .galleria-image {
   width: 100%;
-  height: 550px;
+  height: 650px;
   object-fit: cover;
   display: block;
 }
@@ -31,6 +31,7 @@ h2 {
 
 :host ::ng-deep section {
   &.noticias,
+  &.tramites,
   &.videos,
   &.interes,
   &.empresarial
@@ -48,6 +49,78 @@ h2 {
     }
   }
 
+  &.tramites {
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-around;
+
+      .card {
+        width: 400px;
+        height: 150px;
+        background-color: $white;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+          &:before { height: 100%; }
+          p { color: $white; }
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0;
+          background-color: inherit;
+          transition: height 0.5s ease;
+          z-index: 1;
+        }
+
+        p {
+          position: relative;
+          z-index: 2;
+          font-size: 18px;
+          color: #333;
+          transition: color 0.3s ease;
+        }
+
+        &:first-child {
+          border-bottom: 5px solid #50a280;
+          &:before { background-color: #50a280; }
+        }
+        &:nth-child(2) {
+          border-bottom: 5px solid #00a8e8;
+          &:before { background-color: #00a8e8; }
+        }
+        &:nth-child(3) {
+          border-bottom: 5px solid #8f2eb9;
+          &:before { background-color: #8f2eb9; }
+        }
+        &:nth-child(4) {
+          border-bottom: 5px solid #97c020;
+          &:before { background-color: #97c020; }
+        }
+        &:last-child {
+          border-bottom: 5px solid #C04F6A;
+          &:before { background-color: #C04F6A; }
+        }
+      }
+    }
+  }
+
   &.interes {
      .p-carousel {
         .p-carousel-container .p-carousel-items-container {
@@ -61,7 +134,7 @@ h2 {
             }
 
             &-image {
-              width: 100%;
+              width: 80%;
               height: 100%;
               object-fit: cover;
             }
@@ -69,4 +142,9 @@ h2 {
         }
     }
   }
+}
+
+@keyframes ocean-wave {
+  0% { background-position: 0 100%; }
+  100% { background-position: 200% 100%; }
 }

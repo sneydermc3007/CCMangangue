@@ -4,9 +4,8 @@
     </div>
     <nav>
         <ul>
-            <li><a href="#item1">Transparencia</a></li>
-            <li><a href="#item2">Participa</a></li>
-            <li><a href="#item3">Asistente Virtual</a></li>
+            <li><a [routerLink]="['/leyes']" routerLinkActive="activo">Transparencia</a></li>
+            <li><a [routerLink]="['/convocatorias']" routerLinkActive="activo">Participa</a></li>
         </ul>
     </nav>
 </header>
@@ -14,41 +13,31 @@
 <div class="horizontal-menu">
     <div class="left-segment">
         <div class="logo">
-            <img src="logos/cc_mangangue-largo.png" alt="Larger Logo">
+            <img src="logos/cc_mangangue-ancho-blanco.png" alt="Larger Logo" (click)="goHome()">
         </div>
         <nav>
-            <ul>
+        <ul>
+            @for (item of menuList; track $index) {
                 <li>
-                    <a href="#menuA">Nosotros</a>
+                    <a href="#">{{ item.name }}</a>
                     <ul>
-                        <li><a href="#optionA1">Opción A1</a></li>
-                        <li><a href="#optionA2">Opción A2</a></li>
-                        <li><a href="#optionA3">Opción A3</a></li>
+                        @for (subItem of item.opciones; track $index) {
+                            <li>
+                                <a href="#">{{ subItem }}</a>
+                            </li>
+                        }
                     </ul>
                 </li>
-                <li>
-                    <a href="#menuB">Servicio al Cliente</a>
-                    <ul>
-                        <li><a href="#optionB1">Opción B1</a></li>
-                        <li><a href="#optionB2">Opción B2</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#menuC">Registros Públicos</a>
-                    <ul>
-                        <li><a href="#optionC1">Opción C1</a></li>
-                        <li><a href="#optionC2">Opción C2</a></li>
-                    </ul>
-                </li>
-            </ul>
+            }
+        </ul>
         </nav>
     </div>
     <div class="right-segment">
       <div style="position: relative; display: inline-block;">
-        <input type="text" placeholder="Search...">
-        <i class="fa-solid fa-magnifying-glass fa-xl buscar"></i>
+          <input type="text" placeholder="Search...">
+          <i class="fa-solid fa-magnifying-glass fa-xl buscar"></i>
       </div>
-        <p-button styleClass="tramites" label="Trámites en línea" />
-        <p-button styleClass="renovar" label="Renovar Ahora" />
+      <p-button styleClass="tramites" label="Trámites en línea" />
+      <p-button styleClass="renovar" label="Renovar Ahora" />
     </div>
 </div>

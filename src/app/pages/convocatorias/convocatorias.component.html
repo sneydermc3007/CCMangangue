@@ -1,0 +1,33 @@
+<main>
+  <section class="title">
+    <h1>Convocatorias</h1>
+  </section>
+
+  <section class="buscador">
+    <div class="p-toolbar-group-center">
+      <span class="p-input-icon-right">
+        <i class="pi pi-search"></i>
+        <input pInputText placeholder="Buscar alguna convocatoria" [(ngModel)]="searchTerm" />
+      </span>
+    </div>
+  </section>
+
+  <section class="convocatorias">
+    <h2>Todas las Convocatorias</h2>
+    <div class="card-grid">
+      @for (item of filteredConvocatorias(); track $index) {
+        <div class="card">
+          <div class="card-date">
+            <span>{{ item.fecha }}</span>
+          </div>
+          <img src="{{item.imagen}}" alt="Convocatoria" />
+          <div class="card-content">
+            <h3>{{ item.titulo | shortenText: 37 }}</h3>
+            <p>{{ item.descripcion | shortenText: 70 }}</p>
+            <a href="#" class="card-link">Saber más</a>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+</main>

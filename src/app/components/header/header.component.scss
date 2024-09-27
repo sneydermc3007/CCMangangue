@@ -1,116 +1,129 @@
 @import './../../../styles.scss';
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 15%;
-    background-color: $gobierno-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15%;
+  background-color: $gobierno-color;
 
-    height: 25px;
+  height: 25px;
+
+  .logo img { height: 20px; }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $white;
+      &.activo { font-weight: bold; }
+    }
+  }
+}
+.horizontal-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+  padding: 10px 15%;
+
+  .left-segment {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
 
     .logo img {
-        height: 20px;
+      width: 160px;
+      object-fit: cover;
+      cursor: pointer;
     }
 
-    nav {
-        ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      li {
+        position: relative;
 
         a {
-            text-decoration: none;
-            color: $white;
-            font-weight: bold;
+          display: block;
+          padding: 10px 20px;
+          color: $white;
+          text-decoration: none;
+          font-weight: 400;
+          font-size: 14px;
+          letter-spacing: 0.5px;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $quinary-color;
+            font-weight: 500;
+          }
         }
+
+        ul {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          z-index: 10;
+          background-color: rgba(255, 255, 255, 0.9);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          border-radius: 4px;
+
+          li a {
+            padding: 8px 15px;
+            font-size: 13px;
+            color: #666;
+            transition: color 0.3s ease;
+
+            &:hover { color: #333; }
+          }
+        }
+
+        &:hover ul {
+          display: block;
+          animation: slideDown 0.3s ease forwards;
+          width: max-content;
+        }
+      }
     }
+  }
+
+  .right-segment {
+      display: flex;
+      column-gap: 1em;
+
+      input {
+        background: transparent;
+        height: 40px;
+        border-radius: 5px;
+        border: 2px solid $white;
+
+        padding: 0 10px;
+        font-size: 1em;
+        color: $white;
+
+        &::placeholder { color: $white; }
+      }
+
+      i {
+        position: absolute;
+        top: 50%;
+        left: 85%;
+        color: $white;
+      }
 }
-
-.horizontal-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $primary-color;
-    padding: 10px 15%;
-
-    .left-segment {
-        display: flex;
-        align-items: center;
-        column-gap: 1em;
-
-        .logo img {
-            width: 80px;
-            object-fit: cover;
-            // height: 40px;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-
-            li {
-                position: relative;
-
-                a {
-                    display: block;
-                    padding: 10px 20px;
-                    color: white;
-                    text-decoration: none;
-
-                    &:hover { background-color: $secondary-color; }
-                }
-
-                ul {
-                    display: none;
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    background-color: $tertiary-color;
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                    z-index: 1;
-
-
-                    li a {
-                        padding: 10px 20px;
-                        white-space: nowrap;
-                    }
-                }
-
-                &:hover ul { display: block; }
-            }
-        }
-    }
-
-    .right-segment {
-        display: flex;
-        column-gap: 1em;
-
-        input {
-            background: transparent;
-            height: 40px;
-            border-radius: 5px;
-            border: 2px solid $white;
-
-            padding: 0 10px;
-            font-size: 1em;
-            color: $white;
-
-            &::placeholder { color: $white; }
-        }
-
-        i {
-            position: absolute;
-            top: 50%;
-            left: 85%;
-            color: $white;
-        }
-    }
 }
 
 :host ::ng-deep p-button {
@@ -146,6 +159,17 @@ header {
       box-sizing: border-box;
       clip-path: polygon(0 0, 0 0, 0 0, 0 0);
     }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 

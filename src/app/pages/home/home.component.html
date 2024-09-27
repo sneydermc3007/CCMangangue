@@ -7,7 +7,6 @@
       [showIndicators]="true"
       [showIndicatorsOnItem]="true"
       [responsiveOptions]="responsiveOptions"
-      [containerStyle]="{ 'max-width': '70%', margin: '0 auto' }"
     >
       <ng-template pTemplate="item" let-item>
         <img [src]="item.itemImageSrc" [alt]="item.alt" class="galleria-image" />
@@ -25,18 +24,17 @@
   </section>
 
   <section class="tramites">
-<!--    <p-accordion>-->
-<!--      <p-accordionTab header="Servicios ofrecidos" [@tabContent]>-->
-<!--        <div class="option-container">-->
-<!--          <div class="option">-->
-<!--            <i class="pi pi-refresh"></i> Renueva en línea-->
-<!--          </div>-->
-<!--          <div class="option">-->
-<!--            <i class="pi pi-cog"></i> Crear mi empresa-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </p-accordionTab>-->
-<!--    </p-accordion>-->
+    <h2>
+      <i class="fa-regular fa-folder-open fa-xl"></i>
+      Tramites
+    </h2>
+    <div class="card-container">
+      <ng-container *ngFor="let item of cardViews">
+        <div class="card">
+          <p>{{ item.title }}</p>
+        </div>
+      </ng-container>
+    </div>
   </section>
 
   <section class="empresarial">

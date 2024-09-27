@@ -25,24 +25,24 @@ export class AppComponent {
   constructor() {}
 
   callBot() {
-    if (this.chatComponentRef) {
-      this.chatComponentRef.destroy();
-      this.chatComponentRef = null;
-    } else {
-      this.chatComponentRef = this.chatContainer.createComponent(ChatComponent);
-      this.chatComponentRef.instance.isChatOpen = true;
-    }
+    console.log('Chat is called');
+
+    this.chatComponentRef = this.chatContainer.createComponent(ChatComponent);
+    this.chatComponentRef.instance.isChatOpen = true;
+    this.chatComponentRef.instance.onChatHide.subscribe((visible) => {
+      if (!visible)
+        this.chatComponentRef?.destroy();
+    });
   }
 
   callAssistenteVirtual() {
     console.log('Asistente Virtual is called');
 
-    if (this.assistantVirtualComponentRef) {
-      this.assistantVirtualComponentRef.destroy();
-      this.assistantVirtualComponentRef = null;
-    } else {
-      this.assistantVirtualComponentRef = this.assistantVirtualContainer.createComponent(AsistenteVirtualComponent);
-      this.assistantVirtualComponentRef.instance.sidebarVisible = true;
-    }
+    this.assistantVirtualComponentRef = this.assistantVirtualContainer.createComponent(AsistenteVirtualComponent);
+    this.assistantVirtualComponentRef.instance.sidebarVisible = true;
+    this.assistantVirtualComponentRef.instance.onSidebarHide.subscribe((visible) => {
+      if (!visible)
+        this.assistantVirtualComponentRef?.destroy();
+    });
   }
 }

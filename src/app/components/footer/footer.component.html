@@ -2,22 +2,21 @@
     <div class="footer-left">
         <div class="line"></div>
         <ul>
-            <li><a href="#">Escríbanos</a></li>
-            <li><a href="#">Ley de transparencia</a></li>
-            <li><a href="#">Llámenos</a></li>
-            <li><a href="#">PQRS Atención al cliente</a></li>
-            <li><a href="#">Preguntas frecuentes</a></li>
-            <li><a href="#">Reportes judiciales</a></li>
-            <li><a href="#">Aviso de privacidad</a></li>
-            <li><a href="#">Protección de datos personales</a></li>
-            <li><a href="#">Términos y condiciones</a></li>
-            <li><a href="#">Mapa del sitio web</a></li>
-            <li><a href="#">Declaración de Conformidad de <br> Accesibilidad</a></li>
+          @for (item of paginasInternas; track $index) {
+              <li>
+                  <a href="#">
+                      {{ item.label }}
+                      @if ($last) {
+                        <br> Accesibilidad
+                      }
+                  </a>
+              </li>
+          }
         </ul>
     </div>
 
     <div class="footer-center">
-        <img src="logos/cc_mangangue-ancho.png" alt="">
+        <img src="logos/cc_mangangue-ancho-blanco.png" alt="">
 
         <div>
             <img src="https://www.cccartagena.org.co/sites/default/files/media/images/logo-govco.svg" alt="">
@@ -25,10 +24,9 @@
             <img src="https://www.cccartagena.org.co/sites/default/files/styles/fhd/public/media/images/Cámara_de_Comercio_de_Cartagena_2023_Certification_Badge.png?itok=Rssmu44x" alt="">
         </div>
         <div>
-            <i class="fa-brands fa-facebook fa-2xl"></i>
-            <i class="fa-brands fa-x-twitter fa-2xl"></i>
-            <i class="fa-brands fa-instagram fa-2xl"></i>
-            <i class="fa-brands fa-youtube fa-2xl"></i>
+          @for (item of redesSociales; track $index) {
+              <i class="{{ item.icon }}"></i>
+          }
         </div>
     </div>
 

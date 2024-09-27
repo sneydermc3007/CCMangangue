@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, EventEmitter, Input, OnDestroy, Output } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 
@@ -10,8 +10,10 @@ import { CommonModule } from "@angular/common";
   templateUrl: './chat.component.html',
   styleUrl: './chat.component.scss'
 })
-export class ChatComponent {
+export class ChatComponent implements OnDestroy {
   @Input() isChatOpen = false;
+  @Output() onChatHide: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   newMessage = '';
   messages = [{ sender: 'bot', text: 'Hello! How can I help you?' }];
 
@@ -28,6 +30,10 @@ export class ChatComponent {
   }
 
   closeChat() {
-    this.isChatOpen = false;
+    this.onChatHide.emit(false);
+  }
+
+  ngOnDestroy() {
+    console.log('Chat is destroyed');
   }
 }

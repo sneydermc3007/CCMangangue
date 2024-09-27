@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 import { GalleriaModule } from 'primeng/galleria';
-import { AccordionModule } from 'primeng/accordion';
 import { CarouselModule } from 'primeng/carousel';
 
 import { SharedModule } from "../../shared/shared.module";
@@ -19,7 +18,6 @@ import { VideosComponent } from "../../components/videos/videos.component";
     CommonModule,
     FormsModule,
     GalleriaModule,
-    AccordionModule,
     CarouselModule,
     SharedModule,
     NoticiasModule,
@@ -43,7 +41,7 @@ export class HomeComponent implements OnInit {
   public images: any[] = [];
   public sitiosInteres: any[] = [
     {
-      img: 'https://volavi.co/wp-content/uploads/2016/04/images_Certificado_Calidad_turistica_colombia.jpg',
+      img: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2017/10/certificacioncalidadturistica.jpg?w=1060',
       url: 'https://ccmagangue.org.co/v2/'
     },
     {
@@ -51,7 +49,7 @@ export class HomeComponent implements OnInit {
       url: 'https://ruesfront.rues.org.co'
     },
     {
-      img: 'https://change-lab.co/wp-content/uploads/slider10/logo-confecamaras-vert_-_copia.png',
+      img: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2017/10/confecamaras.jpg?w=1060',
       url: 'https://confecamaras.org.co'
     },
     {
@@ -63,7 +61,7 @@ export class HomeComponent implements OnInit {
       url: 'https://www.contraloria.gov.co/'
     },
     {
-      img: 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Logo_Procuraduria_Colombia.png',
+      img: 'https://www.registraduria.gov.co/IMG/jpg/procuraduria.jpg',
       url: 'https://www.procuraduria.gov.co/Pages/Inicio.aspx'
     },
     {
@@ -79,10 +77,17 @@ export class HomeComponent implements OnInit {
       url: 'https://sii2.confecamaras.co/vista/plantilla/index.php?cod_camara=19'
     }
   ];
-   public responsiveOptions: any[] = [
+  public responsiveOptions: any[] = [
     { breakpoint: '1024px',  numVisible: 5 },
     { breakpoint: '768px',  numVisible: 3 },
     { breakpoint: '560px',  numVisible: 1 }
+];
+  public cardViews: any[] = [
+    { title: 'Registros públicos', icon: '', url: '' },
+    { title: 'Quiero crear mi empresa', icon: '', url: '' },
+    { title: 'Formaciones y convocatorias', icon: '', url: '' },
+    { title: 'Centro de Arbitraje y Conciliación', icon: '', url: '' },
+    { title: 'Investigaciones económica', icon: '', url: '' },
   ];
 
   ngOnInit() {

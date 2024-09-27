@@ -1,0 +1,36 @@
+@import './../../../styles.scss';
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  margin: 2.5rem 0;
+
+  > * {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    padding: 0 15%;
+  }
+}
+
+section {
+  &.title {
+    text-transform: uppercase;
+    background: $primary-color;
+    color: $white;
+
+    h1 {
+      flex: 1.5;
+      border-right: 2px solid;
+    }
+
+    p {
+      text-align: justify;
+      text-transform: initial;
+      flex: 2;
+
+      padding-left: 1rem;
+    }
+  }
+}

@@ -8,8 +8,11 @@ import { CarouselModule } from 'primeng/carousel';
 
 import { SharedModule } from "../../shared/shared.module";
 import { NoticiasModule } from "../../components/noticias/noticias.module";
+
 import { ActividadEmpresarialComponent } from "../../components/actividad-empresarial/actividad-empresarial.component";
 import { VideosComponent } from "../../components/videos/videos.component";
+
+import { Video } from "../../interfaces/video.interface";
 
 @Component({
   selector: 'app-home',
@@ -37,8 +40,39 @@ import { VideosComponent } from "../../components/videos/videos.component";
     ])
   ]
 })
-export class HomeComponent implements OnInit {
-  public images: any[] = [];
+export class HomeComponent {
+  public images: any[] = [
+    {
+      itemImageSrc: 'https://imagenes.eltiempo.com/files/image_1200_600/uploads/2021/08/14/6117bbc046c0a.jpeg',
+      thumbnailImageSrc: 'https://imagenes.eltiempo.com/files/image_1200_600/uploads/2021/08/14/6117bbc046c0a.jpeg',
+      alt: 'Description for Image 1',
+      title: 'Title 1'
+    },
+    {
+      itemImageSrc: 'https://www.bolivar.gov.co/web/wp-content/uploads/2024/05/IMG-20240502-WA00091-1200x675.jpg',
+      thumbnailImageSrc: 'https://www.bolivar.gov.co/web/wp-content/uploads/2024/05/IMG-20240502-WA00091-1200x675.jpg',
+      alt: 'Description for Image 2',
+      title: 'Title 2'
+    },
+    {
+      itemImageSrc: 'https://aventurecolombia.com/wp-content/uploads/2020/08/mompox-bolivar-colombia-©-Tristan-Quevilly-1.jpg',
+      thumbnailImageSrc: 'https://aventurecolombia.com/wp-content/uploads/2020/08/mompox-bolivar-colombia-©-Tristan-Quevilly-1.jpg',
+      alt: 'Description for Image 3',
+      title: 'Title 3'
+    },
+    {
+      itemImageSrc: 'https://maganguehoy.co/wp-content/uploads/2024/09/1e2df7cd-3a81-4f82-aa09-984e11ba6c11.jpeg',
+      thumbnailImageSrc: 'https://maganguehoy.co/wp-content/uploads/2024/09/1e2df7cd-3a81-4f82-aa09-984e11ba6c11.jpeg',
+      alt: 'Description for Image 4',
+      title: 'Title 4'
+    }
+  ];
+  public videos: Video[] = [
+    { title: 'Video 1', url: 'https://www.youtube.com/embed/oJEEPG5EBXM' },
+    { title: 'Video 2', url: 'https://www.youtube.com/embed/GGUniEAJ7gA' },
+    { title: 'Video 3', url: 'https://www.youtube.com/embed/h80gHRFGhVQ' },
+    { title: 'Video 4', url: 'https://www.youtube.com/embed/LhoRE0fVB74' },
+  ];
   public sitiosInteres: any[] = [
     {
       img: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2017/10/certificacioncalidadturistica.jpg?w=1060',
@@ -89,33 +123,4 @@ export class HomeComponent implements OnInit {
     { title: 'Centro de Arbitraje y Conciliación', icon: '', url: '' },
     { title: 'Investigaciones económica', icon: '', url: '' },
   ];
-
-  ngOnInit() {
-    this.images.push(
-      {
-        itemImageSrc: 'https://cdn.pixabay.com/photo/2023/09/16/18/18/wallpaper-8257343_640.png',
-        thumbnailImageSrc: 'https://cdn.pixabay.com/photo/2023/09/16/18/18/wallpaper-8257343_640.png',
-        alt: 'Description for Image 1',
-        title: 'Title 1'
-      },
-      {
-        itemImageSrc: 'https://blog.orange.es/wp-content/uploads/sites/4/2024/03/fondos-de-pantalla-3d-paisaje.jpg',
-        thumbnailImageSrc: 'https://blog.orange.es/wp-content/uploads/sites/4/2024/03/fondos-de-pantalla-3d-paisaje.jpg',
-        alt: 'Description for Image 2',
-        title: 'Title 2'
-      },
-      {
-        itemImageSrc: 'https://img.freepik.com/foto-gratis/hoja-naturaleza-fondos-patron-ilustracion-planta-telon-fondo-diseno-abstracto-naturaleza-verde-vibrante-papel-tapiz-ilustracion-generativa-ai_188544-12680.jpg?w=2000&t=st=1726803634~exp=1726804234~hmac=1e988638a8e9a21bab3c531ded29021734ed0435a5d217f1047f4f340bdbfca0',
-        thumbnailImageSrc: 'https://img.freepik.com/foto-gratis/hoja-naturaleza-fondos-patron-ilustracion-planta-telon-fondo-diseno-abstracto-naturaleza-verde-vibrante-papel-tapiz-ilustracion-generativa-ai_188544-12680.jpg?w=2000&t=st=1726803634~exp=1726804234~hmac=1e988638a8e9a21bab3c531ded29021734ed0435a5d217f1047f4f340bdbfca0',
-        alt: 'Description for Image 3',
-        title: 'Title 3'
-      },
-      {
-        itemImageSrc: 'https://i.blogs.es/aad9ce/fondo-de-pantalla-dinamico/1366_2000.jpg',
-        thumbnailImageSrc: 'https://i.blogs.es/aad9ce/fondo-de-pantalla-dinamico/1366_2000.jpg',
-        alt: 'Description for Image 4',
-        title: 'Title 4'
-      }
-    )
-  }
 }

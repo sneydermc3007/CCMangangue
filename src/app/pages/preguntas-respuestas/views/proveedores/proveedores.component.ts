@@ -1,0 +1,27 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-proveedores',
+  templateUrl: './proveedores.component.html',
+  styleUrl: './proveedores.component.scss'
+})
+export class ProveedoresComponent {
+  public information = [
+    { header: "¿QUÉ REQUISITOS SE REQUIEREN PARA SER PROVEEDOR DE LA CÁMARA DE COMERCIO DE MAGANGUÉ?", contenido: "" },
+    { header: "¿QUÉ DOCUMENTOS SE REQUIEREN EN CASO DE SER CONTRATADO POR LA CÁMARA DE COMERCIO DE MAGANGUÉ?", contenido: ""  },
+    { header: "¿TIENE LA CÁMARA DE COMERCIO DE MAGANGUÉ UN MANUAL DE COMPRAS Y DONDE SE PUEDE CONSULTAR?", contenido: "" },
+    { header: "¿CUÁNTO TIEMPO DEMORA LA CÁMARA DE COMERCIO DE MAGANGUÉ PARA HACER EFECTIVO UN PAGO DE UNA FACTURA DE UN PRODUCTO Y/O SERVICIO?", contenido: "" },
+    { header: "¿DÓNDE SE RADICAN LAS FACTURAS?", contenido: "" },
+    { header: "¿QUÉ SUCEDE SI NO SE TIENE CUENTA BANCARIA PARA HACER TRANSFERENCIA POR CONCEPTO DE UN PAGO DE UN PRODUCTO Y/O SERVICIO?", contenido: "" },
+    { header: "¿QUÉ VIGENCIA TIENEN MIS DOCUMENTOS LEGALES RADICADOS COMO PROVEEDOR?", contenido: "" },
+    { header: "¿CÓMO SE SOLICITA LOS CERTIFICADOS DE RETENCIÓN EN LA FUENTE PRACTICADOS POR LA CÁMARA DE COMERCIO DE MAGANGUÉ?", contenido: "" },
+    { header: "¿CÓMO SE SOLICITA CERTIFICADO DEL SERVICIO PRESTADO Y/O PRODUCTO VENDIDO?", contenido: "" },
+    { header: "¿A QUÉ CORREO ELECTRÓNICO PUEDO PRESENTAR MI PROPUESTA COMERCIAL A LA CÁMARA DE COMERCIO DE MAGANGUÉ?", contenido: "" },
+    { header: "¿DEBO PERTENECER A LA JURISDICCIÓN DE LA CÁMARA DE COMERCIO DE MAGANGUÉ PARA PODER COTIZAR UN PRODUCTO Y/O SERVICIO?", contenido: "" },
+    { header: "¿A QUÉ NÚMEROS TELEFÓNICOS ME PUEDO COMUNICAR AL ÁREA DE COMPRAS Y PROVEEDORES?", contenido: "" },
+    { header: "¿QUÉ PRODUCTOS Y/O SERVICIOS CONTRATA LA CÁMARA DE COMERCIO DE MAGANGUÉ?", contenido: "" },
+    { header: "¿QUÉ INFORMACIÓN MÍNIMA DEBE CONTENER MI COTIZACIÓN O PROPUESTA?", contenido: "" },
+    { header: "¿QUÉ ACTIVIDADES NO REQUIEREN ESTAR MATRICULADOS EN LA CÁMARA DE COMERCIO DE MAGANGUÉ?", contenido: "" },
+    { header: "¿DÓNDE SE ENCUENTRA INFORMACIÓN DE LAS CONTRATACIONES DE LA CÁMARA DE COMERCIO DE MAGANGUÉ?", contenido: "" },
+  ];
+}

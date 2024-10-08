@@ -1,0 +1,22 @@
+<main>
+    <section class="title">
+        <h1>Sedes</h1>
+    </section>
+
+    <section class="sedes">
+        @for (item of sedes; track $index) {
+            <div class="contenedor">
+                <h2>{{ item.title }}</h2>
+                <div class="info-box">
+                    <p *ngIf="item.info.address.value"><strong>{{ item.info.address.subtitle }}:</strong> {{ item.info.address.value }}</p>
+                    <p *ngIf="item.info.phone.value"><strong>{{ item.info.phone.subtitle }}:</strong> {{ item.info.phone.value }}</p>
+                    <p *ngIf="item.info.mobile.value"><strong>{{ item.info.mobile.subtitle }}:</strong> {{ item.info.mobile.value }}</p>
+                    <p *ngIf="item.info.affiliatedMobile.value"><strong>{{ item.info.affiliatedMobile.subtitle }}:</strong> {{ item.info.affiliatedMobile.value }}</p>
+                    <p *ngIf="item.info.hours.value"><strong>{{ item.info.hours.subtitle }}:</strong> {{ item.info.hours.value }}</p>
+                    <p *ngIf="item.info.email.value"><strong>{{ item.info.email.subtitle }}:</strong> {{ item.info.email.value }}</p>
+                    <a routerLink="#">Consulte aquí listado datos de contacto funcionarios</a>
+                  </div>
+            </div>
+        }
+    </section>
+</main>

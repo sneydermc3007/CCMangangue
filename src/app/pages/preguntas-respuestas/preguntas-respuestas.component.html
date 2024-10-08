@@ -1,0 +1,17 @@
+<main>
+    <section class="title">
+      <h1>Preguntas y respuestas frecuentes</h1>
+    </section>
+  
+    <section class="tabs">
+      <div class="card">
+        <p-tabView>
+            @for (item of tabs; track $index) {
+                <p-tabPanel [header]="item.header">
+                    <ng-container *ngComponentOutlet="item.component"></ng-container>
+                </p-tabPanel>
+            }
+        </p-tabView>
+      </div>
+    </section>
+  </main>

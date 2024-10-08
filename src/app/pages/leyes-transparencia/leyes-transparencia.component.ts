@@ -35,4 +35,21 @@ export class LeyesTransparenciaComponent {
         descripcion: 'Por el cual se reglamentan aspectos relacionados con la Ley de Transparencia y Acceso a la Información Pública.'
       }
     ];
+    public information = [
+      { header: "Información de la Entidad", contenido: "" },
+      { header: "Normatividad", contenido: ""  },
+      { header: "Contratación", contenido: "" },
+      { header: "Planeación, presupuesto e informes", contenido: "" },
+      { header: "Trámites", contenido: "" },
+      { header: "Participa", contenido: "" },
+      { header: "Datos Abiertos", contenido: "" },
+      { header: "Información Específica Para Grupos de Interés.", contenido: "" },
+      { header: "Obligaciones de reporte de información específica por parte de la entidad", contenido: "" },
+      { header: "Información tributaria en entidades territoriales locales", contenido: "" },
+      { header: "Transparencia Pasiva", contenido: "" },
+      { header: "Accesibilidad Web", contenido: "" },
+      { header: "Habeas Data", contenido: "" },
+      { header: "Preguntas y Respuestas Frecuentes", contenido: "" },
+      { header: "Glosario", contenido: ""  }
+    ];
 }

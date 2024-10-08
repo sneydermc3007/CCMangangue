@@ -1,25 +1,25 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterModule
+  ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
   public paginasInternas = [
-    { label: 'Escríbanos', url: '#' },
-    { label: 'Ley de transparencia', url: '#' },
-    { label: 'Llámenos', url: '#' },
-    { label: 'PQRS Atención al cliente', url: '#' },
-    { label: 'Preguntas frecuentes', url: '#' },
-    { label: 'Reportes judiciales', url: '#' },
-    { label: 'Aviso de privacidad', url: '#' },
-    { label: 'Protección de datos personales', url: '#' },
     { label: 'Términos y condiciones', url: '#' },
+    { label: 'Preguntas frecuentes', url: '/fqa' },
+    { label: 'Aviso de privacidad', url: '/leyes/datos-personales' },
+    { label: 'Protección de datos personales', url: '/leyes/datos-personales' },
+    { label: 'PQRS Atención al cliente', url: '/pqrs' },
+    { label: 'Ley de transparencia', url: '/leyes' },
+    { label: 'Escríbanos', url: 'http://ccmagangue.docxflow.com/public/sucursal' },
     { label: 'Mapa del sitio', url: '#' },
-    { label: 'Declaración de Conformidad de', url: '#' },
   ];
 
   public redesSociales = [

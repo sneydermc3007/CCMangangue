@@ -25,3 +25,27 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
+:host ::ng-deep .p-accordion {
+    .p-accordion-header a {
+      background: $secondary-color;
+      color: $white;
+      text-transform: uppercase;
+      padding: 15px;
+      border-radius: 8px;
+      transition: background 0.3s ease-in-out;
+  
+      &:hover {
+        background: $tertiary-color;
+        color: $white;
+        transform: scale(1.02);
+      }
+    }
+  
+    .p-accordion-content {
+      padding: 20px;
+      background-color: $anti-white;
+      border-radius: 8px;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+    }
+}

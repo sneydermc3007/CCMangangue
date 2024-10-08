@@ -2,31 +2,32 @@
     <div class="footer-left">
         <div class="line"></div>
         <ul>
-          @for (item of paginasInternas; track $index) {
-              <li>
-                  <a href="#">
-                      {{ item.label }}
-                      @if ($last) {
-                        <br> Accesibilidad
-                      }
-                  </a>
-              </li>
-          }
+            @for (item of paginasInternas; track $index) {
+                <li>
+                    @if ($last) {
+                        <a href="https://ccmagangue.org.co/media/pdf/TerminosyCondicionesdeUsodelSitioWeb.pdf" download target="_blank" >{{ item.label }}</a>
+                    }
+                    @else if ((item.url.startsWith('http') || item.url.startsWith('www')) && !$last) {
+                        <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer"> {{ item.label }} </a>
+                    }
+                    @else {
+                        <a [routerLink]="item.url"> {{ item.label }} </a>
+                    }
+                </li>
+            }
         </ul>
     </div>
 
     <div class="footer-center">
         <img src="logos/cc_mangangue-ancho-blanco.png" alt="">
-
+        <div>
+          @for (item of redesSociales; track $index) {
+            <i class="{{ item.icon }}"></i>
+          }
+        </div>
         <div>
             <img src="https://www.cccartagena.org.co/sites/default/files/media/images/logo-govco.svg" alt="">
             <img src="https://www.cccartagena.org.co/sites/default/files/styles/fhd/public/media/images/co-pais.png?itok=IR-IGqt3" alt="">
-            <img src="https://www.cccartagena.org.co/sites/default/files/styles/fhd/public/media/images/Cámara_de_Comercio_de_Cartagena_2023_Certification_Badge.png?itok=Rssmu44x" alt="">
-        </div>
-        <div>
-          @for (item of redesSociales; track $index) {
-              <i class="{{ item.icon }}"></i>
-          }
         </div>
     </div>
 
@@ -37,7 +38,7 @@
         <p>Magangué, Bolívar</p>
 
         <div class="line"></div>
-        <p><a href="#" style="text-decoration: none;">Ver Sedes y Seccionales</a></p>
+        <p><a routerLink="/camara/sedes" style="text-decoration: none;">Ver Sedes y Seccionales</a></p>
 
         <div class="line"></div>
         <h4>Trámites Registrales:</h4>

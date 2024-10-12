@@ -65,4 +65,23 @@
             Para mayor información sobre el tratamiento de sus datos personales podrá consultar en los siguientes enlaces, el Manual de Políticas y Procedimientos de Protección de Datos Personales de la Cámara de Comercio de Magangué, Documento de Seguridad y aviso de privacidad.
         </p>
     </section>
+
+    <section class="documentos">
+        <p-carousel 
+            [value]="documentos" 
+            [numVisible]="3" 
+            [numScroll]="1" 
+            [circular]="true" 
+            [autoplayInterval]="3000"
+            [showIndicators]="false"
+            >
+            <ng-template pTemplate="item" let-documento>
+              <div class="documento-item">
+                <i class="fa-solid fa-file-pdf fa-2xl"></i>
+                <h3>{{ documento.nombre }}</h3>
+                <button pButton type="button" icon="pi pi-download" label="DESCARGAR" (click)="descargar(documento.url)"></button>
+              </div>
+            </ng-template>
+          </p-carousel>
+    </section>
 </main>

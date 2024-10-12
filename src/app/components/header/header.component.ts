@@ -5,6 +5,8 @@ import { Router, RouterLink, RouterLinkActive } from "@angular/router";
 
 import { ButtonModule } from 'primeng/button';
 
+interface Menu { name: string; opciones: string[]; }
+
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -13,19 +15,18 @@ import { ButtonModule } from 'primeng/button';
     FormsModule,
     RouterLink,
     RouterLinkActive,
-    ButtonModule
+    ButtonModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  constructor(
-    private router: Router
-  ) {}
-  public menuList = [
+  constructor(private router: Router) {}
+  public menuList: Array<Menu> = [
     {
-      name: 'Nosotros', opciones: [
+      name: 'Nosotros',
+      opciones: [
         'Historia',
         'Mision y Vision',
         'Junta Directiva',
@@ -34,20 +35,22 @@ export class HeaderComponent {
         'Organigrama',
         'Mapa de la jurisdiccion',
         'Ubicacion',
-        'Politicas'
+        'Politicas',
       ]
     },
     {
-      name: 'Servicios al Cliente', opciones: [
+      name: 'Servicios al Cliente',
+      opciones: [
         'Puntos de Atencion',
         'PQRSF',
         'Servicios virtuales',
         'Servicios registrales',
-        'Desarrollo empresarial'
+        'Desarrollo empresarial',
       ]
     },
     {
-      name: 'Registros públicos', opciones: [
+      name: 'Registros públicos',
+      opciones: [
         'Beneficios',
         'Registro Mercantil',
         'Registro Único de Proponentes',

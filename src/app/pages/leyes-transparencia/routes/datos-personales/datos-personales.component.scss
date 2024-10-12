@@ -37,5 +37,41 @@ main {
         margin-bottom: 1rem;
       }
     }
+
+    &.documentos {
+      .documento-item {
+        text-align: center;
+        padding: 1rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h3 {
+          font-size: 1rem;
+          margin: 0.5rem 0;
+        }
+
+        i { 
+          color: $secondary-color; 
+
+          &.fa-file-pdf {
+            font-size: 2rem;
+            margin-top: 1rem;
+          }
+        }
+      }
+      
+      button {
+        background-color: $secondary-color; 
+        width: calc(100% - 80px);
+        justify-content: baseline;
+        margin: 0 auto;
+      }      
+    }
   }
 }

@@ -1,6 +1,12 @@
 <main>
     <section class="title">
-        <h1>Sedes</h1>
+        <h1>Sedes Y/O Seccionales</h1>
+    </section>
+
+    <section class="funcionarios">
+        <button (click)="consultarFuncionarios()">
+            Contacto de funcionarios
+        </button>
     </section>
 
     <section class="sedes">
@@ -14,7 +20,6 @@
                     <p *ngIf="item.info.affiliatedMobile.value"><strong>{{ item.info.affiliatedMobile.subtitle }}:</strong> {{ item.info.affiliatedMobile.value }}</p>
                     <p *ngIf="item.info.hours.value"><strong>{{ item.info.hours.subtitle }}:</strong> {{ item.info.hours.value }}</p>
                     <p *ngIf="item.info.email.value"><strong>{{ item.info.email.subtitle }}:</strong> {{ item.info.email.value }}</p>
-                    <a routerLink="#">Consulte aquí listado datos de contacto funcionarios</a>
                   </div>
             </div>
         }

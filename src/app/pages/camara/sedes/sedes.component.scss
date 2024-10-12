@@ -22,6 +22,26 @@ section {
         color: $white;
     }
 
+    &.funcionarios {
+        button {
+            background-color: $secondary-color;
+            color: $white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            transform: scale(1);
+
+            &:hover {
+                background-color: $primary-color;
+                transform: scale(1.05);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            }
+        }
+    }
+
     &.sedes {
         place-items: initial;
         flex-direction: column;
@@ -45,14 +65,6 @@ section {
 
             .info-box {
                 padding: 10px;
-
-                a {
-                    color: $secondary-color;
-                    text-decoration: none;
-                    font-weight: bold;
-        
-                    &:hover { text-decoration: underline; }
-                }
             }
         }
     }

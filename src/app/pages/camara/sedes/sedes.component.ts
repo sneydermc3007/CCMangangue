@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { title } from 'process';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-sedes',
@@ -86,4 +87,10 @@ export class SedesComponent {
       }
     }
   ];
+
+  constructor(private router: Router) {}
+
+  consultarFuncionarios() {
+    this.router.navigate(['/ruta-deseada']); // Cambia "/ruta-deseada" por la ruta correcta
+  }
 }

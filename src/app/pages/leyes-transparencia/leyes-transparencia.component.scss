@@ -60,4 +60,10 @@ section {
       }
     }
   }
+
+  &.acordion {
+    div:first-child {
+      width: 100%;
+    }
+  }
 }

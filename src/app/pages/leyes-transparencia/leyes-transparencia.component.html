@@ -16,24 +16,7 @@
   </section>
   <section class="acordion">
     <div>
-      <p-accordion [activeIndex]="0">
-        @for (item of information; track $index) {
-          <p-accordionTab header="{{ item.header }}">
-            @for (subitems of item.contenido; track $index) {
-              @if(subitems.tipo === 'lista') {
-                <ul>
-                  @for (list of subitems.valor; track $index) {
-                    <li>{{ list }}</li>
-                  }
-                </ul>
-              }
-              @else if (subitems.tipo === 'parrafo') {
-                <p>{{ subitems.valor }}</p>
-              }
-            }
-          </p-accordionTab>
-        }
-      </p-accordion>
+      <app-acordeon [information]="information"></app-acordeon>
     </div>
   </section>
 </main>

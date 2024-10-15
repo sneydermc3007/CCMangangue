@@ -12,7 +12,7 @@ import { NoticiasModule } from "../../components/noticias/noticias.module";
 import { ActividadEmpresarialComponent } from "../../components/actividad-empresarial/actividad-empresarial.component";
 import { VideosComponent } from "../../components/videos/videos.component";
 
-import { Video } from "../../interfaces/video.interface";
+import { VideoInterface } from "../../interfaces/video.interface";
 
 @Component({
   selector: 'app-home',
@@ -67,7 +67,7 @@ export class HomeComponent {
       title: 'Title 4'
     }
   ];
-  public videos: Video[] = [
+  public videos: VideoInterface[] = [
     { title: 'Video 1', url: 'https://www.youtube.com/embed/oJEEPG5EBXM' },
     { title: 'Video 2', url: 'https://www.youtube.com/embed/GGUniEAJ7gA' },
     { title: 'Video 3', url: 'https://www.youtube.com/embed/h80gHRFGhVQ' },

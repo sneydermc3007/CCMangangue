@@ -8,7 +8,7 @@
         <p-tabView>
             @for (item of tabs; track $index) {
               <p-tabPanel [header]="item.header">
-                <ng-container *ngComponentOutlet="item.component"></ng-container>
+                 <app-acordeon [information]="item.dataView"></app-acordeon>
               </p-tabPanel>
             }
         </p-tabView>

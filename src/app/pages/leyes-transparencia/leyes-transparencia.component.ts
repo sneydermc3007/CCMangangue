@@ -2,19 +2,21 @@ import { Component } from '@angular/core';
 
 import { AccordionModule } from 'primeng/accordion';
 
-import { Video } from "../../interfaces/video.interface";
+import { SharedModule } from "../../shared/shared.module";
+
+import { VideoInterface } from "../../interfaces/video.interface";
 
 import { VideosComponent } from "../../components/videos/videos.component";
 
 @Component({
   selector: 'app-leyes-transparencia',
   standalone: true,
-  imports: [AccordionModule, VideosComponent],
+  imports: [AccordionModule, VideosComponent, SharedModule],
   templateUrl: './leyes-transparencia.component.html',
   styleUrl: './leyes-transparencia.component.scss',
 })
 export class LeyesTransparenciaComponent {
-  public videos: Video[] = [
+  public videos: VideoInterface[] = [
     {
       title:
         'Ley de transparencia y acceso a la información pública | Cámara de Comercio de Magangué',

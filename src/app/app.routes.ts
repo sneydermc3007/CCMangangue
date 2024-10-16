@@ -11,7 +11,13 @@ export const routes: Routes = [
       { path: 'datos-personales', loadComponent: () => import('./pages/leyes-transparencia/routes/datos-personales/datos-personales.component').then(m => m.DatosPersonalesComponent) },
     ]
   },
-  { path: 'tramites', loadComponent: () => import('./pages/tramites/tramites.component').then(m => m.TramitesComponent) },
+  {
+    path: 'tramites',
+    children: [
+      { path: '', loadComponent: () => import('./pages/tramites/tramites.component').then(m => m.TramitesComponent) },
+      { path: 'registros-publicos', loadComponent: () => import('./pages/tramites/routes/registros-publicos/registros-publicos.component').then(m => m.RegistrosPublicosComponent) },
+    ]
+  },
   { path: 'fqa',  loadComponent: () => import('./pages/preguntas-respuestas/preguntas-respuestas.component').then(m => m.PreguntasRespuestasComponent) },
   { path: 'pqrs', loadComponent: () => import('./pages/pqrs/pqrs.component').then(m => m.PqrsComponent) },
   { path: 'camara', loadChildren: () => import('./pages/camara/camara.module').then(m => m.CamaraModule) },

@@ -1,0 +1,169 @@
+@import './../../../../../styles.scss';
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin: 2.5rem 0;
+
+    > * {
+        display: flex;
+        place-content: center;
+        place-items: center;
+        padding: 0 15%;
+    }
+}
+
+section {
+    &.menu {
+        display: flex;
+        gap: 1rem;
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    }
+}
+
+:host ::ng-deep p-panelmenu {
+    .p-panelmenu {
+        .p-panelmenu-header {
+            border-bottom: 5px solid $quaternary-color;
+            border-radius: 10px;
+
+            &-content:hover {
+                padding: 1rem;
+                background-color: $quaternary-color;
+                border-radius: 5px;
+                border: none;
+                transition: max-height 0.5s ease, opacity 0.5s ease;
+
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+a.enlace {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2) inset;
+
+    .enlace-top {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+
+        img.fondo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0;
+            filter: grayscale(100%);
+            transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+
+        .show {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+
+            h2 {
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                font-size: 1rem;
+                color: $secondary-color;
+                text-align: center;
+                transition: width 0.3s ease-in-out;
+            }
+        }
+    }
+
+    .enlace-descripcion {
+        padding: 1rem;
+        font-size: 1rem;
+        display: none;
+        color: $white;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .enlace-flecha {
+        position: absolute;
+        font-size: 2rem;
+        right: 10px;
+        bottom: 10px;
+        color: #2CE0D8;
+        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    &:hover {
+        .enlace-top {
+            display: flex;
+            background: transparent;
+
+
+            img.fondo {
+                opacity: 0.5;
+                filter: none;
+            }
+
+            .show {
+                // img { display: none; }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 255, 0.5);
+                    z-index: 2; 
+                    transition: background-color 0.3s ease-in-out;
+                }
+
+                h2 {
+                    width: 80px;
+                    color: $quaternary-color;
+                }
+            }
+        }
+
+        .enlace-descripcion {
+            z-index: 3;
+            display: flex;
+        }
+
+        .enlace-flecha {
+            transform: translateX(10px);
+            color: #0E738A;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<main>
+    <section class="title">
+        <h1>Junta Directiva</h1>
+    </section>
+
+    <section class="organigrama">
+
+        <div class="card junta">
+            <h3>Junta Directiva</h3>
+            <p-organizationChart 
+                [value]="juntaDirectiva" 
+                selectionMode="multiple" 
+                [(selection)]="selectedNodes" 
+                [collapsible]="true">
+                    <ng-template let-node pTemplate="person">
+                        <div class="p-2 text-center">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>{{ node.data.name }}</p>
+                            <p>{{ node.data.title }}</p>
+                        </div>
+                    </ng-template>
+            </p-organizationChart>
+        </div>
+
+        <div class="card revisor">
+            <h3>Revisoría Fiscal</h3>
+            <p-organizationChart 
+                [value]="revisoriaFiscal" 
+                selectionMode="multiple" 
+                [(selection)]="selectedNodes" 
+                [collapsible]="true">
+                    <ng-template let-node pTemplate="person">
+                        <div class="p-2 text-center">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>{{ node.data.name }}</p>
+                            <p>{{ node.data.title }}</p>
+                        </div>
+                    </ng-template>
+            </p-organizationChart>
+        </div>
+    </section>
+</main>

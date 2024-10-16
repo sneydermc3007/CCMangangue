@@ -11,7 +11,8 @@
             <p-panel class="card-panel">
                 <img src="{{ item.image }}" alt="{{ item.title }}" />
                 <button 
-                    pButton 
+                    pButton
+                    routerLink="{{ item.link }}"
                     type="button" 
                     label="{{ item.title }}" 
                     icon="pi pi-arrow-right" 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 import { PanelModule } from 'primeng/panel';
 import { ButtonModule } from 'primeng/button';
@@ -7,7 +8,12 @@ import { ButtonModule } from 'primeng/button';
 @Component({
   selector: 'app-tramites',
   standalone: true,
-  imports: [ CommonModule ,PanelModule, ButtonModule ],
+  imports: [ 
+    CommonModule, 
+    PanelModule, 
+    ButtonModule,
+    RouterLink
+  ],
   templateUrl: './tramites.component.html',
   styleUrl: './tramites.component.scss'
 })
@@ -15,7 +21,8 @@ export class TramitesComponent {
   cards = [
     {
       title: 'Consultas - Registros Públicos',
-      image: 'https://s3.pagegear.co/3/content_block/6/items/14_1920x1080.png?1383868'
+      image: 'https://s3.pagegear.co/3/content_block/6/items/14_1920x1080.png?1383868',
+      link: '/tramites/registros-publicos'
     },
     {
       title: 'Consultas - Registros Nacionales',

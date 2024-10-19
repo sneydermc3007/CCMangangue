@@ -4,8 +4,82 @@
     </section>
 
     <section class="contenido">
-        <a href="https://ccmagangue.org.co/media/pdf/organigrama-mapaproceso.pdf" target="_blank" rel="noopener noreferrer">
-            Organigrama de la Cámara de Comercio de Magangué
-        </a>
+        <div class="p-grid p-m-2">
+            <div class="p-col-12">
+              <p-panel header="Directorio - Personal">
+                <p-table 
+                    #table 
+                    [value]="personas" 
+                    [paginator]="true" 
+                    [rows]="5" 
+                    [rowsPerPageOptions]="[5, 10, 20]"
+                    sortField="nombre"
+                    [sortOrder]="1"
+                    >
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <th pSortableColumn="nombre">Nombres y Apellidos <p-sortIcon field="nombre"></p-sortIcon></th>
+                      <th pSortableColumn="cargo">Cargo <p-sortIcon field="cargo"></p-sortIcon></th>
+                      <th>Correo</th>
+                      <th>Acciones</th>
+                    </tr>
+                    <!-- <tr>
+                        <th>
+                            <input 
+                              pInputText 
+                              type="text" 
+                              (input)="applyFilter($event.target, 'nombre')" 
+                              placeholder="Buscar por cargo" 
+                            />
+                          </th>
+                        <th><input pInputText type="text" (input)="table?.filter($event.target.value, 'cargo', 'contains')" placeholder="Buscar por cargo"/></th>
+                        <th><input pInputText type="text" (input)="table?.filter($event.target.value, 'correo', 'contains')" placeholder="Buscar por correo"/></th>
+                        <th></th>                        
+                    </tr> -->
+                  </ng-template>
+                  <ng-template pTemplate="body" let-persona>
+                    <tr>
+                      <td>{{persona.nombre}}</td>
+                      <td>{{persona.cargo}}</td>
+                      <td>{{persona.correo}}</td>
+                      <td>
+                        <p-button icon="pi pi-search" label="Ver detalles" (onClick)="verDetalles(persona)"></p-button>
+                      </td>
+                    </tr>
+                  </ng-template>
+                  <ng-template pTemplate="emptymessage">
+                    <tr>
+                      <td colspan="4">No se encontraron registros</td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+              </p-panel>
+            </div>
+          
+            <!-- Tarjetas con PrimeNG -->
+            <div class="p-col-12">
+              <p-panel header="Personal en Tarjetas">
+                <div class="p-grid">
+                  <div class="p-col-12 p-md-4" *ngFor="let persona of personas">
+                    <p-card header="{{persona.nombre}}" subheader="{{persona.cargo}}">
+                      <ng-template pTemplate="content">
+                        <p>{{persona.correo}}</p>
+                        <p-button icon="pi pi-search" label="Ver detalles" (onClick)="verDetalles(persona)"></p-button>
+                      </ng-template>
+                    </p-card>
+                  </div>
+                </div>
+              </p-panel>
+            </div>
+          
+            <!-- Modal de detalles con PrimeNG -->
+            <p-dialog header="Detalles del Personal" [(visible)]="displayModal" modal="true" [closable]="true" [style]="{width: '50vw'}">
+              <div *ngIf="selectedPersona">
+                <p><strong>Nombre:</strong> {{selectedPersona.nombre}}</p>
+                <p><strong>Cargo:</strong> {{selectedPersona.cargo}}</p>
+                <p><strong>Correo:</strong> {{selectedPersona.correo}}</p>
+              </div>
+            </p-dialog>
+          </div>          
     </section>
 </main>

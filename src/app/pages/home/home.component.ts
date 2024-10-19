@@ -2,6 +2,7 @@ import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule }  from "@angular/common";
 import { FormsModule } from '@angular/forms';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Router, RouterLink } from '@angular/router';
 
 import { GalleriaModule } from 'primeng/galleria';
 import { CarouselModule } from 'primeng/carousel';
@@ -20,6 +21,7 @@ import { VideoInterface } from "../../interfaces/video.interface";
   imports: [
     CommonModule,
     FormsModule,
+    RouterLink,
     GalleriaModule,
     CarouselModule,
     SharedModule,
@@ -41,6 +43,9 @@ import { VideoInterface } from "../../interfaces/video.interface";
   ]
 })
 export class HomeComponent {
+
+  constructor(private router: Router) {}
+
   public images: any[] = [
     {
       itemImageSrc: 'https://imagenes.eltiempo.com/files/image_1200_600/uploads/2021/08/14/6117bbc046c0a.jpeg',
@@ -117,10 +122,12 @@ export class HomeComponent {
     { breakpoint: '560px',  numVisible: 1 }
 ];
   public cardViews: any[] = [
-    { title: 'Registros públicos', icon: '', url: '' },
-    { title: 'Quiero crear mi empresa', icon: '', url: '' },
-    { title: 'Formaciones y convocatorias', icon: '', url: '' },
-    { title: 'Centro de Arbitraje y Conciliación', icon: '', url: '' },
-    { title: 'Investigaciones económica', icon: '', url: '' },
+    { title: 'Registros Mercantil', icon: '', url: '/registros/mercantil' },
+    { title: 'Registro entidades sin animo de lucro', icon: '', url: '#' },
+    { title: 'Registros unico de proponente', icon: '', url: '#' },
+    { title: 'Registro nacional de turismo', icon: '', url: '' },
+    { title: 'Registros unico nacional de entidades operadoras de libranza', icon: '', url: '' },
+    { title: 'Registro publico de veedurías ciudadanas', icon: '', url: '' },
+    { title: 'Quiero crear mi empresa', icon: '', url: 'https://www.vue.gov.co/' },
   ];
 }

@@ -23,7 +23,7 @@
                     <ul>
                         @for (subItem of item.opciones; track $index) {
                             <li>
-                                <a href="#">{{ subItem }}</a>
+                                <a [routerLink]="subItem.path">{{ subItem.label }}</a>
                             </li>
                         }
                     </ul>
@@ -38,6 +38,6 @@
             <i class="fa-solid fa-magnifying-glass fa-xl buscar"></i>
         </div>
         <p-button routerLink="/tramites" styleClass="tramites" label="Trámites en línea" />
-        <p-button styleClass="renovar" label="Renovar Ahora" />
+        <p-button routerLink="/renovar" styleClass="renovar" label="Renovar Ahora" />
     </div>
 </div>

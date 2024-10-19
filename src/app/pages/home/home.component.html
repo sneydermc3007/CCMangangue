@@ -26,11 +26,11 @@
   <section class="tramites">
     <h2>
       <i class="fa-regular fa-folder-open fa-xl"></i>
-      Servicios Empresariales
+      Registros Públicos
     </h2>
     <div class="card-container">
       <ng-container *ngFor="let item of cardViews">
-        <div class="card">
+        <div class="card" [routerLink]="item.url">
           <p>{{ item.title }}</p>
         </div>
       </ng-container>

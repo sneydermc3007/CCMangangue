@@ -57,6 +57,7 @@ h2 {
       justify-content: space-around;
 
       .card {
+        cursor: pointer;
         width: 400px;
         height: 150px;
         background-color: $white;
@@ -68,6 +69,15 @@ h2 {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         position: relative;
         overflow: hidden;
+
+        p {
+          position: relative;
+          z-index: 2;
+          font-size: 18px;
+          color: #333;
+          transition: color 0.3s ease;
+          text-align: center;
+        }
 
         &:hover {
           transform: translateY(-10px);
@@ -89,14 +99,6 @@ h2 {
           z-index: 1;
         }
 
-        p {
-          position: relative;
-          z-index: 2;
-          font-size: 18px;
-          color: #333;
-          transition: color 0.3s ease;
-        }
-
         &:first-child {
           border-bottom: 5px solid #50a280;
           &:before { background-color: #50a280; }
@@ -112,6 +114,14 @@ h2 {
         &:nth-child(4) {
           border-bottom: 5px solid #97c020;
           &:before { background-color: #97c020; }
+        }
+        &:nth-child(5) {
+          border-bottom: 5px solid #f7b32b;
+          &:before { background-color: #f7b32b; }
+        }
+        &:nth-child(6) {
+          border-bottom: 5px solid #ff3933;
+          &:before { background-color: #ff3933; }
         }
         &:last-child {
           border-bottom: 5px solid #C04F6A;

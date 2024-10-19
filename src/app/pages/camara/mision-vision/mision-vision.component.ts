@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 
+import { AccordionInterface } from '../../../interfaces/acordion.interface';
+
 @Component({
   selector: 'app-mision-vision',
   templateUrl: './mision-vision.component.html',
   styleUrl: './mision-vision.component.scss'
 })
 export class MisionVisionComponent {
-  public information = [
+  public information: AccordionInterface[] = [
     {
       header: 'Misión',
       contenido: [

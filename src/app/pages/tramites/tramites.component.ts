@@ -22,39 +22,37 @@ export class TramitesComponent {
     {
       title: 'Consultas - Registros Públicos',
       image: 'https://s3.pagegear.co/3/content_block/6/items/14_1920x1080.png?1383868',
-      link: '/tramites/registros-publicos'
+      link: '/tramites/servicios'
     },
     {
       title: 'Consultas - Registros Nacionales',
-      image: 'https://s3.pagegear.co/3/content_block/6/items/14_1920x1080.png?1383868'
+      image: 'https://www.shutterstock.com/image-photo/digital-system-transferring-documents-ftpfile-260nw-2294165995.jpg',
+      link: '/tramites/servicios'
     },
     {
       title: 'Operaciones - Registros Publicos',
-      image: 'https://s3.pagegear.co/3/content_block/6/items/14_1920x1080.png?1383868'
+      image: 'https://img.freepik.com/foto-gratis/concepto-control-calidad-estandar-m_23-2150041867.jpg',
+      link: '/tramites/servicios'
     },
     {
       title: 'Operaciones - Usuarios Publicos',
-      image: 'https://s3.pagegear.co/3/content_block/6/items/14_1920x1080.png?1383868'
+      image: 'https://trcgroup.com.mx/wp-content/uploads/2024/09/Devoluciones-Operaciones-Virtuales.jpg',
+      link: '/tramites/servicios'
     },
     {
       title: 'Registro Nacional de Turismo',
-      image: 'https://s3.pagegear.co/3/content_block/6/items/14_1920x1080.png?1383868'
-    },
-    {
-      title: 'RUNEO',
-      image: 'https://s3.pagegear.co/3/content_block/6/items/14_1920x1080.png?1383868'
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ61orpW7vei2ATTLES27jVIj8ZyQK0Infbxg&s',
+      link: '/tramites/servicios'
     },
     {
       title: 'RUNEOL',
-      image: 'https://s3.pagegear.co/3/content_block/6/items/14_1920x1080.png?1383868'
+      image: 'https://runeol.rues.org.co/Diseno/images/foto-law.jpg',
+      link: '/tramites/servicios'
     },
     {
       title: 'Creación de Empresas',
-      image: 'https://s3.pagegear.co/3/content_block/6/items/14_1920x1080.png?1383868'
-    },
-    {
-      title: 'Sociedades BIC',
-      image: 'https://s3.pagegear.co/3/content_block/6/items/14_1920x1080.png?1383868'
+      image: 'https://www.liderempresarial.com/wp-content/uploads/2023/02/Programas-Empresas.jpg',
+      link: '/tramites/servicios'
     }
   ];
 }

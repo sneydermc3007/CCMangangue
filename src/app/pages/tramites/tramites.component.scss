@@ -48,7 +48,7 @@ main {
         .header-section { margin-bottom: 2rem; }
 
         .card-panel {
-            width: calc(100% - 50px);
+            max-width: 385px;
             position: relative;
             transition: transform 0.2s ease-in-out;
 
@@ -59,8 +59,8 @@ main {
             }
 
             img {
-                width: 100%;
-                height: auto;
+                width: 380px;
+                height: 205px;
                 object-fit: cover;
                 border-radius: 20px;
             }

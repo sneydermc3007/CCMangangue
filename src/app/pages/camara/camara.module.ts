@@ -6,6 +6,12 @@ import { camaraRoutes } from './camara.routes';
 
 import { OrganizationChartModule } from 'primeng/organizationchart';
 import { DividerModule } from 'primeng/divider';
+import { TableModule } from 'primeng/table';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { DialogModule } from 'primeng/dialog';
+import { PanelModule } from 'primeng/panel';
 
 import { SharedModule } from '../../shared/shared.module';
 
@@ -36,7 +42,13 @@ import { UbicacionComponent } from './ubicacion/ubicacion.component';
     RouterModule.forChild(camaraRoutes),
     SharedModule,
     OrganizationChartModule,
-    DividerModule
+    DividerModule,
+    TableModule,
+    InputTextModule,
+    ButtonModule,
+    CardModule,
+    DialogModule,
+    PanelModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

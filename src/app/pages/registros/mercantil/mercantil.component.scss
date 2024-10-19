@@ -22,11 +22,11 @@ section {
         color: $white;
     }
 
-    &.contenido {
-        a {
-            color: $primary-color;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    &.contexto {
+        flex-direction: column;
+
+        h2, h3{ color: $primary-color; }
+        
+        p { text-align: justify; }
     }
 }

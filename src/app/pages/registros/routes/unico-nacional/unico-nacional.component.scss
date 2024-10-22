@@ -1,0 +1,16 @@
+@import './../../../../../styles.scss';
+
+section {
+    &.contexto {
+        flex-direction: column;        
+        p { text-align: justify; }
+    }
+
+    &.button {
+        a {
+            text-decoration: none;
+            background: $extra-color;
+            border: none;
+        }
+    }
+}

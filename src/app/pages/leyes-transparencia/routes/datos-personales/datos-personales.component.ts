@@ -3,12 +3,15 @@ import { Component } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 
+import { SharedModule } from '../../../../shared/shared.module';
+
 @Component({
   selector: 'app-datos-personales',
   standalone: true,
   imports: [
     CarouselModule,
-    ButtonModule
+    ButtonModule,
+    SharedModule
   ],
   templateUrl: './datos-personales.component.html',
   styleUrl: './datos-personales.component.scss',

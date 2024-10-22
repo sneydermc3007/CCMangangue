@@ -6,6 +6,11 @@ main {
   grid-gap: 20px;
 }
 
+div.card {
+  padding: 0 !important;
+  p-galleria { width: 100%; }
+}
+
 .galleria-image {
   width: 100%;
   height: 650px;
@@ -24,12 +29,21 @@ h2 {
   align-items: center;
   gap: 20px;
   justify-content: center;
-  //10px 25px 10px
 
   &:nth-child(2) { margin: 0 15%; }
 }
 
 :host ::ng-deep section {
+
+  &:not(.noticias) {
+    flex-direction: column;
+
+    h2, 
+    app-actividad-empresarial,
+    app-videos
+    { width: 100%; }
+  }
+
   &.noticias,
   &.tramites,
   &.videos,

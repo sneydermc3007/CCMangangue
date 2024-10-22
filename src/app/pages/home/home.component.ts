@@ -48,12 +48,6 @@ export class HomeComponent {
 
   public images: any[] = [
     {
-      itemImageSrc: 'https://imagenes.eltiempo.com/files/image_1200_600/uploads/2021/08/14/6117bbc046c0a.jpeg',
-      thumbnailImageSrc: 'https://imagenes.eltiempo.com/files/image_1200_600/uploads/2021/08/14/6117bbc046c0a.jpeg',
-      alt: 'Description for Image 1',
-      title: 'Title 1'
-    },
-    {
       itemImageSrc: 'https://www.bolivar.gov.co/web/wp-content/uploads/2024/05/IMG-20240502-WA00091-1200x675.jpg',
       thumbnailImageSrc: 'https://www.bolivar.gov.co/web/wp-content/uploads/2024/05/IMG-20240502-WA00091-1200x675.jpg',
       alt: 'Description for Image 2',
@@ -70,6 +64,12 @@ export class HomeComponent {
       thumbnailImageSrc: 'https://maganguehoy.co/wp-content/uploads/2024/09/1e2df7cd-3a81-4f82-aa09-984e11ba6c11.jpeg',
       alt: 'Description for Image 4',
       title: 'Title 4'
+    },
+    {
+      itemImageSrc: 'https://imagenes.eltiempo.com/files/image_1200_600/uploads/2021/08/14/6117bbc046c0a.jpeg',
+      thumbnailImageSrc: 'https://imagenes.eltiempo.com/files/image_1200_600/uploads/2021/08/14/6117bbc046c0a.jpeg',
+      alt: 'Description for Image 1',
+      title: 'Title 1'
     }
   ];
   public videos: VideoInterface[] = [
@@ -123,11 +123,11 @@ export class HomeComponent {
 ];
   public cardViews: any[] = [
     { title: 'Registros Mercantil', icon: '', url: '/registros/mercantil' },
-    { title: 'Registro entidades sin animo de lucro', icon: '', url: '#' },
-    { title: 'Registros unico de proponente', icon: '', url: '#' },
-    { title: 'Registro nacional de turismo', icon: '', url: '' },
-    { title: 'Registros unico nacional de entidades operadoras de libranza', icon: '', url: '' },
-    { title: 'Registro publico de veedurías ciudadanas', icon: '', url: '' },
+    { title: 'Registro entidades sin animo de lucro', icon: '', url: '/registros/entidades-animo-lucro' },
+    { title: 'Registros unico de proponente', icon: '', url: '/registros/unico-proponentes' },
+    { title: 'Registro nacional de turismo', icon: '', url: '/registros/nacional-turismo' },
+    { title: 'Registros unico nacional de entidades operadoras de libranza', icon: '', url: '/registros/unico-nacional-entidades' },
+    { title: 'Registro publico de veedurías ciudadanas', icon: '', url: '/registros/publico-veedurias-ciudadanas' },
     { title: 'Quiero crear mi empresa', icon: '', url: 'https://www.vue.gov.co/' },
   ];
 }

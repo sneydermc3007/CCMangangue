@@ -7,12 +7,14 @@ import { ShortenTextPipe } from './pipes/shorten-text.pipe';
 import { SafePipe } from "./pipes/safe.pipe";
 
 import { AcordeonComponent } from './acordeon/acordeon.component';
+import { TitleComponent } from './title/title.component';
 
 @NgModule({
   declarations: [
     ShortenTextPipe,
     SafePipe,
-    AcordeonComponent
+    AcordeonComponent,
+    TitleComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { AcordeonComponent } from './acordeon/acordeon.component';
   exports: [
     ShortenTextPipe,
     SafePipe,
-    AcordeonComponent
+    AcordeonComponent,
+    TitleComponent
   ]
 })
 export class SharedModule { }

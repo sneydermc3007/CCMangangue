@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AccordionInterface } from '../../../interfaces/acordion.interface';
+import { AccordionInterface } from '../../../../interfaces/acordion.interface';
 
 @Component({
   selector: 'app-mercantil',

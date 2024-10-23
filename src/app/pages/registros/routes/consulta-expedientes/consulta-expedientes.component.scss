@@ -1,0 +1,31 @@
+@import '../../../../../styles.scss';
+
+section {
+    flex-direction: column;
+
+    &.contexto { 
+        p { text-align: justify; }
+     }
+
+    &.botones {
+        align-items: baseline;
+        gap: 10px;
+    
+        button {
+          padding: 10px 20px;
+          border-radius: 8px;
+          background-color: #007ad9;
+          color: #fff;
+          font-size: 1rem;
+          transition: background-color 0.3s ease;
+    
+          &:hover {
+            background-color: #005fa3;
+          }
+    
+          .pi {
+            margin-right: 10px;
+          }
+        }
+      }
+}

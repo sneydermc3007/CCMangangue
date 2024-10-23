@@ -21,7 +21,12 @@ export const routes: Routes = [
   { path: 'renovar', loadComponent: () => import('./pages/renovar/renovar.component').then(m => m.RenovarComponent) },
   { path: 'fqa',  loadComponent: () => import('./pages/preguntas-respuestas/preguntas-respuestas.component').then(m => m.PreguntasRespuestasComponent) },
   { path: 'pqrs', loadComponent: () => import('./pages/pqrs/pqrs.component').then(m => m.PqrsComponent) },
+  { path: 'formulario-pqrs', loadComponent: () => import('./pages/formulario-pqrs/formulario-pqrs.component').then(m => m.FormularioPqrsComponent) },
+
+
   { path: 'camara', loadChildren: () => import('./pages/camara/camara.module').then(m => m.CamaraModule) },
   { path: 'registros', loadChildren: () => import('./pages/registros/registros.module').then(m => m.RegistrosModule) },
+  { path: 'politicas', loadChildren: () => import('./pages/politicas/politicas.module').then(m => m.PoliticasModule) },
+  { path: 'servicios-virtuales', loadChildren: () => import('./pages/servicios-virtuales/servicios-virtuales.module').then(m => m.ServiciosVirtualesModule) },
   { path: '**', redirectTo: '' }
 ];

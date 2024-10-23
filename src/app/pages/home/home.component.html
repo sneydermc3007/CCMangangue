@@ -29,11 +29,11 @@
       Registros Públicos
     </h2>
     <div class="card-container">
-      <ng-container *ngFor="let item of cardViews">
-        <div class="card" [routerLink]="item.url">
+      @for (item of cardViews; track $index) {
+        <div class="card" (click)="goTo(item.url)">
           <p>{{ item.title }}</p>
         </div>
-      </ng-container>
+      }
     </div>
   </section>
 

@@ -5,8 +5,8 @@ import { Router, RouterLink, RouterLinkActive } from "@angular/router";
 
 import { ButtonModule } from 'primeng/button';
 
-interface Menu { name: string; opciones: MenuOption[]; }
-interface MenuOption { label: string; path: string; }
+interface Menu { title: string; opciones: MenuOption[]; }
+interface MenuOption { label: string; route: string; subOpciones?: MenuOption[]; }
 
 @Component({
   selector: 'app-header',
@@ -26,46 +26,59 @@ export class HeaderComponent {
   constructor(private router: Router) {}
   public menuList: Array<Menu> = [
     {
-      name: 'Nosotros',
+      title: 'Nosotros',
       opciones: [
-        { label: 'Historia', path: '/camara/historia' },
-        { label: 'Mision y Vision', path: '/camara/mision-vision' },
-        { label: 'Junta Directiva', path: '/camara/junta-directiva' },
-        { label: 'Colaboradores', path: '/camara/colaboradores' },
-        { label: 'Mapa de procesos', path: '/camara/mapa-procesos' },
-        { label: 'Organigrama', path: '/camara/organigrama' },
-        { label: 'Mapa de la jurisdiccion', path: '/camara/mapa-jurisdiccion' },
-        { label: 'Ubicacion', path: '/camara/ubicacion' },
-        { label: 'Politicas', path: '/camara/politicas' }, // Falta hacer los submenus y rutas.
+        { label: 'Historia', route: '/camara/historia' },
+        { label: 'Mision y Vision', route: '/camara/mision-vision' },
+        { label: 'Junta Directiva', route: '/camara/junta-directiva' },
+        { label: 'Colaboradores', route: '/camara/colaboradores' },
+        { label: 'Mapa de procesos', route: '/camara/mapa-procesos' },
+        { label: 'Organigrama', route: '/camara/organigrama' },
+        { label: 'Mapa de la jurisdiccion', route: '/camara/mapa-jurisdiccion' },
+        { label: 'Ubicacion', route: '/camara/ubicacion' },
+        { label: 'Politicas', route: '/camara/politicas', subOpciones: [
+          { label: 'Politica de atención al cliente', route: '/politicas/atencion-cliente' },
+          { label: 'Politica de seguridad de la información', route: '/politicas/seguridad-informacion' },
+          { label: 'Politica de seguridad de linformación ', route: '/politicas/ley-transparencia-acceso-informacion' },
+          { label: 'Politica de gestión documental', route: '/politicas/gestion-documental' },
+          { label: 'Politica de administración de riesgos', route: '/politicas/administracion-riesgos' },
+          { label: 'Politica de seguridad y salud en el trabajo', route: '/politicas/seguridad-salud-trabajo' },
+          { label: 'Politica del sistema integrado de gestión (SIG)', route: '/politicas/sig' },
+        ]}
       ]
     },
     {
-      name: 'Servicios al Cliente',
+      title: 'Servicios al Cliente',
       opciones: [
-        { label: 'Puntos de Atencion', path: '/servicios-cliente/puntos-atencion' },
-        { label: 'PQRSF', path: '/servicios-cliente/pqrsf' },
-        { label: 'Servicios virtuales', path: '/servicios-cliente/servicios-virtuales' },
-        { label: 'Servicios registrales', path: '/servicios-cliente/servicios-registrales' },
-        { label: 'Desarrollo empresarial', path: '/servicios-cliente/desarrollo-empresarial' },
-      ]
-    },
-    {
-      name: 'Registros públicos',
-      opciones: [
-        { label: 'Beneficios', path: '/registros-publicos/beneficios' },
-        { label: 'Registro Mercantil', path: '/registros-publicos/registro-mercantil' },
-        { label: 'Registro Único de Proponentes', path: '/registros-publicos/registro-unico-proponentes' },
-        { label: 'Entidades Jurídicas sin Ánimo de Lucro', path: '/registros-publicos/entidades-juridicas-sin-animo-de-lucro' },
-        { label: 'Registro de Entidades de Economía Solidaria', path: '/registros-publicos/registro-economia-solidaria' },
-        { label: 'Registros de apoderados de ONGs extranjeras', path: '/registros-publicos/registros-apoderados-ongs' },
-        { label: 'Registro de Vendedores de Juegos de Suerte y Azar', path: '/registros-publicos/registro-juegos-azar' },
-        { label: 'Registro único nacional de entidades operadoras de libranza', path: '/registros-publicos/registro-operadores-libranza' },
-        { label: 'Registro de Veedurías', path: '/registros-publicos/registro-veedurias' },
-        { label: 'Registro Nacional de Turismo', path: '/registros-publicos/registro-nacional-turismo' },
-        { label: 'SIPREF', path: '/registros-publicos/sipref' },
-        { label: 'Recursos administrativos', path: '/registros-publicos/recursos-administrativos' },
-        { label: 'Biblioteca Videotutoriales', path: '/registros-publicos/biblioteca-videotutoriales' },
-        { label: 'Tiempos de respuesta', path: '/registros-publicos/tiempos-respuesta' },
+        { label: 'Puntos de Atencion', route: '/camara/sedes' },
+        { label: 'PQRSF', route: 'http://ccmagangue.docxflow.com/public/sucursal' },
+        { label: 'Servicios virtuales', route: '/servicios-cliente/servicios-virtuales', subOpciones: [
+          { label: 'Cree su empresa', route: 'https://www.vue.gov.co/' },
+          { label: 'Expedición y verificación de certificados', route: '/servicios-virtuales/expedicion-verificacion-certificados' },
+          { label: 'Incripciones y renovaciones', route: '/servicios-virtuales/inscripciones-renovaciones' },
+          { label: 'Instructivos para trámites virtuales', route: '/servicios-virtuales/instructivos-tramites-virtuales' },
+          { label: 'Trámites en línea', route: '/tramites' }
+        ]},
+        { label: 'Servicios registrales', route: '/servicios-cliente/servicios-registrales', subOpciones: [
+          { label: 'Registro mercantil', route: '/registros/mercantil' },
+          { label: 'Registro entidades sin ánimo de lucro', route: '/registros/entidades-animo-lucro' },
+          { label: 'Registro único de proponentes', route: '/registros/unico-proponentes' },
+          { label: 'Registro nacional de turismo', route: '/registros/nacional-turismo' },
+          { label: 'Registro único empresarial', route: '/registros/unico-empresarial' },
+          { label: 'Registro de entidades extranjeras de derecho sin ánimo de lucro', route: '/registros/unico-nacional-entidades' },
+          { label: 'Registro de las entidades de economiá solidaria', route: '/registros/entidades-economia-solidaria' },
+          { label: 'Registro de actividad de juego y azar', route: '/registros/actividad-juego-azar' },
+          { label: 'Registro público de veedurías ciudadanas', route: '/registros/publico-veedurias-ciudadanas' },
+          { label: 'Registro de libros', route: '/registros/libros' },
+          { label: 'Registro único nacional de entidades operadoras de libranza - runeol', route: '/registros/unico-nacional-entidades' },
+          { label: 'Depósitos de los estados financieros', route: '/registros/depositos-estados-financieros' },
+          { label: 'Consulta de expedientes', route: '/registros/consulta-expedientes' }
+        ]},
+        { label: 'Desarrollo empresarial', route: '/servicios-cliente/desarrollo-empresarial', subOpciones: [
+          { label: 'Capacitaciones', route: '#' },
+          { label: 'Diplomados', route: '#' },
+          { label: 'Convocatorias', route: '#' }
+        ]},
       ]
     }
   ];

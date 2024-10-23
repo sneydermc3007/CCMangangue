@@ -1,0 +1,67 @@
+<main>
+    <app-title [title]="'Depósitos de los estados financieros'"></app-title>
+
+    <section class="contenido">
+        <p>El artículo 41 de la Ley 222 de 1995, establece la obligación de depositar los estados financieros.</p>
+        <p>Conforme a las disposiciones legales y con el fin de evitar la imposición de las sanciones de Ley, la Cámara de Magangué le recuerda que según lo establecido en el artículo 41 de la 
+            Ley 222 de 1995” Dentro del mes siguiente a la fecha en la cual sean aprobados, se depositará copia de los estados financieros de propósito general, junto con sus notas y el dictamen 
+            correspondiente, si lo hubiere, en la Cámara de Comercio del domicilio social.”.
+            Ahora bien, de acuerdo con el Decreto 2649 de 1993, los Estados Financieros de Propósito General son aquellos que se preparan al cierre de un período para ser conocidos por usuarios 
+            indeterminados, con el ánimo principal de satisfacer el interés común del público en evaluar la capacidad de un ente económico para generar flujos favorables de fondos (artículo 21). 
+            Se conforman por los siguientes Estados Financieros Básicos (artículo 22):
+        </p>
+
+        <ul>
+            @for (item of estadosFinancieros; track $index) {
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item }}</h5>
+                    </div>
+                </div>
+            }
+        </ul>
+
+        <p>Dichos estados financieros deben estar acompañados de sus notas y de certificación suscrita por el representante legal y el revisor fiscal/contador público, bajo cuya responsabilidad se hubieren preparado. La certificación consiste en declarar que “se han verificado previamente las certificaciones contenidas en ellos y que los mismos se han tomado fielmente de los libros”.</p>
+        <p>
+            Tenga en cuenta que los Estados Financieros se deben depositar bajo las Normas Internacionales de Información Financiera (NIIF).
+            Evite la imposición de sanciones de ley a las que haya lugar, se precisa que además las sanciones previstas en el artículo 43 de la Ley 222 de 1995, la Superintendencia de Sociedades en reiterados pronunciamientos advierte que “…Sin perjuicio de las sanciones a que haya lugar.”:
+        </p>
+
+        <ul>
+            @for (item of sanciones; track $index) {
+                <li>{{ item }}</li>
+            }            
+        </ul>
+
+        <p>Conforme a lo indicado en el Artículo 150 del Decreto 019 de 2012, cuando los estados financieros se depositen en la Superintendencia de Sociedades o en otra Superintendencia, no tendrán que ser depositados en las Cámaras de Comercio.</p>
+        <p>Si su empresa ya cumplió con esta obligación o se encuentra vigilada y controlada por la Superintendencia de Sociedades (Decreto 4350 del 2006) por favor haga caso omiso a la presente comunicación.</p>
+        <p>El depósito de los estados financieros se realiza en cualquiera de las oficinas de las Cámaras de Comercio de Villavicencio diligenciando el formato y acompañado de los documentos respectivos, el cajero le liquidara el valor del depósito.</p>
+
+        <h3>¿Cuáles son los Estados Financieros que se deben depositar?</h3>
+        <p>De conformidad con lo establecido en los Decretos 2496 y 2420 de 2016, los Estados Financieros de Propósito General se conforman por los siguientes Estados Financieros Básicos y sus revelaciones:</p>
+
+        <ul>
+            @for (item of estadosBasicos; track $index) {
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item }}</h5>
+                    </div>
+                </div>
+            }
+        </ul>
+
+        <h4>¿Cuándo se debe hacer el depósito?</h4>
+        <p>Dentro del mes siguiente a la fecha en la cual sean aprobados por el máximo órgano social.</p>
+
+        <h4>¿Dónde se debe hacer el depósito?</h4>
+        <p>En la Cámara de Comercio del domicilio principal de la sociedad.</p>
+
+        <h4>¿Qué costo tiene el depósito?</h4>
+        <p>Las sociedades comerciales, sucursales de sociedades extranjeras y empresas unipersonales, inspeccionadas, vigiladas o controladas por la Superintendencia de Sociedades que hubieren remitido la información financiera en los términos, detalle y oportunidad exigidos en la circular externa que anualmente expide la referida Entidad para el efecto.
+            Lo anterior en atención a lo establecido en la Resolución 220-006909 del 28 de junio de 2010 expedida por la Superintendencia de Sociedades y reglamentada por el artículo 150 del Decreto 019 de 2012.
+        </p>
+        <p>
+            La Superintendencia de Sociedades comunicará anualmente a las Cámaras de Comercio del país la relación de las sociedades comerciales, sucursales de sociedades extranjeras y empresas unipersonales inspeccionadas, vigiladas y/o controladas por la misma que están exoneradas del cumplimiento de la obligación de depósito de la información financiera en las respectivas Cámaras de Comercio.
+        </p>
+    </section>
+</main>

@@ -25,6 +25,7 @@ header {
     }
   }
 }
+
 .horizontal-menu {
   display: flex;
   justify-content: space-between;
@@ -89,9 +90,33 @@ header {
 
             &:hover { color: #333; }
           }
+
+          li ul {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+
+            li a {
+              padding: 8px 15px;
+              font-size: 13px;
+              color: #666;
+              transition: color 0.3s ease;
+
+              &:hover { color: #333; }
+            }
+          }
+
+          li:hover ul {
+            display: block;
+            animation: slideRight 0.3s ease forwards;
+          }
         }
 
-        &:hover ul {
+        &:hover > ul {
           display: block;
           animation: slideDown 0.3s ease forwards;
           width: max-content;
@@ -169,6 +194,17 @@ header {
   }
   to {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
     opacity: 1;
   }
 }

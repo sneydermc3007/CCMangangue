@@ -19,11 +19,29 @@
         <ul>
             @for (item of menuList; track $index) {
                 <li>
-                    <a href="#">{{ item.name }}</a>
+                    <a href="#">{{ item.title }}</a>
                     <ul>
                         @for (subItem of item.opciones; track $index) {
                             <li>
-                                <a [routerLink]="subItem.path">{{ subItem.label }}</a>
+                                @if (subItem.route.includes('http')) {
+                                    <a href="{{ subItem.route }}" target="_blank" rel="noopener noreferrer">{{ subItem.label }}</a>
+                                } @else {
+                                    <a [routerLink]="subItem.route">{{ subItem.label }}</a>
+                                }
+
+                                @if (subItem.subOpciones) {
+                                    <ul>
+                                        @for (subSubItem of subItem.subOpciones; track $index) {
+                                            <li>
+                                                @if (subSubItem.route.includes('http')) {
+                                                    <a href="{{ subSubItem.route }}" target="_blank" rel="noopener noreferrer">{{ subSubItem.label }}</a>
+                                                } @else {
+                                                    <a [routerLink]="subSubItem.route">{{ subSubItem.label }}</a>
+                                                }
+                                            </li>
+                                        }
+                                    </ul>
+                                }
                             </li>
                         }
                     </ul>

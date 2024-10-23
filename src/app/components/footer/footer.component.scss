@@ -6,7 +6,6 @@ footer {
     column-gap: 3.75rem; /* o usar 15% */
     justify-content: center;
 
-    //position: absolute;
     bottom: 0;
     padding: 2.5rem 15%;
 
@@ -16,8 +15,6 @@ footer {
     width: 100%;
 
     .footer-left {
-        // width: 60%;
-
         ul {
             list-style: none;
             padding: 0;
@@ -27,6 +24,12 @@ footer {
                 color: white;
                 text-decoration: none;
                 line-height: 2;
+
+                &:hover { 
+                    color: $quaternary-color;
+                    transition: all 0.6s;
+                    font-weight: 600;
+                }
             }
         }
     }

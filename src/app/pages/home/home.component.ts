@@ -130,4 +130,11 @@ export class HomeComponent {
     { title: 'Registro publico de veedurías ciudadanas', icon: '', url: '/registros/publico-veedurias-ciudadanas' },
     { title: 'Quiero crear mi empresa', icon: '', url: 'https://www.vue.gov.co/' },
   ];
+
+  public goTo(url: string): void {
+    if (url.includes('http'))
+      window.open(url, '_blank');
+    else
+      this.router.navigate([url]);
+  }
 }

@@ -59,7 +59,7 @@ export class HeaderComponent {
           { label: 'Instructivos para trámites virtuales', route: '/servicios-virtuales/instructivos-tramites-virtuales' },
           { label: 'Trámites en línea', route: '/tramites' }
         ]},
-        { label: 'Servicios registrales', route: '/servicios-cliente/servicios-registrales', subOpciones: [
+        { label: 'Servicios registrales', route: '#', subOpciones: [
           { label: 'Registro mercantil', route: '/registros/mercantil' },
           { label: 'Registro entidades sin ánimo de lucro', route: '/registros/entidades-animo-lucro' },
           { label: 'Registro único de proponentes', route: '/registros/unico-proponentes' },
@@ -74,10 +74,10 @@ export class HeaderComponent {
           { label: 'Depósitos de los estados financieros', route: '/registros/depositos-estados-financieros' },
           { label: 'Consulta de expedientes', route: '/registros/consulta-expedientes' }
         ]},
-        { label: 'Desarrollo empresarial', route: '/servicios-cliente/desarrollo-empresarial', subOpciones: [
-          { label: 'Capacitaciones', route: '#' },
-          { label: 'Diplomados', route: '#' },
-          { label: 'Convocatorias', route: '#' }
+        { label: 'Desarrollo empresarial', route: '#', subOpciones: [
+          { label: 'Capacitaciones', route: '/desarrollo-empresarial/capacitaciones' },
+          { label: 'Diplomados', route: '/desarrollo-empresarial/diplomados' },
+          { label: 'Convocatorias', route: '/convocatorias' }
         ]},
       ]
     }

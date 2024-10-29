@@ -122,13 +122,12 @@ export class HomeComponent {
     { breakpoint: '560px',  numVisible: 1 }
 ];
   public cardViews: any[] = [
-    { title: 'Registros Mercantil', icon: '', url: '/registros/mercantil' },
-    { title: 'Registro entidades sin animo de lucro', icon: '', url: '/registros/entidades-animo-lucro' },
-    { title: 'Registros unico de proponente', icon: '', url: '/registros/unico-proponentes' },
-    { title: 'Registro nacional de turismo', icon: '', url: '/registros/nacional-turismo' },
-    { title: 'Registros unico nacional de entidades operadoras de libranza', icon: '', url: '/registros/unico-nacional-entidades' },
-    { title: 'Registro publico de veedurías ciudadanas', icon: '', url: '/registros/publico-veedurias-ciudadanas' },
-    { title: 'Quiero crear mi empresa', icon: '', url: 'https://www.vue.gov.co/' },
+    { title: 'Crea tu Empresa Aquí', icon: '', url: 'https://www.vue.gov.co/' },
+    { title: 'Modelo de Actas y Documentos', icon: '', url: '' },
+    { title: 'Conoce Nuestros Registros', icon: '', url: '' },
+    { title: 'Crea tu Empresa en Linea', icon: '', url: '' },
+    { title: 'Consulta de expedientes', icon: '', url: 'registros/consulta-expedientes' },
+    { title: 'Radica Aquí PQRSF', icon: '', url: 'http://ccmagangue.docxflow.com/public/sucursal' },
   ];
 
   public goTo(url: string): void {

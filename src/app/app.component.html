@@ -1,4 +1,6 @@
-<app-header></app-header>
+@if (showHeaderFooter) {
+  <app-header></app-header>
+}
 <router-outlet/>
 
 <div class="floating-chat">
@@ -11,4 +13,6 @@
 </div>
 <div #assistantVirtualContainer></div>
 
-<app-footer></app-footer>
+@if (showHeaderFooter) {
+  <app-footer></app-footer>
+}

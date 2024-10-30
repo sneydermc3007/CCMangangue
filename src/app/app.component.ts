@@ -1,5 +1,5 @@
 import { Component, ViewChild, ViewContainerRef, ComponentRef } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, NavigationEnd ,RouterOutlet } from '@angular/router';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -15,6 +15,7 @@ import { AsistenteVirtualComponent } from "./components/asistente-virtual/asiste
 })
 export class AppComponent {
   title = 'CamaraComercio';
+  showHeaderFooter: boolean = true;
 
   chatComponentRef: ComponentRef<ChatComponent> | null = null;
   @ViewChild('chatContainer', { read: ViewContainerRef, static: true }) chatContainer!: ViewContainerRef;
@@ -22,7 +23,13 @@ export class AppComponent {
   assistantVirtualComponentRef: ComponentRef<AsistenteVirtualComponent> | null = null;
   @ViewChild('assistantVirtualContainer', { read: ViewContainerRef, static: true }) assistantVirtualContainer!: ViewContainerRef;
 
-  constructor() {}
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.showHeaderFooter = !event.url.includes('/login');
+      }
+    });
+  }
 
   callBot() {
     console.log('Chat is called');

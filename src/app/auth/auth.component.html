@@ -1,0 +1,58 @@
+<div class="login-container">
+    <p-card class="login-card" header="Iniciar Sesión">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="field">
+                <label for="email">Correo Electrónico</label>
+                <span class="p-input-icon-left">
+                    <i class="pi pi-envelope"></i>
+                    <input 
+                        pInputText 
+                        id="email" 
+                        formControlName="email" 
+                        type="email" 
+                        placeholder="ejemplo@correo.com"
+                        class="animated-input" 
+                    />
+                </span>
+                @if (loginForm.get('email')?.invalid && loginForm.get('email')?.touched) {
+                    <p-messages 
+                        [value]="[{severity:'error', summary:'Error', detail:'Correo requerido'}]"
+                        [enableService]="false" 
+                        [closable]="false" 
+                    />
+                }
+            </div>
+
+            <div class="field">
+                <label for="password">Contraseña</label>
+                <span class="p-input-icon-left">
+                    <i class="pi pi-lock"></i>
+                    <input 
+                        pInputText 
+                        id="password" 
+                        formControlName="password" 
+                        type="password" 
+                        placeholder="Contraseña"
+                        class="animated-input" 
+                    />
+                </span>
+                @if (loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
+                    <p-messages 
+                        [value]="[{severity:'error', summary:'Error', detail:'Contraseña requerida'}]"
+                        [enableService]="false" 
+                        [closable]="false" 
+                    />
+                }
+            </div>
+
+            <button 
+                pButton 
+                type="submit" 
+                label="Iniciar Sesión" 
+                icon="pi pi-sign-in" 
+                class="animated-button"
+                [disabled]="loginForm.invalid"
+            ></button>
+        </form>
+    </p-card>
+</div>

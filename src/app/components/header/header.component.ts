@@ -53,7 +53,7 @@ export class HeaderComponent {
         { label: 'Puntos de Atencion', route: '/camara/sedes' },
         { label: 'PQRSF', route: 'http://ccmagangue.docxflow.com/public/sucursal' },
         { label: 'Servicios virtuales', route: '/servicios-cliente/servicios-virtuales', subOpciones: [
-          { label: 'Cree su empresa', route: 'https://www.vue.gov.co/' },
+          { label: 'Cree su empresa', route: '/servicios-virtuales/empresa' },
           { label: 'Expedición y verificación de certificados', route: '/servicios-virtuales/expedicion-verificacion-certificados' },
           { label: 'Incripciones y renovaciones', route: '/servicios-virtuales/inscripciones-renovaciones' },
           { label: 'Instructivos para trámites virtuales', route: '/servicios-virtuales/instructivos-tramites-virtuales' },

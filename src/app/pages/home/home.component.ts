@@ -122,10 +122,10 @@ export class HomeComponent {
     { breakpoint: '560px',  numVisible: 1 }
 ];
   public cardViews: any[] = [
-    { title: 'Crea tu Empresa Aquí', icon: '', url: 'https://www.vue.gov.co/' },
-    { title: 'Modelo de Actas y Documentos', icon: '', url: '' },
+    { title: 'Crea tu Empresa Aquí', icon: '', url: '/servicios-virtuales/empresa' },
+    { title: 'Modelo de Actas y Documentos', icon: '', url: 'actas-documentos' },
     { title: 'Conoce Nuestros Registros', icon: '', url: '' },
-    { title: 'Crea tu Empresa en Linea', icon: '', url: '' },
+    { title: 'Crea tu Empresa en Linea', icon: '', url: 'https://www.vue.gov.co/' },
     { title: 'Consulta de expedientes', icon: '', url: 'registros/consulta-expedientes' },
     { title: 'Radica Aquí PQRSF', icon: '', url: 'http://ccmagangue.docxflow.com/public/sucursal' },
   ];

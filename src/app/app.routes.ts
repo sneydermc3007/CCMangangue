@@ -22,6 +22,7 @@ export const routes: Routes = [
   { path: 'fqa',  loadComponent: () => import('./pages/preguntas-respuestas/preguntas-respuestas.component').then(m => m.PreguntasRespuestasComponent) },
   { path: 'pqrs', loadComponent: () => import('./pages/pqrs/pqrs.component').then(m => m.PqrsComponent) },
   { path: 'formulario-pqrs', loadComponent: () => import('./pages/formulario-pqrs/formulario-pqrs.component').then(m => m.FormularioPqrsComponent) },
+  { path: 'actas-documentos', loadComponent: () => import('./pages/actas-documentos/actas-documentos.component').then(m => m.ActasDocumentosComponent) },
 
 
   { path: 'camara', loadChildren: () => import('./pages/camara/camara.module').then(m => m.CamaraModule) },

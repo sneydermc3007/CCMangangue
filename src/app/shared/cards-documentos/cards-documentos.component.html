@@ -1,0 +1,19 @@
+<div class="content">
+    <ng-container *ngFor="let item of menu; let i = index">
+      <ng-container *ngIf="selectedItem === item.label">
+        <ng-container *ngFor="let subitem of item['elementos']; let j = index">
+          <a [href]="subitem.link" target="_blank" class="enlace" (click)="onMenuSelect(item.label)">
+            <div class="enlace-top">
+              <img class="fondo" src="https://s3.pagegear.co/3/content_block/6/items/14_1920x1080.png?1383868" alt="Certificado">
+              <div class="show">
+                <h2>{{ subitem.label }}</h2>
+                <img src="https://s3.pagegear.co/3/content_block/15/items/99_1920x1080.jpg?2010048" alt="Fondo">
+              </div>
+              <p class="enlace-descripcion">{{ subitem.description }}</p>
+            </div>
+            <span class="enlace-flecha fa fa-arrow-right"></span>
+          </a>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+</div>

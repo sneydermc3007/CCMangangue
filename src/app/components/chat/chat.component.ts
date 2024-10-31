@@ -15,7 +15,7 @@ export class ChatComponent implements OnDestroy {
   @Output() onChatHide: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   newMessage = '';
-  messages = [{ sender: 'bot', text: 'Hello! How can I help you?' }];
+  messages = [{ sender: 'bot', text: 'Hola! Soy Juancho, el bot. En la camara de comercio de Manague estamos comprometidos contigo, ¿Comó puedo ayudarte hoy?' }];
 
   constructor() {}
 

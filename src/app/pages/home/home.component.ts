@@ -48,36 +48,42 @@ export class HomeComponent {
 
   public images: any[] = [
     {
-      itemImageSrc: 'https://www.bolivar.gov.co/web/wp-content/uploads/2024/05/IMG-20240502-WA00091-1200x675.jpg',
-      thumbnailImageSrc: 'https://www.bolivar.gov.co/web/wp-content/uploads/2024/05/IMG-20240502-WA00091-1200x675.jpg',
+      itemImageSrc: '/slides/baner-new-1.jpg',
+      thumbnailImageSrc: '/slides/baner-new-1.jpg',
       alt: 'Description for Image 2',
-      title: 'Title 2'
+      title: 'Title 2',
+      link: '/renovar'
     },
     {
-      itemImageSrc: 'https://aventurecolombia.com/wp-content/uploads/2020/08/mompox-bolivar-colombia-©-Tristan-Quevilly-1.jpg',
-      thumbnailImageSrc: 'https://aventurecolombia.com/wp-content/uploads/2020/08/mompox-bolivar-colombia-©-Tristan-Quevilly-1.jpg',
+      itemImageSrc: '/slides/baner-new-2.jpg',
+      thumbnailImageSrc: '/slides/baner-new-2.jpg',
       alt: 'Description for Image 3',
-      title: 'Title 3'
+      title: 'Title 3',
+      link: '/renovar'
     },
     {
-      itemImageSrc: 'https://maganguehoy.co/wp-content/uploads/2024/09/1e2df7cd-3a81-4f82-aa09-984e11ba6c11.jpeg',
-      thumbnailImageSrc: 'https://maganguehoy.co/wp-content/uploads/2024/09/1e2df7cd-3a81-4f82-aa09-984e11ba6c11.jpeg',
-      alt: 'Description for Image 4',
-      title: 'Title 4'
-    },
-    {
-      itemImageSrc: 'https://imagenes.eltiempo.com/files/image_1200_600/uploads/2021/08/14/6117bbc046c0a.jpeg',
-      thumbnailImageSrc: 'https://imagenes.eltiempo.com/files/image_1200_600/uploads/2021/08/14/6117bbc046c0a.jpeg',
+      itemImageSrc: '/slides/baner-new-4.jpg',
+      thumbnailImageSrc: '/slides/baner-new-4.jpg',
       alt: 'Description for Image 1',
-      title: 'Title 1'
+      title: 'Title 1',
+      link: '/renovar'
+    },
+    {
+      itemImageSrc: '/slides/baner-new-3.jpg',
+      thumbnailImageSrc: '/slides/baner-new-3.jpg',
+      alt: 'Description for Image 4',
+      title: 'Title 4',
+      link: '/renovar'
     }
   ];
+
   public videos: VideoInterface[] = [
-    { title: 'Video 1', url: 'https://www.youtube.com/embed/oJEEPG5EBXM' },
-    { title: 'Video 2', url: 'https://www.youtube.com/embed/GGUniEAJ7gA' },
-    { title: 'Video 3', url: 'https://www.youtube.com/embed/h80gHRFGhVQ' },
-    { title: 'Video 4', url: 'https://www.youtube.com/embed/LhoRE0fVB74' },
+    { title: 'Video 1', url: 'https://www.youtube.com/embed/ftSSu8tF1FE' },
+    { title: 'Video 2', url: 'https://www.youtube.com/embed/AFbeeRVlYSI' },
+    { title: 'Video 3', url: 'https://www.youtube.com/embed/WDmPJHWcocM' },
+    { title: 'Video 4', url: 'https://www.youtube.com/embed/Y7J14zlveDE' },
   ];
+
   public sitiosInteres: any[] = [
     {
       img: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2017/10/certificacioncalidadturistica.jpg?w=1060',
@@ -116,11 +122,13 @@ export class HomeComponent {
       url: 'https://sii2.confecamaras.co/vista/plantilla/index.php?cod_camara=19'
     }
   ];
+
   public responsiveOptions: any[] = [
     { breakpoint: '1024px',  numVisible: 5 },
     { breakpoint: '768px',  numVisible: 3 },
     { breakpoint: '560px',  numVisible: 1 }
-];
+  ];
+
   public cardViews: any[] = [
     { title: 'Crea tu Empresa Aquí', icon: '', url: '/servicios-virtuales/empresa' },
     { title: 'Modelo de Actas y Documentos', icon: '', url: 'actas-documentos' },

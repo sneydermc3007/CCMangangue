@@ -13,9 +13,10 @@ div.card {
 
 .galleria-image {
   width: 100%;
-  height: 650px;
+  height: 550px;
   object-fit: unset;
   display: block;
+  cursor: pointer;
 }
 
 h2 {
@@ -161,6 +162,7 @@ h2 {
               width: 80%;
               height: 100%;
               object-fit: cover;
+              cursor: pointer;
             }
           }
         }

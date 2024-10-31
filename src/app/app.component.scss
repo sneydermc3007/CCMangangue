@@ -1,7 +1,8 @@
 @import "./../styles.scss";
 
 .floating-chat,
-.floating-assistant {
+.floating-assistant,
+.floating-wpp {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -49,6 +50,11 @@
 
   background-color: $extra-color;
   &:hover { background-color: $secondary-color; }
+}
+
+.floating-wpp {
+  right: 20px;
+  bottom: 120px;
 }
 
 @keyframes spin-clockwise {

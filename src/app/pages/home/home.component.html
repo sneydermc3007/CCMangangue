@@ -9,7 +9,7 @@
       [responsiveOptions]="responsiveOptions"
     >
       <ng-template pTemplate="item" let-item>
-        <img [src]="item.itemImageSrc" [alt]="item.alt" class="galleria-image" />
+        <img [routerLink]="item.link" [src]="item.itemImageSrc" [alt]="item.alt" class="galleria-image" />
       </ng-template>
     </p-galleria>
   </div>
@@ -69,7 +69,7 @@
       <ng-template let-sitios pTemplate="item">
         <div class="card-container">
           <div class="card-content">
-            <img [src]="sitios.img" class="card-image" />
+            <img [src]="sitios.img" class="card-image" (click)="goTo(sitios.url)" />
           </div>
         </div>
       </ng-template>

@@ -12,19 +12,19 @@ export class PrincipalesComponent implements OnInit {
   ngOnInit() {
     this.noticias = [
       {
-        title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        description: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s...',
-        image: 'https://dus6dayednven.cloudfront.net/app/uploads/2020/12/JEAN-PAUL-DE-LA-HARPE.jpg'
+        title: 'PROCESO DE CONVOCATORIA PÚBLICA DE FECHA 03 DE SEPTIEMBRE DE 2024.',
+        description: 'La Cámara de Comercio de Magangué se permite informar, a los interesados, los resultados de la convocatoria pública para elección del representante de la comunidad por los Gremios de la Producción ante la Junta Directiva de la ESE Hospital La Divina Misericordia, en el cual es nombrado el comerciante ÁLVARO JAVIER ACUÑA ACUÑA como el siguiente miembro de la Junta Directiva de la E.S.E. HOSPITAL LA DIVINA MISERICORDIA.',
+        image: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2024/09/SUBIR_IMAGEN.png?w=816&ssl=1'
       },
       {
-        title: 'Another News Title',
-        description: 'This is the description for another news. It can be longer than the first one...',
-        image: 'https://www.blogdelfotografo.com/wp-content/uploads/2022/01/silueta-atardecer-foto-perfil.webp'
+        title: 'SEMINARIO DE ACTUALIZACIÓN TRIBUTARIA Y CONTABLE',
+        description: '¡Es la oportunidad de actualizarnos!',
+        image: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2024/03/Blue-And-White-Modern-Business-Webinar-Instagram-Post-2.png?w=1080&ssl=1'
       },
       {
-        title: 'Yet Another News Title',
-        description: 'More text goes here for this third news item...',
-        image: 'https://w0.peakpx.com/wallpaper/752/821/HD-wallpaper-verde-blanco-claro-hojas-niebla.jpg'
+        title: 'CONVOCATORIA PÚBLICA PARA SER MIEMBRO DE JUNTA DIRECTIVA DE LA E.S.E. HOSPITAL LA DIVINA MISERICORDIA POR EL GREMIO DE PRODUCCIÓN.',
+        description: 'La Cámara de Comercio de Magangué, se permite convocar a los comerciantes interesados en participar de la elección del Representante de los Gremios de Producción en la Junta Directiva de la E.S.E. Hospital la Divina Misericordia, con base en el artículo 2.5.3.8.4.2.3 del Decreto 780 de 2016, el cual establece el “Mecanismo de conformación de las Juntas Directivas para las Empresas Sociales del Estado de carácter territorial;',
+        image: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2024/09/principal-1.png?w=562&ssl=1'
       }
     ];
   }

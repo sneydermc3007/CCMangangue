@@ -52,4 +52,11 @@ export class AppComponent {
         this.assistantVirtualComponentRef?.destroy();
     });
   }
+
+  wpp() {
+    window.open(
+      `https://api.whatsapp.com/send?phone=573147734540&text=Buen día, Bienvenid@ al WhatsApp de la Cámara de Comercio de Mangangué, ¿En qué puedo ayudarte?`, 
+      '_blank'
+    );
+  }
 }

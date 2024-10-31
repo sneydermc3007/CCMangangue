@@ -12,19 +12,26 @@ export class PrincipalesComponent implements OnInit {
   ngOnInit() {
     this.noticias = [
       {
-        title: 'PROCESO DE CONVOCATORIA PÚBLICA DE FECHA 03 DE SEPTIEMBRE DE 2024.',
-        description: 'La Cámara de Comercio de Magangué se permite informar, a los interesados, los resultados de la convocatoria pública para elección del representante de la comunidad por los Gremios de la Producción ante la Junta Directiva de la ESE Hospital La Divina Misericordia, en el cual es nombrado el comerciante ÁLVARO JAVIER ACUÑA ACUÑA como el siguiente miembro de la Junta Directiva de la E.S.E. HOSPITAL LA DIVINA MISERICORDIA.',
-        image: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2024/09/SUBIR_IMAGEN.png?w=816&ssl=1'
+        title: 'Laboratorio de Emprendimiento Productivo Inspira a Jóvenes Innovadores',
+        description: `El laboratorio de emprendimiento productivo ha alcanzado con éxito su objetivo de fomentar la creatividad y el espíritu emprendedor entre los jóvenes de la comunidad. Este espacio innovador ha proporcionado herramientas y conocimientos esenciales para ayudar a los participantes a convertir sus ideas en proyectos empresariales viables.
+A través de talleres prácticos, mentorías y recursos especializados, el laboratorio ha capacitado a numerosos jóvenes, alentándolos a desarrollar sus habilidades y a explorar nuevas oportunidades en el mundo empresarial. Los resultados han sido notables, con varios proyectos emergentes que ya están tomando forma y generando interés en el mercado.
+La iniciativa ha creado un ambiente colaborativo donde los jóvenes pueden intercambiar ideas y recibir apoyo, convirtiéndose en un punto de referencia para el emprendimiento local. Con su enfoque en la innovación y el desarrollo personal, el laboratorio se ha establecido como un pilar fundamental en el impulso del potencial emprendedor de la nueva generación.`,
+        image: '/noticias/1.jpeg'
       },
       {
-        title: 'EXPODULCES 2024',
-        description: 'La cámara de comercio abre convocatoria para los emprendimientos que se dedican a la fabricación de Dulces típicos, postres, chichas, pasteles, a qué se inscriban en el Expodulces 2024, aprovecha esta gran oportunidad y reserva tu cupo totalmente gratis.Cupos limitados.',
-        image: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2024/03/Blue-Navy-Elegant-Medical-Health-Services-Instagram-Post.png?w=1080&ssl=1'
+        title: 'ÉXITO DEL “OFERTÓN DEL CENTRO DE MAGANGUÉ” IMPULSA LA ECONOMÍA LOCAL',
+        descripcion: `Del 3 al 5 de octubre de 2024, Magangué vivió el “Ofertón del Centro de Magangué”, un evento que movilizó la economía local con la participación de más de 63 almacenes. Los comerciantes ofrecieron descuentos de hasta el 60%, logrando ventas que superaron los 550 millones de pesos.
+El evento atrajo a numerosos compradores, quienes disfrutaron de ofertas competitivas en una amplia gama de productos. Además, aquellos que gastaron más de 30 mil pesos participaron en sorteos de atractivos premios, incluyendo neveras, televisores, lavadoras y celulares, distribuyéndose un total de más de 160 premios de manera transparente.
+El éxito del Ofertón no solo benefició a los comerciantes, sino que también brindó a los habitantes de Magangué la oportunidad de adquirir productos de calidad a precios reducidos, generando un ambiente de alegría en el centro de la ciudad. Este evento piloto ha sentado las bases para considerar su institucionalización como el “Día del Comercio”, con la meta de superarse en futuras ediciones, incluyendo la posibilidad de un artista destacado para atraer más compradores.`,
+        image: '/noticias/2.jpeg'
       },
       {
-        title: 'CONVOCATORIA PÚBLICA PARA SER MIEMBRO DE JUNTA DIRECTIVA DE LA E.S.E. HOSPITAL LA DIVINA MISERICORDIA POR EL GREMIO DE PRODUCCIÓN.',
-        description: 'La Cámara de Comercio de Magangué, se permite convocar a los comerciantes interesados en participar de la elección del Representante de los Gremios de Producción en la Junta Directiva de la E.S.E. Hospital la Divina Misericordia, con base en el artículo 2.5.3.8.4.2.3 del Decreto 780 de 2016, el cual establece el “Mecanismo de conformación de las Juntas Directivas para las Empresas Sociales del Estado de carácter territorial;',
-        image: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2024/09/principal-1.png?w=562&ssl=1'
+        title: 'Éxito de la Feria "Moda Sostenible" en el Marco del Festi Jazz',
+        description: `Los días 13 y 14 de septiembre, se llevó a cabo la exitosa feria "Moda Sostenible" en el marco del Festi Jazz, destacando la creatividad y el talento de los emprendimientos de Mompox y la región. El evento ofreció un atractivo desfile de moda, donde se exhibieron piezas innovadoras que promovieron la sostenibilidad en la industria textil.
+Además del desfile, los asistentes disfrutaron de una variada oferta gastronómica y artesanías momposinas, lo que permitió a los visitantes sumergirse en la rica cultura de la región. La feria fue un éxito rotundo, generando un impacto significativo en el impulso comercial de los emprendedores locales, quienes encontraron en este espacio una plataforma ideal para exhibir y vender sus productos.
+Con una gran afluencia de público, el evento no solo celebró la moda responsable, sino que también fomentó el desarrollo económico y cultural de Mompox, consolidando la feria "Moda Sostenible" como un pilar del Festi Jazz y un referente para futuras iniciativas en la región.
+`,
+        image: '/noticias/3.jpeg'
       }
     ];
   }

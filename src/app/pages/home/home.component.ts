@@ -80,8 +80,8 @@ export class HomeComponent {
   public videos: VideoInterface[] = [
     { title: 'Video 1', url: 'https://www.youtube.com/embed/ftSSu8tF1FE' },
     { title: 'Video 2', url: 'https://www.youtube.com/embed/AFbeeRVlYSI' },
-    { title: 'Video 3', url: 'https://www.youtube.com/embed/WDmPJHWcocM' },
-    { title: 'Video 4', url: 'https://www.youtube.com/embed/Y7J14zlveDE' },
+    { title: 'Video 3', url: 'https://www.youtube.com/embed/WDmPJHWcocM' }
+    // { title: 'Video 4', url: 'https://www.youtube.com/embed/Y7J14zlveDE' },
   ];
 
   public sitiosInteres: any[] = [

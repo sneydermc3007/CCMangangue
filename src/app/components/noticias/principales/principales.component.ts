@@ -17,9 +17,9 @@ export class PrincipalesComponent implements OnInit {
         image: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2024/09/SUBIR_IMAGEN.png?w=816&ssl=1'
       },
       {
-        title: 'SEMINARIO DE ACTUALIZACIÓN TRIBUTARIA Y CONTABLE',
-        description: '¡Es la oportunidad de actualizarnos!',
-        image: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2024/03/Blue-And-White-Modern-Business-Webinar-Instagram-Post-2.png?w=1080&ssl=1'
+        title: 'EXPODULCES 2024',
+        description: 'La cámara de comercio abre convocatoria para los emprendimientos que se dedican a la fabricación de Dulces típicos, postres, chichas, pasteles, a qué se inscriban en el Expodulces 2024, aprovecha esta gran oportunidad y reserva tu cupo totalmente gratis.Cupos limitados.',
+        image: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2024/03/Blue-Navy-Elegant-Medical-Health-Services-Instagram-Post.png?w=1080&ssl=1'
       },
       {
         title: 'CONVOCATORIA PÚBLICA PARA SER MIEMBRO DE JUNTA DIRECTIVA DE LA E.S.E. HOSPITAL LA DIVINA MISERICORDIA POR EL GREMIO DE PRODUCCIÓN.',

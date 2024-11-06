@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-acordeon',
@@ -7,4 +8,17 @@ import { Component, Input } from '@angular/core';
 })
 export class AcordeonComponent {
   @Input() public information: any[] = [];
+
+  constructor(private router: Router) {}
+
+  public vista(item: string | any): void {
+    console.log(item);
+
+    if (item.pagina === 'pdf' || item.pagina === 'aspx') 
+      window.open(item.archivo, '_blank');
+    else if (item.pagina === 'externa')
+      window.open(item.enlace, '_blank');
+    else 
+      this.router.navigate([item.pagina]);
+  }
 }

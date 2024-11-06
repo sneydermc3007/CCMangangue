@@ -18,26 +18,22 @@ import { VideosComponent } from "../../components/videos/videos.component";
 export class LeyesTransparenciaComponent {
   public videos: VideoInterface[] = [
     {
-      title:
-        'Ley de transparencia y acceso a la información pública | Cámara de Comercio de Magangué',
+      title: 'Ley de transparencia y acceso a la información pública | Cámara de Comercio de Magangué',
       url: 'https://www.youtube.com/embed/1tee4hVJIC8',
     },
   ];
   public decretos = [
     {
       titulo: 'Decreto 1074 de 2015',
-      descripcion:
-        'Por medio del cual se expide el Decreto Único Reglamentario del Sector Comercio, Industria y Turismo.',
+      descripcion: 'Por medio del cual se expide el Decreto Único Reglamentario del Sector Comercio, Industria y Turismo.',
     },
     {
       titulo: 'Decreto 1081 de 2015',
-      descripcion:
-        'Por medio del cual se expide el Decreto Reglamentario Único del Sector Presidencia de la República.',
+      descripcion: 'Por medio del cual se expide el Decreto Reglamentario Único del Sector Presidencia de la República.',
     },
     {
       titulo: 'Resolución 3564 de 2015',
-      descripcion:
-        'Por el cual se reglamentan aspectos relacionados con la Ley de Transparencia y Acceso a la Información Pública.',
+      descripcion: 'Por el cual se reglamentan aspectos relacionados con la Ley de Transparencia y Acceso a la Información Pública.',
     },
   ];
   public information = [
@@ -47,22 +43,22 @@ export class LeyesTransparenciaComponent {
         {
           tipo: 'lista',
           valor: [
-            'Misión y Visión',
-            'Funciones y Deberes',
-            'Estructura Orgánica-Organigrama',
-            'Mapa de Procesos',
-            'Directorio institucional',
-            'Directorio Colaboradores y Contratistas',
-            'Directorio de Entidades',
-            'Directorio de agremiaciones o asociaciones en las que participe',
-            'Servicio al público, normas, formularios y protocolos de atención',
-            'Procedimientos que se siguen para tomar decisiones en las diferentes áreas',
-            'Mecanismo de presentación directa de solicitudes, quejas y reclamos',
-            'Calendario de actividades y eventos',
-            'Información sobre decisiones que puede afectar al público',
-            'Entes y autoridades que lo vigilan',
-            'Publicación de hojas de vida',
-            'Estudios, investigaciones y otras publicaciones',
+            { label: 'Misión y Visión', pagina: "/camara/mision-vision" },
+            { label: 'Funciones y Deberes', pagina: "pdf", archivo: "https://ccmagangue.org.co/v2/wp-content/uploads/2023/01/funcionesdelascamarasdecomercio.pdf" },
+            { label: 'Estructura Orgánica-Organigrama', pagina: "pdf", archivo: "https://ccmagangue.org.co/v2/wp-content/uploads/2023/01/organigrama-mapaproceso.pdf" },
+            { label: 'Mapa de Procesos', pagina: "/camara/mapa-procesos" },
+            { label: 'Directorio institucional', pagina: "/leyes-transparencia/mecanismos-atencion" },
+            { label: 'Directorio Colaboradores y Contratistas', pagina: "/leyes-transparencia/directorio-colaboradores-contratistas" },
+            { label: 'Directorio de Entidades', pagina: "externa", enlace: "https://confecamaras.org.co/conozca-la-red-de-camaras-de-comercio/" },
+            { label: 'Directorio de agremiaciones o asociaciones en las que participe', pagina: "/leyes-transparencia/directorio-agremiaciones-asociaciones" },
+            { label: 'Servicio al público, normas, formularios y protocolos de atención', pagina: "externa", enlace: "http://ccmagangue.docxflow.com/public/sucursal" },
+            { label: 'Procedimientos que se siguen para tomar decisiones en las diferentes áreas', pagina: "/camara/mapa-procesos" },
+            { label: 'Mecanismo de presentación directa de solicitudes, quejas y reclamos', pagina: "externa", enlace: "http://ccmagangue.docxflow.com/public/sucursal" },
+            { label: 'Calendario de actividades y eventos', pagina: "/calendario" },
+            { label: 'Información sobre decisiones que puede afectar al público', pagina: "/camara/informacion" },
+            { label: 'Entes y autoridades que lo vigilan', pagina: "pdf", archivo: "https://ccmagangue.org.co/v2/wp-content/uploads/2022/08/Entes%20de%20control.pdf" },
+            "Publicación de hojas de vida",
+            { label: 'Estudios, investigaciones y otras publicaciones', pagina: "/leyes-transparencia/estudios-investigaciones-publicas" },
           ],
         },
       ],
@@ -72,7 +68,7 @@ export class LeyesTransparenciaComponent {
       contenido: [
         {
           tipo: 'parrafo',
-          valor: 'Normativa',
+          valor: { label: 'Normativa', pagina: '/normativa' }
         },
       ],
     },

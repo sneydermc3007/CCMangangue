@@ -9,6 +9,7 @@ import { SafePipe } from "./pipes/safe.pipe";
 import { AcordeonComponent } from './acordeon/acordeon.component';
 import { TitleComponent } from './title/title.component';
 import { CardsDocumentosComponent } from './cards-documentos/cards-documentos.component';
+import { NormatividadesComponent } from './normatividades/normatividades.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CardsDocumentosComponent } from './cards-documentos/cards-documentos.co
     SafePipe,
     AcordeonComponent,
     TitleComponent,
-    CardsDocumentosComponent
+    CardsDocumentosComponent,
+    NormatividadesComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { CardsDocumentosComponent } from './cards-documentos/cards-documentos.co
     SafePipe,
     AcordeonComponent,
     TitleComponent,
-    CardsDocumentosComponent
+    CardsDocumentosComponent,
+    NormatividadesComponent
   ]
 })
 export class SharedModule { }

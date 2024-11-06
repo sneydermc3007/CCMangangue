@@ -1,6 +1,11 @@
-<p-sidebar [(visible)]="sidebarVisible" (onHide)="ocultarSideBar()" >
-  <h3>Sidebar</h3>
-  <p>
-    Lorem ipsum dolor sit amet...
-  </p>
+<p-sidebar [(visible)]="sidebarVisible" (onHide)="ocultarSideBar()" [style]="{width: '250px'}">
+  <h3>Accesibilidad</h3>
+  <div class="accesibilidad-opciones">
+    @for (item of opcionesAccesibilidad; track $index) {
+      <button class="accesibilidad-boton">
+        <i [ngClass]="item.icon"></i>
+        <span>{{item.label}}</span>
+      </button>
+    }
+  </div>
 </p-sidebar>

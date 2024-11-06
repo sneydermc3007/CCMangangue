@@ -4,3 +4,9 @@ a {
     text-decoration: none;
     color: $black;
 }
+
+.hipervinculo:hover {
+    color: $primary-color;
+    font-weight: bold;
+    cursor: pointer;
+}

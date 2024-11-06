@@ -1,0 +1,35 @@
+@import './../../../styles.scss';
+
+.accesibilidad-opciones {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+.accesibilidad-boton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 14px;
+    transition: color 0.3s, background-color 0.3s;
+
+    &:hover {
+        color: $quinary-color;
+        background-color: $extra-color;
+        border-radius: 20px;
+    }
+
+    i {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+}

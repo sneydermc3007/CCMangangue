@@ -14,10 +14,10 @@ export class FooterComponent {
   public paginasInternas = [
     { label: 'Términos y condiciones', url: '#' },
     { label: 'Preguntas frecuentes', url: '/fqa' },
-    { label: 'Aviso de privacidad', url: '/leyes/datos-personales' },
-    { label: 'Protección de datos personales', url: '/leyes/datos-personales' },
+    { label: 'Aviso de privacidad', url: '/leyes-transparencia/datos-personales' },
+    { label: 'Protección de datos personales', url: '/leyes-transparencia/datos-personales' },
     { label: 'PQRS Atención al cliente', url: '/pqrs' },
-    { label: 'Ley de transparencia', url: '/leyes' },
+    { label: 'Ley de transparencia', url: '/leyes-transparencia' },
     { label: 'Escríbanos', url: 'http://ccmagangue.docxflow.com/public/sucursal' },
     { label: 'Mapa del sitio', url: '#' },
   ];

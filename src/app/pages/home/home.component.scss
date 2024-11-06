@@ -161,6 +161,12 @@ h2 {
         }
     }
   }
+
+  &.videos {
+    @media screen and (max-width: 1729px) {     
+      .video-card { width: 400px; }
+    }
+  }
 }
 
 @keyframes ocean-wave {

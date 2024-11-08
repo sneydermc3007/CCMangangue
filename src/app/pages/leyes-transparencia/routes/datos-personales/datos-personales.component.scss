@@ -59,3 +59,7 @@ main {
     }
   }
 }
+
+:host ::ng-deep .custom-carousel {
+  max-width: 1400px;
+}

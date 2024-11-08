@@ -1,0 +1,103 @@
+@import './../../../../../styles.scss';
+
+section {
+    flex-direction: column;
+
+    &.contexto {
+        p {
+            font-size: 1rem;
+            text-align: justify;
+        }
+    }
+
+    &.contenido {
+        .timeline-container {
+            padding: 2rem;
+          }
+          
+          .custom-timeline {
+            .year-label {
+              background-color: #28a745;
+              color: white;
+              font-weight: bold;
+              padding: 0.5rem 1rem;
+              border-radius: 12px;
+              margin-bottom: 1rem;
+              font-size: 1.2rem;
+              text-align: center;
+              cursor: pointer;
+              transition: transform 0.2s ease;
+          
+              &:hover {
+                transform: scale(1.05);
+              }
+            }
+          }
+          
+          /* Estilos modernos para el modal */
+          .modern-dialog .p-dialog-content {
+            background-color: #f7f9fc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            color: #333;
+          }
+          
+          .modern-dialog .p-dialog-header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #4a4a4a;
+            background: none;
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eaeaea;
+          }
+          
+          .modern-dialog .p-dialog-header .p-dialog-title {
+            font-weight: bold;
+          }
+          
+          .modern-dialog .p-dialog-close-icon {
+            font-size: 1.2rem;
+            color: #4a4a4a;
+            transition: color 0.3s;
+            cursor: pointer;
+          
+            &:hover {
+              color: #ff5252;
+            }
+          }
+          
+          .document-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+          
+          .document-link {
+            display: block;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            background-color: #007bff;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          
+            &:hover {
+              background-color: #0056b3;
+              transform: translateY(-2px);
+            }
+          }
+          
+          .document-list p {
+            text-align: center;
+            color: #555;
+          }
+          
+    }
+}

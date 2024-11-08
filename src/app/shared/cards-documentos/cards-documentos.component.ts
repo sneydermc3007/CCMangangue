@@ -1,7 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
-import { MenuItem } from 'primeng/api';
-
 @Component({
   selector: 'app-cards-documentos',
   templateUrl: './cards-documentos.component.html',

@@ -12,6 +12,8 @@ export const routes: Routes = [
   { path: 'formulario-pqrs', loadComponent: () => import('./pages/formulario-pqrs/formulario-pqrs.component').then(m => m.FormularioPqrsComponent) },
   { path: 'actas-documentos', loadComponent: () => import('./pages/actas-documentos/actas-documentos.component').then(m => m.ActasDocumentosComponent) },
   { path: 'calendario', loadComponent: () => import('./pages/calendar/calendar.component').then(m => m.CalendarComponent) },
+  { path: 'tarifas', loadComponent: () => import('./pages/tarifas/tarifas.component').then(m => m.TarifasComponent) },
+  { path: 'glosario', loadComponent: () => import('./pages/glosario/glosario.component').then(m => m.GlosarioComponent) },
 
   { 
     path: 'leyes-transparencia', 
@@ -24,6 +26,18 @@ export const routes: Routes = [
       { path: 'sipref', loadComponent: () => import('./pages/leyes-transparencia/routes/sipref/sipref.component').then(m => m.SiprefComponent) },
       { path: 'estudios-investigaciones-publicas', loadComponent: () => import('./pages/leyes-transparencia/routes/estudios-investigaciones-publicas/estudios-investigaciones-publicas.component').then(m => m.EstudiosInvestigacionesPublicasComponent) },
       { path: 'normas-generales', loadComponent: () => import('./pages/leyes-transparencia/routes/normas-generales/normas-generales.component').then(m => m.NormasGeneralesComponent) },
+      { path: 'informacion-presupuestal-anual', loadComponent: () => import('./pages/leyes-transparencia/routes/presupuesto-general-asignado/presupuesto-general-asignado.component').then(m => m.PresupuestoGeneralAsignadoComponent) },
+      { path: 'estados-financieros-dictamenes-revisoria-fiscal', loadComponent: () => import('./pages/leyes-transparencia/routes/estados-financieros-dictamenes-revisoria-fiscal/estados-financieros-dictamenes-revisoria-fiscal.component').then(m => m.EstadosFinancierosDictamenesRevisoriaFiscalComponent) },
+      { path: 'ejecuccion-presupuestas-historica', loadComponent: () => import('./pages/leyes-transparencia/routes/ejecuccion-presupuestas-historica/ejecuccion-presupuestas-historica.component').then(m => m.EjecuccionPresupuestasHistoricaComponent) },
+      { path: 'informes-gestion', loadComponent: () => import('./pages/leyes-transparencia/routes/informes-gestion/informes-gestion.component').then(m => m.InformesGestionComponent) },
+      { path: 'planes-mejoramiento', loadComponent: () => import('./pages/leyes-transparencia/routes/planes-mejoramiento/planes-mejoramiento.component').then(m => m.PlanesMejoramientoComponent) },
+      { path: 'informe-peticiones-quejas-reclamos', loadComponent: () => import('./pages/leyes-transparencia/routes/informe-peticiones-quejas-reclamos/informe-peticiones-quejas-reclamos.component').then(m => m.InformePeticionesQuejasReclamosComponent) },
+      { path: 'costumbre-mercantil', loadComponent: () => import('./pages/leyes-transparencia/routes/costumbre-mercantil/costumbre-mercantil.component').then(m => m.CostumbreMercantilComponent) },
+      { path: 'directorio-agremiaciones-asociaciones-otros', loadComponent: () => import('./pages/leyes-transparencia/routes/directorio-agremiaciones-asociaciones-otros/directorio-agremiaciones-asociaciones-otros.component').then(m => m.DirectorioAgremiacionesAsociacionesOtrosComponent) },
+      { path: 'sistemas-informacion', loadComponent: () => import('./pages/leyes-transparencia/routes/sistemas-informacion/sistemas-informacion.component').then(m => m.SistemasInformacionComponent) },
+      { path: 'transparencia-pasiva', loadComponent: () => import('./pages/leyes-transparencia/routes/transparencia-pasiva/transparencia-pasiva.component').then(m => m.TransparenciaPasivaComponent) },
+      { path: 'accesibilidad-medios-electronicos-poblocacion', loadComponent: () => import('./pages/leyes-transparencia/routes/accesibilidad-medios-electronicos-poblocacion/accesibilidad-medios-electronicos-poblocacion.component').then(m => m.AccesibilidadMediosElectronicosPoblocacionComponent) },
+      { path: 'indice-cumplimiento-lt', loadComponent: () => import('./pages/leyes-transparencia/routes/indice-cumplimiento-lt/indice-cumplimiento-lt.component').then(m => m.IndiceCumplimientoLtComponent) },
     ]
   },
   { 
@@ -31,6 +45,7 @@ export const routes: Routes = [
     children: [
       { path: '', loadComponent: () => import('./pages/tramites/tramites.component').then(m => m.TramitesComponent) },
       { path: 'servicios', loadComponent: () => import('./pages/tramites/routes/servicios/servicios.component').then(m => m.ServiciosComponent) },
+      { path: 'linea', loadComponent: () => import('./pages/tramites/routes/tramites-linea/tramites-linea.component').then(m => m.TramitesLineaComponent) },
     ]
   },
   { 

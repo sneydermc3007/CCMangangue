@@ -1,0 +1,33 @@
+@import './../../../styles.scss';
+
+h3 { 
+    color: $tertiary-color;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: start;
+    cursor: pointer;
+
+    .card {
+        width: 18rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        background-color: #f8f9fa;
+        transition: transform 0.2s ease-in-out;
+        
+        &:hover { transform: translateY(-5px); }
+
+        .card-body {
+            padding: 1rem;
+            text-align: center;
+            font-size: 1rem;
+            color: $primary-color;
+        }
+    }
+}

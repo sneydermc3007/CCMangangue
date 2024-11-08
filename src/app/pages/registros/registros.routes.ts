@@ -12,6 +12,7 @@ import { ActividadJuegoAzarComponent } from './routes/actividad-juego-azar/activ
 import { LibrosComponent } from './routes/libros/libros.component';
 import { DepositosFinancierosComponent } from './routes/depositos-financieros/depositos-financieros.component';
 import { ConsultaExpedientesComponent } from './routes/consulta-expedientes/consulta-expedientes.component';
+import { EntidadesExtrangerasDerechoAnimoLucroComponent } from './routes/entidades-extrangeras-derecho-animo-lucro/entidades-extrangeras-derecho-animo-lucro.component';
 
 export const registrosRoutes: Routes = [
     { path: 'mercantil', component: MercantilComponent },
@@ -25,5 +26,6 @@ export const registrosRoutes: Routes = [
     { path: 'actividad-juego-azar', component: ActividadJuegoAzarComponent },
     { path: 'libros', component: LibrosComponent },
     { path: 'depositos-estados-financieros', component: DepositosFinancierosComponent },
-    { path: 'consulta-expedientes', component: ConsultaExpedientesComponent }
+    { path: 'consulta-expedientes', component: ConsultaExpedientesComponent },
+    { path: 'entidades-extrangeras-derecho-animo-lucro', component: EntidadesExtrangerasDerechoAnimoLucroComponent },
 ]

@@ -9,16 +9,26 @@ import { Router } from '@angular/router';
 export class AcordeonComponent {
   @Input() public information: any[] = [];
 
-  constructor(private router: Router) {}
+  public displayModal: boolean = false;
+
+  constructor(private router: Router) { }
 
   public vista(item: string | any): void {
-    console.log(item);
-
     if (item.pagina === 'pdf' || item.pagina === 'aspx') 
       window.open(item.archivo, '_blank');
     else if (item.pagina === 'externa')
       window.open(item.enlace, '_blank');
+    else if (item.pagina === 'popup')
+      this.displayModal = true;
     else 
       this.router.navigate([item.pagina]);
+  }
+
+  close() {
+    this.displayModal = false;
+  }
+
+  redirect(url: string) {
+    window.open(url, '_blank');
   }
 }

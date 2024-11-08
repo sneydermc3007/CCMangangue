@@ -65,7 +65,7 @@ export class HeaderComponent {
           { label: 'Registro único de proponentes', route: '/registros/unico-proponentes' },
           { label: 'Registro nacional de turismo', route: '/registros/nacional-turismo' },
           { label: 'Registro único empresarial', route: '/registros/unico-empresarial' },
-          { label: 'Registro de entidades extranjeras de derecho sin ánimo de lucro', route: '/registros/unico-nacional-entidades' },
+          { label: 'Registro de entidades extranjeras de derecho sin ánimo de lucro', route: 'registros/entidades-extrangeras-derecho-animo-lucro' },
           { label: 'Registro de las entidades de economiá solidaria', route: '/registros/entidades-economia-solidaria' },
           { label: 'Registro de actividad de juego y azar', route: '/registros/actividad-juego-azar' },
           { label: 'Registro público de veedurías ciudadanas', route: '/registros/publico-veedurias-ciudadanas' },

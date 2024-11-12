@@ -33,14 +33,14 @@ export class AppComponent {
 
   callBot() {
     console.log('Chat is called');
-
     this.chatComponentRef = this.chatContainer.createComponent(ChatComponent);
-    this.chatComponentRef.instance.isChatOpen = true;
+    this.chatComponentRef.instance.isChatOpen = true; // Asegúrate de que esta línea esté presente
     this.chatComponentRef.instance.onChatHide.subscribe((visible) => {
-      if (!visible)
+      if (!visible) {
         this.chatComponentRef?.destroy();
+      }
     });
-  }
+}
 
   callAssistenteVirtual() {
     console.log('Asistente Virtual is called');
@@ -55,7 +55,7 @@ export class AppComponent {
 
   wpp() {
     window.open(
-      `https://api.whatsapp.com/send?phone=573147734540&text=Buen día, Bienvenid@ al WhatsApp de la Cámara de Comercio de Mangangué, ¿En qué puedo ayudarte?`, 
+      `https://api.whatsapp.com/send?phone=573147734540&text=Buen día, Bienvenid@ al WhatsApp de la Cámara de Comercio de Mangangué, ¿En qué puedo ayudarte?`,
       '_blank'
     );
   }

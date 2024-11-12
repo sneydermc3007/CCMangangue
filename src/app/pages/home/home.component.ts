@@ -1,4 +1,4 @@
-import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule }  from "@angular/common";
 import { FormsModule } from '@angular/forms';
 import { trigger, state, style, transition, animate } from '@angular/animations';
@@ -21,7 +21,6 @@ import { VideoInterface } from "../../interfaces/video.interface";
   imports: [
     CommonModule,
     FormsModule,
-    RouterLink,
     GalleriaModule,
     CarouselModule,
     SharedModule,

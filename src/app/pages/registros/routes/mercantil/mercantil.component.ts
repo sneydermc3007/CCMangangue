@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AccordionInterface } from '../../../../interfaces/acordion.interface';
+import { AcordeonInterface } from '../../../../interfaces/acordeon.interface';
 
 @Component({
   selector: 'app-mercantil',
@@ -8,7 +8,7 @@ import { AccordionInterface } from '../../../../interfaces/acordion.interface';
   styleUrl: './mercantil.component.scss'
 })
 export class MercantilComponent {
-  public information: AccordionInterface[] = [
+  public information: AcordeonInterface[] = [
     {
       header: 'Consultas previas a la Matricula Mercantil',
       contenido: [

@@ -5,6 +5,7 @@ import { AccordionModule } from 'primeng/accordion';
 import { SharedModule } from "../../shared/shared.module";
 
 import { VideoInterface } from "../../interfaces/video.interface";
+import { AcordeonInterface } from '../../interfaces/acordeon.interface';
 
 import { VideosComponent } from "../../components/videos/videos.component";
 
@@ -36,7 +37,7 @@ export class LeyesTransparenciaComponent {
       descripcion: 'Por el cual se reglamentan aspectos relacionados con la Ley de Transparencia y Acceso a la Información Pública.',
     },
   ];
-  public information = [
+  public information: AcordeonInterface[] = [
     {
       header: 'Información de la Entidad',
       contenido: [

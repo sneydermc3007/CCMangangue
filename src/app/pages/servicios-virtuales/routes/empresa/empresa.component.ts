@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AccordionInterface } from '../../../../interfaces/acordion.interface';
+import { AcordeonInterface } from '../../../../interfaces/acordeon.interface';
 
 @Component({
   selector: 'app-empresa',
@@ -9,7 +9,7 @@ import { AccordionInterface } from '../../../../interfaces/acordion.interface';
 })
 export class EmpresaComponent {
 
-  public information: AccordionInterface[] = [
+  public information: AcordeonInterface[] = [
     {
       header: 'Documentos Necesarios para Registrararse',
       contenido: [

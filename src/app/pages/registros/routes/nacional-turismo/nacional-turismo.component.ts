@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AccordionInterface } from '../../../../interfaces/acordion.interface';
+import { AcordeonInterface } from '../../../../interfaces/acordeon.interface';
 
 @Component({
   selector: 'app-nacional-turismo',
@@ -8,7 +8,7 @@ import { AccordionInterface } from '../../../../interfaces/acordion.interface';
   styleUrl: './nacional-turismo.component.scss'
 })
 export class NacionalTurismoComponent {
-  public information: AccordionInterface[] = [
+  public information: AcordeonInterface[] = [
     {
       header: '¿Cuáles son los prestadores de servicios turísticos obligados a inscribirse en el Registro Nacional de Turismo – RNT?',
       contenido: [

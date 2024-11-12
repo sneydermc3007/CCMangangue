@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 
+import { AcordeonInterface } from '../../../interfaces/acordeon.interface';
+
 @Component({
   selector: 'app-informacion-camara',
   templateUrl: './informacion-camara.component.html',
   styleUrl: './informacion-camara.component.scss'
 })
 export class InformacionCamaraComponent {
-  public information = [
+  public information: AcordeonInterface[] = [
     {
       header: 'Información sobre decisiones que puede afectar al público',
       contenido: [

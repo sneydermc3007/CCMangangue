@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AccordionInterface } from '../../../../interfaces/acordion.interface';
+import { AcordeonInterface } from '../../../../interfaces/acordeon.interface';
 
 @Component({
   selector: 'app-entidades-animo-lucro',
@@ -8,7 +8,7 @@ import { AccordionInterface } from '../../../../interfaces/acordion.interface';
   styleUrl: './entidades-animo-lucro.component.scss'
 })
 export class EntidadesAnimoLucroComponent {
-  public information: AccordionInterface[] = [
+  public information: AcordeonInterface[] = [
     {
       header: 'Registro Entidades Sin Ánimo de Lucro',
       contenido: [

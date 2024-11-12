@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { SharedModule } from '../../../../shared/shared.module';
 
+import { AcordeonInterface } from '../../../../interfaces/acordeon.interface';
+
 @Component({
   selector: 'app-circulares',
   standalone: true,
@@ -12,7 +14,7 @@ import { SharedModule } from '../../../../shared/shared.module';
   styleUrl: './circulares.component.scss'
 })
 export class CircularesComponent {
-  public information = [
+  public information: AcordeonInterface[] = [
     {
       header: 'Circular 003 del 19 de diciembre de 2019',
       contenido: [

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { SharedModule } from '../../shared/shared.module';
 
+import { AcordeonInterface } from '../../interfaces/acordeon.interface';
+
 @Component({
   selector: 'app-normativa',
   standalone: true,
@@ -12,7 +14,7 @@ import { SharedModule } from '../../shared/shared.module';
   styleUrl: './normativa.component.scss'
 })
 export class NormativaComponent {
-  public information = [
+  public information: AcordeonInterface[] = [
     {
       header: 'Normativa de la entidad',
       contenido: [

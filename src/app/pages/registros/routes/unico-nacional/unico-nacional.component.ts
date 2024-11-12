@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AccordionInterface } from '../../../../interfaces/acordion.interface';
+import { AcordeonInterface } from '../../../../interfaces/acordeon.interface';
 
 @Component({
   selector: 'app-unico-nacional',
@@ -8,7 +8,7 @@ import { AccordionInterface } from '../../../../interfaces/acordion.interface';
   styleUrl: './unico-nacional.component.scss'
 })
 export class UnicoNacionalComponent {
-  public information: AccordionInterface[] = [
+  public information: AcordeonInterface[] = [
     {
       header: 'Objetivo',
       contenido: [

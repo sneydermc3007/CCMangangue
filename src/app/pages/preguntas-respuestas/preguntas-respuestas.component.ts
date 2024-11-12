@@ -5,9 +5,9 @@ import { TabViewModule } from 'primeng/tabview';
 
 import { SharedModule } from '../../shared/shared.module';
 
-import { AccordionInterface } from '../../interfaces/acordion.interface';
+import { AcordeonInterface } from '../../interfaces/acordeon.interface';
 
-interface tabs { header: string, dataView: AccordionInterface[] }
+interface tabs { header: string, dataView: AcordeonInterface[] }
 
 @Component({
   selector: 'app-preguntas-respuestas',

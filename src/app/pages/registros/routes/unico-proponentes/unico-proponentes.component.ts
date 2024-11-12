@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AccordionInterface } from '../../../../interfaces/acordion.interface';
+import { AcordeonInterface } from '../../../../interfaces/acordeon.interface';
 
 @Component({
   selector: 'app-unico-proponentes',
@@ -8,7 +8,7 @@ import { AccordionInterface } from '../../../../interfaces/acordion.interface';
   styleUrl: './unico-proponentes.component.scss'
 })
 export class UnicoProponentesComponent {
-  public information: AccordionInterface[] = [
+  public information: AcordeonInterface[] = [
     {
       header: '¿Cuál es la legislación Aplicable?',
       contenido: [

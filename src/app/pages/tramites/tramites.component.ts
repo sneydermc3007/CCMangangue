@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { getMenu, getMenuCategory, getMenuItemsByCategory } from '../../helpers/menu.helper';
+import { getMenuCategory } from '../../helpers/menu.helper';
 
 import { SharedModule } from "../../shared/shared.module";
+
+import { AcordeonInterface } from '../../interfaces/acordeon.interface';
 
 @Component({
   selector: 'app-tramites',
@@ -13,7 +15,7 @@ import { SharedModule } from "../../shared/shared.module";
   styleUrl: './tramites.component.scss'
 })
 export class TramitesComponent {
-  public data = [
+  public data: AcordeonInterface[] = [
     {
       header: 'Servicios registrales',
       contenido: [
@@ -109,7 +111,7 @@ export class TramitesComponent {
             { label: 'Recurso de Reposicion Sociedad Transportes Yiwow S.A.S.', pagina: 'pdf', archivo: 'https://ccmagangue.org.co/v2/recurso-de-reposicion.pdf' },
             { label: 'Recursos de Reposicion AMIJUSBOL', pagina: 'pdf', archivo: 'https://ccmagangue.org.co/v2/recurso_reposicion_amijusbol.pdf' },
             { label: 'Recursos de Reposicion AGUAS DE BUENAVISTA SA E.S.P.', pagina: 'pdf', archivo: 'https://ccmagangue.org.co/v2/wp-content/uploads/2024/10/recurso.pdf' },
-            { label: 'Recursos de Reposicion Wilson Manuel Meza Arriola', pagina: 'pdf', arcivo: 'https://ccmagangue.org.co/v2/wp-content/uploads/2024/10/Blanco-y-negro0364.pdf' },
+            { label: 'Recursos de Reposicion Wilson Manuel Meza Arriola', pagina: 'pdf', archivo: 'https://ccmagangue.org.co/v2/wp-content/uploads/2024/10/Blanco-y-negro0364.pdf' },
             { label: 'Recursos de Reposicion AGUAS DE BUENAVISTA SA E.S.P.', pagina: 'pdf', archivo: 'https://ccmagangue.org.co/v2/wp-content/uploads/2024/10/RESOLUCION-003-POR-MEDIO-DEL-CUAL-SE-RESUELVE-UN-RECURSO-DE-REPOSICION-AGUAS-DE-BUENAVISTA-1.pdf' }
           ]
         }
@@ -121,8 +123,8 @@ export class TramitesComponent {
         {
           tipo: 'lista',
           valor: [
-            { label: 'Recursos de Apelacion', pagina: 'archivo', externa: 'https://ccmagangue.org.co/v2/recurso-de-apelacion.pdf' },
-            { label: 'Recursos de Apelacion Wilson Manuel Meza Arriola', pagina: 'archivo', externa: 'https://ccmagangue.org.co/v2/wp-content/uploads/2024/10/RESOLUCION-004-POR-MEDIO-DEL-CUAL-SE-NIEGA-POR-INPROCEDENTE-UN-RECURSO-WILSON-MEZA.pdf' }
+            { label: 'Recursos de Apelacion', pagina: 'pdf', archivo: 'https://ccmagangue.org.co/v2/recurso-de-apelacion.pdf' },
+            { label: 'Recursos de Apelacion Wilson Manuel Meza Arriola', pagina: 'pdf', archivo: 'https://ccmagangue.org.co/v2/wp-content/uploads/2024/10/RESOLUCION-004-POR-MEDIO-DEL-CUAL-SE-NIEGA-POR-INPROCEDENTE-UN-RECURSO-WILSON-MEZA.pdf' }
           ]
         }
       ]

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { SharedModule } from "../../../../shared/shared.module";
 
+import { AcordeonInterface } from '../../../../interfaces/acordeon.interface';
+
 @Component({
   selector: 'app-sistemas-informacion',
   standalone: true,
@@ -10,7 +12,7 @@ import { SharedModule } from "../../../../shared/shared.module";
   styleUrl: './sistemas-informacion.component.scss'
 })
 export class SistemasInformacionComponent {
-  public data = [
+  public data: AcordeonInterface[] = [
     {
       header: 'Portal Nacional del RUES',
       contenido: [

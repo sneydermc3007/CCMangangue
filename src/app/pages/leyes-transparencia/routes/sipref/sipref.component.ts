@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { SharedModule } from '../../../../shared/shared.module';
 
+import { AcordeonInterface } from '../../../../interfaces/acordeon.interface';
+
 @Component({
   selector: 'app-sipref',
   standalone: true,
@@ -10,7 +12,7 @@ import { SharedModule } from '../../../../shared/shared.module';
   styleUrl: './sipref.component.scss'
 })
 export class SiprefComponent {
-  public information = [
+  public information: AcordeonInterface[] = [
     {
       header: 'Que es el Sistema Preventivo de Fraudes – SIPREF?',
       contenido: [

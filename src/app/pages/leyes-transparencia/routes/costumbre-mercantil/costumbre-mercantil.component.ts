@@ -5,6 +5,8 @@ import { ButtonModule } from 'primeng/button';
 
 import { SharedModule } from '../../../../shared/shared.module';
 
+import { AcordeonInterface } from '../../../../interfaces/acordeon.interface';
+
 @Component({
   selector: 'app-costumbre-mercantil',
   standalone: true,
@@ -18,7 +20,7 @@ import { SharedModule } from '../../../../shared/shared.module';
   host: { ngSkipHydration: 'true' }
 })
 export class CostumbreMercantilComponent {
-  public data = [
+  public data: AcordeonInterface[] = [
     {
       header: '¿Qué es la Costumbre Mercantil?',
       contenido: [

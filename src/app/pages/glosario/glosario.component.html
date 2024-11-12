@@ -1,0 +1,14 @@
+<main>
+    <app-title [title]="'glosario'"></app-title>
+
+    <section class="glossary">
+        <div *ngFor="let item of glossaryItems" class="glossary-item">
+            <button class="glossary-term" (click)="toggleItem(item)">
+                {{ item.term }}
+            </button>
+            <div class="glossary-definition" *ngIf="item.isExpanded">
+                {{ item.definition }}
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,31 @@
+<main>
+    <app-title [title]="'INFORME DE PETICIONES, QUEJAS, RECLAMOS, DENUNCIAS Y SOLICITUDES DE ACCESO A LA INFORMACIÓN'"></app-title>
+
+    <section class="contenido">
+        <h3>Informes de Solicitudes de Acceso a la Información</h3>
+        <p>
+            Dando cumplimiento a lo establecido en el Decreto 103 de 2015, por el cual se reglamenta parcialmente la Ley Estatutaria 1712 de 2014 “Ley de Transparencia y del Derecho de Acceso a la Información Pública”, se presentan los informes de las solicitudes radicadas ante la Cámara de Comercio de Magangué.
+            En este informe se incluyen la solicitudes de información, los derechos de petición, las felicitaciones, quejas, sugerencias y reclamos recibidos entre el 1 de enero de 2020 hasta el 30 de octubre de 2020.
+        </p>
+    </section>
+
+    <section class="documentos">
+        <p-carousel 
+            [value]="documentos" 
+            [numVisible]="3" 
+            [numScroll]="1" 
+            [circular]="true" 
+            [autoplayInterval]="3000"
+            [showIndicators]="false"
+            styleClass="custom-carousel"
+            >
+            <ng-template pTemplate="item" let-documento>
+              <div class="documento-item">
+                <i class="fa-solid fa-file-pdf fa-2xl"></i>
+                <h3>{{ documento.nombre }}</h3>
+                <button pButton type="button" icon="pi pi-download" label="DESCARGAR" (click)="descargar(documento.url)"></button>
+              </div>
+            </ng-template>
+          </p-carousel>
+    </section>
+</main>

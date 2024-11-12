@@ -1,0 +1,29 @@
+<main>
+    <app-title [title]="'ELECCIÓN DE JUNTA DIRECTIVA Y REVISOR FISCAL 2023 – 2026'"></app-title>
+
+    <section class="tabla">
+        <div class="document-list">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Download</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (item of documentList; track $index) {
+                    <tr>
+                        <td>{{ item.date }}</td>
+                        <td>{{ item.description }}</td>
+                        <td>
+                            <a href="{{ item.downloadLink }}" download>Descargar</a>
+                        </td>
+                    </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          
+    </section>
+</main>

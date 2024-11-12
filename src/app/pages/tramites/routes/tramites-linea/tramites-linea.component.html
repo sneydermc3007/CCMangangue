@@ -1,0 +1,24 @@
+<main>
+    <section class="title">
+        <h1>Trámites en linea</h1>
+        <p>Encuentre aquí los términos y condiciones para el estudio de los trámites registrales de la entidad, una vez el Sistema Integrado de Información– SII, genere el recibo de pago, el trámite se entenderá radicado. Para ello, las Cámaras de Comercio, cuentan con los siguientes términos:
+            <span><a routerLink="#" routerLinkActive="router-link-active" >Términos y Condiciones</a></span>
+        </p>
+    </section>
+
+    <section class="tramites">
+        @for (item of cards; track $index) {
+            <p-panel class="card-panel">
+                <img src="{{ item.image }}" alt="{{ item.title }}" />
+                <button 
+                    pButton
+                    routerLink="{{ item.link }}"
+                    type="button" 
+                    label="{{ item.title }}" 
+                    icon="pi pi-arrow-right" 
+                    class="card-button"
+                ></button>
+            </p-panel>
+        }
+    </section>
+</main>

@@ -20,6 +20,7 @@ import { ActividadJuegoAzarComponent } from './routes/actividad-juego-azar/activ
 import { LibrosComponent } from './routes/libros/libros.component';
 import { DepositosFinancierosComponent } from './routes/depositos-financieros/depositos-financieros.component';
 import { ConsultaExpedientesComponent } from './routes/consulta-expedientes/consulta-expedientes.component';
+import { EntidadesExtrangerasDerechoAnimoLucroComponent } from './routes/entidades-extrangeras-derecho-animo-lucro/entidades-extrangeras-derecho-animo-lucro.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ConsultaExpedientesComponent } from './routes/consulta-expedientes/cons
     LibrosComponent,
     DepositosFinancierosComponent,
     ConsultaExpedientesComponent,
+    EntidadesExtrangerasDerechoAnimoLucroComponent,
   ],
   imports: [
     CommonModule,

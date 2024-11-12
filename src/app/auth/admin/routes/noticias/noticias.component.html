@@ -1,0 +1,85 @@
+<h2>
+    <i class="fa-solid fa-newspaper fa-xl"></i>
+    Noticias
+</h2>
+
+<section class="tabs">
+    <div class="card">
+        <p-tabView>
+            @for (item of tabs; track $index) {
+                <p-tabPanel [header]="item.header">
+                    @if (item.header == 'Listar') {
+                        <div class="noticias-grid">
+                            <p-card *ngFor="let noticia of noticias" class="noticia-card">
+                              <ng-template pTemplate="header">
+                                <img [src]="noticia.imagen" alt="{{ noticia.titulo }}" class="noticia-imagen" />
+                              </ng-template>
+                              <ng-template pTemplate="content">
+                                <h2>{{ noticia.titulo }}</h2>
+                                <p>{{ noticia.descripcion }}</p>
+                              </ng-template>
+                            </p-card>
+                        </div>
+                    }
+                    @else {
+                        <p-table [value]="acciones" class="acciones-table">
+                            <ng-template pTemplate="header">
+                              <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                              </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-accion>
+                              <tr>
+                                <td>{{ accion.id }}</td>
+                                <td>{{ accion.nombre }}</td>
+                                <td>{{ accion.descripcion }}</td>
+                                <td>
+                                  <span class="estado" [ngClass]="{
+                                    'activo': accion.estado === 'Activo',
+                                    'inactivo': accion.estado === 'Inactivo',
+                                    'pendiente': accion.estado === 'Pendiente'
+                                  }">{{ accion.estado }}</span>
+                                </td>
+                                <td>
+                                  <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-info p-button-text"
+                                    (click)="openEditModal(accion)">
+                                  </button>
+                                  <button pButton icon="pi pi-trash" class="p-button-rounded p-button-danger p-button-text"
+                                    (click)="deleteAccion(accion.id)">
+                                  </button>
+                                </td>
+                              </tr>
+                            </ng-template>
+                          </p-table>
+                    }
+                </p-tabPanel>
+            }
+        </p-tabView>
+    </div>
+</section>
+
+<!-- acciones.component.html -->
+<p-dialog header="Editar Acción" [(visible)]="displayEditModal" [modal]="true" [closable]="false" [style]="{ width: '400px', borderRadius: '8px' }">
+    <div class="p-fluid">
+      <div class="p-field">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" pInputText [(ngModel)]="selectedAccion.nombre">
+      </div>
+      <div class="p-field">
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" pInputTextarea [(ngModel)]="selectedAccion.descripcion"></textarea>
+      </div>
+      <div class="p-field">
+        <label for="estado">Estado</label>
+        <p-dropdown [appendTo]="'body'" [options]="estados" [(ngModel)]="selectedAccion.estado" placeholder="Seleccione un estado"></p-dropdown>
+      </div>
+    </div>
+    <p-footer>
+      <button pButton label="Guardar" icon="pi pi-check" (click)="saveChanges()" class="p-button-text"></button>
+      <button pButton label="Cancelar" icon="pi pi-times" (click)="displayEditModal = false" class="p-button-danger"></button>
+    </p-footer>
+  </p-dialog>

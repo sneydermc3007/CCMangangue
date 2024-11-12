@@ -24,6 +24,8 @@ import { MapaProcesosComponent } from './mapa-procesos/mapa-procesos.component';
 import { OrganigramaComponent } from './organigrama/organigrama.component';
 import { MapaJurisdiccionComponent } from './mapa-jurisdiccion/mapa-jurisdiccion.component';
 import { UbicacionComponent } from './ubicacion/ubicacion.component';
+import { InformacionCamaraComponent } from './informacion-camara/informacion-camara.component';
+import { EleccionesJuntaComponent } from './elecciones-junta/elecciones-junta.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { UbicacionComponent } from './ubicacion/ubicacion.component';
     MapaProcesosComponent,
     OrganigramaComponent,
     MapaJurisdiccionComponent,
-    UbicacionComponent
+    UbicacionComponent,
+    InformacionCamaraComponent,
+    EleccionesJuntaComponent
   ],
   imports: [
     CommonModule,

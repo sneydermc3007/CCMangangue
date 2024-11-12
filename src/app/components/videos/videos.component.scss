@@ -22,7 +22,11 @@
   }
 }
 
-.LT { height: 300px; }
+iframe.LT { 
+  height: 300px;
+  width: 100%;
+  border-radius: 16px;
+}
 
 .video-overlay {
   position: absolute;

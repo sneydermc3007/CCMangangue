@@ -9,6 +9,8 @@ import { MapaProcesosComponent } from './mapa-procesos/mapa-procesos.component';
 import { OrganigramaComponent } from './organigrama/organigrama.component';
 import { MapaJurisdiccionComponent } from './mapa-jurisdiccion/mapa-jurisdiccion.component';
 import { UbicacionComponent } from './ubicacion/ubicacion.component';
+import { InformacionCamaraComponent } from './informacion-camara/informacion-camara.component';
+import { EleccionesJuntaComponent } from './elecciones-junta/elecciones-junta.component';
 
 export const camaraRoutes: Routes = [
     { path: 'sedes', component: SedesComponent },
@@ -19,5 +21,7 @@ export const camaraRoutes: Routes = [
     { path: 'mapa-procesos', component: MapaProcesosComponent },
     { path: 'organigrama', component: OrganigramaComponent },
     { path: 'mapa-jurisdiccion', component: MapaJurisdiccionComponent },
-    { path: 'ubicacion', component: UbicacionComponent }
+    { path: 'ubicacion', component: UbicacionComponent },
+    { path: 'informacion', component: InformacionCamaraComponent },
+    { path: 'elecciones-junta-directiva', component: EleccionesJuntaComponent }, 
 ];

@@ -81,7 +81,6 @@ export class HomeComponent {
     { title: 'Video 1', url: 'https://www.youtube.com/embed/ftSSu8tF1FE' },
     { title: 'Video 2', url: 'https://www.youtube.com/embed/AFbeeRVlYSI' },
     { title: 'Video 3', url: 'https://www.youtube.com/embed/WDmPJHWcocM' }
-    // { title: 'Video 4', url: 'https://www.youtube.com/embed/Y7J14zlveDE' },
   ];
 
   public sitiosInteres: any[] = [
@@ -114,8 +113,8 @@ export class HomeComponent {
       url: 'http://www.supersolidaria.gov.co'
     },
     {
-      img: 'https://unired.edu.co/images/instituciones/LOGOS/Logo_SIC.png',
-      url: 'https://sedeelectronica.sic.gov.co'
+      img: 'https://capacitacionvirtual.supersociedades.gov.co/pluginfile.php/1/theme_moove/logo/1608423457/logo_.png',
+      url: 'https://www.supersociedades.gov.co'
     },
     {
       img: 'https://ccmagangue.org.co/v2/wp-content/uploads/2017/10/sii.jpg',

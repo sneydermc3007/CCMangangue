@@ -2,6 +2,8 @@
 
 main {
   section {
+    flex-direction: column;
+    
     &.contenido,
     &.politicas {
       h3 {
@@ -56,4 +58,8 @@ main {
       }      
     }
   }
+}
+
+:host ::ng-deep .custom-carousel {
+  max-width: 1400px;
 }

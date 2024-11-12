@@ -1,0 +1,55 @@
+<section class="menu">
+    <p-sidebar [(visible)]="sidebarVisible" position="left" [baseZIndex]="10000">
+        <ul class="sidebar-menu">
+          <li (click)="selectOption('slides')">Slides</li>
+          <li (click)="selectOption('noticias')">Noticias</li>
+          <li (click)="selectOption('videos')">Videos</li>
+          <li (click)="selectOption('eventos')">Eventos</li>
+        </ul>
+    </p-sidebar>
+    <button type="button" pButton icon="pi pi-bars" (click)="sidebarVisible = true"></button>
+</section>
+
+<section class="administrativa">    
+    <div class="admin-dashboard">
+        <div class="header">
+            <h1>Panel Administrativo</h1>
+            <p>Bienvenido, aquí puedes gestionar la información de la cámara de comercio.</p>
+        </div>
+      
+        <div class="card-container">
+            <p-card *ngFor="let card of cards" (click)="openModal(card)" class="info-card">
+                <ng-template pTemplate="header">{{ card.title }}</ng-template>
+                <ng-template pTemplate="content"><p>{{ card.description }}</p></ng-template>
+            </p-card>
+        </div>
+    </div>    
+</section>
+
+
+<!-- Modal Noticias -->
+<p-dialog header="Agregar Noticia" [(visible)]="modalNoticias" modal="true">
+    <div class="news-form">
+        <form (ngSubmit)="submitForm()">
+            <div class="p-field">
+                <label for="title">Título</label>
+                <input id="title" type="text" pInputText [(ngModel)]="news.title" name="title" required />
+            </div>
+            <div class="p-field">
+                <label for="content">Contenido</label>
+                <textarea id="content" pInputTextarea [(ngModel)]="news.content" name="content" required></textarea>
+            </div>
+            <div class="p-field">
+                <label for="image">Imagen</label>
+                <input
+                    type="file"
+                    #fileInput
+                    accept="image/*"
+                    (change)="onFileSelect($event)"
+                />
+            </div>
+            
+            <button type="submit" pButton label="Guardar"></button>
+        </form>
+    </div>
+</p-dialog>

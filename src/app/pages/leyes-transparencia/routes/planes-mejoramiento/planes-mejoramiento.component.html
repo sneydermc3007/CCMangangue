@@ -1,0 +1,29 @@
+<main>
+    <app-title [title]="'PLANES DE MEJORAMIENTO VIGENTES'"></app-title>
+
+    <section class="planes-mejoramiento">
+        <h3>Planes de Mejoramiento</h3>
+        <ul>
+            @for (item of planMejoramiento; track $index) {
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" (click)="redireccionar(item.archivo)" >{{ item.label }}</h5>
+                    </div>
+                </div>
+            }
+        </ul>
+    </section>
+
+    <section class="informe-evaluacion">
+        <h3>Informes de Evaluaciones</h3>
+        <ul>
+            @for (item of informeEvaluacion; track $index) {
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" (click)="redireccionar(item.archivo)" >{{ item.label }}</h5>
+                    </div>
+                </div>
+            }
+        </ul>
+    </section>
+</main>

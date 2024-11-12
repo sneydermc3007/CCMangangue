@@ -1,25 +1,64 @@
 <p-accordion [activeIndex]="0">
-    @for (item of information; track $index) {
-      <p-accordionTab header="{{ item.header }}">
-        @for (subitems of item.contenido; track $index) {
-          @if(subitems.tipo === 'lista') {
-            <ul>
-              @for (list of subitems.valor; track $index) {
-                <li>{{ list }}</li>
-              }
-            </ul>
-          }
-          @else if (subitems.tipo === 'parrafo') {
-            <p>{{ subitems.valor }}</p>
-          }
-          @else if (subitems.tipo === 'formatted') {
-            <p [innerHTML]="subitems.valor"></p>
-          }
-          @else if (subitems.tipo === 'link') {
-            <a [href]="subitems.valor">{{ subitems.valor }}</a>
-            <!-- <br> -->
-          }
+  @for (item of information; track $index) {
+    <p-accordionTab header="{{ item.header }}">
+      @for (subitems of item.contenido; track $index) {
+        @if (subitems.tipo === 'lista') {
+          <ul>
+            @for (lista of subitems.valor; track $index) {
+              <li 
+                [ngClass]="{'hipervinculo': lista.pagina != null}"
+                (click)="vista(lista)"
+              >
+                {{ lista.label || lista }}
+                @if (lista.subitems) {
+                  <ul>
+                    @for (subitem of lista.subitems; track $index) {
+                      <li 
+                        [ngClass]="{'hipervinculo': subitem.pagina != null}"
+                        (click)="vista(subitem)"
+                      >
+                        {{ subitem.label || subitem }}
+                      </li>
+                    }
+                  </ul>
+                }
+              </li>
+            }
+          </ul>
         }
-      </p-accordionTab>
-    }
-  </p-accordion>
+        @else if (subitems.tipo === 'parrafo') {
+          <p 
+            [ngClass]="{'hipervinculo': subitems.valor.label != null}"
+            (click)="vista(subitems.valor)"
+          >
+            {{ subitems.valor.label || subitems.valor }}
+          </p>
+        }
+        @else if (subitems.tipo === 'formatted') {
+          <p [innerHTML]="subitems.valor"></p>
+        }
+        @else if (subitems.tipo === 'link') {
+          <a [href]="subitems.enlace">{{ subitems.valor }}</a>
+          <!-- <br> -->
+        }
+        @else if (subitems.tipo === 'popup') {
+          <p class="hipervinculo" (click)="vista(subitems.valor)"> {{ subitems.valor.label }} </p>
+          <p-dialog
+            [(visible)]="displayModal"
+            [modal]="true"
+            [closable]="true"
+            [header]="subitems.valor.label"
+            (onHide)="close()"
+          >
+            <app-cards-documentos [menu]="subitems.valor.menu" [selectedItem]="subitems.valor.label"></app-cards-documentos>
+          </p-dialog>
+        }
+        @else if (subitems.tipo === 'button') {
+          <button class="modern-button" (click)="redirect(subitems.valor.enlace)">
+            {{ subitems.valor.label }}
+          </button>
+        }
+      }
+    </p-accordionTab>
+  }
+</p-accordion>

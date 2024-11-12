@@ -1,0 +1,7 @@
+@import './../../../styles.scss';
+
+section {
+    &.acordeon {
+        app-acordeon { width: 100%; }
+    }
+}

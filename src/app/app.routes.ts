@@ -58,12 +58,19 @@ export const routes: Routes = [
       { path: 'leyes', loadComponent: () => import('./pages/normativa/routes/leyes/leyes.component').then(m => m.LeyesComponent) },
     ]
   },
+  { 
+    path: 'login', 
+    children: [
+      { path: '', loadComponent: () => import('./auth/auth.component').then(m => m.AuthComponent) },
+      { path: 'admin', loadChildren: () => import('./auth/admin/admin.module').then(m => m.AdminModule) }
+    ]
+  },
+
 
   { path: 'camara', loadChildren: () => import('./pages/camara/camara.module').then(m => m.CamaraModule) },
   { path: 'registros', loadChildren: () => import('./pages/registros/registros.module').then(m => m.RegistrosModule) },
   { path: 'politicas', loadChildren: () => import('./pages/politicas/politicas.module').then(m => m.PoliticasModule) },
   { path: 'servicios-virtuales', loadChildren: () => import('./pages/servicios-virtuales/servicios-virtuales.module').then(m => m.ServiciosVirtualesModule) },
   { path: 'desarrollo-empresarial', loadChildren: () => import('./pages/desarrollo-empresarial/desarrollo-empresarial.module').then(m => m.DesarrolloEmpresarialModule) },
-  { path: 'login', loadComponent: () => import('./auth/auth.component').then(m => m.AuthComponent) },
-  { path: '**', redirectTo: '' }
+  { path: '**', loadComponent: () => import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent) },
 ];

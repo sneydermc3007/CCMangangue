@@ -1,0 +1,31 @@
+@import "./../../../../styles.scss";
+
+.floating-back {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    background-color: $secondary-color;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 10;
+  
+    i { color: bisque; }
+  
+    &:hover { background-color: $extra-color; }
+  
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      width: 80px;
+      height: 80px;
+      z-index: -1;
+    }
+}

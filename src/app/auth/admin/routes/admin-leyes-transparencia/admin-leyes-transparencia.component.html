@@ -1,0 +1,130 @@
+<h2>
+    <i class="fa-solid fa-gavel fa-xl"></i>
+    Leyes de Transparencia
+</h2>
+
+<section class="tabs">
+    <div class="card">
+        <p-tabView>
+            @for (item of tabs; track $index) {
+            <p-tabPanel [header]="item.header">
+                @if (item.header == 'Decretos') {
+                <p-table [value]="decretos" class="decretos-table">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            @for (item of tabs[0].columnas; track $index) {
+                            <th>{{ item.header }}</th>
+                            }
+                            <th>Acciones</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-decreto>
+                        <tr>
+                            @for (item of tabs[0].columnas; track $index) {
+                            @if (item.field != 'estado') {
+                            <td>{{ decreto[item.field] }}</td>
+                            }
+                            @else {
+                            <td>
+                                <span class="estado" [ngClass]="{
+                                                    'activo': decreto.estado === 'Activo',
+                                                    'inactivo': decreto.estado === 'Inactivo',
+                                                    'pendiente': decreto.estado === 'Pendiente'
+                                                    }">
+                                    {{ decreto.estado }}
+                                </span>
+                            </td>
+                            }
+                            }
+                            <td>
+                                <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-info p-button-text"
+                                    (click)="openEditModal(decreto)">
+                                </button>
+                                <button pButton icon="pi pi-trash"
+                                    class="p-button-rounded p-button-danger p-button-text"
+                                    (click)="deleteDecreto(decreto.id)">
+                                </button>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+
+                <button pButton label="Agregar Decreto" class="p-button-rounded p-button-success"
+                    style="margin-top: 1rem;" (click)="openAddModal()"></button>
+                }
+                @else if (item.header == 'Información') {
+                <div class="acordeon">
+                    <button (click)="addSection()">Agregar Sección</button>
+                    <form [formGroup]="ltSectionsForm" (ngSubmit)="saveData()">
+                        <div formArrayName="sections">
+                            <div *ngFor="let section of sections.controls; let i = index">
+                                <div [formGroupName]="i">
+                                    <input formControlName="header" placeholder="Nombre de la sección" />
+                                    <button (click)="addContent(i, 'lista')">Agregar Lista</button>
+                                    <button (click)="addContent(i, 'parrafo')">Agregar Párrafo</button>
+                                    <button (click)="addContent(i, 'link')">Agregar Link</button>
+                                    <button (click)="addContent(i, 'formatted')">Agregar Formato</button>
+
+                                    <div formArrayName="content">
+                                        <!-- Acceder al FormArray en TypeScript y usarlo aquí -->
+                                        <ng-container *ngIf="getContentArray(i)">
+                                            <div *ngFor="let content of getContentArray(i).controls; let j = index">
+                                                <div [formGroupName]="j">
+                                                    <ng-container [ngSwitch]="content.get('type')?.value">
+                                                        <div *ngSwitchCase="'lista'">
+                                                            <h4>Lista</h4>
+                                                            <button (click)="addListItem(i, j)">Agregar Item de Lista</button>
+                                                            <div formArrayName="valor">
+                                                                <div *ngFor="let item of getValorArray(j)?.controls; let k = index" [formGroupName]="k">
+                                                                    <input formControlName="label" placeholder="Etiqueta" />
+                                                                    <input formControlName="pagina" placeholder="Página" />
+                                                                    <button (click)="addSubitem(i, j, k)">Agregar Subitem</button>
+                                                                    <div formArrayName="subitems">
+                                                                      <div *ngFor="let subitem of getSubitemsArray(i, j, k)?.controls; let l = index" [formGroupName]="l">
+                                                                        <input formControlName="label" placeholder="Etiqueta Subitem" />
+                                                                        <input formControlName="pagina" placeholder="Página Subitem" />
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div *ngSwitchCase="'parrafo'">
+                                                            <h4>Párrafo</h4>
+                                                            <input formControlName="valor"
+                                                                placeholder="Contenido del párrafo" />
+                                                        </div>
+
+                                                        <div *ngSwitchCase="'link'">
+                                                            <h4>Link</h4>
+                                                            <input formControlName="valor"
+                                                                placeholder="Texto del enlace" />
+                                                            <input formControlName="enlace"
+                                                                placeholder="URL del enlace" />
+                                                        </div>
+
+                                                        <div *ngSwitchCase="'formatted'">
+                                                            <h4>Contenido Formateado</h4>
+                                                            <textarea formControlName="valor"
+                                                                placeholder="HTML o texto formateado"></textarea>
+                                                        </div>
+                                                    </ng-container>
+                                                </div>
+                                            </div>
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button style="margin-top: 1rem;" type="submit">Guardar</button>
+                    </form>
+                </div>
+
+                }
+            </p-tabPanel>
+            }
+        </p-tabView>
+    </div>
+</section>
+
+<app-return-admin></app-return-admin>

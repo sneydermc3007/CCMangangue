@@ -1,0 +1,217 @@
+@import "./../../../../../styles.scss";
+ 
+h2 {
+  text-align: center;
+  background: rgba(83, 144, 217, 0.2);
+  line-height: 3rem;
+  border-radius: 30px 10px;
+ 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+ 
+section {
+  &.tabs {
+    .card {
+      width: 100%;
+    }
+ 
+    width: 80%;
+    margin-left: auto;
+    padding-right: 20px;
+  }
+}
+ 
+:host ::ng-deep p-tabView .p-tabview {
+    .p-tabview-nav-content .p-tabview-nav {
+        justify-content: space-between;
+ 
+        .p-highlight a {
+            border-color: $primary-color;
+            color: $primary-color;
+        }
+    }
+}
+ 
+:host ::ng-deep p-table .p-datatable-wrapper {
+    table tbody tr td {
+        span {
+            &.estado {
+                padding: 0.25rem 0.5rem;
+                border-radius: 4px;
+                font-weight: bold;
+ 
+                &.activo {
+                    color: #2f855a;
+                    background-color: #c6f6d5;
+                }
+ 
+                &.inactivo {
+                    color: #c53030;
+                    background-color: #fed7d7;
+                }
+ 
+                &.pendiente {
+                    color: #b7791f;
+                    background-color: #fefcbf;
+                }
+            }
+        }
+    }
+}
+
+div.acordeon {
+    // Form Section Styling
+form {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  // Buttons
+  button {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  
+    &.add-button {
+      margin-bottom: 15px;
+    }
+  }
+  
+  // Section Header
+  h4 {
+    font-size: 1.2rem;
+    color: $dark-gray;
+    margin-top: 20px;
+    border-bottom: 2px solid $secondary-color;
+    padding-bottom: 10px;
+  }
+  
+  // Form Control Styling
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    font-size: 16px;
+    color: #ff5722;
+  
+    &:focus {
+      border-color: #4caf50;
+      background-color: white;
+    }
+  
+    &::placeholder {
+      color: #888;
+    }
+  }
+  
+  // List and Content Form Array Styles
+  formArrayName {
+    margin-top: 15px;
+    margin-left: 20px;
+  }
+  
+  formGroupName {
+    margin-left: 40px;
+  }
+  
+  .subitems-container {
+    margin-left: 40px;
+    padding-left: 20px;
+    border-left: 2px solid $secondary-color;
+    margin-top: 10px;
+  }
+  
+  .subitems-container input {
+    margin-top: 10px;
+  }
+  
+  // Accordion-like section styles
+  .section-container {
+    margin-bottom: 25px;
+  }
+  
+  .section-container .section-header {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid $secondary-color;
+  }
+  
+  .content-section {
+    margin-top: 20px;
+    padding-left: 15px;
+  }
+  
+  .content-section .content-header {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: $primary-color;
+  }
+  
+  .content-section button {
+    margin-bottom: 15px;
+    background-color: #ff5722;
+  }
+  
+  .content-section button:hover {
+    background-color: darken(#ff5722, 10%);
+  }
+  
+  // Form Field Containers
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .input-container input,
+  .input-container textarea {
+    margin-top: 8px;
+  }
+  
+  // Responsiveness
+  @media (max-width: 768px) {
+    form {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .section-container {
+      margin-bottom: 15px;
+    }
+  
+    .input-container input,
+    .input-container textarea {
+      font-size: 14px;
+    }
+  }
+  
+}
+

@@ -20,6 +20,7 @@ import { AdminPanelComponent } from './routes/admin-panel/admin-panel.component'
 import { NoticiasComponent } from './routes/noticias/noticias.component';
 import { AdminLeyesTransparenciaComponent } from './routes/admin-leyes-transparencia/admin-leyes-transparencia.component';
 import { AdminVideosComponent } from './routes/admin-videos/admin-videos.component';
+import { AdminEventosComponent } from './routes/admin-eventos/admin-eventos.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AdminVideosComponent } from './routes/admin-videos/admin-videos.compone
     NoticiasComponent,
     AdminLeyesTransparenciaComponent,
     AdminVideosComponent,
+    AdminEventosComponent,
   ],
   imports: [
     CommonModule,

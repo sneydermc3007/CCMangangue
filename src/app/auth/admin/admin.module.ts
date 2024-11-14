@@ -13,6 +13,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { TabViewModule } from 'primeng/tabview';
 import { TableModule } from 'primeng/table';
 import { DropdownModule } from 'primeng/dropdown';
+import { ToggleButtonModule } from 'primeng/togglebutton';
 
 import { ComponentsModule } from '../components/components.module';
 
@@ -21,6 +22,7 @@ import { NoticiasComponent } from './routes/noticias/noticias.component';
 import { AdminLeyesTransparenciaComponent } from './routes/admin-leyes-transparencia/admin-leyes-transparencia.component';
 import { AdminVideosComponent } from './routes/admin-videos/admin-videos.component';
 import { AdminEventosComponent } from './routes/admin-eventos/admin-eventos.component';
+import { AdminUsuariosComponent } from './routes/admin-usuarios/admin-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { AdminEventosComponent } from './routes/admin-eventos/admin-eventos.comp
     AdminLeyesTransparenciaComponent,
     AdminVideosComponent,
     AdminEventosComponent,
+    AdminUsuariosComponent,
   ],
   imports: [
     CommonModule,
@@ -42,6 +45,7 @@ import { AdminEventosComponent } from './routes/admin-eventos/admin-eventos.comp
     TabViewModule,
     TableModule,
     DropdownModule,
+    ToggleButtonModule,
     ComponentsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

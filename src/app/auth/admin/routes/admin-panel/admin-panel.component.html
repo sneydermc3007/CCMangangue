@@ -32,7 +32,7 @@
 <!-- Modal Noticias -->
 <p-dialog header="Agregar Noticia" [(visible)]="modalNoticias" modal="true">
     <div class="news-form">
-        <form (ngSubmit)="submitForm()">
+        <form (ngSubmit)="submitForm('noticias')">
             <div class="p-field">
                 <label for="title">Título</label>
                 <input id="title" type="text" pInputText [(ngModel)]="news.title" name="title" required />
@@ -50,8 +50,36 @@
                     (change)="onFileSelect($event)"
                 />
             </div>
-            
             <button type="submit" pButton label="Guardar"></button>
+        </form>
+    </div>
+</p-dialog>
+
+<!-- Modal Videos -->
+<p-dialog header="Agregar Video" [(visible)]="modalVideos" modal="true" [style]="{width: '400px'}" [contentStyle]="{'padding': '1rem'}">
+    <div class="video-form">
+        <form (ngSubmit)="submitForm('videos')" class="minimal-form">
+            <div class="p-field">
+                <label for="title" class="minimal-label">Título</label>
+                <input id="title" type="text" pInputText [(ngModel)]="video.titulo" name="title" required class="minimal-input"/>
+            </div>
+            <div class="p-field">
+                <label for="url" class="minimal-label">URL</label>
+                <input id="url" type="text" pInputText [(ngModel)]="video.url" name="url" required class="minimal-input"/>
+            </div>
+            <div class="p-field">
+                <label for="status" class="minimal-label">Estado</label>
+                <p-dropdown 
+                    [options]="statusOptions" 
+                    [(ngModel)]="video.estado" 
+                    name="status" 
+                    placeholder="Seleccionar estado" 
+                    class="minimal-dropdown"
+                    appendTo="body"
+                    >
+                </p-dropdown>
+            </div>
+            <button type="submit" pButton label="Guardar" class="minimal-button"></button>
         </form>
     </div>
 </p-dialog>

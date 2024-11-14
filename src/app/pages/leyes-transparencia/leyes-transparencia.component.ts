@@ -19,8 +19,8 @@ import { VideosComponent } from "../../components/videos/videos.component";
 export class LeyesTransparenciaComponent {
   public videos: VideoInterface[] = [
     {
-      title: 'Ley de transparencia y acceso a la información pública | Cámara de Comercio de Magangué',
-      url: 'https://www.youtube.com/embed/1tee4hVJIC8',
+      titulo: 'Ley de transparencia y acceso a la información pública | Cámara de Comercio de Magangué',
+      url: 'https://www.youtube.com/embed/1tee4hVJIC8'
     },
   ];
   public decretos = [

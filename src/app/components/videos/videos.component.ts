@@ -8,10 +8,7 @@ import { ButtonModule } from 'primeng/button';
 import {SharedModule} from "../../shared/shared.module";
 import { ToastModule } from 'primeng/toast';
 
-interface Video {
-  title: string;
-  url: string;
-}
+import { VideoInterface } from '../../interfaces/video.interface';
 
 @Component({
   selector: 'app-videos',
@@ -31,12 +28,12 @@ interface Video {
 })
 export class VideosComponent {
   @Input() callingComponent: string | undefined;
-  @Input() videos: Video[] = [];
+  @Input() videos: VideoInterface[] = [];
 
-  selectedVideo: Video | null = null;
+  selectedVideo: VideoInterface | null = null;
   isModalOpen = false;
 
-  showVideo(video: Video) {
+  showVideo(video: VideoInterface) {
     this.selectedVideo = video;
     this.isModalOpen = true;
   }

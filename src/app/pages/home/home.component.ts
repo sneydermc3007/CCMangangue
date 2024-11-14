@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { CommonModule }  from "@angular/common";
 import { FormsModule } from '@angular/forms';
 import { trigger, state, style, transition, animate } from '@angular/animations';
@@ -14,6 +14,8 @@ import { ActividadEmpresarialComponent } from "../../components/actividad-empres
 import { VideosComponent } from "../../components/videos/videos.component";
 
 import { VideoInterface } from "../../interfaces/video.interface";
+
+import { VideosService } from '../../services/videos/videos.service';
 
 @Component({
   selector: 'app-home',
@@ -41,9 +43,19 @@ import { VideoInterface } from "../../interfaces/video.interface";
     ])
   ]
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  public videos: VideoInterface[] = [];
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private _videosService: VideosService
+  ) {}
+
+  ngOnInit(): void {
+    this._videosService.getVideos().subscribe((videos: VideoInterface[]) => {
+      this.videos = videos;
+    });
+  }
 
   public images: any[] = [
     {
@@ -76,11 +88,6 @@ export class HomeComponent {
     }
   ];
 
-  public videos: VideoInterface[] = [
-    { title: 'Video 1', url: 'https://www.youtube.com/embed/ftSSu8tF1FE' },
-    { title: 'Video 2', url: 'https://www.youtube.com/embed/AFbeeRVlYSI' },
-    { title: 'Video 3', url: 'https://www.youtube.com/embed/WDmPJHWcocM' }
-  ];
 
   public sitiosInteres: any[] = [
     {

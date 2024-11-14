@@ -1,4 +1,6 @@
 export interface VideoInterface {
-  title: string;
+  id?: number;
+  titulo: string;
   url: string;
+  estado?: string;
 }

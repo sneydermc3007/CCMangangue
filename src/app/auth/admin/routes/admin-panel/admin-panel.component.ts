@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { VideosService } from '../../../../services/videos/videos.service';
+
 @Component({
   selector: 'app-admin-panel',
   templateUrl: './admin-panel.component.html',
@@ -13,6 +15,9 @@ export class AdminPanelComponent {
   public modalNoticias: boolean = false;
   public news: any = {};
 
+  public modalVideos: boolean = false;
+  public video: any = {};
+
   cards = [
     { title: 'Slides', description: 'Agregar slides.' },
     { title: 'Noticias', description: 'Agregar noticias.' },
@@ -20,7 +25,16 @@ export class AdminPanelComponent {
     { title: 'Eventos', description: 'Agregar eventos.' }
   ]
 
-  constructor(private router: Router) {}
+  statusOptions = [
+    { label: 'Activo', value: 'activo' },
+    { label: 'Inactivo', value: 'inactivo' },
+    { label: 'Pendiente', value: 'pendiente' }
+  ];
+
+  constructor(
+    private router: Router,
+    private _videosService: VideosService
+  ) {}
 
 
   selectOption(option: string) {
@@ -33,6 +47,8 @@ export class AdminPanelComponent {
   openModal(card: any) {
     if (card.title === 'Noticias')
       this.modalNoticias = true;
+    else if(card.title === 'Videos')
+      this.modalVideos = true;
     else 
       throw new Error('Modal not implemented.');
   }
@@ -41,12 +57,19 @@ export class AdminPanelComponent {
     const input = event.target as HTMLInputElement;
     const file = input.files?.[0];
     if (file) {
-      console.log(file);
       this.news.image = file;
     }
   }
 
-  submitForm() {
-    throw new Error('Method not implemented.');
+  submitForm(tipo: string) {
+    if (tipo === 'noticias') {
+      console.log('Noticia:', this.news);
+    } 
+    else if (tipo === 'videos') {
+      this._videosService.addVideo(this.video).subscribe((response: any) => {
+        this.modalVideos = false;
+        this.video = {};
+      });
+    }
   }
 }

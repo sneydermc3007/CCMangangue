@@ -19,12 +19,14 @@ import { ComponentsModule } from '../components/components.module';
 import { AdminPanelComponent } from './routes/admin-panel/admin-panel.component';
 import { NoticiasComponent } from './routes/noticias/noticias.component';
 import { AdminLeyesTransparenciaComponent } from './routes/admin-leyes-transparencia/admin-leyes-transparencia.component';
+import { AdminVideosComponent } from './routes/admin-videos/admin-videos.component';
 
 @NgModule({
   declarations: [
     AdminPanelComponent,
     NoticiasComponent,
     AdminLeyesTransparenciaComponent,
+    AdminVideosComponent,
   ],
   imports: [
     CommonModule,

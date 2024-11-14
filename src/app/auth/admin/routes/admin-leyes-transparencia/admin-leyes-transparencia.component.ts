@@ -22,6 +22,7 @@ export class AdminLeyesTransparenciaComponent {
   ];
 
   public decretos: any[] = [];
+  sections: any[] = [];
 
   ltSectionsForm: FormGroup;
   constructor(private fb: FormBuilder, private cdRef: ChangeDetectorRef) {
@@ -69,116 +70,51 @@ export class AdminLeyesTransparenciaComponent {
   }
 
   // Logica para agregar un nuevo elemento al acordeon.
-  get sections() {
-    return this.ltSectionsForm.get('sections') as FormArray;
-  }
-
-  getContentArray(sectionIndex: number): FormArray {
-    return this.sections.at(sectionIndex).get('content') as FormArray;
-  }
-
-  getValorArray(contentIndex: number): FormArray {
-    const content = this.sections.at(contentIndex);
-    const valor = content?.get('valor');
-    
-    if (!valor) {
-      console.log('Inicializando FormArray vacío');
-      return this.fb.array([]);  // Si no existe 'valor', devuelve un FormArray vacío
-    }
-  
-    return valor as FormArray;
-  }
-
-  getSubitemsArray(
-    itemIndex: number,
-    contentIndex: number,
-    listItemIndex: number
-  ): FormArray | null {
-    const section = this.sections.at(itemIndex);
-    if (!section) return null;
-
-    const contentArray = section.get('content') as FormArray;
-    if (!contentArray) return null;
-
-    const content = contentArray.at(contentIndex);
-    if (!content) return null;
-
-    const valorArray = content.get('valor') as FormArray;
-    if (!valorArray) return null;
-
-    const listItem = valorArray.at(listItemIndex);
-    if (!listItem) return null;
-
-    return listItem.get('subitems') as FormArray;
-  }
-
   addSection() {
-    const sectionForm = this.fb.group({
+    this.sections.push({
       header: '',
-      content: this.fb.array([]),
+      content: []
     });
-    this.sections.push(sectionForm);  // Agrega la sección al array de secciones
   }
-  
 
   addContent(sectionIndex: number, type: string) {
-    const contentForm = this.fb.group({
+    const newContent: any = {
       type: type,
-      valor: type === 'lista' ? this.fb.array([]) : '',
+      valor: type === 'lista' ? [] : '',
       enlace: '',
-      archivo: '',
-    });
+      archivo: ''
+    };
 
-    (this.sections.at(sectionIndex).get('content') as FormArray).push(contentForm);
+    this.sections[sectionIndex].content.push(newContent);
   }
 
   addListItem(sectionIndex: number, contentIndex: number) {
-    const listItem = this.fb.group({
+    const listItem: any = {
       label: '',
       pagina: '',
-      archivo: '',
-      enlace: '',
-      subitems: this.fb.array([]),
-    });
-  
-    const contentForm = (this.sections.at(sectionIndex).get('content') as FormArray).at(contentIndex);
-    const valorArray = contentForm.get('valor') as FormArray;  // Aquí accedemos al FormArray 'valor'
-  
-    valorArray.push(listItem);  // Agregamos el nuevo 'listItem' al 'valorArray'
-    console.log('Item de lista agregado:', listItem);
+      subitems: []
+    };
+
+    const content = this.sections[sectionIndex].content[contentIndex];
+    if (content && content.type === 'lista') {
+      (content.valor as any[]).push(listItem);
+    }
   }
-  
 
-  addSubitem(
-    sectionIndex: number,
-    contentIndex: number,
-    listItemIndex: number
-  ) {
-    const subitem = this.fb.group({
+  addSubitem(sectionIndex: number, contentIndex: number, listItemIndex: number) {
+    const subitem: any = {
       label: '',
-      pagina: '',
-      archivo: '',
-      enlace: '',
-    });
+      pagina: ''
+    };
 
-    const section = this.sections.controls[sectionIndex];
-    const contentArray = section?.get('content') as FormArray;
-    const content = contentArray?.controls[contentIndex];
-    const valorArray = content?.get('valor') as FormArray;
-    const listItem = valorArray?.controls[listItemIndex];
-    const subitemsArray = listItem?.get('subitems') as FormArray;
-
-    if (subitemsArray) {
-      subitemsArray.push(subitem);
-    } else {
-      console.error(
-        "No se pudo añadir el subitem: 'subitemsArray' es nulo o indefinido."
-      );
+    const content = this.sections[sectionIndex].content[contentIndex];
+    if (content && content.type === 'lista') {
+      const listItem = (content.valor as any[])[listItemIndex];
+      listItem.subitems.push(subitem);
     }
   }
 
   saveData() {
-    const data = this.ltSectionsForm.value;
-    console.log('Saved LT data:', data);
+    console.log('Saved LT data:', this.sections);
   }
 }

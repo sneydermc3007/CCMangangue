@@ -30,27 +30,50 @@
 
 
 <!-- Modal Noticias -->
-<p-dialog header="Agregar Noticia" [(visible)]="modalNoticias" modal="true">
-    <div class="news-form">
+<p-dialog header="Agregar Noticia" [(visible)]="modalNoticias" [modal]="true" [closable]="false" [style]="{ width: '500px', borderRadius: '8px' }">
+    <div class="news-form p-fluid">
         <form (ngSubmit)="submitForm('noticias')">
+            <!-- Campo Título -->
             <div class="p-field">
                 <label for="title">Título</label>
                 <input id="title" type="text" pInputText [(ngModel)]="news.title" name="title" required />
             </div>
+
+            <!-- Campo Descripción -->
+            <div class="p-field">
+                <label for="description">Descripción</label>
+                <textarea id="description" pInputTextarea [(ngModel)]="news.description" name="description" required></textarea>
+            </div>
+
+            <!-- Campo Contenido -->
             <div class="p-field">
                 <label for="content">Contenido</label>
                 <textarea id="content" pInputTextarea [(ngModel)]="news.content" name="content" required></textarea>
             </div>
+
+            <!-- Campo Estado -->
+            <div class="p-field">
+                <label for="estado">Estado</label>
+                <p-dropdown [appendTo]="'body'" [options]="statusOptions" [(ngModel)]="news.estado" name="estado" placeholder="Seleccione un estado"></p-dropdown>
+            </div>
+
+            <!-- Campo Fecha de Publicación -->
+            <div class="p-field">
+                <label for="fechaPublicacion">Fecha de Publicación</label>
+                <input id="fechaPublicacion" type="date" pInputText [(ngModel)]="news.fecha_publicacion" name="fecha_publicacion" required />
+            </div>
+
+            <!-- Campo Imagen con Vista Previa -->
             <div class="p-field">
                 <label for="image">Imagen</label>
-                <input
-                    type="file"
-                    #fileInput
-                    accept="image/*"
-                    (change)="onFileSelect($event)"
-                />
+                <input type="file" #fileInput accept="image/*" (change)="onFileSelect($event)" />
+                <!-- <img *ngIf="imagePreview" [src]="imagePreview" alt="Vista previa de imagen" class="image-preview" /> -->
             </div>
-            <button type="submit" pButton label="Guardar"></button>
+
+            <!-- Botones del Modal -->
+            <p-footer>
+                <button type="submit" pButton label="Guardar" icon="pi pi-check" class="p-button-text"></button>
+            </p-footer>
         </form>
     </div>
 </p-dialog>

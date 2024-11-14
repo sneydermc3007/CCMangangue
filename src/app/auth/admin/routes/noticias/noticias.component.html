@@ -12,17 +12,17 @@
               <div class="noticias-grid">
                   <p-card *ngFor="let noticia of noticias" class="noticia-card">
                     <ng-template pTemplate="header">
-                      <img [src]="noticia.imagen" alt="{{ noticia.titulo }}" class="noticia-imagen" />
+                      <img [src]="noticia.imagen_url" alt="{{ noticia.nombre }}" class="noticia-imagen" />
                     </ng-template>
                     <ng-template pTemplate="content">
-                      <h2>{{ noticia.titulo }}</h2>
+                      <h2>{{ noticia.nombre }}</h2>
                       <p>{{ noticia.descripcion }}</p>
                     </ng-template>
                   </p-card>
               </div>
           }
           @else {
-            <p-table [value]="acciones" class="acciones-table">
+            <p-table [value]="noticias" class="acciones-table">
               <ng-template pTemplate="header">
                 <tr>
                   <th>ID</th>
@@ -32,24 +32,24 @@
                   <th>Acciones</th>
                 </tr>
               </ng-template>
-              <ng-template pTemplate="body" let-accion>
+              <ng-template pTemplate="body" let-noticia>
                 <tr>
-                  <td>{{ accion.id }}</td>
-                  <td>{{ accion.nombre }}</td>
-                  <td>{{ accion.descripcion }}</td>
+                  <td>{{ noticia.id }}</td>
+                  <td>{{ noticia.nombre }}</td>
+                  <td>{{ noticia.descripcion }}</td>
                   <td>
                     <span class="estado" [ngClass]="{
-                      'activo': accion.estado === 'Activo',
-                      'inactivo': accion.estado === 'Inactivo',
-                      'pendiente': accion.estado === 'Pendiente'
-                    }">{{ accion.estado }}</span>
+                      'activo': noticia.estado === 'Activo',
+                      'inactivo': noticia.estado === 'Inactivo',
+                      'pendiente': noticia.estado === 'Pendiente'
+                    }">{{ noticia.estado }}</span>
                   </td>
                   <td>
                     <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-info p-button-text"
-                      (click)="openEditModal(accion)">
+                      (click)="openEditModal(noticia)">
                     </button>
                     <button pButton icon="pi pi-trash" class="p-button-rounded p-button-danger p-button-text"
-                      (click)="deleteAccion(accion.id)">
+                      (click)="deleteAccion(noticia.id)">
                     </button>
                   </td>
                 </tr>
@@ -62,26 +62,55 @@
   </div>
 </section>
 
-<!-- acciones.component.html -->
-<p-dialog header="Editar Acción" [(visible)]="displayEditModal" [modal]="true" [closable]="false" [style]="{ width: '400px', borderRadius: '8px' }">
-    <div class="p-fluid">
-      <div class="p-field">
-        <label for="nombre">Nombre</label>
-        <input id="nombre" type="text" pInputText [(ngModel)]="selectedAccion.nombre">
-      </div>
-      <div class="p-field">
-        <label for="descripcion">Descripción</label>
-        <textarea id="descripcion" pInputTextarea [(ngModel)]="selectedAccion.descripcion"></textarea>
-      </div>
-      <div class="p-field">
-        <label for="estado">Estado</label>
-        <p-dropdown [appendTo]="'body'" [options]="estados" [(ngModel)]="selectedAccion.estado" placeholder="Seleccione un estado"></p-dropdown>
-      </div>
+<p-dialog header="Editar Acción" [(visible)]="displayEditModal" [modal]="true" [closable]="false" [style]="{ width: '500px', borderRadius: '8px' }">
+  <div class="p-fluid">
+    <!-- Nombre -->
+    <div class="p-field">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" type="text" pInputText [(ngModel)]="selectedAccion.nombre">
     </div>
-    <p-footer>
-      <button pButton label="Guardar" icon="pi pi-check" (click)="saveChanges()" class="p-button-text"></button>
-      <button pButton label="Cancelar" icon="pi pi-times" (click)="displayEditModal = false" class="p-button-danger"></button>
-    </p-footer>
+
+    <!-- Descripción Corta -->
+    <div class="p-field">
+      <label for="descripcion">Descripción Corta</label>
+      <textarea id="descripcion" pInputTextarea [(ngModel)]="selectedAccion.descripcion"></textarea>
+    </div>
+
+    <!-- Estado -->
+    <div class="p-field">
+      <label for="estado">Estado</label>
+      <p-dropdown [appendTo]="'body'" [options]="estados" [(ngModel)]="selectedAccion.estado" placeholder="Seleccione un estado"></p-dropdown>
+    </div>
+
+    <!-- Fecha de Publicación -->
+    <div class="p-field">
+      <label for="fecha_publicacion">Fecha de Publicación</label>
+      <input id="fecha_publicacion" type="date" pInputText [(ngModel)]="selectedAccion.fecha_publicacion">
+    </div>
+
+    <!-- URL de Imagen -->
+    <div class="p-field">
+      <label for="imagen_url">URL de Imagen</label>
+      <input id="imagen_url" type="text" pInputText [(ngModel)]="selectedAccion.imagen_url">
+    </div>
+
+    <!-- Contenido Completo -->
+    <div class="p-field">
+      <label for="contenido">Contenido Completo</label>
+      <textarea id="contenido" pInputTextarea rows="6" [(ngModel)]="selectedAccion.contenido"></textarea>
+    </div>
+
+    <!-- Imagen Preview -->
+    <div class="p-field" *ngIf="selectedAccion.imagen_url">
+      <label>Vista Previa de Imagen</label>
+      <img [src]="selectedAccion.imagen_url" alt="Imagen Vista Previa" style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 8px; margin-top: 10px;">
+    </div>
+  </div>
+
+  <p-footer>
+    <button pButton label="Guardar" icon="pi pi-check" (click)="saveChanges()" class="p-button-text"></button>
+    <button pButton label="Cancelar" icon="pi pi-times" (click)="displayEditModal = false" class="p-button-danger"></button>
+  </p-footer>
 </p-dialog>
 
 <app-return-admin></app-return-admin>

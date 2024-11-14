@@ -88,7 +88,6 @@ export class HomeComponent implements OnInit {
     }
   ];
 
-
   public sitiosInteres: any[] = [
     {
       img: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2017/10/certificacioncalidadturistica.jpg?w=1060',

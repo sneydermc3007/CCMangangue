@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { VideosService } from '../../../../services/videos/videos.service';
+import { NoticiasService } from '../../../../services/noticias/noticias.service';
 
 @Component({
   selector: 'app-admin-panel',
@@ -33,9 +34,9 @@ export class AdminPanelComponent {
 
   constructor(
     private router: Router,
-    private _videosService: VideosService
+    private _videosService: VideosService,
+    private _noticiasService: NoticiasService
   ) {}
-
 
   selectOption(option: string) {
     this.selectedOption = option;
@@ -63,7 +64,10 @@ export class AdminPanelComponent {
 
   submitForm(tipo: string) {
     if (tipo === 'noticias') {
-      console.log('Noticia:', this.news);
+      this._noticiasService.addNoticia(this.news).subscribe((response: any) => {
+        this.modalNoticias = false;
+        this.news = {};
+      });
     } 
     else if (tipo === 'videos') {
       this._videosService.addVideo(this.video).subscribe((response: any) => {

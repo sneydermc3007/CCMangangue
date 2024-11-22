@@ -1,4 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { NoticiasService } from '../../../services/noticias/noticias.service';
 
 @Component({
   selector: 'app-segundarias',
@@ -8,18 +11,15 @@ import {Component, OnInit} from '@angular/core';
 export class SegundariasComponent implements OnInit {
   public noticias: any[] = [];
 
+  constructor(private router: Router, private _noticias: NoticiasService) {}
+
   ngOnInit() {
-    this.noticias = [
-      {
-        title: 'SEMINARIO DE ACTUALIZACIÓN TRIBUTARIA Y CONTABLE',
-        description: '¡Es la oportunidad de actualizarnos!',
-        image: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2024/03/Blue-And-White-Modern-Business-Webinar-Instagram-Post-2.png?w=1080&ssl=1'
-      },
-      {
-        title: 'PROMOTORES DE REGISTRO 2024.',
-        description: 'La Cámara de Comercio de Magangué presenta a los promotores de Registros autorizados que ayudarán con tu Renovación 2024.#Renuevatuhuellaempresarial',
-        image: 'https://i0.wp.com/ccmagangue.org.co/v2/wp-content/uploads/2024/01/Agregar-un-subtitulo-3.png?w=1080&ssl=1'
-      }
-    ];
+    this._noticias.getNoticias('Secundaria').subscribe((noticias: any) => {
+      this.noticias = noticias.filter((noticia: any) => noticia.estado === 'Activo');
+    });
+  }
+
+  navigateToNoticia(id: number) {
+    this.router.navigate(['/noticias', id]);
   }
 }

@@ -1,17 +1,3 @@
-<section class="menu">
-    <p-sidebar [(visible)]="sidebarVisible" position="left" [baseZIndex]="10000">
-        <ul class="sidebar-menu">
-            <li (click)="selectOption('slides')">Slides</li>
-            <li (click)="selectOption('noticias')">Noticias</li>
-            <li (click)="selectOption('videos')">Videos</li>
-            <li (click)="selectOption('eventos')">Eventos</li>
-            <li (click)="selectOption('usuarios')">Usuarios</li>
-            <li (click)="selectOption('leyes-transparencia')">Leyes de Transparencia</li>
-        </ul>
-    </p-sidebar>
-    <button type="button" pButton icon="pi pi-bars" (click)="sidebarVisible = true"></button>
-</section>
-
 <section class="administrativa">    
     <div class="admin-dashboard">
         <div class="header">
@@ -20,89 +6,12 @@
         </div>
       
         <div class="card-container">
-            <p-card *ngFor="let card of cards" (click)="openModal(card)" class="info-card">
-                <ng-template pTemplate="header">{{ card.title }}</ng-template>
-                <ng-template pTemplate="content"><p>{{ card.description }}</p></ng-template>
+            <p-card *ngFor="let card of cards" (click)="redireccionar(card)" class="info-card">
+                <ng-template pTemplate="content">
+                    <i class="pi pi-folder card-icon"></i>
+                    <p>{{ card }}</p>
+                </ng-template>
             </p-card>
         </div>
     </div>    
 </section>
-
-
-<!-- Modal Noticias -->
-<p-dialog header="Agregar Noticia" [(visible)]="modalNoticias" [modal]="true" [closable]="false" [style]="{ width: '500px', borderRadius: '8px' }">
-    <div class="news-form p-fluid">
-        <form (ngSubmit)="submitForm('noticias')">
-            <!-- Campo Título -->
-            <div class="p-field">
-                <label for="title">Título</label>
-                <input id="title" type="text" pInputText [(ngModel)]="news.title" name="title" required />
-            </div>
-
-            <!-- Campo Descripción -->
-            <div class="p-field">
-                <label for="description">Descripción</label>
-                <textarea id="description" pInputTextarea [(ngModel)]="news.description" name="description" required></textarea>
-            </div>
-
-            <!-- Campo Contenido -->
-            <div class="p-field">
-                <label for="content">Contenido</label>
-                <textarea id="content" pInputTextarea [(ngModel)]="news.content" name="content" required></textarea>
-            </div>
-
-            <!-- Campo Estado -->
-            <div class="p-field">
-                <label for="estado">Estado</label>
-                <p-dropdown [appendTo]="'body'" [options]="statusOptions" [(ngModel)]="news.estado" name="estado" placeholder="Seleccione un estado"></p-dropdown>
-            </div>
-
-            <!-- Campo Fecha de Publicación -->
-            <div class="p-field">
-                <label for="fechaPublicacion">Fecha de Publicación</label>
-                <input id="fechaPublicacion" type="date" pInputText [(ngModel)]="news.fecha_publicacion" name="fecha_publicacion" required />
-            </div>
-
-            <!-- Campo Imagen con Vista Previa -->
-            <div class="p-field">
-                <label for="image">Imagen</label>
-                <input type="file" #fileInput accept="image/*" (change)="onFileSelect($event)" />
-                <!-- <img *ngIf="imagePreview" [src]="imagePreview" alt="Vista previa de imagen" class="image-preview" /> -->
-            </div>
-
-            <!-- Botones del Modal -->
-            <p-footer>
-                <button type="submit" pButton label="Guardar" icon="pi pi-check" class="p-button-text"></button>
-            </p-footer>
-        </form>
-    </div>
-</p-dialog>
-
-<!-- Modal Videos -->
-<p-dialog header="Agregar Video" [(visible)]="modalVideos" modal="true" [style]="{width: '400px'}" [contentStyle]="{'padding': '1rem'}">
-    <div class="video-form">
-        <form (ngSubmit)="submitForm('videos')" class="minimal-form">
-            <div class="p-field">
-                <label for="title" class="minimal-label">Título</label>
-                <input id="title" type="text" pInputText [(ngModel)]="video.titulo" name="title" required class="minimal-input"/>
-            </div>
-            <div class="p-field">
-                <label for="url" class="minimal-label">URL</label>
-                <input id="url" type="text" pInputText [(ngModel)]="video.url" name="url" required class="minimal-input"/>
-            </div>
-            <div class="p-field">
-                <label for="status" class="minimal-label">Estado</label>
-                <p-dropdown 
-                    [options]="statusOptions" 
-                    [(ngModel)]="video.estado" 
-                    name="status" 
-                    placeholder="Seleccionar estado" 
-                    class="minimal-dropdown"
-                    appendTo="body"
-                    >
-                </p-dropdown>
-            </div>
-            <button type="submit" pButton label="Guardar" class="minimal-button"></button>
-        </form>
-    </div>
-</p-dialog>

@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
+import { MessageService } from 'primeng/api';
+
 import { VideoInterface } from '../../../../interfaces/video.interface';
 import { VideosService } from '../../../../services/videos/videos.service';
 
 @Component({
   selector: 'app-admin-videos',
   templateUrl: './admin-videos.component.html',
-  styleUrl: './admin-videos.component.scss'
+  styleUrl: './admin-videos.component.scss',
+  providers: [MessageService]
 })
 export class AdminVideosComponent implements OnInit {
 
@@ -19,12 +22,12 @@ export class AdminVideosComponent implements OnInit {
   estadoOptions = [
     { label: 'Activo', value: 'Activo' },
     { label: 'Inactivo', value: 'Inactivo' },
-    { label: 'Pendiente', value: 'Pendiente' }
   ];
 
   constructor(
     private _videosService: VideosService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private msg: MessageService
   ) {}
 
   sanitizeUrl(videoUrl: string): SafeResourceUrl {
@@ -32,23 +35,29 @@ export class AdminVideosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._videosService.getVideos().subscribe((videos: VideoInterface[]) => {
-      this.videos = videos;
-    });
+    this._videosService.getVideos().subscribe((videos: VideoInterface[]) => this.videos = videos );
   }
 
   onSubmit() {
+    const activos = this.videos.filter(video => video.estado === 'Activo').length;
+  
+    if (activos >= 3) {
+      this.nuevoVideo.estado = 'Inactivo';
+      this.msg.add({ severity: 'warn', summary: 'Advertencia', detail: 'Solo se pueden tener 3 videos activos' });
+    }
+  
     if (this.nuevoVideo.titulo && this.nuevoVideo.url) {
       this._videosService.addVideo(this.nuevoVideo).subscribe((video: VideoInterface) => {
         this.videos.push(video);
       });
-
+  
       this.nuevoVideo = { titulo: '', url: '', estado: 'Activo' };
     }
   }
+  
 
   abrirModalEditar(video: VideoInterface) {
-    this.videoSeleccionado = { ...video }; // Copia del video seleccionado
+    this.videoSeleccionado = { ...video };
     this.modalEditar = true;
   }
 

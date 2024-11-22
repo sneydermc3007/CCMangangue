@@ -72,5 +72,6 @@ export const routes: Routes = [
   { path: 'politicas', loadChildren: () => import('./pages/politicas/politicas.module').then(m => m.PoliticasModule) },
   { path: 'servicios-virtuales', loadChildren: () => import('./pages/servicios-virtuales/servicios-virtuales.module').then(m => m.ServiciosVirtualesModule) },
   { path: 'desarrollo-empresarial', loadChildren: () => import('./pages/desarrollo-empresarial/desarrollo-empresarial.module').then(m => m.DesarrolloEmpresarialModule) },
+  { path: 'noticias/:id', loadChildren: () => import('./components/noticias/noticias.module').then(m => m.NoticiasModule) },
   { path: '**', loadComponent: () => import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent) },
 ];

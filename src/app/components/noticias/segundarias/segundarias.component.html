@@ -1,11 +1,11 @@
 <ng-container *ngFor="let noticia of noticias">
   <div class="card-container">
     <div class="card-content">
-      <img [src]="noticia.image" alt="Noticia" class="card-image" />
+      <img [src]="noticia.imagen_url" alt="Noticia" class="card-image" />
       <div class="card-text">
-        <h2>{{ noticia.title }}</h2>
-        <p> {{ noticia.description | shortenText:50  }} </p>
-        <button class="btn-read-more">Leer nota aquí</button>
+        <h2>{{ noticia.nombre }}</h2>
+        <p> {{ noticia.descripcion | shortenText:50  }} </p>
+        <button class="btn-read-more" (click)="navigateToNoticia(noticia.id)" >Leer nota aquí</button>
       </div>
     </div>
   </div>

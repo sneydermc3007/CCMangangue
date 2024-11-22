@@ -14,6 +14,8 @@ import { TabViewModule } from 'primeng/tabview';
 import { TableModule } from 'primeng/table';
 import { DropdownModule } from 'primeng/dropdown';
 import { ToggleButtonModule } from 'primeng/togglebutton';
+import { ToastModule } from 'primeng/toast';
+import { MessagesModule } from 'primeng/messages';
 
 import { ComponentsModule } from '../components/components.module';
 
@@ -46,6 +48,8 @@ import { AdminUsuariosComponent } from './routes/admin-usuarios/admin-usuarios.c
     TableModule,
     DropdownModule,
     ToggleButtonModule,
+    ToastModule,
+    MessagesModule,
     ComponentsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

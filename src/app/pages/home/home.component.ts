@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this._videosService.getVideos().subscribe((videos: VideoInterface[]) => {
-      this.videos = videos;
+      this.videos = videos.filter((video: VideoInterface) => video.estado === 'Activo');
     });
   }
 

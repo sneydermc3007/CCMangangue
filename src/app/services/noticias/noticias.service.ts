@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpResponse } from '@angular/common/http';
 
 import { environment } from '../../environments/environment';
 import { catchError, Observable, tap } from 'rxjs';
@@ -14,10 +14,27 @@ export class NoticiasService {
     this.preUrl = environment.apiUrl;
   }
 
-  public getNoticias(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.preUrl}/noticias`).pipe(
+  public getNoticias(tipo?: string): Observable<any[]> {
+    let params = new HttpParams();
+  
+    if (tipo)
+      params = params.set('tipo', tipo);
+  
+    return this.http.get<any[]>(`${this.preUrl}/noticias`, { params }).pipe(
       tap((noticias: any[]) => {
-        console.log('noticias:', noticias);
+        console.log(`Noticias ${tipo}s: `, noticias);
+      }),
+      catchError((error: any) => {
+        console.error('Error:', error);
+        return [];
+      })
+    );
+  }
+
+  public getNoticia(id: number): Observable<any> {
+    return this.http.get<any>(`${this.preUrl}/noticias/${id}`).pipe(
+      tap((noticia: any) => {
+        console.log('noticia:', noticia);
       }),
       catchError((error: any) => {
         console.error('Error:', error);
@@ -27,7 +44,7 @@ export class NoticiasService {
   }
 
   public addNoticia(noticia: any): Observable<HttpResponse<any>> {
-    return this.http.post<any>(`${this.preUrl}/noticias`, noticia, { observe: 'response' }).pipe(
+    return this.http.post<any>(`${this.preUrl}/noticias/crear`, noticia, { observe: 'response' }).pipe(
       tap((response: any) => {
         console.log('response  add nnoticias:', response);
       }),

@@ -18,10 +18,10 @@ export class AppComponent {
   showHeaderFooter: boolean = true;
 
   chatComponentRef: ComponentRef<ChatComponent> | null = null;
-  @ViewChild('chatContainer', { read: ViewContainerRef, static: true }) chatContainer!: ViewContainerRef;
+  @ViewChild('chatContainer', { read: ViewContainerRef, static: false }) chatContainer!: ViewContainerRef;
 
   assistantVirtualComponentRef: ComponentRef<AsistenteVirtualComponent> | null = null;
-  @ViewChild('assistantVirtualContainer', { read: ViewContainerRef, static: true }) assistantVirtualContainer!: ViewContainerRef;
+  @ViewChild('assistantVirtualContainer', { read: ViewContainerRef, static: false }) assistantVirtualContainer!: ViewContainerRef;
 
   constructor(private router: Router) {
     this.router.events.subscribe(event => {

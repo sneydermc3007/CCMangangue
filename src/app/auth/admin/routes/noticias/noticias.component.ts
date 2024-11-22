@@ -15,6 +15,9 @@ export class NoticiasComponent implements OnInit {
   ];
   noticias: any[] = [];
 
+  public modalNoticias: boolean = false;
+  public news: any = {};
+
   displayEditModal = false; 
   selectedAccion: any = {};
 
@@ -22,6 +25,14 @@ export class NoticiasComponent implements OnInit {
     { label: 'Activo', value: 'Activo' },
     { label: 'Inactivo', value: 'Inactivo' },
     { label: 'Pendiente', value: 'Pendiente' }
+  ];
+
+  tipos = ['Principal', 'Secundaria'];
+
+  statusOptions = [
+    { label: 'Activo', value: 'activo' },
+    { label: 'Inactivo', value: 'inactivo' },
+    { label: 'Pendiente', value: 'pendiente' }
   ];
 
   constructor(private _noticiasServices: NoticiasService) { }
@@ -60,5 +71,19 @@ export class NoticiasComponent implements OnInit {
       },
       (error: any) => console.error('Error:', error)
     );
+  }
+
+  openAddModal() {
+    console.log('openAddModal');
+    this.modalNoticias = true;
+  }
+
+  submitForm() {
+    console.log(this.news);
+    this._noticiasServices.addNoticia(this.news).subscribe((response: any) => {
+      this.modalNoticias = false;
+      this.news = {};
+      this.noticias.push(response);
+    });
   }
 }

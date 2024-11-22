@@ -39,10 +39,6 @@ export class CalendarComponent implements OnInit {
       list: 'Lista'
     },
     height: 'auto',
-    // events: [
-    //   { title: 'Reunión de equipo', date: '2024-11-20', backgroundColor: '#5390d9', borderColor: '#5390d9' },
-    //   { title: 'Presentación', date: '2024-11-25', backgroundColor: '#e53935', borderColor: '#e53935' }
-    // ]
     events: []
   };
   isBrowser: boolean;

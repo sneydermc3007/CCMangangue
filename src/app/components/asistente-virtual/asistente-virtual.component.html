@@ -2,9 +2,9 @@
   <h3>Accesibilidad</h3>
   <div class="accesibilidad-opciones">
     @for (item of opcionesAccesibilidad; track $index) {
-      <button class="accesibilidad-boton">
+      <button class="accesibilidad-boton" (click)="item.action()">
         <i [ngClass]="item.icon"></i>
-        <span>{{item.label}}</span>
+        <span>{{ item.label }}</span>
       </button>
     }
   </div>

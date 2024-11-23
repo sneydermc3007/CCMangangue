@@ -54,7 +54,8 @@ app-title {
   }
 }
 
-
+/* ======================== Estilos Prime NG ======================== */
+/* Estilos para el funcionamiento del acordeon */
 :host ::ng-deep .p-accordion {
   .p-accordion-header a {
     background: $secondary-color;
@@ -82,4 +83,73 @@ app-title {
       strong { color: $black; }
     }
   }
+}
+/* Fin de estilos para el acordeon */
+/* ======================== Fin de estilos Prime NG ======================== */
+
+/* Estilos para el funcionamiento del boton de accesibilidad */
+.desactivar-animaciones {
+  * {
+    animation: none !important;
+    animation-name: none !important;
+    animation-duration: 0 !important;
+    animation-delay: 0 !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+
+    &::before, &::after {
+      animation: none !important;
+      animation-name: none !important;
+    }
+  }
+}
+
+.alto-contraste {
+  background-color: $black; 
+  color: $white;
+  
+  * {
+    background-color: $black !important;
+    color: $white !important;
+    border-color: $white !important;
+    text-decoration: none !important;
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  button, input, textarea {
+    background-color: $black;
+    color: $white;
+    border: 1px solid $white;
+  }
+
+  img {
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      pointer-events: none;
+    }
+  }
+
+  iframe {
+    filter: grayscale(100%) opacity(0.8);
+    transition: filter 0.3s ease, opacity 0.3s ease;
+  }
+}
+
+img {
+  position: relative;
+  display: block;
 }

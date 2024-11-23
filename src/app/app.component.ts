@@ -9,7 +9,7 @@ import { AsistenteVirtualComponent } from "./components/asistente-virtual/asiste
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, ChatComponent, AsistenteVirtualComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -34,7 +34,7 @@ export class AppComponent {
   callBot() {
     console.log('Chat is called');
     this.chatComponentRef = this.chatContainer.createComponent(ChatComponent);
-    this.chatComponentRef.instance.isChatOpen = true; // Asegúrate de que esta línea esté presente
+    this.chatComponentRef.instance.isChatOpen = true;
     this.chatComponentRef.instance.onChatHide.subscribe((visible) => {
       if (!visible) {
         this.chatComponentRef?.destroy();

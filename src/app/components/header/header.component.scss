@@ -152,13 +152,7 @@ header {
 }
 
 :host ::ng-deep p-button {
-  .tramites {
-    animation: pulse-tramites 1.5s infinite;
-
-    &::before {
-      animation: moveBorder 4s linear infinite;
-    }
-  }
+  .tramites { animation: pulse-tramites 1.5s infinite; }
 
   .renovar {
     animation: grow 2s infinite alternate;
@@ -212,14 +206,6 @@ header {
 @keyframes pulse-tramites {
   0%, 100% { background-color: $extra-color; }
   50% { background-color: #70e000; }
-}
-
-@keyframes moveBorder {
-  0% { clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); }  // Top
-  25% { clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0); }  // Right
-  50% { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); }  // Bottom
-  75% { clip-path: polygon(0 0, 0 100%, 0 100%, 0 0); }  // Left
-  100% { clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); }  // Vuelve a Top
 }
 
 @keyframes grow {

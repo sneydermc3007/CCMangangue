@@ -23,11 +23,30 @@ export class AsistenteVirtualComponent implements OnDestroy {
     { icon: "pi pi-volume-up", label: "Leer Texto", action: () => this.leerTexto() },
     { icon: "pi pi-eye", label: "Subrayar Texto", action: () => this.subrayarTexto() },
     { icon: "pi pi-eye-slash", label: "Ocultar Texto", action: () => this.ocultarTexto() },
-  ]
+  ];
+
+  public fontSizes = ['14px', '18px', '22px', '26px']
+  public currentFontSizeIndex = 0;
 
   constructor() {}
 
-  aumentarTexto() {}
+  aumentarTexto() {
+    const root = document.body;
+    this.currentFontSizeIndex++;
+  
+    if (this.currentFontSizeIndex >= this.fontSizes.length)
+      this.currentFontSizeIndex = 0;
+  
+    const newFontSize = this.fontSizes[this.currentFontSizeIndex];
+    root.style.fontSize = newFontSize;
+  
+    root.classList.remove('font-size-14', 'font-size-18', 'font-size-22', 'font-size-26');
+    root.classList.add(`font-size-${parseInt(newFontSize)}`);
+  
+    console.log(`Tamaño de texto actualizado a: ${newFontSize}`);
+  }
+  
+  
 
   altoContraste() {
     const root =  document.body;
@@ -51,10 +70,22 @@ export class AsistenteVirtualComponent implements OnDestroy {
     speechSynthesis.speak(utterance);
   }
 
-  subrayarTexto() {}
+  subrayarTexto() {
+    const root = document.body;
+    if (root.classList.contains('subrayar-texto'))
+      root.classList.remove('subrayar-texto');
+    else
+      root.classList.add('subrayar-texto');
+  }
 
-  ocultarTexto() {}
-
+  ocultarTexto() {
+    const root = document.body;
+    if (root.classList.contains('ocultar-texto'))
+      root.classList.remove('ocultar-texto');
+    else
+      root.classList.add('ocultar-texto');
+  }
+  
   ocultarSideBar() {
     this.onSidebarHide.emit(false);
   }

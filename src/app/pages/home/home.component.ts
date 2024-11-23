@@ -134,12 +134,12 @@ export class HomeComponent implements OnInit {
   ];
 
   public cardViews: any[] = [
-    { title: 'Crea tu Empresa Aquí', icon: '', url: '/servicios-virtuales/empresa' },
-    { title: 'Modelo de Actas y Documentos', icon: '', url: 'actas-documentos' },
-    { title: 'Conoce Nuestros Registros', icon: '', url: '' },
-    { title: 'Crea tu Empresa en Linea', icon: '', url: 'https://www.vue.gov.co/' },
-    { title: 'Consulta de expedientes', icon: '', url: 'registros/consulta-expedientes' },
-    { title: 'Radica Aquí PQRSF', icon: '', url: 'http://ccmagangue.docxflow.com/public/sucursal' },
+    { title: 'Crea tu Empresa Aquí', url: '/servicios-virtuales/empresa' },
+    { title: 'Modelo de Actas y Documentos', url: 'actas-documentos' },
+    { title: 'Conoce Nuestros Registros', url: '' },
+    { title: 'Crea tu Empresa en Linea', url: 'https://www.vue.gov.co/' },
+    { title: 'Consulta de expedientes', url: 'registros/consulta-expedientes' },
+    { title: 'Radica Aquí PQRSF', url: 'http://ccmagangue.docxflow.com/public/sucursal' },
   ];
 
   public goTo(url: string): void {

@@ -4,7 +4,10 @@
     @for (item of opcionesAccesibilidad; track $index) {
       <button class="accesibilidad-boton" (click)="item.action()">
         <i [ngClass]="item.icon"></i>
-        <span>{{ item.label }}</span>
+        <p>{{ item.label }}</p>
+        @if (item.label === 'Aumentar Texto') {
+          <span>{{ fontSizes[currentFontSizeIndex].split('px')[0] }} pixeles </span>
+        }
       </button>
     }
   </div>

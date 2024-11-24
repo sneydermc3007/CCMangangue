@@ -1,0 +1,12 @@
+@if (pagina) {
+    <div class="pagina-detail">
+        <div class="pagina-container">
+        <h1 class="pagina-title">{{ pagina.titulo }}</h1>
+        <img [src]="pagina.imagen_principal" alt="{{ pagina.titulo }}" class="pagina-image" />
+        <div class="pagina-content" [innerHTML]="pagina.contenido"></div>
+            @if (pagina.imagen_segundaria) {
+                <img [src]="pagina.imagen_segundaria" alt="Imagen secundaria" class="pagina-secondary-image" />
+            }
+        </div>
+    </div>
+}

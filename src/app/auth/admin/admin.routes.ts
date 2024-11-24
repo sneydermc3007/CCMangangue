@@ -7,6 +7,7 @@ import { AdminLeyesTransparenciaComponent } from './routes/admin-leyes-transpare
 import { AdminVideosComponent } from './routes/admin-videos/admin-videos.component';
 import { AdminEventosComponent } from './routes/admin-eventos/admin-eventos.component';
 import { AdminUsuariosComponent } from './routes/admin-usuarios/admin-usuarios.component';
+import { AdminSlidesComponent } from './routes/admin-slides/admin-slides.component';
 
 export const adminRoutes: Routes = [
     { path: '', component: AdminPanelComponent, pathMatch: 'full', canActivate: [authGuard] },
@@ -14,5 +15,6 @@ export const adminRoutes: Routes = [
     { path: 'videos', component: AdminVideosComponent, canActivate: [authGuard] },
     { path: 'eventos', component: AdminEventosComponent, canActivate: [authGuard] },
     { path: 'usuarios', component: AdminUsuariosComponent, canActivate: [authGuard] },
-    { path: 'leyes-transparencia', component: AdminLeyesTransparenciaComponent, canActivate: [authGuard] }
+    { path: 'leyes-transparencia', component: AdminLeyesTransparenciaComponent, canActivate: [authGuard] },
+    { path: 'slides', component: AdminSlidesComponent, canActivate: [authGuard] }
 ];

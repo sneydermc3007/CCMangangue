@@ -14,8 +14,10 @@ import { ActividadEmpresarialComponent } from "../../components/actividad-empres
 import { VideosComponent } from "../../components/videos/videos.component";
 
 import { VideoInterface } from "../../interfaces/video.interface";
+import { SlideInterface } from "../../interfaces/slides.interface";
 
 import { VideosService } from '../../services/videos/videos.service';
+import { SlidesService } from '../../services/slides/slides.service';
 
 @Component({
   selector: 'app-home',
@@ -45,48 +47,24 @@ import { VideosService } from '../../services/videos/videos.service';
 })
 export class HomeComponent implements OnInit {
   public videos: VideoInterface[] = [];
+  public slides: SlideInterface[] = [];
 
   constructor(
     private router: Router,
-    private _videosService: VideosService
+    private _videos: VideosService,
+    private _slides: SlidesService
   ) {}
 
   ngOnInit(): void {
-    this._videosService.getVideos().subscribe((videos: VideoInterface[]) => {
+    this._videos.getVideos().subscribe((videos: VideoInterface[]) => {
       this.videos = videos.filter((video: VideoInterface) => video.estado === 'Activo');
     });
-  }
 
-  public images: any[] = [
-    {
-      itemImageSrc: '/slides/baner-new-1.jpg',
-      thumbnailImageSrc: '/slides/baner-new-1.jpg',
-      alt: 'Description for Image 2',
-      title: 'Title 2',
-      link: '/renovar'
-    },
-    {
-      itemImageSrc: '/slides/baner-new-2.jpg',
-      thumbnailImageSrc: '/slides/baner-new-2.jpg',
-      alt: 'Description for Image 3',
-      title: 'Title 3',
-      link: '/renovar'
-    },
-    {
-      itemImageSrc: '/slides/baner-new-4.jpg',
-      thumbnailImageSrc: '/slides/baner-new-4.jpg',
-      alt: 'Description for Image 1',
-      title: 'Title 1',
-      link: '/renovar'
-    },
-    {
-      itemImageSrc: '/slides/baner-new-3.jpg',
-      thumbnailImageSrc: '/slides/baner-new-3.jpg',
-      alt: 'Description for Image 4',
-      title: 'Title 4',
-      link: '/renovar'
-    }
-  ];
+    this._slides.getSlides().subscribe((slides: any[]) => {
+      slides.sort((a, b) => a.posicion - b.posicion).filter((slide: any) => slide.estado === 'activo');
+      this.slides = slides;
+    });
+  }
 
   public sitiosInteres: any[] = [
     {
@@ -134,15 +112,16 @@ export class HomeComponent implements OnInit {
   ];
 
   public cardViews: any[] = [
-    { title: 'Crea tu Empresa Aquí', url: '/servicios-virtuales/empresa' },
+    { title: 'Crea tu Empresa Aquí', url: 'servicios-virtuales/empresa' },
     { title: 'Modelo de Actas y Documentos', url: 'actas-documentos' },
-    { title: 'Conoce Nuestros Registros', url: '' },
+    { title: 'Conoce Nuestros Registros', url: 'tramites/servicios' },
     { title: 'Crea tu Empresa en Linea', url: 'https://www.vue.gov.co/' },
     { title: 'Consulta de expedientes', url: 'registros/consulta-expedientes' },
     { title: 'Radica Aquí PQRSF', url: 'http://ccmagangue.docxflow.com/public/sucursal' },
   ];
 
   public goTo(url: string): void {
+    console.log(url);
     if (url.includes('http'))
       window.open(url, '_blank');
     else

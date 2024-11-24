@@ -1,7 +1,7 @@
 <main class="contenido">
   <div class="card">
     <p-galleria
-      [value]="images"
+      [value]="slides"
       [showItemNavigators]="true"
       [showThumbnails]="false"
       [showIndicators]="true"
@@ -9,7 +9,12 @@
       [responsiveOptions]="responsiveOptions"
     >
       <ng-template pTemplate="item" let-item>
-        <img  [src]="item.itemImageSrc" [alt]="item.alt" class="galleria-image" />
+        <img 
+          [src]="item.portada_url" 
+          class="galleria-image"
+          [ngStyle]="{ cursor: item.link !== null ? 'pointer' : item.pagina.titulo !== 'Nueva Página' ? 'pointer' : 'default' }"
+          (click)="goTo(item.link ? item.link : 'slide/' + item.id)"
+        />
       </ng-template>
     </p-galleria>
   </div>

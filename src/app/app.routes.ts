@@ -14,6 +14,7 @@ export const routes: Routes = [
   { path: 'calendario', loadComponent: () => import('./pages/calendar/calendar.component').then(m => m.CalendarComponent) },
   { path: 'tarifas', loadComponent: () => import('./pages/tarifas/tarifas.component').then(m => m.TarifasComponent) },
   { path: 'glosario', loadComponent: () => import('./pages/glosario/glosario.component').then(m => m.GlosarioComponent) },
+  { path: 'slide/:id', loadComponent: () => import('./components/slide/slide.component').then(m => m.SlideComponent) },
 
   { 
     path: 'leyes-transparencia', 

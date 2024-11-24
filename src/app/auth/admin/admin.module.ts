@@ -16,6 +16,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { ToastModule } from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
+import { EditorModule } from 'primeng/editor';
 
 import { ComponentsModule } from '../components/components.module';
 
@@ -25,6 +26,7 @@ import { AdminLeyesTransparenciaComponent } from './routes/admin-leyes-transpare
 import { AdminVideosComponent } from './routes/admin-videos/admin-videos.component';
 import { AdminEventosComponent } from './routes/admin-eventos/admin-eventos.component';
 import { AdminUsuariosComponent } from './routes/admin-usuarios/admin-usuarios.component';
+import { AdminSlidesComponent } from './routes/admin-slides/admin-slides.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { AdminUsuariosComponent } from './routes/admin-usuarios/admin-usuarios.c
     AdminVideosComponent,
     AdminEventosComponent,
     AdminUsuariosComponent,
+    AdminSlidesComponent,
   ],
   imports: [
     CommonModule,
@@ -50,6 +53,7 @@ import { AdminUsuariosComponent } from './routes/admin-usuarios/admin-usuarios.c
     ToggleButtonModule,
     ToastModule,
     MessagesModule,
+    EditorModule,
     ComponentsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

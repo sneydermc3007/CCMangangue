@@ -18,6 +18,7 @@ import { ToastModule } from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
 import { EditorModule } from 'primeng/editor';
 
+import { SharedModule } from './../../shared/shared.module';
 import { ComponentsModule } from '../components/components.module';
 
 import { AdminPanelComponent } from './routes/admin-panel/admin-panel.component';
@@ -54,7 +55,8 @@ import { AdminSlidesComponent } from './routes/admin-slides/admin-slides.compone
     ToastModule,
     MessagesModule,
     EditorModule,
-    ComponentsModule
+    ComponentsModule,
+    SharedModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

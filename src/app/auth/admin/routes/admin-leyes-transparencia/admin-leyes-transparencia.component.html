@@ -4,110 +4,225 @@
 </h2>
 
 <section class="tabs">
-    <div class="card">
-        <p-tabView>
-            @for (item of tabs; track $index) {
-            <p-tabPanel [header]="item.header">
-                @if (item.header == 'Decretos') {
-                <p-table [value]="decretos" class="decretos-table">
-                    <ng-template pTemplate="header">
-                        <tr>
-                            @for (item of tabs[0].columnas; track $index) {
-                            <th>{{ item.header }}</th>
-                            }
-                            <th>Acciones</th>
-                        </tr>
-                    </ng-template>
-                    <ng-template pTemplate="body" let-decreto>
-                        <tr>
-                            @for (item of tabs[0].columnas; track $index) {
-                            @if (item.field != 'estado') {
-                            <td>{{ decreto[item.field] }}</td>
-                            }
-                            @else {
-                            <td>
-                                <span class="estado" [ngClass]="{
-                                                    'activo': decreto.estado === 'Activo',
-                                                    'inactivo': decreto.estado === 'Inactivo',
-                                                    'pendiente': decreto.estado === 'Pendiente'
-                                                    }">
-                                    {{ decreto.estado }}
-                                </span>
-                            </td>
-                            }
-                            }
-                            <td>
-                                <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-info p-button-text"
-                                    (click)="openEditModal(decreto)">
-                                </button>
-                                <button pButton icon="pi pi-trash"
-                                    class="p-button-rounded p-button-danger p-button-text"
-                                    (click)="deleteDecreto(decreto.id)">
-                                </button>
-                            </td>
-                        </tr>
-                    </ng-template>
-                </p-table>
+  <div class="card">
+    <p-tabView>
+      @for (item of tabs; track $index) {
+        <p-tabPanel [header]="item.header">
+          @if (item.header == 'Decretos') {
+            <p-table [value]="decretos" class="decretos-table">
+              <ng-template pTemplate="header">
+                <tr>
+                  @for (item of tabs[0].columnas; track $index) {
+                    <th>{{ item.header }}</th>
+                  }
+                  <th>Acciones</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-decreto>
+                <tr>
+                    @for (item of tabs[0].columnas; track $index) {
+                      @if (item.field != 'estado') {
+                        <td>{{ decreto[item.field] }}</td>
+                      }
+                      @else {
+                        <td>
+                          <span 
+                            class="estado" 
+                            [ngClass]="{
+                              'activo': decreto.estado === 'activo',
+                              'inactivo': decreto.estado === 'inactivo',
+                              'pendiente': decreto.estado === 'pendiente'
+                            }"
+                          >
+                            {{ decreto.estado }}
+                          </span>
+                        </td>
+                      }
+                    }
+                    <td>
+                      <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-info p-button-text" (click)="openEditModal(decreto)"></button>
+                      <button pButton icon="pi pi-trash" class="p-button-rounded p-button-danger p-button-text" (click)="deleteDecreto(decreto.id)"></button> 
+                    </td>
+                </tr>
+              </ng-template>
+            </p-table>
+            <button pButton label="Agregar Decreto" class="p-button-rounded p-button-success" style="margin-top: 1rem;" (click)="openAddModal()"></button>
+          }
+          @else if (item.header == 'Listar Acordeones') {
+            <app-acordeon [information]="acordeones"></app-acordeon>
+          }
+          @else if (item.header == 'Crear Acordeon') {
+            <div class="acordeon">
+              <button (click)="addSection()">Agregar Sección</button>
+                <div *ngFor="let section of sections; let i = index">
+                  <input [(ngModel)]="section.header" placeholder="Nombre de la sección" />
+              
+                  <div class="button-group">
+                    <button (click)="addContent(i, 'lista')">Agregar Lista</button>
+                    <button (click)="addContent(i, 'parrafo')">Agregar Párrafo</button>
+                    <button (click)="addContent(i, 'link')">Agregar Link</button>
+                    <button (click)="addContent(i, 'formatted')">Agregar Formato</button>
+                  </div>
+              
+                  <div *ngFor="let content of section.content; let j = index">
+                    <ng-container [ngSwitch]="content.type">
+                      <div *ngSwitchCase="'lista'">
+                        <h4>Lista</h4>
+                        <button (click)="addListItem(i, j)">Agregar Item de Lista</button>
+                        <div *ngFor="let item of content.valor; let k = index">
+                          <input [(ngModel)]="item.label" placeholder="Label" />
+                          <p-dropdown 
+                            [options]="paginaOptions" 
+                            placeholder="Seleccione una página"
+                            appendTo="body"
+                            [(ngModel)]="item.pagina"
+                          ></p-dropdown>
 
-                <button pButton label="Agregar Decreto" class="p-button-rounded p-button-success"
-                    style="margin-top: 1rem;" (click)="openAddModal()"></button>
-                }
-                @else if (item.header == 'Información') {
-                    <div class="acordeon">
-                        <button (click)="addSection()">Agregar Sección</button>
-                        <div *ngFor="let section of sections; let i = index">
-                          <input [(ngModel)]="section.header" placeholder="Nombre de la sección" />
-                      
-                          <button (click)="addContent(i, 'lista')">Agregar Lista</button>
-                          <button (click)="addContent(i, 'parrafo')">Agregar Párrafo</button>
-                          <button (click)="addContent(i, 'link')">Agregar Link</button>
-                          <button (click)="addContent(i, 'formatted')">Agregar Formato</button>
-                      
-                          <div *ngFor="let content of section.content; let j = index">
-                            <ng-container [ngSwitch]="content.type">
-                              <div *ngSwitchCase="'lista'">
-                                <h4>Lista</h4>
-                                <button (click)="addListItem(i, j)">Agregar Item de Lista</button>
-                      
-                                <div *ngFor="let item of content.valor; let k = index">
-                                  <input [(ngModel)]="item.label" placeholder="Etiqueta" />
-                                  <input [(ngModel)]="item.pagina" placeholder="Página" />
-                                  <button (click)="addSubitem(i, j, k)">Agregar Subitem</button>
-                      
-                                  <div *ngFor="let subitem of item.subitems; let l = index">
-                                    <input [(ngModel)]="subitem.label" placeholder="Etiqueta Subitem" />
-                                    <input [(ngModel)]="subitem.pagina" placeholder="Página Subitem" />
-                                  </div>
-                                </div>
-                              </div>
-                      
-                              <div *ngSwitchCase="'parrafo'">
-                                <h4>Párrafo</h4>
-                                <input [(ngModel)]="content.valor" placeholder="Contenido del párrafo" />
-                              </div>
-                      
-                              <div *ngSwitchCase="'link'">
-                                <h4>Link</h4>
-                                <input [(ngModel)]="content.valor" placeholder="Texto del enlace" />
-                                <input [(ngModel)]="content.enlace" placeholder="URL del enlace" />
-                              </div>
-                      
-                              <div *ngSwitchCase="'formatted'">
-                                <h4>Contenido Formateado</h4>
-                                <textarea [(ngModel)]="content.valor" placeholder="HTML o texto formateado"></textarea>
-                              </div>
-                            </ng-container>
-                          </div>
+                          @if (item.pagina === 'Interna') {
+                            <input [(ngModel)]="item.paginaInterna" placeholder="Vinculo de la página interna" />
+                          }
+                          @else if (item.pagina === "Externa") {
+                            <input [(ngModel)]="item.paginaExterna" placeholder="Vinculo de la página externa" />
+                          }
+                          @else if (item.pagina === "PDF") {
+                            <input [(ngModel)]="item.archivo" placeholder="Vinculo del PDF" />
+                          }
+                          
+                          <button (click)="addSubitem(i, j, k)">Agregar Subitem</button>
+                          @for (subitem of item.subitems; track $index) {
+                            <input [(ngModel)]="subitem.label" placeholder="Label" />
+                            <p-dropdown 
+                              [options]="paginaOptions" 
+                              placeholder="Seleccione una página"
+                              appendTo="body"
+                              [(ngModel)]="subitem.pagina"
+                            ></p-dropdown>
+
+                            @if (subitem.pagina === 'Interna') {
+                              <input [(ngModel)]="subitem.paginaInterna" placeholder="Vinculo de la página interna" />
+                            }
+                            @else if (subitem.pagina === "Externa") {
+                              <input [(ngModel)]="subitem.paginaExterna" placeholder="Vinculo de la página externa" />
+                            }
+                            @else if (subitem.pagina === "PDF") {
+                              <input [(ngModel)]="subitem.paginaPDF" placeholder="Vinculo del PDF" />
+                            }
+                          }
                         </div>
-                        <button style="margin-top: 1rem;" (click)="saveData()">Guardar</button>
                       </div>
-                      
-
-                }
-            </p-tabPanel>
-            }
-        </p-tabView>
-    </div>
+              
+                      <div *ngSwitchCase="'parrafo'">
+                        <h4>Párrafo</h4>
+                        <input [(ngModel)]="content.valor" placeholder="Contenido del párrafo" />
+                        <input [(ngModel)]="content.pagina" placeholder="Vinculo de la página (en caso de el texto lo necesite)" />
+                      </div>
+              
+                      <div *ngSwitchCase="'link'">
+                        <h4>Link</h4>
+                        <input [(ngModel)]="content.valor" placeholder="Texto del enlace" />
+                        <input [(ngModel)]="content.enlace" placeholder="URL del enlace" />
+                      </div>
+              
+                      <div *ngSwitchCase="'formatted'">
+                        <h4>Contenido Formateado</h4>
+                        <textarea [(ngModel)]="content.valor" placeholder="HTML o texto formateado"></textarea>
+                      </div>
+                    </ng-container>
+                  </div>
+                </div>
+              <button style="margin-top: 1rem;" (click)="saveData()">Guardar</button>
+            </div>
+          }
+          @else {
+            <p-table [value]="acordeones" [paginator]="true" [rows]="10">
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>Título</th>
+                  <th>Acciones</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-acordeon>
+                <tr>
+                  <td>{{ acordeon.header }}</td>
+                  <td>
+                    <!-- <button pButton type="button" label="Editar" icon="pi pi-pencil" (click)="openEditModalLT(acordeon)"></button> -->
+                    <button pButton type="button" label="Eliminar" icon="pi pi-trash" class="p-button-danger" (click)="deletePage(acordeon.id)"></button>
+                  </td>
+                </tr>
+              </ng-template>
+            </p-table>
+          }
+        </p-tabPanel>
+      }
+    </p-tabView>
+  </div>
 </section>
 
+<!-- Modal para agregar/editar decreto -->
+<p-dialog 
+  [(visible)]="isModalVisible" 
+  [header]="modalTitle" 
+  [closable]="true" 
+  [modal]="true" 
+  [style]="{ width: '500px' }"
+  [responsive]="true"
+  [breakpoint]="768"
+>
+  <form [formGroup]="decretoForm">
+    <div class="form-group">
+      <label for="titulo">Título</label>
+      <input 
+        id="titulo" 
+        type="text" 
+        formControlName="titulo" 
+        pInputText 
+        placeholder="Ingrese el título"
+      />
+    </div>
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <textarea 
+        id="descripcion" 
+        rows="3" 
+        formControlName="descripcion" 
+        pInputTextarea 
+        placeholder="Ingrese la descripción"
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="estado">Estado</label>
+      <p-dropdown 
+        id="estado" 
+        formControlName="estado" 
+        [options]="estadoOptions" 
+        placeholder="Seleccione un estado"
+        appendTo="body"
+      ></p-dropdown>
+    </div>
+  </form>
+
+  <p-footer>
+    <button 
+      pButton 
+      label="Guardar" 
+      icon="pi pi-check" 
+      class="p-button-success" 
+      (click)="saveDecreto()"
+    ></button>
+    <button 
+      pButton 
+      label="Cancelar" 
+      icon="pi pi-times" 
+      class="p-button-secondary" 
+      (click)="closeModal()"
+    ></button>
+  </p-footer>
+</p-dialog>
+
+<p-toast 
+  [showTransformOptions]="'translateY(100%)'"
+  [showTransitionOptions]="'1000ms'" 
+  [hideTransitionOptions]="'1000ms'"
+  [showTransformOptions]="'translateX(100%)'"
+/>
 <app-return-admin></app-return-admin>

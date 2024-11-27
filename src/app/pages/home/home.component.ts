@@ -92,11 +92,11 @@ export class HomeComponent implements OnInit {
       url: 'https://www.procuraduria.gov.co/Pages/Inicio.aspx'
     },
     {
-      img: 'https://certificado.supersolidaria.gov.co:8443/DownloadReportPDF/images/superlogo.jpg',
+      img: 'https://www.supersolidaria.gov.co/sites/default/files/noticias/super_1.png',
       url: 'http://www.supersolidaria.gov.co'
     },
     {
-      img: 'https://capacitacionvirtual.supersociedades.gov.co/pluginfile.php/1/theme_moove/logo/1608423457/logo_.png',
+      img: 'https://www.greatplacetowork.com.co/images/CompaniesCertification/Fotos/Supersociedades/2023/cddf7a37-7905-486f-a70b-3863e5e4e444.png',
       url: 'https://www.supersociedades.gov.co'
     },
     {

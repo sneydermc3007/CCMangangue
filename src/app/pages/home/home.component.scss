@@ -33,7 +33,6 @@ h2 {
 }
 
 :host ::ng-deep section {
-
   &:not(.noticias) {
     flex-direction: column;
 
@@ -138,40 +137,327 @@ h2 {
   }
 
   &.interes {
-     .p-carousel {
-        .p-carousel-container .p-carousel-items-container {
-          .p-carousel-item { align-content: center; }
+    .p-carousel {
+      .p-carousel-container .p-carousel-items-container {
+        .p-carousel-item { align-content: center; }
 
-          .card {
-            &-content {
-              position: relative;
-              width: 100%;
-              height: 100%;
-            }
+        .card {
+          &-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+          }
 
-            &-image {
-              width: 80%;
-              height: 100%;
-              object-fit: cover;
-              cursor: pointer;
-            }
+          &-image {
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            mix-blend-mode: color-burn;
           }
         }
-    }
-  }
-
-  &.videos {
-    @media screen and (max-width: 1729px) {     
-      .video-card { width: 400px; }
+      }
     }
   }
 }
 
-:host ::ng-deep p-galleriaitem .p-galleria-item-prev{
-  z-index: 2000;
-}
+:host ::ng-deep p-galleriaitem .p-galleria-item-prev{ z-index: 2000; }
 
 @keyframes ocean-wave {
   0% { background-position: 0 100%; }
   100% { background-position: 200% 100%; }
+}
+
+// Estilos responsivos
+@media screen and (max-width: 1350px) and (min-width: 1201px) {
+  main {  
+    .galleria-image { height: 650px; }
+    background: red;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1025px) {
+  main { 
+    background: blue;
+  }
+
+  .card {
+    .galleria-image {
+      height: 650px;
+      object-fit: initial;
+    }
+  }
+
+  :host ::ng-deep section {
+    &.noticias {
+      flex-direction: column;
+      row-gap: 1em;
+
+      app-principales {
+        p-carousel .p-carousel .p-carousel-content { width: auto; }
+      }
+
+      app-segundarias {
+        .card-container { height: 400px; }
+      }
+    }
+
+    &.tramites {
+      .card-container .card { width: 300px; }
+    }
+
+    &.videos {
+      .video-grid {
+        gap: 1em;
+        justify-content: center;
+        .video-card {  width: calc(50% - 0.5em); }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  main { 
+    background: green;
+  }
+
+  :host ::ng-deep section {
+    &.noticias {
+      app-principales {
+        p-carousel .p-carousel .p-carousel-content { 
+          max-width: 350px; 
+          width: auto;
+          min-width: 300px
+        }
+      }
+    }
+
+    &.tramites {
+      .card-container .card {
+        width: 200px;
+        padding: 10px !important;
+      }
+    }
+
+    &.empresarial {
+      app-actividad-empresarial {
+        .image-header .overlay h1 { font-size: 2rem; }
+        .news-cards { margin-top: -25%; } 
+      }
+    }
+
+    &.videos {
+      .video-grid {
+        gap: 1em;
+        .video-card {  
+          width: 100%;
+          height: 200px
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 957px) and (min-width: 768px) {
+  main { 
+    background: yellow;
+  }
+
+  .card {
+    .galleria-image {
+      height: 350px;
+      object-fit: initial;
+    }
+  }
+  
+  :host ::ng-deep section {
+    &.noticias {
+      app-principales {
+        .card-container { height: 500px; }
+      }
+
+      app-segundarias {
+        .card-container { height: 250px; }
+      }
+
+      app-principales,
+      app-segundarias {
+        .card-text h2 { font-size: 0.75em !important; }
+      }      
+    }
+
+    &.empresarial {
+      app-actividad-empresarial {
+        .image-header .overlay {
+          align-items: flex-start;
+        }
+    
+        .news-cards { 
+          margin-top: -60%;
+          row-gap: 1.75em;
+
+          .card { 
+            max-width: 100%;
+            width: 95%;
+            height: 130px;
+
+            p { margin: 8px 0; }
+          }
+        } 
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 576px) {
+  main { 
+    background: orange;
+  }
+
+  .card {
+    .galleria-image {
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  :host ::ng-deep section {
+    &.noticias {
+      flex-direction: column;
+      row-gap: 1em;
+
+      app-principales {
+        .card-container { height: 400px; }
+        p-carousel .p-carousel .p-carousel-content { 
+          width: 100%;
+        } 
+      }
+
+      app-segundarias {
+        row-gap: 1em;
+        .card-container { height: 350px; }
+      }    
+    }
+
+    &.empresarial {
+      app-actividad-empresarial {
+        .image-header .overlay {
+          align-items: start;
+          h1 { font-size: 1.5rem !important; }
+        }
+    
+        .news-cards { 
+          margin-top: -70%;
+          row-gap: 1.75em;
+
+          .card { 
+
+            h3 { min-height: 6.875em;}
+            p { display: none; }
+          }
+        } 
+      }
+    }
+
+    &.tramites {
+      .card-container .card {
+        width: 200px;
+        padding: 10px !important;
+      }
+    }
+
+    &.videos {
+      .video-grid {
+        row-gap: 1em;
+        .video-card {  
+          width: calc(250px - .5em);
+          height: calc(250px);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  main { 
+    background: purple;
+  }
+
+  .card {
+    .galleria-image {
+      height: 300px;
+      object-fit: unset;
+    }
+  }
+
+  :host ::ng-deep section {
+    &.noticias {
+      flex-direction: column;
+      row-gap: 1em;
+
+      app-principales {
+        .card-container { height: 325px; }
+        p-carousel .p-carousel .p-carousel-content { width: 100%; } 
+      }
+
+      app-segundarias {
+        row-gap: 1em;
+        .card-container { height: 250px; }
+      }    
+    }
+
+    &.empresarial {
+      app-actividad-empresarial {
+        .image-header .overlay {
+          align-items: start;
+          h1 { font-size: 1.25rem !important; }
+        }
+    
+        .news-cards { 
+          margin-top: -21.5em;
+          row-gap: 1em;
+
+          .card { 
+            width: 85%;
+            max-width: 300px;
+
+            // display: flex;
+            // justify-items: center;
+            // align-items: center;
+
+            // padding: 0 1em;
+
+            h3 { min-height: 1em;}
+            p { display: none; }
+          }
+        } 
+      }
+    }
+
+    &.tramites {
+      .card-container .card {
+        width: 100%;
+        height: 100px;
+      }
+    }
+
+    &.videos {
+      .video-grid {
+        row-gap: 1em;
+
+        .video-card {  
+          width: 100%;
+          height: 180px;
+        }
+      }
+    }
+
+    &.interes {
+      .p-carousel {
+        .p-carousel-container .p-carousel-items-container {
+          .card-image {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,9 +1,10 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { CommonModule }  from "@angular/common";
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, RouterLinkActive } from "@angular/router";
 
 import { ButtonModule } from 'primeng/button';
+import { SidebarModule } from 'primeng/sidebar';
 
 interface Menu { title: string; opciones: MenuOption[]; }
 interface MenuOption { label: string; route: string; subOpciones?: MenuOption[]; }
@@ -16,14 +17,16 @@ interface MenuOption { label: string; route: string; subOpciones?: MenuOption[];
     FormsModule,
     RouterLink,
     RouterLinkActive,
-    ButtonModule
+    ButtonModule,
+    SidebarModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  constructor(private router: Router) {}
+  public sideBarVisible: boolean = false;
+
   public menuList: Array<Menu> = [
     {
       title: 'Nosotros',
@@ -83,7 +86,17 @@ export class HeaderComponent {
     }
   ];
 
+  constructor( private router: Router) {}
+
   public goHome() {
     this.router.navigate(['/']);
+  }
+
+  toggleSidebar() {
+    this.sideBarVisible = !this.sideBarVisible;
+  }
+
+  closeSidebar() {
+    this.sideBarVisible = false;
   }
 }

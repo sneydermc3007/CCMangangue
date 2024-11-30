@@ -276,8 +276,6 @@ header {
 
 @media screen and (max-width: 974px) and (min-width: 768px) {
   .horizontal-menu {
-    background: gray;
-
     .left-segment {
       nav ul li {
         margin: auto 0;
@@ -286,11 +284,8 @@ header {
     }
   }
 }
-
 @media screen and (max-width: 767px) and (min-width: 648px) {
   .horizontal-menu {
-    background: greenyellow;
-
     .left-segment {
       .logo img { display: none; }
 
@@ -302,10 +297,8 @@ header {
     }
   }
 }
-
 @media screen and (max-width: 647px) and (min-width: 487px) {
   .horizontal-menu {
-    background: skyblue;
     display: flex;
     flex-direction: column-reverse;
 
@@ -319,7 +312,6 @@ header {
     }
   }
 }
-
 @media screen and (max-width: 486px) {
   header {
     flex-direction: column;
@@ -341,7 +333,6 @@ header {
   }
 
   .horizontal-menu {
-    background: violet;
     .left-segment nav, .right-segment { display: none; }
 
     button {

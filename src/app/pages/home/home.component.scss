@@ -173,13 +173,9 @@ h2 {
 @media screen and (max-width: 1350px) and (min-width: 1201px) {
   main {  
     .galleria-image { height: 650px; }
-    background: red;
   }
 }
 @media screen and (max-width: 1200px) and (min-width: 1025px) {
-  main { 
-    background: blue;
-  }
 
   .card {
     .galleria-image {
@@ -216,10 +212,6 @@ h2 {
   }
 }
 @media screen and (max-width: 1024px) and (min-width: 768px) {
-  main { 
-    background: green;
-  }
-
   :host ::ng-deep section {
     &.noticias {
       app-principales {
@@ -257,10 +249,6 @@ h2 {
   }
 }
 @media screen and (max-width: 957px) and (min-width: 768px) {
-  main { 
-    background: yellow;
-  }
-
   .card {
     .galleria-image {
       height: 350px;
@@ -307,10 +295,6 @@ h2 {
   }
 }
 @media screen and (max-width: 767px) and (min-width: 576px) {
-  main { 
-    background: orange;
-  }
-
   .card {
     .galleria-image {
       height: 300px;
@@ -375,10 +359,6 @@ h2 {
   }
 }
 @media screen and (max-width: 575px) {
-  main { 
-    background: purple;
-  }
-
   .card {
     .galleria-image {
       height: 300px;

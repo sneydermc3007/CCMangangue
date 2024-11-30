@@ -123,7 +123,6 @@ footer {
 
     //========= Breakpoints for responsiveness =========
     @media (max-width: 1680px) and (min-width: 1279px) {
-        background: red;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem 3.75rem;
 
@@ -131,25 +130,19 @@ footer {
 
         .location { grid-column: span 3; }
     }
-
     @media (max-width: 1278px) and (min-width: 1150px) {
-        background: orange;
         grid-template-columns: repeat(3, 1fr);
         gap: 1em;
 
         .location { grid-column: span 3; }
     }
-
     @media (max-width: 1149px) and (min-width: 852px) {
-        background: green;
         grid-template-columns: repeat(2, 1fr);
         gap: 1em 3em;
 
         .footer-left, .footer-center, .footer-right, .location { margin-bottom: 0; }
     }
-
     @media (max-width: 851px) and (min-width: 760px) { // Ya se puede seguir las mismas dimensiones del home
-        background: gray;
         grid-template-columns: 1fr 1fr;
         gap: 1.5em 1em;
 
@@ -167,9 +160,7 @@ footer {
             }
         }
     }
-
     @media (max-width: 759px) {
-        background: cadetblue;
         grid-template-columns: 1fr;
         row-gap: 1.5rem;
 

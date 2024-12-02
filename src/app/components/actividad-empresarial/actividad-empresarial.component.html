@@ -7,16 +7,12 @@
 
   <div class="news-cards">
     <div class="card" *ngFor="let noticia of noticias">
-      <h3>{{ noticia.title | shortenText:45 }}</h3>
-      <p>{{ noticia.date }}</p>
-      <button>
+      <h3>{{ noticia.nombre | shortenText:45 }}</h3>
+      <p>{{ noticia.fecha_publicacion }}</p>
+      <button (click)="navigateToNoticia(noticia.id)">
         Visitar la noticia
         <i class="pi pi-angle-right"></i>
       </button>
-<!--      <span>-->
-<!--        <a [routerLink]="['/noticia', noticia.id]">Visitar la noticia</a>-->
-<!--        <i class="pi pi-angle-right"></i>-->
-<!--      </span>-->
     </div>
   </div>
 </div>

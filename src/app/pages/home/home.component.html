@@ -56,6 +56,18 @@
     <app-videos callingComponent="home" [videos]="videos"></app-videos>
   </section>
 
+  <section class="calendario">
+    <h2>
+      <i class="fa-solid fa-calendar fa-xl"></i>
+      Eventos
+    </h2>
+    @if (isBrowser) {
+      <div class="calendar-container">
+        <full-calendar [options]="calendarOptions"></full-calendar>
+      </div>
+    }
+  </section>
+
   <section class="interes">
     <h2>
       <i class="fa-solid fa-globe fa-xl"></i>

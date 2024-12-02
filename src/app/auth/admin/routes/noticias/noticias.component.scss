@@ -107,6 +107,25 @@ section {
   }
 }
 
+.tipo {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+
+  &.principal {
+    color: #03045e;
+    background-color: #00b4d8;
+  }
+  &.secundaria {
+    color: #3182ce;
+    background-color: #ebf8ff;
+  }
+  &.empresarial {
+    color: #c8b1e4;
+    background-color: #4c3fd9;
+  }
+}
+
 p-dialog {
   .ui-dialog-titlebar {
     background-color: #3a3a3a;
@@ -121,6 +140,8 @@ p-dialog {
 }
 
 .p-field {
+  margin-bottom: 1.25rem;
+
   label {
     font-size: 0.9rem;
     font-weight: 500;

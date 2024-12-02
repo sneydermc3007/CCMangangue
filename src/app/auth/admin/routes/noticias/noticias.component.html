@@ -28,6 +28,7 @@
                   <th>ID</th>
                   <th>Nombre</th>
                   <th>Descripción</th>
+                  <th>Tipo</th>
                   <th>Estado</th>
                   <th>Acciones</th>
                 </tr>
@@ -37,6 +38,13 @@
                   <td>{{ noticia.id }}</td>
                   <td>{{ noticia.nombre }}</td>
                   <td>{{ noticia.descripcion }}</td>
+                  <td>  
+                    <span class="tipo" [ngClass]="{
+                      'principal': noticia.tipo === 'Principal',
+                      'secundaria': noticia.tipo === 'Secundaria',
+                      'empresarial': noticia.tipo === 'Empresarial'
+                    }">{{ noticia.tipo }}</span>
+                  </td>
                   <td>
                     <span class="estado" [ngClass]="{
                       'activo': noticia.estado === 'Activo',
@@ -177,3 +185,4 @@
 </p-dialog>
 
 <app-return-admin></app-return-admin>
+<p-toast />

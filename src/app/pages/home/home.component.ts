@@ -1,11 +1,19 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, Inject, PLATFORM_ID ,OnInit } from '@angular/core';
 import { CommonModule }  from "@angular/common";
 import { FormsModule } from '@angular/forms';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 
 import { GalleriaModule } from 'primeng/galleria';
 import { CarouselModule } from 'primeng/carousel';
+
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import listPlugin from '@fullcalendar/list';
+import esLocale from '@fullcalendar/core/locales/es';
+import { CalendarOptions } from '@fullcalendar/core';
 
 import { SharedModule } from "../../shared/shared.module";
 import { NoticiasModule } from "../../components/noticias/noticias.module";
@@ -18,6 +26,7 @@ import { SlideInterface } from "../../interfaces/slides.interface";
 
 import { VideosService } from '../../services/videos/videos.service';
 import { SlidesService } from '../../services/slides/slides.service';
+import { CalendariosService } from '../../services/calendarios/calendarios.service';
 
 @Component({
   selector: 'app-home',
@@ -27,6 +36,7 @@ import { SlidesService } from '../../services/slides/slides.service';
     FormsModule,
     GalleriaModule,
     CarouselModule,
+    FullCalendarModule,
     SharedModule,
     NoticiasModule,
     ActividadEmpresarialComponent,
@@ -48,12 +58,36 @@ import { SlidesService } from '../../services/slides/slides.service';
 export class HomeComponent implements OnInit {
   public videos: VideoInterface[] = [];
   public slides: SlideInterface[] = [];
+  protected isBrowser: boolean;
+
+  public   calendarOptions: CalendarOptions = {
+    plugins: [dayGridPlugin, timeGridPlugin, listPlugin],
+    initialView: 'dayGridMonth',
+    locale: esLocale,
+    headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek,listWeek'
+    },
+    buttonText: {
+      today: 'Hoy',
+      month: 'Mes',
+      week: 'Semana',
+      list: 'Lista'
+    },
+    height: 'auto',
+    events: []
+  };
 
   constructor(
     private router: Router,
     private _videos: VideosService,
-    private _slides: SlidesService
-  ) {}
+    private _slides: SlidesService,
+    private _calendario: CalendariosService,
+    @Inject(PLATFORM_ID) private platformId: object
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
 
   ngOnInit(): void {
     this._videos.getVideos().subscribe((videos: VideoInterface[]) => {
@@ -64,6 +98,17 @@ export class HomeComponent implements OnInit {
       slides.sort((a, b) => a.posicion - b.posicion).filter((slide: any) => slide.estado === 'activo');
       this.slides = slides;
     });
+
+    if (this.isBrowser) 
+      this._calendario.getEventos().subscribe((eventos) => {
+        const formattedEvents = eventos.map(evento => ({
+          title: evento.titulo,
+          start: `${evento.fecha}T${evento.hora_inicio}`,
+          end: `${evento.fecha}T${evento.hora_fin}`
+        }));
+        
+        this.calendarOptions = {...this.calendarOptions, events: formattedEvents};
+      });
   }
 
   public sitiosInteres: any[] = [

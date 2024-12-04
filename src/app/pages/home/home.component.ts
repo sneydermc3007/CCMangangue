@@ -7,6 +7,7 @@ import { isPlatformBrowser } from '@angular/common';
 
 import { GalleriaModule } from 'primeng/galleria';
 import { CarouselModule } from 'primeng/carousel';
+import { DialogModule } from 'primeng/dialog';
 
 import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -36,6 +37,7 @@ import { CalendariosService } from '../../services/calendarios/calendarios.servi
     FormsModule,
     GalleriaModule,
     CarouselModule,
+    DialogModule,
     FullCalendarModule,
     SharedModule,
     NoticiasModule,
@@ -59,6 +61,7 @@ export class HomeComponent implements OnInit {
   public videos: VideoInterface[] = [];
   public slides: SlideInterface[] = [];
   protected isBrowser: boolean;
+  public displayModal: boolean = false;
 
   public   calendarOptions: CalendarOptions = {
     plugins: [dayGridPlugin, timeGridPlugin, listPlugin],
@@ -90,6 +93,8 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.displayModal = true;
+
     this._videos.getVideos().subscribe((videos: VideoInterface[]) => {
       this.videos = videos.filter((video: VideoInterface) => video.estado === 'Activo');
     });

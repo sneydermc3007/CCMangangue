@@ -91,3 +91,12 @@
     </p-carousel>
   </section> 
 </main>
+
+<p-dialog [(visible)]="displayModal" [modal]="isBrowser" [closable]="isBrowser">
+  <div class="image-container">
+    <button (click)="displayModal = false">
+      <i class="pi pi-times"></i>
+    </button>
+    <img src="https://ccmagangue.org.co/v2/wp-content/uploads/2023/04/RUP.png"/>
+  </div>
+</p-dialog>

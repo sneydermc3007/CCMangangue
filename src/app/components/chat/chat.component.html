@@ -1,22 +1,49 @@
-<div class="chat-container" *ngIf="isChatOpen">
+<div class="chat-container" [class.open]="isChatOpen">
   <div class="chat-header">
-    <h3>Juancho</h3>
-    <button (click)="closeChat()">X</button>
+    <h3>Chat con Juancho</h3>
+    <button class="close-button" (click)="closeChat()">
+      <span>&times;</span>
+    </button>
   </div>
 
-  <div class="chat-body">
-    <div *ngFor="let message of messages">
-      <div *ngIf="message.sender === 'bot'" class="message bot">
-        {{ message.text }}
+  <div class="chat-messages">
+    <div *ngFor="let message of messages" 
+         [class.user-message]="message.sender === 'user'"
+         [class.bot-message]="message.sender === 'bot'"
+         class="message-container">
+      
+      <div class="message-avatar">
+        <img [src]="message.sender === 'bot' ? botAvatar : userAvatar" 
+             [alt]="message.sender === 'bot' ? 'Bot Avatar' : 'User Avatar'">
+        <span class="sender-name">{{ message.sender === 'bot' ? 'Juancho' : 'Tú' }}</span>
       </div>
-      <div *ngIf="message.sender === 'user'" class="message user">
-        {{ message.text }}
+
+      <div class="message-content">
+        <p class="message-text">{{ message.text }}</p>
+        <span class="message-time">{{ message.timestamp | date:'shortTime' }}</span>
       </div>
+    </div>
+
+    <div *ngIf="isLoading" class="typing-indicator">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
     </div>
   </div>
 
-  <div class="chat-footer">
-    <input [(ngModel)]="newMessage" placeholder="Escribe un mensaje..." />
-    <button (click)="sendMessage()">Enviar</button>
+  <div class="chat-input">
+    <textarea
+      [(ngModel)]="newMessage"
+      placeholder="Escribe tu mensaje aquí..."
+      (keydown)="handleKeyPress($event)"
+      [disabled]="isLoading"
+    ></textarea>
+    <button 
+      (click)="sendMessage()" 
+      [disabled]="!newMessage.trim() || isLoading"
+      class="send-button">
+      <span *ngIf="!isLoading">Enviar</span>
+      <span *ngIf="isLoading">...</span>
+    </button>
   </div>
 </div>

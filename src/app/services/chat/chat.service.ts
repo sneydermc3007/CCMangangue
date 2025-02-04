@@ -79,7 +79,7 @@ export class ChatService {
       `);
 
       const llm = new ChatOpenAI({
-        modelName: "meta-llama/llama-3.1-8b-instruct:free",
+        modelName: "meta-llama/llama-3.2-3b-instruct:free",
         openAIApiKey: environment.OPENROUTER_API_KEY,
         configuration: {
           baseURL: "https://openrouter.ai/api/v1"
@@ -102,12 +102,11 @@ export class ChatService {
   async getAnswer(question: string): Promise<any> {
     try {
       await this.initializationPromise;
-
       if (!this.vectorStore) {
         throw new Error('Vector store no inicializado');
       }
 
-      // Buscar coincidencia exacta en el QA
+      // Buscar coincidencia exacta en el Q&A
       const exactMatch = this.qaData.find(
         item => item.pregunta.toLowerCase() === question.toLowerCase()
       );
@@ -119,9 +118,12 @@ export class ChatService {
         };
       }
 
-      // Si no hay coincidencia exacta, usar el RAG chain
-      const retriever = this.vectorStore.asRetriever();
+      // Usar el retriever configurado con k: 3 (igual que en la inicialización)
+      const retriever = this.vectorStore.asRetriever({ k: 3 });
       const relevantDocs = await retriever.invoke(question);
+
+      // Puedes agregar aquí una validación adicional basada en un "score" de similitud.
+      // Si los documentos recuperados tienen baja relevancia, devuelve una respuesta predeterminada.
 
       const response = await this.ragChain.invoke({
         question,
@@ -132,7 +134,6 @@ export class ChatService {
         text: response || 'Lo siento, no pude generar una respuesta.',
         source: 'rag_chain'
       };
-
     } catch (error) {
       console.error('Error al obtener respuesta:', error);
       return {

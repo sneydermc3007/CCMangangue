@@ -18,13 +18,15 @@ interface QAItem {
   providedIn: 'root'
 })
 export class ChatService {
-  private vectorStore: MemoryVectorStore | null = null;
-  private initializationPromise: Promise<void>;
+  private static vectorStore: MemoryVectorStore | null = null;
+  private static initializationPromise: Promise<void>;
   private ragChain: any;
   private qaData: QAItem[] = [];
 
   constructor() {
-    this.initializationPromise = this.initializeVectorStore();
+    if (!ChatService.initializationPromise) {
+      ChatService.initializationPromise = this.initializeVectorStore();
+    }
   }
 
   private async initializeVectorStore() {
@@ -34,15 +36,25 @@ export class ChatService {
       const data = await response.json();
       this.qaData = data['Q&A'] || [];
 
+      // Modificar cómo creamos los documentos para mejorar el contexto
       const docs = this.qaData.map((item: QAItem) => new Document({
-        pageContent: `Pregunta: ${item.pregunta}\nRespuesta: ${item.respuesta}`,
-        metadata: { type: 'qa' }
+        pageContent: `
+          Pregunta: ${item.pregunta}
+          Respuesta: ${item.respuesta}
+          ---
+        `,
+        metadata: { 
+          type: 'qa',
+          question: item.pregunta,
+          answer: item.respuesta
+        }
       }));
 
-      // 2. Dividir el texto en chunks
+      // 2. Ajustar los parámetros del text splitter para mantener Q&A juntos
       const textSplitter = new RecursiveCharacterTextSplitter({
-        chunkSize: 500,
-        chunkOverlap: 50
+        chunkSize: 1000, // Aumentamos el tamaño del chunk
+        chunkOverlap: 200, // Aumentamos el overlap para mejor contexto
+        separators: ["\n---\n", "\n\n", "\n", " ", ""] // Definimos separadores específicos
       });
       const splits = await textSplitter.splitDocuments(docs);
 
@@ -52,31 +64,32 @@ export class ChatService {
         model: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
       });
 
-      this.vectorStore = await MemoryVectorStore.fromDocuments(splits, embeddings);
+      ChatService.vectorStore = await MemoryVectorStore.fromDocuments(splits, embeddings);
 
-      // 4. Configurar el RAG chain con OpenRouter
-      const retriever = this.vectorStore.asRetriever({
-        k: 3, // Recuperar los 3 documentos más relevantes
-      });
-
+      // 4. Modificar el prompt para mejorar la recuperación de información
       const prompt = ChatPromptTemplate.fromTemplate(`
-        Eres un asistente virtual amigable y profesional de la Cámara de Comercio de Magangué. 
-        Tu nombre es Juancho y tu objetivo es ayudar a los usuarios con sus consultas.
+        Eres Juancho, un asistente virtual conciso de la Cámara de Comercio de Magangué.
 
         Instrucciones:
-        1. Responde siempre en español de manera clara y concisa
-        2. Si la pregunta está en el contexto, usa esa información
-        3. Si la pregunta no está en el contexto, indica amablemente que no tienes esa información
-        4. Mantén un tono profesional pero cercano
+        1. Responde de forma directa y breve
+        2. Usa solo la información del contexto
+        3. No agregues saludos ni despedidas
+        4. Si no tienes la información, responde "No tengo información sobre eso"
 
-        Contexto relevante:
+        Contexto:
         {context}
 
-        Pregunta del usuario:
+        Pregunta:
         {question}
 
-        Respuesta en español:
+        Respuesta breve:
       `);
+
+      // 5. Configurar el retriever sin el filtro de score
+      const retriever = ChatService.vectorStore.asRetriever({
+        k: 3,
+        searchType: "similarity"
+      });
 
       const llm = new ChatOpenAI({
         modelName: "meta-llama/llama-3.2-3b-instruct:free",
@@ -101,8 +114,16 @@ export class ChatService {
 
   async getAnswer(question: string): Promise<any> {
     try {
-      await this.initializationPromise;
-      if (!this.vectorStore) {
+      // Validar si es una operación matemática
+      if (/[\d+\-*\/=]+/.test(question)) {
+        return {
+          text: 'No puedo realizar operaciones matemáticas. Por favor, pregunta sobre los servicios de la Cámara de Comercio.',
+          source: 'validation'
+        };
+      }
+
+      await ChatService.initializationPromise;
+      if (!ChatService.vectorStore) {
         throw new Error('Vector store no inicializado');
       }
 
@@ -118,12 +139,21 @@ export class ChatService {
         };
       }
 
-      // Usar el retriever configurado con k: 3 (igual que en la inicialización)
-      const retriever = this.vectorStore.asRetriever({ k: 3 });
+      // Usar el retriever con validación de relevancia
+      const retriever = ChatService.vectorStore.asRetriever({ 
+        k: 3,
+        searchType: "similarity"
+      });
+      
       const relevantDocs = await retriever.invoke(question);
 
-      // Puedes agregar aquí una validación adicional basada en un "score" de similitud.
-      // Si los documentos recuperados tienen baja relevancia, devuelve una respuesta predeterminada.
+      // Solo validar si hay documentos
+      if (!relevantDocs || relevantDocs.length === 0) {
+        return {
+          text: 'Lo siento, no tengo información específica sobre esa consulta. ¿Podrías reformular tu pregunta o preguntar sobre otro tema?',
+          source: 'no_context'
+        };
+      }
 
       const response = await this.ragChain.invoke({
         question,

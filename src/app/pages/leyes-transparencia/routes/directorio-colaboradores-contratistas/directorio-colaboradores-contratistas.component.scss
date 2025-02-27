@@ -1,0 +1,15 @@
+@import './../../../../../styles.scss';
+
+section {
+    flex-direction: column;
+    place-items: flex-start !important;
+
+    &.contenido {
+        a {
+            color: $primary-color;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<main>
+    <app-title [title]="'Preguntas y respuestas frecuentes'"></app-title>
+    
+    <section class="tabs">
+      <div class="card">
+        <p-tabView>
+            @for (item of tabs; track $index) {
+              <p-tabPanel [header]="item.header">
+                 <app-acordeon [information]="item.dataView"></app-acordeon>
+              </p-tabPanel>
+            }
+        </p-tabView>
+      </div>
+    </section>
+  </main>

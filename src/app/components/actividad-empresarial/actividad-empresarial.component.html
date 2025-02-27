@@ -1,0 +1,18 @@
+<div class="empresa-section">
+  <div class="image-header">
+    <div class="overlay">
+      <h1>ACTUALIDAD EMPRESARIAL</h1>
+    </div>
+  </div>
+
+  <div class="news-cards">
+    <div class="card" *ngFor="let noticia of noticias">
+      <h3>{{ noticia.nombre | shortenText:45 }}</h3>
+      <p>{{ noticia.fecha_publicacion }}</p>
+      <button (click)="navigateToNoticia(noticia.id)">
+        Visitar la noticia
+        <i class="pi pi-angle-right"></i>
+      </button>
+    </div>
+  </div>
+</div>

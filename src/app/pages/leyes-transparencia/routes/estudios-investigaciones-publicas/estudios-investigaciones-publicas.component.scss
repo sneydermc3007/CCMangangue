@@ -1,0 +1,10 @@
+@import './../../../../../styles.scss';
+
+section {
+    &.tabs {
+        a {
+            text-decoration: none;
+            color: $primary-color;
+        }
+    }
+}

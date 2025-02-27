@@ -1,0 +1,43 @@
+<main>
+    <app-title [title]="'NORMATIVIDAD GENERAL'"></app-title>
+
+    <section class="tabs">
+        <div class="card">
+          <p-tabView>
+              @for (item of tabs; track $index) {
+                <p-tabPanel [header]="item.header">
+                    @if ($index === 0) {
+                        <p-timeline [value]="item.contenido" align="alternate" styleClass="customized-timeline">
+                            <ng-template pTemplate="marker" let-event>
+                                <span [style]="{ 'background-color': event.color }">
+                                    <p>{{event.year}}</p>
+                                </span>
+                            </ng-template>
+                            <ng-template pTemplate="content" let-event>
+                                <p-card>
+                                    @for (item of event.items; track $index) {
+                                        <div class="ley">
+                                          <h4>{{ item.titulo }}</h4>
+                                          <p>{{ item.descripcion }}</p>
+                                        </div>
+                                    }
+                                </p-card>
+                            </ng-template>
+                        </p-timeline>
+                    }
+                    @else {
+                        <p-card>
+                            @for (item of item.contenido; track $index) {
+                                <div class="ley">
+                                  <h4>{{ item.titulo }}</h4>
+                                  <p>{{ item.descripcion }}</p>
+                                </div>
+                            }
+                        </p-card>
+                    }
+                </p-tabPanel>
+              }
+          </p-tabView>
+        </div>
+      </section>
+</main>

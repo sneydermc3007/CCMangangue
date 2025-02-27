@@ -1,0 +1,42 @@
+@import './../../../styles.scss';
+
+section {
+  &.información {
+    flex-direction: column;
+
+    .fondo {
+      background: #f3f3f3;
+      padding: 1.5rem;
+      border-radius: 20px;
+
+      button {
+        background: $primary-color;
+        color: $white;
+        border: none;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover { background: darken($primary-color, 10%) }
+      }
+    }
+
+    h2 { text-align: center; }
+
+    p { text-align: justify; }
+  }
+}
+
+:host ::ng-deep p-tabView .p-tabview {
+    
+    .p-tabview-nav-content .p-tabview-nav {
+        .p-highlight a {
+            border-color: $primary-color;
+            color: $primary-color;
+        }
+    }
+}
+  

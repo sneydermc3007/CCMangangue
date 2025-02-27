@@ -1,0 +1,353 @@
+@import './../../../styles.scss';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15%;
+  background-color: $gobierno-color;
+
+  height: 25px;
+
+  .logo img { height: 20px; }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $white;
+      &.activo { font-weight: bold; }
+    }
+  }
+}
+
+.horizontal-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+  padding: 10px 15%;
+
+  .left-segment {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+
+    .logo img {
+      width: 160px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      li {
+        position: relative;
+
+        a {
+          display: block;
+          padding: 10px 20px;
+          color: $white;
+          text-decoration: none;
+          font-weight: 400;
+          font-size: 0.875em;
+          letter-spacing: 0.5px;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $quinary-color;
+            font-weight: 500;
+          }
+        }
+
+        ul {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          z-index: 10;
+          background-color: rgba(255, 255, 255, 0.9);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          border-radius: 4px;
+
+          li a {
+            padding: 8px 15px;
+            font-size: 0.813em;
+            color: #666;
+            transition: color 0.3s ease;
+
+            &:hover { color: #333; }
+          }
+
+          li ul {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+
+            li a {
+              padding: 8px 15px;
+              font-size: 0.813em;
+              color: #666;
+              transition: color 0.3s ease;
+
+              &:hover { color: #333; }
+            }
+          }
+
+          li:hover ul {
+            display: block;
+            animation: slideRight 0.3s ease forwards;
+          }
+        }
+
+        &:hover > ul {
+          display: block;
+          animation: slideDown 0.3s ease forwards;
+          width: max-content;
+        }
+      }
+    }
+  }
+
+  .right-segment {
+    display: flex;
+    column-gap: 1em;
+
+    input {
+      background: transparent;
+      height: 40px;
+      border-radius: 5px;
+      border: 2px solid $white;
+
+      padding: 0 10px;
+      font-size: 1em;
+      color: $white;
+
+      &::placeholder { color: $white; }
+    }
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 85%;
+      color: $white;
+    }
+  }
+}
+
+:host ::ng-deep p-button {
+  .tramites { animation: pulse-tramites 1.5s infinite; }
+
+  .renovar {
+    animation: grow 2s infinite alternate;
+    &.p-button { background: $quaternary-color; }
+  }
+
+  .p-button {
+    position: relative;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1em;
+    border: none;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $white;
+      box-sizing: border-box;
+      clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    }
+  }
+}
+
+:host ::ng-deep p-sidebar .p-sidebar {
+  
+  background-color: lighten($color: $primary-color, $amount: 40);
+
+  .p-sidebar-header {
+    button svg { color: $white; }
+  }
+
+  .top-segment {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5em;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      position: relative;
+
+      a {
+        display: block;
+        padding: 10px 15px;
+        color: $white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $quinary-color;
+          background-color: rgba(255, 255, 255, 0.1);
+          font-weight: 800;
+        }
+      }
+
+      ul {
+        display: none;
+        margin-left: 15px;
+        padding: 0;
+
+        li a {
+          padding: 8px 10px;
+          font-size: 1em;
+          color: #ccc;
+          font-weight: 500;
+
+          &:hover {
+            color: $quinary-color;
+          }
+        }
+      }
+
+      &:hover > ul { display: block; }
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-tramites {
+  0%, 100% { background-color: $extra-color; }
+  50% { background-color: #70e000; }
+}
+
+@keyframes grow {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.2); }
+}
+
+@media screen and (max-width: 974px) and (min-width: 768px) {
+  .horizontal-menu {
+    .left-segment {
+      nav ul li {
+        margin: auto 0;
+        a { text-align: -webkit-center; }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 648px) {
+  .horizontal-menu {
+    .left-segment {
+      .logo img { display: none; }
+
+      nav ul li {
+        margin: auto 0;
+        a { text-align: -webkit-center; }
+      }
+      
+    }
+  }
+}
+@media screen and (max-width: 647px) and (min-width: 487px) {
+  .horizontal-menu {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .left-segment {
+      .logo img { display: none; }
+
+      nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+@media screen and (max-width: 486px) {
+  header {
+    flex-direction: column;
+    padding: 20px 15% 0;
+    height: fit-content;
+
+    nav {
+      width: 100%;
+
+      ul {
+        padding: 0;
+
+        li { 
+          flex: 1;
+          &:last-of-type { text-align: right; }
+        }
+      }
+    }
+  }
+
+  .horizontal-menu {
+    .left-segment nav, .right-segment { display: none; }
+
+    button {
+      display: block !important;
+
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      i { 
+        color: $white; 
+        font-size: 1.5em;
+      }
+    }
+  }
+}

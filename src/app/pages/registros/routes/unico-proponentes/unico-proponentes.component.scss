@@ -1,0 +1,29 @@
+@import './../../../../../styles.scss';
+
+:host ::ng-deep section {
+    &.contexto {
+        flex-direction: column;        
+        p { text-align: justify; }
+    }
+
+    &.acordion {
+        app-acordeon {
+            .p-accordion {
+                p-accordiontab:last-child {
+                    .p-accordion-tab div:last-child {
+                        .p-accordion-content {
+                            a {
+                                font-weight: 600;
+
+                                &::after {
+                                    content: "\A";
+                                    white-space: pre;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

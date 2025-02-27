@@ -1,0 +1,9 @@
+<main>
+    <app-title [title]="'Calendario de actividades'"></app-title>
+</main>
+
+@if (isBrowser) {
+    <div class="calendar-container">
+        <full-calendar [options]="calendarOptions"></full-calendar>
+    </div>
+}

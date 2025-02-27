@@ -1,0 +1,102 @@
+<main class="contenido">
+  <div class="card">
+    <p-galleria
+      [value]="slides"
+      [showItemNavigators]="true"
+      [showThumbnails]="false"
+      [showIndicators]="true"
+      [showIndicatorsOnItem]="true"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <ng-template pTemplate="item" let-item>
+        <img 
+          [src]="item.portada_url" 
+          class="galleria-image"
+          [ngStyle]="{ cursor: item.link !== null ? 'pointer' : item.pagina.titulo !== 'Nueva Página' ? 'pointer' : 'default' }"
+          (click)="goTo(item.link ? item.link : 'slide/' + item.id)"
+        />
+      </ng-template>
+    </p-galleria>
+  </div>
+
+  <h2>
+    <i class="fa-solid fa-newspaper fa-xl"></i> Noticias
+  </h2>
+  <section class="noticias">
+    <app-principales></app-principales>
+    <app-segundarias></app-segundarias>
+  </section>
+
+  <section class="empresarial">
+    <h2>
+      <i class="fa-solid fa-people-line fa-xl"></i> Empresas
+    </h2>
+    <app-actividad-empresarial></app-actividad-empresarial>
+  </section>
+
+  <section class="tramites">
+    <h2>
+      <i class="fa-regular fa-folder-open fa-xl"></i>
+      Registros Públicos
+    </h2>
+    <div class="card-container">
+      @for (item of cardViews; track $index) {
+        <div class="card" (click)="goTo(item.url)">
+          <p>{{ item.title }}</p>
+        </div>
+      }
+    </div>
+  </section>
+  
+  <section class="videos">
+    <h2>
+      <i class="fa-solid fa-photo-film fa-xl"></i>
+      Videos
+    </h2>
+    <app-videos callingComponent="home" [videos]="videos"></app-videos>
+  </section>
+
+  <section class="calendario">
+    <h2>
+      <i class="fa-solid fa-calendar fa-xl"></i>
+      Eventos
+    </h2>
+    @if (isBrowser) {
+      <div class="calendar-container">
+        <full-calendar [options]="calendarOptions"></full-calendar>
+      </div>
+    }
+  </section>
+
+  <section class="interes">
+    <h2>
+      <i class="fa-solid fa-globe fa-xl"></i>
+      Sitios de interes
+    </h2>
+    <p-carousel
+      [value]="sitiosInteres"
+      [numVisible]="3"
+      [circular]="false"
+      [showIndicators]="false"
+      [showNavigators]="false"
+      [autoplayInterval]="3000"
+    >
+      <ng-template let-sitios pTemplate="item">
+        <div class="card-container">
+          <div class="card-content">
+            <img [src]="sitios.img" class="card-image" (click)="goTo(sitios.url)" />
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </section> 
+</main>
+
+<p-dialog [(visible)]="displayModal" [modal]="isBrowser" [closable]="isBrowser">
+  <div class="image-container">
+    <button (click)="displayModal = false">
+      <i class="pi pi-times"></i>
+    </button>
+    <img src="https://ccmagangue.org.co/v2/wp-content/uploads/2023/04/RUP.png"/>
+  </div>
+</p-dialog>

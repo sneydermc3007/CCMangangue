@@ -1,0 +1,37 @@
+<main>
+    <app-title [title]="'Registro actividad de juego y azar'"></app-title>
+
+    <section class="vision">
+        <p>
+            Para el año 2019 nos visualizamos como una estructura organizativa y financiera sólida, soportada por una perceptible cultura de calidad, optimizando la 
+            prestación de nuestro portafolio de productos y servicios en el sur del Caribe, focalizando nuestra gestión con convenios o proyectos de cooperación privado, 
+            público e internacionales que nos permitan garantizar el crecimiento sustentable hacia la competitividad regional.
+        </p>
+      </section>
+      
+      <section class="actividad-lista">
+        <table>
+          <thead>
+            <tr>
+              <th>Actividad</th>
+              <th>Código CIIU</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of actividades" @fadeIn>
+              <td>{{ item.nombre }}</td>
+              <td>{{ item.codigoCiiu }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <section class="tramites-relacionados">
+        <h4>Trámites relacionados con este registro:</h4>
+        <ul>
+            @for (tramite of tramites; track $index) {
+                <li> {{ tramite }} </li>
+            }
+        </ul>
+      </section>
+</main>

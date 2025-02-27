@@ -1,0 +1,12 @@
+@import './../../../../styles.scss';
+
+section {
+
+    &.contenido {
+        a {
+            color: $primary-color;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+}

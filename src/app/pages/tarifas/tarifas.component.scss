@@ -1,0 +1,20 @@
+@import './../../../styles.scss';
+
+section {
+    flex-direction: column;
+
+    &.contenido {
+        p { text-align: justify; }
+    }
+    &.lista {
+        app-registros-list {
+            width: 100%;            
+        }
+    }
+}
+
+:host ::ng-deep app-registros-list {
+    h3 {
+        text-align: initial;
+    }
+}

@@ -1,0 +1,15 @@
+<main>
+    <app-title [title]="'EJECUCIÓN PRESUPUESTAL HISTÓRICA (ANUAL)'"></app-title>
+
+    <section class="contenido">
+        <ul>
+            @for (item of ejeccionPresupuestal; track $index) {
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" (click)="redireccionar(item.archivo)" >{{ item.label }}</h5>
+                    </div>
+                </div>
+            }
+        </ul>
+    </section>
+</main>

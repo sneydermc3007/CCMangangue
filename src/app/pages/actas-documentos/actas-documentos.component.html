@@ -1,0 +1,23 @@
+<main>
+  <app-title [title]="'Modelos de actos & documentos'"></app-title>
+
+  <section class="opciones">
+    <div class="document-section">
+      <div class="document-grid">
+        @for (item of documents; track $index) {
+          <div class="document-item" (click)="openModal(item.title)">{{ item.title }}</div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <p-dialog
+    [(visible)]="displayModal"
+    [modal]="true"
+    [closable]="true"
+    header="{{ selectedItem }}"
+    (onHide)="closeModal()"
+  >
+    <app-cards-documentos [menu]="menu" [selectedItem]="selectedItem"></app-cards-documentos>
+  </p-dialog>
+</main>

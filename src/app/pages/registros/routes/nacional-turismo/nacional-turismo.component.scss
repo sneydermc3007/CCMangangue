@@ -1,0 +1,8 @@
+@import './../../../../../styles.scss';
+
+section {
+    &.contexto {
+        flex-direction: column;        
+        p { text-align: justify; }
+    }
+}

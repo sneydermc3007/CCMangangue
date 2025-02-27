@@ -1,0 +1,15 @@
+<main>
+    <app-title [title]="'NORMAS GENERALES Y REGLAMENTARIAS'"></app-title>
+
+    <section class="contenido">
+        <ul>
+            @for (item of normas; track $index) {
+                <div class="card" style="width: 18rem;" (click)="redireccionar(item.link)">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.label }}</h5>
+                    </div>
+                </div>
+            }
+        </ul>
+    </section>
+</main>

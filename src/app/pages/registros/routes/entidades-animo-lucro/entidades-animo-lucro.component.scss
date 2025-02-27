@@ -1,0 +1,11 @@
+@import './../../../../../styles.scss';
+
+section {
+    &.contexto {
+        flex-direction: column;
+
+        h2, h3{ color: $primary-color; }
+        
+        p { text-align: justify; }
+    }
+}

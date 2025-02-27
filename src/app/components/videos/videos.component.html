@@ -1,0 +1,27 @@
+<div class="video-grid">
+  @if (callingComponent === 'leyes-transparencia') {
+    <iframe class="LT" [src]="videos[0].url | safe" frameborder="0" allowfullscreen></iframe>
+  } 
+  @else if (callingComponent === 'home') {
+    @for (item of videos; track $index) {
+      <figure class="video-card">
+        <iframe [src]="item.url | safe" frameborder="0" allowfullscreen></iframe>
+        <figcaption class="video-overlay">
+          <h5> Conoce mi historia </h5>
+          <i class="fa-duotone fa-solid fa-play fa-2xl" (click)="showVideo(item)"></i>
+        </figcaption>
+      </figure>
+    }
+  }
+</div>
+
+<div class="modal-backdrop" *ngIf="isModalOpen"></div>
+<div class="modal-container" *ngIf="isModalOpen">
+  <div class="modal-header">
+    <button class="modal-close" (click)="closeModal()">&#10005;</button>
+  </div>
+  <div class="modal-content">
+    <iframe *ngIf="selectedVideo" [src]="selectedVideo.url | safe" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+

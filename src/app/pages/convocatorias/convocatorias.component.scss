@@ -1,0 +1,86 @@
+@import './../../../styles.scss';
+
+section {
+  &.buscador {
+    input {
+      width: 600px;
+      border-radius: 1rem;
+
+      &::placeholder { color: $secondary-color; }
+      &:hover { border: 1px solid #B0B0B0; }
+      &:focus {
+        border: 3px solid $secondary-color;
+        box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.4);
+        outline: none;
+        -webkit-appearance: none;
+        -webkit-focus-ring-color: transparent;
+      }
+    }
+  }
+
+  &.convocatorias {
+    flex-direction: column;
+    h2 { color: $secondary-color; }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 3rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      img {
+        width: 100%;
+        max-height: 240px;
+        object-fit: unset;
+      }
+
+      .card-date {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: $black;
+        color: $white;
+        padding: 5px 10px;
+        font-size: 14px;
+        border-radius: 5px;
+      }
+
+      .card {
+        &-content {
+          padding: 15px;
+
+          h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+
+          p {
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+        }
+
+        &-link {
+          font-size: 14px;
+          color: $secondary-color;
+          text-decoration: none;
+
+          &:hover { text-decoration: underline; }
+        }
+      }
+    }
+  }
+}

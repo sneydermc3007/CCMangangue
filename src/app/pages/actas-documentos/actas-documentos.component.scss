@@ -1,0 +1,58 @@
+@import './../../../styles.scss';
+
+section {
+  &.opciones .document {
+    &-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      width: 100%;
+      max-width: 600px;
+    }
+  
+    &-item {
+      padding: 12px 20px;
+      background-color: $white;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 1rem;
+      color: #555;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: $tertiary-color;
+        color: $white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+:host ::ng-deep p-dialog .p-dialog {
+  width: 35%;
+  max-width: 670px;
+  min-width: 400px;
+
+  .p-dialog-header { color: $primary-color; }
+  .p-dialog-content { 
+    app-cards-documentos {
+      @media screen and (max-width: 1897px) {
+        .content {
+          justify-content: center;
+        }
+        
+      }
+    }
+  }
+}

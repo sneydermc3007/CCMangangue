@@ -1,0 +1,39 @@
+<main>
+    <app-title [title]="'Historia'"></app-title>
+
+    <section class="contenido">
+        <p>
+            La historia de las Cámaras de Comercio en Colombia comienzan con la ley 111 de 1890. Dicha ley autorizó al gobierno a crear las Cámaras de Comercio en el país “con el carácter de órganos oficiales del comercio ante el gobierno, y de cuerpos consultores en todos los asuntos relacionados con el comercio y la industria”. Durante la vigencia de la ley 111 de 1890 se crearon la Cámara de Comercio de Bogotá (1.904) Medellín (1.904), Tunja (1.910), Cali (1.910), Manizales (1.913) y la mayoría de las que hoy existen en las capitales de departamentos y otras ciudades. Indudablemente la ha sido una de las pocas entidades creadas en esta ciudad con la finalidad de gestionar ante el Gobierno central y demás entes territoriales, los problemas que tengan que ver con el progreso material y el desarrollo comercial y cultural de nuestra región, que realmente ha cumplido y seguirá siendo tal como fue ideada por sus fundadores hace mas de sesenta años. Y es así como el 13 de mayo. De 1943 un puñado de valerosos y progresistas comerciantes hijos natos y adoptivos de esta tierra, se reunieron en los salones del almacén mogollón en una gran asamblea para elegir la Junta Directiva del Comité de Comercio que gestionaría ante el Ministerio de Economía Nacional, la creación de la Cámara de Comercio de Magangué. Este comité según aparece en el boletín No.1 del mes de julio de 1.943 fue el siguiente
+        </p>
+        <ul>
+            @for (item of comiteCreadores; track $index) {
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item }}</h5>
+                    </div>
+                </div>
+            }
+        </ul>
+        <p>
+            Elegido el Comité de Comercio, sus miembros tomaron posesión de sus cargos y entraron decididamente a luchar por los intereses de Magangué. Su primera resolución se enfocó a resolver el problema del aeropuerto ya que Avianca suspendería el servicio de hidroaviones en los puertos. Del Río Magdalena, por lo tanto comunicaron a la gerencia de la empresa aérea en Bogotá, que este puerto estaría dispuesto a donar el terreno para que Avianca enviara técnicos con el fin de construir un aeródromo adecuado.
+        </p>
+        <p>
+            En relación con la creación de la Cámara de Comercio, comenzaron labores encaminadas a gestionar ante la Cámara de Comercio de Cartagena y al Ministerio de Economía Nacional la solicitud de la creación, enviando el listado del recién elegido comité de comercio y solicitando apoyo a la legitima aspiración de Magangué. Posteriormente enviaron despachos telegráficos confirmando el envío del acta de instalación acompañada de 63 firmas de comerciantes importantes divididas en grupos de acuerdo a las diferentes actividades comerciales y de carácter social existentes en la ciudad. La Cámara de Comercio de Cartagena desempeñó un papel importante dando apoyo a las iniciativas de Magangué ante el Ministerio. En realidad Cartagena veía necesario la creación de una nueva Cámara en el sur ya que a ellos les era imposible controlar y dirigir una zona tan amplia como esta. El doctor Antonio Bustillos Franco, dignísimo secretario de la Cámara de Comercio de Cartagena viajaba periódicamente a esta ciudad para animar y dar pautas de procedimientos tendientes a recolectar documentos para enviar a Bogotá y obtener rápidamente la creación de tan anhelada entidad.
+        </p>
+        <p>
+            El Comité de Comercio escogió para diligenciar en Bogotá la creación de la nueva Cámara, a una comisión compuesta por el doctor Argemiro Martínez Vega, Don Adán Delgado Franco y don Luis Guillermo Viñas M. Después de una ardua pero eficaz diligencia en la capital, la tan anhelada creación de la se vio plasmada en el decreto No. 1999 del 8 de octubre de 1.943 firmado por el presidente Alfonso López Pumarejo y su ministro de economía nacional Cesar García Álvarez.
+        </p>
+        <p>
+            Se hicieron las elecciones para nombrar la junta directiva que se componía de 6 miembros principales y 6 suplentes nombrados únicamente por el comercio. Fueron elegidos H. De Fex, Manuel del C. Díaz, Gerardo Meola, Luis Guillermo Viñas, Hernando Del Valle y Jorge Yúnez. La mesa directiva la componían el presidente H. De Fex, el primer vicepresidente Jorge Yúnez D., segundo vicepresidente Hernando Del Valle y secretario del doctor Alberto H. Iriarte.
+        </p>
+        <p>
+            Fueron presidentes de ésta Cámara, Hermenegildo De Fex, Jorge Yúnez, Manuel Lascarro, Pedro Badrán, Edberto Rincón, Policarpo Echeverri, Pedro V. Gutiérrez, Alfredo Amín, Manuel Rojas Nieto, Anuar Mery, Ramiro Rodríguez, Faisal Jalilie, Miguel Ruz, Yadira Borrego, Carlos Montes, Lida Muñoz Secretarios, Alberto H. Iriarte, Alcides Torres Obregón, Dr. Gil Blas Berrío, Salomón Bustillo y Felipe Raúl Trespalacios G.R., Alejandro Barros, Luis Álvarez Contreras, Agustín Arturo Chávez Pérez, Astrid Romero Álvarez y Henry Borré Athías.
+        </p>
+        <p>
+            Desde su creación, la Cámara de Comercio ha sido para Magangué la directriz más correcta en los anales de su historia. El área de su jurisdicción que comprende las regiones bañadas por los ríos san Jorge, Mojana, Cauca y el bajo Magdalena dan testimonio del interés presentado por ella para solucionar los problemas. Lo mismo pueden decir los pueblos de la sabana que han visto nacer las vías de comunicación que los une con Magangué comercialmente. Los beneficios obtenidos con la gestión acertada de la Cámara de Comercio son innumerables de enunciar. La historia deja huellas de recuerdos en grandes obras como aeropuertos, carreteras, hospitales, colegios, comunicaciones servicios públicos como acueducto, energía eléctrica, alcantarillado, dragados y rellenos, mejoramiento de muelles para el manipuleo de carga, control de movimiento portuario, desarrollo de técnicas agropecuarias, resurgimiento de ferias ganaderas y como meta cumbre, lideró la construcción de la muralla y los jarillones sur y norte que han sido la obra de mayor trascendencia para Magangué puesto que acabó con las grandes inundaciones que azotaron y provocaron la ruina durante mucho tiempo del comercio y progreso de este puerto.
+        </p>
+        <p>
+            Se ha de resaltar gestiones importantes en los últimos años como la Interconexión vial Yatí – La Bodega que incluye dos puentes, el Ferry Francisco José de Caldas, la Oficina de la Dian en Magangué, la reactivación del Cuerpo de Bomberos, La Travesía Ciclística por La Mojana, La Inclusión en el Plan de Desarrollo Nacional de la Vía Achí – Magangué, La creación de la Corporación por la Magangueleñidad, El Terminal Fluvial de Pasajeros, El nuevo Comando de Policía de Magangué, el liderazgo en la Alianza por el desarrollo y la democracia de la sociedad civil, la ampliación y modernización de sus oficinas, la expansión en el cubrimiento regional con oficinas en Mompox, Guaranda y Tiquisio, la virtualización de los servicios, entre muchas otras. Bien lo dijo su primer Presidente Hermenegildo de Fex en la sección editorial del boletín No. 1 del Comité de Comercio cuando escribió: “Cuando tengamos Cámara, nuestra voz no se perderá sola en el vacío de la indiferencia, sino que será reforzada por los numerosos e influyentes colegas de toda la República”.
+        </p>
+    </section>
+</main>

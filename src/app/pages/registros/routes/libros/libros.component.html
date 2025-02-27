@@ -1,0 +1,23 @@
+<main>
+    <app-title [title]="'Registro de libros'"></app-title>
+
+    <section class="contexto">
+        <p>Señor comerciante, por disposición del artículo 175 del Decreto Ley 019/2012 se informa que es obligatorio inscribir en el registro mercantil de la cámara de Comercio los siguientes Libros: </p>
+        <ul>
+            @for (item of libros; track $index) {
+                <li>{{ item }}</li>
+            }
+        </ul>
+
+        <h3>Fundamento Legal:</h3>
+        <ul>
+            @for (item of fundamentos; track $index) {
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item }}</h5>
+                    </div>
+                </div>
+            }
+        </ul>
+    </section>
+</main>

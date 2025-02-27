@@ -1,0 +1,69 @@
+@import './../../../styles.scss';
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  margin: 2.5rem 0;
+
+  > * {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    padding: 0 15%;
+  }
+}
+
+section {
+  &.title {
+    text-transform: uppercase;
+    background: $primary-color;
+    color: $white;
+
+    h1 {
+      flex: 1.5;
+      border-right: 2px solid;
+    }
+
+    p {
+      text-align: justify;
+      text-transform: initial;
+      flex: 2;
+
+      padding-left: 1rem;
+    }
+  }
+
+  &.video {
+    app-videos { width: 100% }
+  }
+
+  &.decretos {
+    .decreto {
+      flex: 1;
+      text-align: center;
+
+      &:nth-child(2) {
+        border-left: 2px solid;
+        border-right: 2px solid;
+      }
+
+      h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 14px;
+        color: #555;
+      }
+    }
+  }
+
+  &.acordion {
+    div:first-child {
+      width: 100%;
+    }
+  }
+}

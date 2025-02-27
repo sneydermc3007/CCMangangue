@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/87543927-8457-4378-b2ba-94ce48337171/resourceGroups/CamaraComercioProd/providers/Microsoft.Web/sites/camaracomerciomagangue",
+    "appService.deploySubpath": "dist/camara-comercio/browser"
+}

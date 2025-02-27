@@ -1,0 +1,95 @@
+<h2 class="section-title">
+    <i class="fa-solid fa-calendar fa-xl"></i>
+    Eventos del Calendario
+</h2>
+
+<section class="tabs">
+    <div class="card">
+        <p-tabView>
+            <p-tabPanel header="Listar">
+                <div class="eventos-list">
+                    <div *ngFor="let evento of calendario" class="evento-card">
+                        <h3>{{ evento.titulo }}</h3>
+                        <p class="fecha">{{ evento.fecha | date: 'dd/MM/yyyy' }}</p>
+                        <p class="hora">
+                            {{ evento.fecha + 'T' + evento.hora_inicio | date: 'shortTime' }} - {{ evento.fecha + 'T' +
+                            evento.hora_fin | date: 'shortTime' }}
+                        </p>
+
+                        <p class="descripcion">{{ evento.descripcion }}</p>
+                        <button class="btn btn-edit" icon="pi pi-pencil" (click)="showEditModal(evento)">Editar</button>
+                        <button class="btn btn-delete" (click)="eliminarEvento(evento.id)">Eliminar</button>
+                    </div>
+                </div>
+            </p-tabPanel>
+            <p-tabPanel header="Agregar">
+                <form [formGroup]="eventoForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="titulo">Título</label>
+                        <input id="titulo" type="text" formControlName="titulo" class="form-control"
+                            placeholder="Título del evento" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha">Fecha</label>
+                        <input id="fecha" type="date" formControlName="fecha" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hora_inicio">Hora de Inicio</label>
+                        <input id="hora_inicio" type="time" formControlName="hora_inicio" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hora_fin">Hora de Fin</label>
+                        <input id="hora_fin" type="time" formControlName="hora_fin" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripcion">Descripción</label>
+                        <textarea id="descripcion" formControlName="descripcion" class="form-control" rows="3"
+                            placeholder="Descripción del evento"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" [disabled]="eventoForm.invalid">Agregar
+                        Evento</button>
+                </form>
+            </p-tabPanel>
+        </p-tabView>
+    </div>
+</section>
+
+<p-dialog [(visible)]="display" [modal]="true" [closable]="false" header="Editar Evento" [style]="{width: '50vw'}">
+    <form [formGroup]="eventoForm" (ngSubmit)="onSubmitUpdate()">
+        <div class="form-group">
+            <label for="titulo">Título</label>
+            <input id="titulo" type="text" formControlName="titulo" class="form-control"
+                placeholder="Título del evento" />
+        </div>
+
+        <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input id="fecha" type="date" formControlName="fecha" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="hora_inicio">Hora de Inicio</label>
+            <input id="hora_inicio" type="time" formControlName="hora_inicio" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="hora_fin">Hora de Fin</label>
+            <input id="hora_fin" type="time" formControlName="hora_fin" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" formControlName="descripcion" class="form-control" rows="3"
+                placeholder="Descripción del evento"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="eventoForm.invalid">Actualizar Evento</button>
+    </form>
+</p-dialog>
+
+<app-return-admin></app-return-admin>

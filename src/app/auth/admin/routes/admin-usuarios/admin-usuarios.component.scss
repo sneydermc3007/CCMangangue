@@ -1,0 +1,134 @@
+@import "./../../../../../styles.scss";
+
+h2 {
+  text-align: center;
+  background: rgba(83, 144, 217, 0.2);
+  line-height: 3rem;
+  border-radius: 30px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+section.tabs {
+  .card {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  width: 80%;
+  margin-left: auto;
+  padding-right: 20px;
+}
+
+/* Estilos para el modal */
+::ng-deep .p-dialog {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+::ng-deep .p-dialog-header {
+  background: #007ad9;
+  color: white;
+  border-radius: 8px 8px 0 0;
+  padding: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Estilos para el contenido del modal */
+::ng-deep .form-group {
+  margin-bottom: 15px;
+}
+
+::ng-deep label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+::ng-deep input,
+::ng-deep p-password {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+::ng-deep input:focus,
+::ng-deep p-password:focus {
+  border-color: #007ad9;
+  outline: none;
+}
+
+::ng-deep .form-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+::ng-deep button.p-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+
+  &[icon="pi pi-times"] {
+    background-color: #f44336;
+    border-color: #f44336;
+
+    &:hover {
+      background-color: #d32f2f;
+      border-color: #d32f2f;
+    }
+  }
+
+  &[icon="pi pi-check"] {
+    background-color: #4caf50;
+    border-color: #4caf50;
+
+    &:hover {
+      background-color: #388e3c;
+      border-color: #388e3c;
+    }
+  }
+
+  &:hover {
+    background-color: #005f8d;
+    border-color: #005f8d;
+  }
+}
+
+/* Estilo de la tabla */
+::ng-deep .p-table {
+  th {
+    background-color: #007ad9;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  .p-button {
+    padding: 6px;
+  }
+}

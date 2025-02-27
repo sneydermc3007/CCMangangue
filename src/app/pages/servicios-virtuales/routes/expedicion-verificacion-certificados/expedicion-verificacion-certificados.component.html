@@ -1,0 +1,24 @@
+<main>
+    <app-title [title]="'Expedicíon y verificación de certificados'"></app-title>
+
+    <section class="contexto">
+        <p>
+            Bienvenido al servicio virtual de Expedición y Verificación de certificados. A continuación, seleccione la opción de su interés. 
+            Recuerde que la Cámara de Comercio de Magangué tiene a su disposición los servicios en línea que hacen más fácil sus trámites registrales.
+        </p>
+    </section>
+
+    <section class="opciones">
+        @for (item of imagenes; track $index) {
+            <div (click)="redireccionar(item.link)">
+                <img [src]="item.imagen" alt="">
+            </div>
+        }
+    </section>
+
+    <section class="extra-information">
+        <span>Mas información</span>
+        <p>Si desea conocer más información o aclarar sus dudas sobre el servicio de expedición y verificación de certificados, comuníquese a la línea (095) 687 5362, o envíe sus inquietudes</p>
+        <a routerLink="/formulario-pqrs">Aquí</a>
+    </section>
+</main>

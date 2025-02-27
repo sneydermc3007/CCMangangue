@@ -1,0 +1,61 @@
+@import './../../../styles.scss';
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+.hipervinculo:hover {
+  color: $primary-color;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+:host ::ng-deep p-dialog .p-dialog {
+  width: 35%;
+  max-width: 670px;
+  min-width: 400px;
+
+  .p-dialog-header { color: $primary-color; }
+  .p-dialog-content { 
+    app-cards-documentos {
+      @media screen and (max-width: 1897px) {
+        .content {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.modern-button {
+  background: linear-gradient(135deg, $secondary-color 0%, lighten($secondary-color, 20%) 100%);
+  color: #fff;
+  width: 100%;
+  max-width: 150px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(135deg, lighten($secondary-color, 20%) 0%, $secondary-color 100%);
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($secondary-color, 0.4);
+  }
+}

@@ -1,0 +1,60 @@
+<main>
+  <app-title [title]="'PQRS'"></app-title>
+
+    <section class="información">
+        <div class="fondo">
+            <h2>¿Qué es PQRS?</h2>
+            <h3>Objetivo:</h3>
+            <p>
+              Con el propósito de mejorar la calidad en el servicio al cliente, la Cámara de Comercio de Magangué ha implementado el <strong>SISTEMA DE PETICIONES, QUEJAS Y RECLAMOS</strong>, 
+              para el beneficio de todos los usuarios de la entidad.
+            </p>
+            <p>
+                <strong>La Cámara de Comercio de Magangué</strong>, identificada con Nit <strong>800.481.080 – 1</strong>, en cumplimiento de la Constitución Política y la <strong>Ley 1581 de 2012</strong> 
+                de protección de datos personales informa a todos los colaboradores y cualquier tercero interesado; que cumplimos con las exigencias especiales para la protección de datos 
+                personales de menores de edad (niños, niñas y adolescentes) y de los adultos que suministran sus datos personales; preservando su protección, conservación y garantizando su uso 
+                responsable y seguro, procurando proteger el derecho a la privacidad y protección de su información personal y toda aquella que nos suministró a través de nuestros formatos, 
+                formularios ubicados en nuestras instalaciones y en el sitio web antes y después de la vigencia del decreto y la ley; que sus datos personales se encuentran incluidos en nuestras 
+                bases de datos. <strong>SALIR DE ESTA LISTA:</strong> Si desea dejar de recibir información sobre temas, productos o eventos de la <strong>Cámara de Comercio de Magangué</strong>, 
+                por favor reenviar este correo con la referencia “<strong>ELIMINAR</strong>” al correo electrónico <strong>ccmagangue&#64;ccmagangue.org.co</strong>
+            </p>
+
+            <div class="card">
+                <p-tabView>
+                    <p-tabPanel header="Peticiones">
+                        <p>
+                            <strong>La petición: </strong>es aquel derecho que tiene toda persona para solicitar o reclamar ante las autoridades competentes por razones de interés general o interés particular 
+                            para elevar solicitudes respetuosas de información y/o consulta y para obtener pronta resolución de las mismas.
+                        </p>
+                    </p-tabPanel>
+                    <p-tabPanel header="Quejas">
+                        <p>
+                            <strong>Queja: </strong>Cualquier expresión verbal, escrita o en medio electrónica de insatisfacción con la conducta o la acción de los servidores públicos o de los particulares que llevan a cabo una función estatal y que requiere una respuesta. (Las quejas deben ser resueltas, atendidas o contestadas dentro de los quince (15) días siguientes a la fecha de su presentación.
+                        </p>
+                    </p-tabPanel>
+                    <p-tabPanel header="Reclamación">
+                        <p>
+                            <strong>Reclamación: </strong>Cualquier expresión verbal, escrita o en medio electrónico, de insatisfacción referida a la prestación de un servicio o la deficiente atención de una autoridad pública, es decir, es una declaración formal por el incumplimiento de un derecho que ha sido perjudicado o amenazado, ocasionado por la deficiente prestación o suspensión injustificada del servicio. (Los reclamos deben ser resueltos, atendidos o contestados dentro de los quince (15) días siguientes a la fecha de su presentación).
+                        </p>
+                    </p-tabPanel>
+                    <p-tabPanel header="Sugerencia">
+                        <p>
+                            <strong>Sugerencia:</strong> Cualquier expresión verbal, escrita o en medio electrónico de recomendación entregada por el ciudadano, que tiene por objeto mejorar el servicio que se presta en cada una de las dependencias del Ministerio de Tecnologías de la Información y las Comunicaciones, racionalizar el empleo de los recursos o hacer más participativa la gestión pública. (En un término de diez (10) días se informará sobre la viabilidad de su aplicación).
+                        </p>
+                    </p-tabPanel>
+                    <p-tabPanel header="Felicitación">
+                        <p>
+                            Las <strong>felicitaciones</strong> son la manifestación verbal o escrita de satisfacción hecha con respecto al servicio obtenido o que ha sido beneficiado por Cámara de Comercio de Magangué en el ejercicio de sus funciones.
+                        </p>
+                    </p-tabPanel>
+                </p-tabView>
+            </div>
+
+            <p>
+                * Si usted desea radicar su PQRS en linea de clic en el boton de abajo
+            </p>
+          
+            <button (click)="goToExternalPage()">Radicar PQR aquí</button>
+        </div>
+    </section>
+</main>

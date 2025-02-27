@@ -1,0 +1,92 @@
+<h2 class="section-title">
+    <i class="fa-solid fa-photo-film fa-xl"></i>
+    Videos
+</h2>
+
+<section class="tabs">
+    <div class="card">
+        <p-tabView>
+            <!-- Tab para Listar Videos -->
+            <p-tabPanel header="Listar">
+                <div class="video-list">
+                    <div *ngFor="let video of videos" class="video-card">
+                        <div class="video-thumbnail">
+                            <iframe
+                                [src]="sanitizeUrl(video.url + '?rel=0&modestbranding=1&iv_load_policy=3&fs=0&autohide=1')"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3>{{ video.titulo }}</h3>
+                            <div class="video-actions">
+                                <button pButton label="Editar" icon="pi pi-pencil" class="action-button edit"
+                                    (click)="abrirModalEditar(video)"></button>
+                                <button [disabled]="video.estado === 'Inactivo'"
+                                    [ngStyle]="{ opacity: video.estado === 'Activo' ? 1 : 0.5 }" pButton
+                                    label="Inhabilitar" icon="pi pi-trash" class="action-button delete"
+                                    (click)="deleteVideo(video)"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p-tabPanel>
+
+            <!-- Tab para Agregar Video -->
+            <p-tabPanel header="Agregar">
+                <div class="video-form">
+                    <form (ngSubmit)="onSubmit()" #videoForm="ngForm">
+                        <div class="p-field">
+                            <label for="titulo">Título</label>
+                            <input id="titulo" type="text" pInputText [(ngModel)]="nuevoVideo.titulo" name="titulo"
+                                required />
+                        </div>
+
+                        <div class="p-field">
+                            <label for="url">URL</label>
+                            <input id="url" type="text" pInputText [(ngModel)]="nuevoVideo.url" name="url" required />
+                        </div>
+
+                        <div class="p-field">
+                            <label for="estado">Estado</label>
+                            <p-dropdown [options]="estadoOptions" [(ngModel)]="nuevoVideo.estado" name="estado"
+                                placeholder="Seleccionar Estado"></p-dropdown>
+                        </div>
+
+                        <button type="submit" pButton label="Guardar" [disabled]="videoForm.invalid"
+                            class="submit-button"></button>
+                    </form>
+                </div>
+            </p-tabPanel>
+        </p-tabView>
+    </div>
+</section>
+
+<!-- Modal de Editar Video -->
+<p-dialog header="Editar Video" [(visible)]="modalEditar" modal="true" [style]="{ width: '500px', borderRadius: '8px' }"
+    (onHide)="modalEditar = false;">
+    <div class="video-form">
+        <form (ngSubmit)="actualizarVideo()">
+            <div class="p-field">
+                <label for="edit-title">Título</label>
+                <input id="edit-title" type="text" pInputText [(ngModel)]="videoSeleccionado.titulo" name="titulo"
+                    required />
+            </div>
+            <div class="p-field">
+                <label for="edit-url">URL</label>
+                <input id="edit-url" type="text" pInputText [(ngModel)]="videoSeleccionado.url" name="url" required />
+            </div>
+            <div class="p-field">
+                <label for="edit-estado">Estado</label>
+                <p-dropdown id="edit-estado" appendTo="body" [options]="estadoOptions"
+                    [(ngModel)]="videoSeleccionado.estado" name="estado" placeholder="Seleccione un estado">
+                </p-dropdown>
+            </div>
+            <button type="submit" pButton label="Actualizar" class="submit-button"></button>
+        </form>
+    </div>
+</p-dialog>
+
+<app-return-admin></app-return-admin>
+<p-toast />

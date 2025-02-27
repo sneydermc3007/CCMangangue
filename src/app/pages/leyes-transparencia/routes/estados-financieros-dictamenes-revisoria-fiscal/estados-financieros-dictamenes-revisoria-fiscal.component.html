@@ -1,0 +1,59 @@
+<main>
+    <app-title [title]="'ESTADOS FINANCIEROS Y DICTÁMENES REVISORÍA FISCAL'"></app-title>
+
+    <section class="contexto">
+        <p>
+            Las políticas contables y las normas sobre presentación de los estados financieros han sido sujetas a lo dispuesto en la <strong>circular Única. N° 10 del 2001</strong> por la superintendencia de industria y comercio a que hace referencia a la aplicación de las normas de contabilidad generalmente aceptadas contenidas en el decreto 2649 y 2650 de 1993.
+        </p>
+
+        <p>
+            Para el proceso de identificación, registro, preparación y revelación de los estados contables, La <strong>CÁMARA DE COMERCIO DE MAGANGUÉ</strong> está aplicando el marco conceptual del plan único de cuentas.
+        </p>
+
+        <p>
+            La entidad utiliza los criterios y normas de valuación de activos y pasivos particularmente los relacionados con los ajustes integrales por inflación lo cual no se aplica desde la vigencia del 2008, en cumplimiento del <strong>Decreto 1536 del 15 de Junio de 07</strong>, ejecuta sus provisiones de presentaciones legales y sus depreciaciones en forma mensual.
+        </p>
+
+        <p>
+            Para el reconocimiento patrimonial de los hechos financieros económicos, presupuestales, sociales se aplica la base de causación al igual que para el reconocimiento de la ejecución presupuestal.
+        </p>
+    </section>
+
+    <section class="contenido">
+        <div class="timeline-container">
+            <p-timeline [value]="estadosFinancierosYear" align="alternate" class="custom-timeline">
+              <ng-template pTemplate="content" let-event>
+                <div class="event-content">
+                  <div class="year-label" (click)="showDocuments(event)">
+                    {{ event.year }}
+                  </div>
+                </div>
+              </ng-template>
+            </p-timeline>
+          
+            <!-- Modal para mostrar los documentos con estilos modernos -->
+            <p-dialog
+              header="Documentos de {{ selectedYear }}"
+              [(visible)]="displayModal"
+              [modal]="true"
+              [style]="{ width: '450px' }"
+              [contentStyle]="{ 'max-height': '400px', overflow: 'auto' }"
+              [baseZIndex]="10000"
+              class="modern-dialog"
+            >
+              <ng-container *ngIf="selectedDocuments.length > 0">
+                <ul class="document-list">
+                  <li *ngFor="let doc of selectedDocuments">
+                    <a href="{{ doc.archivo }}" target="_blank" class="document-link">
+                      {{ doc.label }}
+                    </a>
+                  </li>
+                </ul>
+              </ng-container>
+              <ng-container *ngIf="selectedDocuments.length === 0">
+                <p>No hay documentos disponibles para este año.</p>
+              </ng-container>
+            </p-dialog>
+          </div>          
+    </section>
+</main>

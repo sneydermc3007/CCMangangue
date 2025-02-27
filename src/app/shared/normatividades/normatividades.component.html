@@ -1,0 +1,12 @@
+<main>
+    <app-title [title]="title"></app-title>
+
+    <section class="leyes">
+      @for (item of leyes; track $index) {
+        <div class="ley">
+          <h3>{{ item.titulo }}</h3>
+          <p>{{ item.descripcion }}</p>
+        </div>
+      }
+    </section>
+</main>

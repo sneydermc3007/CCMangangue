@@ -1,0 +1,22 @@
+<main>
+  <section class="title">
+    <h1>LEY DE TRANSPARENCIA <br> Y ACCESO A LA INFORMACIÓN PÚBLICA</h1>
+    <p>En cumplimiento a la Ley 1712 del 6 de marzo de 2014 la Cámara de Comercio de Magangué pone a disposición de la ciudadanía la siguiente información.</p>
+  </section>
+  <section class="video">
+    <app-videos callingComponent="leyes-transparencia" [videos]="videos"></app-videos>
+  </section>
+  <section class="decretos">
+    @for (item of decretos; track $index) {
+      <div class="decreto">
+        <h3>{{ item.titulo }}</h3>
+        <p>{{ item.descripcion }}</p>
+      </div>
+    }
+  </section>
+  <section class="acordion">
+    <div>
+      <app-acordeon [information]="information"></app-acordeon>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,11 @@
+<div class="noticia-detail" *ngIf="noticia">
+    <div class="noticia-container">
+        <h1 class="noticia-title">{{ noticia.nombre }}</h1>
+        <img [src]="noticia.imagen_url" alt="{{ noticia.nombre }}" class="noticia-image" />
+        <div class="noticia-body">
+            <p class="noticia-description">{{ noticia.descripcion }}</p>
+            <p class="noticia-content">{{ noticia.contenido }}</p>
+        </div>
+        <small class="noticia-date">Publicado el: {{ noticia.fecha_publicacion }}</small>
+    </div>
+</div>

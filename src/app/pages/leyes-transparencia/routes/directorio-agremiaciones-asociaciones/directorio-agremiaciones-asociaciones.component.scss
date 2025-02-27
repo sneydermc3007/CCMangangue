@@ -1,0 +1,39 @@
+@import './../../../../../styles.scss';
+
+section {
+    flex-direction: column;
+
+    &.contenido {
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+
+            .card {
+                flex: 1 1 calc(33.333% - 1.5rem);
+                max-width: calc(33.333% - 1.5rem);
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+                background-color: #f8f9fa;
+                transition: transform 0.2s ease-in-out;
+                cursor: pointer;
+                
+                &:hover { transform: translateY(-10px); }
+            
+                .card-body {
+                    padding: 1rem;
+                    text-align: center;
+                    font-size: 1rem;
+                    color: $primary-color;
+            
+                    h5 {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}

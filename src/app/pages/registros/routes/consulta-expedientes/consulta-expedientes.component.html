@@ -1,0 +1,15 @@
+<main>
+    <app-title [title]="'Consulta de expedientes'"></app-title>
+
+    <section class="contexto">
+        <p>
+            A través de este servicio, puedes consultar los documentos de los empresarios que reposan en el archivo de los Registros Públicos (Mercantil, ESAL y Proponentes). Para comenzar, selecciona la opción para ingresar:
+        </p>
+    </section>
+
+    <section class="botones">
+        <button pButton type="button" label="Instructivo para consultar los expedientes" icon="pi pi-book" (click)="redirectToExpediente(1)"></button>
+        <button pButton type="button" label="Consulta aquí tu expediente DocxFlow 3.0 registros hasta el 2021" icon="pi pi-file" (click)="redirectToExpediente(2)"></button>
+        <button pButton type="button" label="Consulta aquí tu expediente DocxFlow 4.0 desde el 2022 en adelante" icon="pi pi-file" (click)="redirectToExpediente(3)"></button>
+    </section>
+</main>

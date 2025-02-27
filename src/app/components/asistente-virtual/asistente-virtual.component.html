@@ -1,0 +1,14 @@
+<p-sidebar [(visible)]="sidebarVisible" (onHide)="ocultarSideBar()" [style]="{width: '250px'}">
+  <h3>Accesibilidad</h3>
+  <div class="accesibilidad-opciones">
+    @for (item of opcionesAccesibilidad; track $index) {
+      <button class="accesibilidad-boton" (click)="item.action()">
+        <i [ngClass]="item.icon"></i>
+        <p>{{ item.label }}</p>
+        @if (item.label === 'Aumentar Texto') {
+          <span>{{ fontSizes[currentFontSizeIndex].split('px')[0] }} pixeles </span>
+        }
+      </button>
+    }
+  </div>
+</p-sidebar>

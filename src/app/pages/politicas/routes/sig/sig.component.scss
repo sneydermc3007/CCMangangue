@@ -1,0 +1,8 @@
+@import './../../../../../styles.scss';
+
+section {
+    &.doc embed {
+        width: 100%;
+        height: 1000px;
+    }
+}

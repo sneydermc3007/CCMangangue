@@ -1,0 +1,64 @@
+<div class="login-container">
+    <div class="left-section">
+        <div class="content">
+            <h2>Modulo Administrativo</h2>
+            <p>Camara de Comercio Magangue</p>
+            <div class="illustration">
+                <img src="svgs/rocket.svg" alt="Rocket illustration" />
+            </div>
+        </div>
+    </div>
+    <div class="right-section">
+        <div class="form-container">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="field">
+                    <label for="email">Correo Electrónico</label>
+                    <input 
+                        pInputText 
+                        id="email" 
+                        formControlName="email" 
+                        type="email" 
+                        placeholder="ejemplo@correo.es"
+                    />
+                </div>
+                @if (loginForm.get('email')?.invalid && loginForm.get('email')?.touched) {
+                    <p-messages 
+                        [value]="[{severity:'error', summary:'Error', detail:'Correo requerido'}]"
+                        [enableService]="false" 
+                        [closable]="false" 
+                    />
+                }
+                <div class="field">
+                    <label for="password">Contraseña</label>
+                    <input 
+                        pInputText 
+                        id="password" 
+                        formControlName="password" 
+                        type="password" 
+                        placeholder="Contraseña"
+                    />
+                </div>
+                @if (loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
+                    <p-messages 
+                        [value]="[{severity:'error', summary:'Error', detail:'Contraseña requerida'}]"
+                        [enableService]="false" 
+                        [closable]="false" 
+                    />
+                }
+                <button 
+                    pButton 
+                    type="submit" 
+                    label="Sign Up" 
+                    class="submit-button" 
+                    [disabled]="loginForm.invalid"
+                ></button>
+            </form>
+        </div>
+    </div>
+</div>
+<p-toast 
+    [showTransformOptions]="'translateY(100%)'"
+    [showTransitionOptions]="'1000ms'" 
+    [hideTransitionOptions]="'1000ms'"
+    [showTransformOptions]="'translateX(100%)'"
+/>

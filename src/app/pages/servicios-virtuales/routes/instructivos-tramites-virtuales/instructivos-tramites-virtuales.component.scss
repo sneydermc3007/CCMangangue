@@ -1,0 +1,28 @@
+@import './../../../../../styles.scss';
+
+section {
+    &.contexto {
+        p { text-align: justify; }
+    }
+
+    &.opciones {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        // img { cursor: pointer; }
+        .pointer { cursor: pointer; }
+    }
+
+    &.extra-information {
+        flex-direction: column;
+        align-items: start;
+
+        span { font-weight: bold; }
+        p { text-align: justify; }
+        a {
+            text-decoration: none;
+            color: $primary-color;
+            font-weight: bold;
+        }
+    }
+}

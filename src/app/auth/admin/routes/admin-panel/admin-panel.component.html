@@ -1,0 +1,17 @@
+<section class="administrativa">    
+    <div class="admin-dashboard">
+        <div class="header">
+            <h1>Panel Administrativo</h1>
+            <p>Bienvenido, aquí puedes gestionar la información de la cámara de comercio.</p>
+        </div>
+      
+        <div class="card-container">
+            <p-card *ngFor="let card of cards" (click)="redireccionar(card)" class="info-card">
+                <ng-template pTemplate="content">
+                    <i class="pi pi-folder card-icon"></i>
+                    <p>{{ card }}</p>
+                </ng-template>
+            </p-card>
+        </div>
+    </div>    
+</section>

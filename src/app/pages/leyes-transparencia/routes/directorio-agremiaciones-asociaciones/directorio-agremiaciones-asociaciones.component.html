@@ -1,0 +1,15 @@
+<main>
+    <app-title [title]="'Directorio de agremiaciones, asociaciones & otros grupos de interes'"></app-title>
+
+    <section class="contenido">
+        <ul>
+            @for (item of asociaciones; track $index) {
+                <div class="card" style="width: 18rem;" (click)="redireccionar(item.link)">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.label }}</h5>
+                    </div>
+                </div>
+            }
+        </ul>
+    </section>
+</main>

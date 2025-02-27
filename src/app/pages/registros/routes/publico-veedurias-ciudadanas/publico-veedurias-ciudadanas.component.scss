@@ -1,0 +1,14 @@
+@import './../../../../../styles.scss';
+
+section {
+    flex-direction: column;        
+
+    &.contenido {
+        align-items: flex-start;
+        p { text-align: justify; }
+
+        h4:nth-child(2) {
+            margin-bottom: 0;
+        }
+    }
+}

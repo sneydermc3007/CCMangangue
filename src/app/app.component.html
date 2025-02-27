@@ -1,0 +1,22 @@
+@if (showHeaderFooter) {
+  <app-header></app-header>
+}
+<router-outlet/>
+
+@if (showHeaderFooter) {
+  <div class="floating-wpp" (click)="wpp()">
+    <i class="fa-brands fa-whatsapp fa-xl"></i>
+  </div>
+  
+  <div class="floating-chat" (click)="callBot()">
+    <i class="fa-solid fa-comments fa-xl"></i>
+  </div>
+  <div #chatContainer></div>
+  
+  <div class="floating-assistant" (click)="callAssistenteVirtual()">
+    <i class="fa-brands fa-accessible-icon fa-xl"></i>
+  </div>
+  <div #assistantVirtualContainer></div>
+
+  <app-footer></app-footer>
+}

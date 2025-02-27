@@ -1,0 +1,90 @@
+@import './../../../../../styles.scss';
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin: 2.5rem 0;
+  
+    > * {
+        display: flex;
+        place-content: center;
+        place-items: center;
+        padding: 0 15%;
+    }
+}
+
+  section {
+    &.title {
+        text-transform: uppercase;
+        background: $primary-color;
+        color: $white;
+    
+        h1 { flex: 1.5; }
+    
+        p {
+            text-align: justify;
+            text-transform: initial;
+            flex: 2;
+    
+            padding-left: 1rem;
+            border-left: 2px solid;
+        }
+
+        a {
+            color: $secondary-color;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover { text-decoration: underline; }
+        }
+    }
+
+    &.tramites {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 40px 20px;
+
+        .header-section { margin-bottom: 2rem; }
+
+        .card-panel {
+            max-width: 385px;
+            position: relative;
+            transition: transform 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+                border-radius: 20px;
+            }
+
+            img {
+                width: 380px;
+                height: 205px;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+        }
+
+        .card-button {
+            background-color: $secondary-color;
+            color: $white;
+            margin-top: 1rem;
+            border: none;
+
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+:host ::ng-deep p-panel .p-panel {
+    .p-panel-header { display: none;}
+
+    .p-panel-content { 
+        border-radius: 20px;
+        padding: 0;
+    }
+}

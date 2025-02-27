@@ -1,0 +1,32 @@
+<main>
+    <app-title [title]="'TARIFAS'"></app-title>
+
+    <section class="contenido">
+        <p>
+            A continuación podrá descargar el documento en formato PDF donde encontrará las tarifas de las matrículas y renovaciones empresariales, los derechos por registro de Matrícula de establecimientos, sucursales y agencias, también los derechos por cancelaciones o mutaciones, derechos por inscripción de libros y documentos, certificaciones de Registro Mercantil y Entidades Sin Ánimo de Lucro (ESAL), así como las tarifas de formularios, registro de Proponentes y cuotas de afiliación 2019.
+        </p>
+    </section>
+    
+    <section class="lista">
+        <app-registros-list
+            title="Registro Mercantil"
+            [items]="registroMercantil"
+        >
+        </app-registros-list>
+
+        <app-registros-list
+        title="Registro Único de Proponentes"
+        [items]="registroUnicoProponentes">
+        </app-registros-list>
+
+        <app-registros-list
+        title="Registro Único Nacional"
+        [items]="registroUnicoNacional">
+        </app-registros-list>
+
+        <app-registros-list
+        title="Tarifas Privadas"
+        [items]="tarfifasPrivadas">
+        </app-registros-list>
+    </section>
+</main>

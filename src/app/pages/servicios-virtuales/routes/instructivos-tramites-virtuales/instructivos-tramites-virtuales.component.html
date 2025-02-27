@@ -1,0 +1,23 @@
+<main>
+    <app-title [title]="'Instructivos para trámites virtuales'"></app-title>
+
+    <section class="contexto">
+        <p>
+            A continuación, encontrará los tutoriales correspondientes a cada uno de los procesos de registro y renovación que desee realizar a través de nuestra página web.
+        </p>
+    </section>
+
+    <section class="opciones">
+        @for (item of imagenes; track $index) {
+            <div (click)="redireccionar(item.link)">
+                <img [src]="item.imagen" alt="" [ngClass]="{ 'pointer': item.link.includes('http') || item.link.includes('/') }">
+            </div>
+        }
+    </section>
+
+    <section class="extra-information">
+        <span>Mas información</span>
+        <p>Si desea conocer más información o aclarar sus dudas sobre el servicio de expedición y verificación de certificados, comuníquese a la línea (095) 687 5362, o envíe sus inquietudes</p>
+        <a routerLink="/formulario-pqrs">Aquí</a>
+    </section>
+</main>

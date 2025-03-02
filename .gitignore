@@ -48,3 +48,4 @@ Thumbs.db
 /src/app/environments/environment.ts
 /src/app/environments/environment.dev.ts
 /src/app/environments/environment.staging.ts
+/src/app/environments/environment.prod.ts

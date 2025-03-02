@@ -69,6 +69,11 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.5.2"
   },
+  "overrides": {
+    "path-to-regexp": {
+      "version": "0.1.12"
+    }
+  },
   "engines": {
     "node": ">=18.19.0",
     "npm": ">=9.6.7"

@@ -59,7 +59,7 @@
       },
       "links": {
         "beneficios_miembros": "/camara/informacion",
-        "eventos_exclusivos": "/calendar",
+        "eventos_exclusivos": "/calendario",
         "recursos_empresariales": "/desarrollo-empresarial/capacitaciones",
         "networking": "/desarrollo-empresarial/diplomados"
       },
@@ -350,7 +350,7 @@
         ]
       },
       "links": {
-        "calendario_eventos": "/calendar",
+        "calendario_eventos": "/calendario",
         "proximos_eventos": "/convocatorias",
         "desarrollo_empresarial": "/desarrollo-empresarial/capacitaciones",
         "contacto": "/pqrs"
@@ -391,7 +391,7 @@
         "¿Qué pasos debo seguir para registrarme en una actividad?"
       ],
       "links": {
-        "calendario": "/calendar",
+        "calendario": "/calendario",
         "registro_eventos": "/convocatorias",
         "proximos_eventos": "/convocatorias",
         "eventos_virtuales": "/desarrollo-empresarial/capacitaciones",
@@ -482,7 +482,7 @@
         ]
       },
       "links": {
-        "calendario_eventos": "/calendar",
+        "calendario_eventos": "/calendario",
         "capacitaciones": "/desarrollo-empresarial/capacitaciones",
         "diplomados": "/desarrollo-empresarial/diplomados",
         "convocatorias": "/convocatorias"
@@ -639,7 +639,7 @@
         "capacitaciones": "/desarrollo-empresarial/capacitaciones",
         "servicios_virtuales": "/servicios-virtuales/expedicion-verificacion-certificados",
         "tramites": "/tramites/servicios",
-        "calendario": "/calendar"
+        "calendario": "/calendario"
       },
       "variantes": [
         "¿Qué me ofrece la Cámara de Comercio?",
@@ -729,10 +729,10 @@
         ]
       },
       "links": {
-        "agendar_asesoria": "/servicios/asesoria-legal",
-        "consultar_especialistas": "/directorio/abogados",
-        "guia_servicios": "/recursos/guia-servicios-legales",
-        "tarifas": "/servicios/tarifas-asesoria-legal"
+        "agendar_asesoria": "/tramites/servicios",
+        "consultar_especialistas": "/camara/colaboradores",
+        "guia_servicios": "/servicios-virtuales/instructivos-tramites-virtuales",
+        "tarifas": "/tarifas"
       },
       "variantes": [
         "¿Brindan asesoría jurídica para empresas?",
@@ -1195,7 +1195,7 @@
         ]
       },
       "links": {
-        "calendario_eventos": "/calendar",
+        "calendario_eventos": "/calendario",
         "proximos_networking": "/convocatorias",
         "registro_eventos": "/desarrollo-empresarial/capacitaciones",
         "directorio_empresarial": "/desarrollo-empresarial/diplomados"
@@ -1379,7 +1379,7 @@
       "links": {
         "programas_capacitacion": "/desarrollo-empresarial/capacitaciones",
         "diplomados": "/desarrollo-empresarial/diplomados",
-        "calendario_cursos": "/calendar",
+        "calendario_cursos": "/calendario",
         "inscripcion": "/convocatorias"
       },
       "variantes": [
@@ -1825,7 +1825,7 @@
       "links": {
         "servicios": "/servicios-virtuales/expedicion-verificacion-certificados",
         "tramites": "/tramites/servicios",
-        "eventos": "/calendar",
+        "eventos": "/calendario",
         "capacitaciones": "/desarrollo-empresarial/capacitaciones",
         "informacion_camara": "/camara/informacion"
       },
@@ -2056,9 +2056,9 @@
         ]
       },
       "links": {
-        "servicios_virtuales": "/servicios-virtuales",
+        "servicios_virtuales": "/servicios-virtuales/expedicion-verificacion-certificados",
         "tramites_linea": "/tramites/linea",
-        "certificados_virtuales": "/servicios-virtuales/certificados",
+        "certificados_virtuales": "/servicios-virtuales/expedicion-verificacion-certificados",
         "soporte_virtual": "/pqrs"
       },
       "variantes": [
@@ -2092,7 +2092,7 @@
         ]
       },
       "links": {
-        "consulta_tramites": "/servicios-virtuales/consulta-tramites",
+        "consulta_tramites": "/servicios-virtuales/expedicion-verificacion-certificados",
         "contacto_soporte": "/pqrs",
         "preguntas_frecuentes": "/fqa",
         "chat_asistencia": "/"
@@ -2129,7 +2129,7 @@
         ]
       },
       "links": {
-        "formulario_pqrs": "/pqrs",
+        "formulario_pqrs": "/formulario-pqrs",
         "politica_atencion": "/politicas/atencion-cliente",
         "contacto": "/camara/sedes",
         "derechos_usuario": "/politicas/atencion-cliente"
@@ -2202,7 +2202,7 @@
       },
       "links": {
         "registro_mercantil": "/registros/mercantil",
-        "normatividad": "/normatividad",
+        "normatividad": "/normativa/normatividad",
         "preguntas_frecuentes": "/fqa"
       },
       "variantes": [
@@ -2310,7 +2310,7 @@
       "links": {
         "registro_mercantil": "/registros/mercantil",
         "certificados": "/servicios-virtuales/expedicion-verificacion-certificados",
-        "normatividad": "/normatividad"
+        "normatividad": "/normativa/normatividad"
       },
       "variantes": [
         "¿Para qué sirve el registro mercantil?",
@@ -2381,7 +2381,7 @@
       },
       "links": {
         "registro_mercantil": "/registros/mercantil",
-        "normatividad": "/normatividad",
+        "normatividad": "/normativa/normatividad",
         "preguntas_frecuentes": "/fqa"
       },
       "variantes": [
@@ -2416,8 +2416,8 @@
       },
       "links": {
         "registro_mercantil": "/registros/mercantil",
-        "calendario": "/calendar",
-        "normatividad": "/normatividad"
+        "calendario": "/calendario",
+        "normatividad": "/normativa/normatividad"
       },
       "variantes": [
         "¿Cuál es el plazo para matricularse en la Cámara de Comercio?",
@@ -2522,7 +2522,7 @@
       },
       "links": {
         "registro_mercantil": "/registros/mercantil",
-        "normatividad": "/normatividad",
+        "normatividad": "/normativa/normatividad",
         "preguntas_frecuentes": "/fqa"
       },
       "variantes": [
@@ -2557,7 +2557,7 @@
       },
       "links": {
         "registro_mercantil": "/registros/mercantil",
-        "normatividad": "/normatividad",
+        "normatividad": "/normativa/normatividad",
         "preguntas_frecuentes": "/fqa"
       },
       "variantes": [
@@ -2592,7 +2592,7 @@
       },
       "links": {
         "registro_mercantil": "/registros/mercantil",
-        "normatividad": "/normatividad",
+        "normatividad": "/normativa/normatividad",
         "preguntas_frecuentes": "/fqa"
       },
       "variantes": [
@@ -2627,7 +2627,7 @@
       },
       "links": {
         "tarifas": "/tarifas",
-        "normatividad": "/normatividad",
+        "normatividad": "/normativa/normatividad",
         "preguntas_frecuentes": "/fqa"
       },
       "variantes": [
@@ -2663,7 +2663,7 @@
       },
       "links": {
         "registro_mercantil": "/registros/mercantil",
-        "normatividad": "/normatividad",
+        "normatividad": "/normativa/normatividad",
         "preguntas_frecuentes": "/fqa"
       },
       "variantes": [
@@ -2734,7 +2734,7 @@
       },
       "links": {
         "registro_mercantil": "/registros/mercantil",
-        "normatividad": "/normatividad",
+        "normatividad": "/normativa/normatividad",
         "preguntas_frecuentes": "/fqa"
       },
       "variantes": [
@@ -2805,7 +2805,7 @@
       "links": {
         "renovacion": "/servicios-virtuales/inscripciones-renovaciones",
         "tarifas": "/tarifas",
-        "calendario": "/calendar"
+        "calendario": "/calendario"
       },
       "variantes": [
         "¿Cuál es la fecha límite para renovar la matrícula mercantil?",
@@ -2871,7 +2871,7 @@
         ]
       },
       "links": {
-        "normatividad": "/normatividad",
+        "normatividad": "/normativa/normatividad",
         "preguntas_frecuentes": "/fqa",
         "registro_mercantil": "/registros/mercantil"
       },
@@ -2975,7 +2975,7 @@
       },
       "links": {
         "tarifas": "/tarifas",
-        "normatividad": "/normatividad",
+        "normatividad": "/normativa/normatividad",
         "preguntas_frecuentes": "/fqa"
       },
       "variantes": [
@@ -3010,7 +3010,7 @@
       },
       "links": {
         "renovacion": "/servicios-virtuales/inscripciones-renovaciones",
-        "normatividad": "/normatividad",
+        "normatividad": "/normativa/normatividad",
         "preguntas_frecuentes": "/fqa"
       },
       "variantes": [
@@ -3044,7 +3044,7 @@
         ]
       },
       "links": {
-        "normatividad": "/normatividad",
+        "normatividad": "/normativa/normatividad",
         "tarifas": "/tarifas",
         "preguntas_frecuentes": "/fqa"
       },
@@ -3079,7 +3079,7 @@
       "links": {
         "registro_mercantil": "/registros/mercantil",
         "tarifas": "/tarifas",
-        "normatividad": "/normatividad"
+        "normatividad": "/normativa/normatividad"
       },
       "variantes": [
         "¿Cómo registrar un nuevo representante legal?",
@@ -3146,7 +3146,7 @@
       },
       "links": {
         "registro_mercantil": "/registros/mercantil",
-        "normatividad": "/normatividad",
+        "normatividad": "/normativa/normatividad",
         "preguntas_frecuentes": "/fqa"
       },
       "variantes": [
@@ -3181,7 +3181,7 @@
       },
       "links": {
         "registro_mercantil": "/registros/mercantil",
-        "normatividad": "/normatividad",
+        "normatividad": "/normativa/normatividad",
         "preguntas_frecuentes": "/fqa"
       },
       "variantes": [
@@ -3283,7 +3283,7 @@
       "links": {
         "registro_libros": "/registros/libros",
         "preguntas_frecuentes": "/fqa",
-        "normatividad": "/normatividad"
+        "normatividad": "/normativa/normatividad"
       },
       "variantes": [
         "¿Puedo cambiar el código de un libro en su continuación?",

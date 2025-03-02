@@ -5,6 +5,7 @@ import { NormatividadesComponent } from './shared/normatividades/normatividades.
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'chat-test', loadChildren: () => import('./components/chat/chat-auto-test.module').then(m => m.ChatAutoTestModule) },
   { path: 'convocatorias', loadComponent: () => import('./pages/convocatorias/convocatorias.component').then(m => m.ConvocatoriasComponent) },
   { path: 'renovar', loadComponent: () => import('./pages/renovar/renovar.component').then(m => m.RenovarComponent) },
   { path: 'fqa',  loadComponent: () => import('./pages/preguntas-respuestas/preguntas-respuestas.component').then(m => m.PreguntasRespuestasComponent) },
@@ -16,8 +17,8 @@ export const routes: Routes = [
   { path: 'glosario', loadComponent: () => import('./pages/glosario/glosario.component').then(m => m.GlosarioComponent) },
   { path: 'slide/:id', loadComponent: () => import('./components/slide/slide.component').then(m => m.SlideComponent) },
 
-  { 
-    path: 'leyes-transparencia', 
+  {
+    path: 'leyes-transparencia',
     children: [
       { path: '', loadComponent: () => import('./pages/leyes-transparencia/leyes-transparencia.component').then(m => m.LeyesTransparenciaComponent) },
       { path: 'datos-personales', loadComponent: () => import('./pages/leyes-transparencia/routes/datos-personales/datos-personales.component').then(m => m.DatosPersonalesComponent) },
@@ -41,16 +42,16 @@ export const routes: Routes = [
       { path: 'indice-cumplimiento-lt', loadComponent: () => import('./pages/leyes-transparencia/routes/indice-cumplimiento-lt/indice-cumplimiento-lt.component').then(m => m.IndiceCumplimientoLtComponent) },
     ]
   },
-  { 
-    path: 'tramites', 
+  {
+    path: 'tramites',
     children: [
       { path: '', loadComponent: () => import('./pages/tramites/tramites.component').then(m => m.TramitesComponent) },
       { path: 'servicios', loadComponent: () => import('./pages/tramites/routes/servicios/servicios.component').then(m => m.ServiciosComponent) },
       { path: 'linea', loadComponent: () => import('./pages/tramites/routes/tramites-linea/tramites-linea.component').then(m => m.TramitesLineaComponent) },
     ]
   },
-  { 
-    path: 'normativa', 
+  {
+    path: 'normativa',
     children: [
       { path: '', loadComponent: () => import('./pages/normativa/normativa.component').then(m => m.NormativaComponent) },
       { path: 'normatividad', loadComponent: () => import('./pages/normativa/routes/normatividad/normatividad.component').then(m => m.NormatividadComponent) },
@@ -59,8 +60,8 @@ export const routes: Routes = [
       { path: 'leyes', loadComponent: () => import('./pages/normativa/routes/leyes/leyes.component').then(m => m.LeyesComponent) },
     ]
   },
-  { 
-    path: 'login', 
+  {
+    path: 'login',
     children: [
       { path: '', loadComponent: () => import('./auth/auth.component').then(m => m.AuthComponent) },
       { path: 'admin', loadChildren: () => import('./auth/admin/admin.module').then(m => m.AdminModule) }

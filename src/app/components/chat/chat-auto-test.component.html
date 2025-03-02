@@ -1,0 +1,93 @@
+<div class="chat-auto-test-container">
+  <h1>Pruebas Automáticas del Chat</h1>
+
+  <div class="controls">
+    <h2>Ejecutar pruebas</h2>
+    <div class="buttons">
+      <button (click)="runAllTests()" [disabled]="isRunning">Ejecutar todas las pruebas</button>
+
+      <div class="category-buttons">
+        <button (click)="runCategoryTests('exact')" [disabled]="isRunning">Coincidencias exactas</button>
+        <button (click)="runCategoryTests('variants')" [disabled]="isRunning">Variantes</button>
+        <button (click)="runCategoryTests('partial')" [disabled]="isRunning">Coincidencias parciales</button>
+        <button (click)="runCategoryTests('keywords')" [disabled]="isRunning">Palabras clave</button>
+        <button (click)="runCategoryTests('links')" [disabled]="isRunning">Preguntas con enlaces</button>
+        <button (click)="runCategoryTests('rag')" [disabled]="isRunning">Preguntas para RAG</button>
+        <button (click)="runCategoryTests('complex')" [disabled]="isRunning">Preguntas complejas</button>
+        <button (click)="runCategoryTests('typos')" [disabled]="isRunning">Errores tipográficos</button>
+        <button (click)="runCategoryTests('short')" [disabled]="isRunning">Preguntas cortas</button>
+        <button (click)="runCategoryTests('long')" [disabled]="isRunning">Preguntas largas</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="status" *ngIf="isRunning">
+    <div class="progress">
+      <div class="progress-bar" [style.width.%]="(currentQuestion / currentTestSet.length) * 100"></div>
+    </div>
+    <p>Procesando pregunta {{ currentQuestion + 1 }} de {{ currentTestSet.length }}</p>
+    <p>Pregunta actual: {{ currentTestSet[currentQuestion] }}</p>
+  </div>
+
+  <div class="results" *ngIf="results.length > 0">
+    <h2>Resultados ({{ results.length }} preguntas)</h2>
+
+    <div class="summary">
+      <div class="stat">
+        <span class="label">Coincidencias exactas:</span>
+        <span class="value">{{ getCountBySource('exact_match') }}</span>
+      </div>
+      <div class="stat">
+        <span class="label">Coincidencias por variante:</span>
+        <span class="value">{{ getCountBySource('variant_match') }}</span>
+      </div>
+      <div class="stat">
+        <span class="label">Coincidencias por palabra clave:</span>
+        <span class="value">{{ getCountBySource('keyword_match') }}</span>
+      </div>
+      <div class="stat">
+        <span class="label">Generadas por RAG:</span>
+        <span class="value">{{ getCountBySource('rag_chain') }}</span>
+      </div>
+      <div class="stat">
+        <span class="label">Errores:</span>
+        <span class="value">{{ getCountBySource('error') }}</span>
+      </div>
+      <div class="stat">
+        <span class="label">Con enlaces:</span>
+        <span class="value">{{ getCountWithLinks() }}</span>
+      </div>
+      <div class="stat">
+        <span class="label">Tiempo promedio:</span>
+        <span class="value">{{ getAverageTime() }}ms</span>
+      </div>
+    </div>
+
+    <div class="result-list">
+      <div class="result-item" *ngFor="let result of results; let i = index">
+        <div class="result-header">
+          <span class="result-number">{{ i + 1 }}</span>
+          <span class="result-question">{{ result.question }}</span>
+          <span class="result-source" [ngClass]="result.source">
+            {{ result.source }}
+            <span *ngIf="result.categoria">({{ result.categoria }})</span>
+          </span>
+          <span class="result-time" *ngIf="result.time">{{ result.time }}ms</span>
+        </div>
+
+        <div class="result-content">
+          <p class="result-text">{{ result.text }}</p>
+
+          <div class="result-links" *ngIf="result.links && Object.keys(result.links).length > 0">
+            <h4>Enlaces:</h4>
+            <ul>
+              <li *ngFor="let link of getLinks(result.links)">
+                <a [href]="link.url" target="_blank">{{ link.name }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

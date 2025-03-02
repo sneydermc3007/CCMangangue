@@ -1,0 +1,3374 @@
+{
+  "Q&A": [
+    {
+      "id": "1",
+      "pregunta": "¿Cómo puedo convertirme en miembro de la Cámara de Comercio de Magangué?",
+      "respuesta": "Puedes registrarte como miembro completando el formulario de inscripción en nuestro sitio web o visitando nuestras oficinas.",
+      "categoria": "Membresía",
+      "keywords": [
+        "registro",
+        "miembro",
+        "inscripción",
+        "nuevo miembro",
+        "afiliación"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Registro",
+        "requiere_documentos": true,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "links": {
+        "formulario_inscripcion": "/registros/mercantil",
+        "requisitos": "/registros/unico-proponentes",
+        "tarifas": "/tarifas",
+        "contacto": "/pqrs"
+      },
+      "variantes": [
+        "¿Cuál es el proceso para hacerme miembro de la Cámara de Comercio?",
+        "¿Dónde puedo inscribirme como miembro de la Cámara de Comercio de Magangué?",
+        "¿Qué pasos debo seguir para afiliarme a la Cámara de Comercio?",
+        "Quiero ser parte de la Cámara de Comercio, ¿cómo lo hago?",
+        "¿Cómo afiliarse a la Cámara de Comercio de Magangué?"
+      ]
+    },
+    {
+      "id": "2",
+      "pregunta": "¿Cuáles son los beneficios de ser miembro?",
+      "respuesta": "Los beneficios incluyen acceso a eventos exclusivos, oportunidades de networking, recursos empresariales y representación ante entidades gubernamentales.",
+      "categoria": "Membresía",
+      "keywords": [
+        "beneficios",
+        "ventajas",
+        "servicios",
+        "miembro",
+        "privilegios"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "beneficios_miembros": "/camara/informacion",
+        "eventos_exclusivos": "/calendario",
+        "recursos_empresariales": "/desarrollo-empresarial/capacitaciones",
+        "networking": "/desarrollo-empresarial/diplomados"
+      },
+      "variantes": [
+        "¿Qué ventajas tiene ser miembro de la Cámara?",
+        "¿Por qué debería afiliarme a la Cámara de Comercio?",
+        "¿Qué gano al ser parte de la Cámara de Comercio?",
+        "Ventajas de pertenecer a la Cámara de Comercio",
+        "¿Cuál es el valor agregado de ser miembro?"
+      ]
+    },
+    {
+      "id": "3",
+      "pregunta": "¿Cuánto cuesta la membresía?",
+      "respuesta": "El costo de la membresía varía según el tamaño y tipo de empresa. Puedes consultar nuestra tabla de tarifas actualizada en el sitio web.",
+      "categoria": "Membresía",
+      "keywords": [
+        "costo",
+        "tarifa",
+        "precio",
+        "valor",
+        "pago"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "tarifas_actuales": "/tarifas",
+        "calculadora_tarifas": "/servicios-virtuales/expedicion-verificacion-certificados",
+        "formas_pago": "/servicios-virtuales/inscripciones-renovaciones",
+        "beneficios_membresia": "/camara/informacion"
+      },
+      "variantes": [
+        "¿Cuál es el valor de la afiliación?",
+        "¿Cuánto debo pagar por ser miembro?",
+        "Precio de la membresía anual",
+        "¿Cuánto vale registrarse en la Cámara?",
+        "Tarifas para afiliarse a la Cámara de Comercio"
+      ]
+    },
+    {
+      "id": "4",
+      "pregunta": "¿Cómo puedo renovar mi membresía?",
+      "respuesta": "Puedes renovar tu membresía en línea a través de nuestro portal de miembros o contactando a nuestro equipo de atención al cliente.",
+      "categoria": "Membresía",
+      "keywords": [
+        "renovación",
+        "renovar",
+        "membresía",
+        "actualización",
+        "extensión"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Renovación",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "variantes": [
+        "¿Cuál es el proceso para renovar mi afiliación?",
+        "Mi membresía está por vencer, ¿cómo la renuevo?",
+        "¿Dónde puedo extender mi membresía?",
+        "¿Qué debo hacer para actualizar mi membresía?",
+        "¿Cómo hago para seguir siendo miembro de la Cámara?"
+      ],
+      "links": {
+        "portal_renovacion": "/renovar",
+        "guia_renovacion": "/servicios-virtuales/instructivos-tramites-virtuales",
+        "tarifas": "/tarifas",
+        "contacto": "/pqrs"
+      }
+    },
+    {
+      "id": "5",
+      "pregunta": "¿Qué documentos necesito para inscribirme como miembro?",
+      "respuesta": "Necesitarás una copia de la identificación del representante legal, registro mercantil y una carta de solicitud.",
+      "categoria": "Membresía",
+      "keywords": [
+        "documentos",
+        "requisitos",
+        "inscripción",
+        "registro",
+        "papeles"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "lista_documentos": "/registros/mercantil",
+        "formatos_descarga": "/registros/libros",
+        "preguntas_frecuentes": "/fqa",
+        "soporte": "/pqrs"
+      },
+      "variantes": [
+        "¿Qué papeles necesito para registrarme en la Cámara de Comercio?",
+        "¿Cuáles son los requisitos documentales para ser miembro?",
+        "¿Qué debo llevar para inscribirme en la Cámara?",
+        "Documentación necesaria para afiliarse a la Cámara de Comercio",
+        "¿Qué documentación se requiere para el registro en la Cámara?"
+      ]
+    },
+    {
+      "id": "6",
+      "pregunta": "¿Puedo cancelar mi membresía en cualquier momento?",
+      "respuesta": "Sí, puedes cancelar tu membresía en cualquier momento contactando a nuestro equipo de soporte.",
+      "categoria": "Membresía",
+      "keywords": [
+        "cancelar",
+        "cancelación",
+        "terminar",
+        "membresía",
+        "baja"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Cancelación",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "variantes": [
+        "¿Cómo puedo dar de baja mi membresía?",
+        "¿Existe alguna penalización por cancelar mi afiliación?",
+        "¿Cuál es el proceso para terminar mi membresía?",
+        "Quiero dejar de ser miembro, ¿qué debo hacer?",
+        "¿Se puede cancelar la afiliación antes de que venza?"
+      ]
+    },
+    {
+      "id": "7",
+      "pregunta": "¿Ofrecen descuentos para pequeñas empresas?",
+      "respuesta": "Sí, ofrecemos descuentos especiales para pequeñas y medianas empresas. Consulta nuestra página de membresía para más información.",
+      "categoria": "Membresía",
+      "keywords": [
+        "descuentos",
+        "pymes",
+        "pequeñas empresas",
+        "tarifas",
+        "precios especiales"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Hay tarifas reducidas para pymes?",
+        "¿Existen precios especiales para microempresas?",
+        "Tengo una pequeña empresa, ¿puedo obtener algún descuento?",
+        "¿Las pymes tienen algún beneficio económico en la afiliación?",
+        "¿Cómo funcionan los descuentos para empresas pequeñas?"
+      ]
+    },
+    {
+      "id": "8",
+      "pregunta": "¿Puedo transferir mi membresía a otra persona?",
+      "respuesta": "No, las membresías no son transferibles. Cada miembro debe registrarse individualmente.",
+      "categoria": "Membresía",
+      "keywords": [
+        "transferir",
+        "cambio",
+        "titular",
+        "traspaso",
+        "membresía"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "variantes": [
+        "¿Es posible ceder mi membresía a otro empresario?",
+        "¿Se puede cambiar el titular de una membresía?",
+        "¿Puedo traspasar mi afiliación a otra persona?",
+        "¿La membresía es personal o se puede transferir?",
+        "¿Existe alguna forma de cambiar el nombre del afiliado?"
+      ]
+    },
+    {
+      "id": "9",
+      "pregunta": "¿Cómo puedo actualizar mis datos de contacto?",
+      "respuesta": "Puedes actualizar tus datos de contacto a través del portal de miembros o contactando a nuestro equipo de soporte.",
+      "categoria": "Soporte",
+      "keywords": [
+        "actualizar",
+        "datos",
+        "contacto",
+        "información",
+        "cambios"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Actualización",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "variantes": [
+        "¿Dónde cambio mi información de contacto?",
+        "Necesito modificar mis datos personales, ¿cómo lo hago?",
+        "¿Cuál es el procedimiento para actualizar mi información?",
+        "¿Cómo notifico un cambio en mis datos de contacto?",
+        "¿Puedo modificar mi dirección y teléfono en mi perfil?"
+      ]
+    },
+    {
+      "id": "10",
+      "pregunta": "¿Qué pasa si pierdo mi número de membresía?",
+      "respuesta": "Puedes recuperar tu número de membresía contactando a nuestro equipo de atención al cliente.",
+      "categoria": "Soporte",
+      "keywords": [
+        "pérdida",
+        "número",
+        "membresía",
+        "recuperar",
+        "olvidé"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Soporte",
+        "requiere_documentos": true,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "variantes": [
+        "Olvidé mi número de afiliación, ¿cómo lo recupero?",
+        "¿Dónde puedo consultar mi número de membresía?",
+        "Extravié mi información de miembro, ¿qué debo hacer?",
+        "¿Cómo puedo saber cuál es mi número de membresía?",
+        "Perdí mi credencial de miembro, ¿cómo obtengo el número?"
+      ]
+    },
+    {
+      "id": "11",
+      "pregunta": "¿Dónde puedo encontrar información sobre los próximos eventos?",
+      "respuesta": "Puedes encontrar información sobre los próximos eventos en nuestro sitio web y en el portal de miembros.",
+      "categoria": "Eventos",
+      "keywords": [
+        "eventos",
+        "calendario",
+        "próximos",
+        "agenda",
+        "programación"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "email"
+        ]
+      },
+      "links": {
+        "calendario_eventos": "/calendario",
+        "proximos_eventos": "/convocatorias",
+        "desarrollo_empresarial": "/desarrollo-empresarial/capacitaciones",
+        "contacto": "/pqrs"
+      },
+      "variantes": [
+        "¿Cómo me entero de los eventos que organizan?",
+        "¿Dónde está el calendario de eventos?",
+        "¿Cómo puedo ver la agenda de actividades?",
+        "¿Tienen alguna programación de eventos disponible?",
+        "¿Dónde consulto los próximos eventos de la Cámara?"
+      ]
+    },
+    {
+      "id": "12",
+      "pregunta": "¿Cómo me registro para un evento?",
+      "respuesta": "Puedes registrarte para cualquier evento a través de nuestro calendario de eventos en línea o contactando directamente a nuestro equipo de eventos.",
+      "categoria": "Eventos",
+      "keywords": [
+        "registro",
+        "eventos",
+        "inscripción",
+        "participar",
+        "asistir"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Registro",
+        "requiere_documentos": false,
+        "canal": [
+          "web"
+        ]
+      },
+      "variantes": [
+        "¿Cuál es el proceso para inscribirme en un evento?",
+        "¿Dónde puedo anotarme para asistir a un evento?",
+        "Quiero participar en un evento, ¿cómo me inscribo?",
+        "¿Cómo confirmo mi asistencia a un evento?",
+        "¿Qué pasos debo seguir para registrarme en una actividad?"
+      ],
+      "links": {
+        "calendario": "/calendario",
+        "registro_eventos": "/convocatorias",
+        "proximos_eventos": "/convocatorias",
+        "eventos_virtuales": "/desarrollo-empresarial/capacitaciones",
+        "politicas_cancelacion": "/politicas/atencion-cliente"
+      }
+    },
+    {
+      "id": "13",
+      "pregunta": "¿Hay algún costo para asistir a los eventos?",
+      "respuesta": "Algunos eventos son gratuitos para los miembros, mientras que otros pueden tener un costo. Consulta los detalles del evento específico para más información.",
+      "categoria": "Eventos",
+      "keywords": [
+        "costo",
+        "precio",
+        "eventos",
+        "entrada",
+        "gratuito",
+        "pago"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "variantes": [
+        "¿Los eventos tienen algún precio de entrada?",
+        "¿Son gratuitos los eventos para miembros?",
+        "¿Cuánto debo pagar para asistir a un evento?",
+        "¿Todos los eventos tienen costo?",
+        "¿Existen tarifas para participar en los eventos?"
+      ]
+    },
+    {
+      "id": "14",
+      "pregunta": "¿Puedo llevar a un invitado a un evento?",
+      "respuesta": "Sí, puedes llevar a un invitado. Asegúrate de registrar a tu invitado cuando te inscribas para el evento.",
+      "categoria": "Eventos",
+      "keywords": [
+        "invitado",
+        "acompañante",
+        "registro",
+        "eventos",
+        "inscripción"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Registro",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Está permitido asistir con acompañantes a los eventos?",
+        "¿Puedo ir con un colega a un evento?",
+        "¿Cómo registro a un acompañante para un evento?",
+        "¿Los eventos permiten llevar invitados?",
+        "¿Es posible incluir a otra persona en mi registro para un evento?"
+      ]
+    },
+    {
+      "id": "15",
+      "pregunta": "¿Qué tipo de eventos organiza la Cámara de Comercio?",
+      "respuesta": "Organizamos una variedad de eventos, incluyendo talleres, seminarios, conferencias y eventos de networking.",
+      "categoria": "Eventos",
+      "keywords": [
+        "tipos",
+        "eventos",
+        "talleres",
+        "seminarios",
+        "conferencias",
+        "networking"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "email",
+          "presencial"
+        ]
+      },
+      "links": {
+        "calendario_eventos": "/calendario",
+        "capacitaciones": "/desarrollo-empresarial/capacitaciones",
+        "diplomados": "/desarrollo-empresarial/diplomados",
+        "convocatorias": "/convocatorias"
+      },
+      "variantes": [
+        "¿Cuáles son los formatos de eventos que realizan?",
+        "¿Qué clase de actividades organiza la Cámara?",
+        "¿Qué eventos puedo esperar de la Cámara de Comercio?",
+        "¿Organizan talleres o solo conferencias?",
+        "¿Qué modalidades de eventos tienen disponibles?"
+      ]
+    },
+    {
+      "id": "16",
+      "pregunta": "¿Cómo puedo ser ponente en uno de sus eventos?",
+      "respuesta": "Si estás interesado en ser ponente, envíanos una propuesta detallada a través de nuestro formulario de contacto en el sitio web.",
+      "categoria": "Eventos",
+      "keywords": [
+        "ponente",
+        "speaker",
+        "presentador",
+        "eventos",
+        "conferencia"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Participación",
+        "requiere_documentos": true,
+        "canal": [
+          "web",
+          "email"
+        ]
+      },
+      "variantes": [
+        "¿Cuál es el proceso para participar como expositor?",
+        "Me gustaría dar una charla en un evento, ¿cómo lo solicito?",
+        "¿Cómo postularme como conferencista?",
+        "¿Qué requisitos hay para ser speaker en un evento?",
+        "¿Puedo proponer una presentación para algún evento?"
+      ]
+    },
+    {
+      "id": "17",
+      "pregunta": "¿Puedo patrocinar un evento?",
+      "respuesta": "Sí, ofrecemos oportunidades de patrocinio para nuestros eventos. Contacta a nuestro equipo de eventos para más información.",
+      "categoria": "Eventos",
+      "keywords": [
+        "patrocinio",
+        "sponsor",
+        "eventos",
+        "publicidad",
+        "marketing"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Patrocinio",
+        "requiere_documentos": true,
+        "canal": [
+          "presencial",
+          "email"
+        ]
+      },
+      "variantes": [
+        "¿Cómo puedo convertirme en patrocinador de un evento?",
+        "¿Qué opciones de sponsorship ofrecen para eventos?",
+        "¿Tienen paquetes de patrocinio para empresas?",
+        "Mi empresa quiere patrocinar un evento, ¿cómo procedemos?",
+        "¿Cuáles son los beneficios de patrocinar un evento?"
+      ]
+    },
+    {
+      "id": "18",
+      "pregunta": "¿Cómo puedo recibir notificaciones sobre nuevos eventos?",
+      "respuesta": "Puedes suscribirte a nuestro boletín informativo o activar las notificaciones en el portal de miembros.",
+      "categoria": "Eventos",
+      "keywords": [
+        "notificaciones",
+        "alertas",
+        "eventos",
+        "boletín",
+        "newsletter"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Comunicación",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "email"
+        ]
+      },
+      "variantes": [
+        "¿Cómo me mantengo informado sobre los eventos?",
+        "¿Existe alguna alerta para no perderme los eventos?",
+        "¿Puedo recibir avisos cuando haya nuevos eventos?",
+        "¿Cómo me suscribo al boletín de eventos?",
+        "¿Tienen newsletter para informar sobre próximos eventos?"
+      ]
+    },
+    {
+      "id": "19",
+      "pregunta": "¿Qué debo hacer si no puedo asistir a un evento después de registrarme?",
+      "respuesta": "Por favor, infórmanos lo antes posible para que podamos ajustar la lista de asistencia. Puedes cancelar tu inscripción a través del portal de miembros.",
+      "categoria": "Eventos",
+      "keywords": [
+        "cancelación",
+        "registro",
+        "eventos",
+        "inasistencia",
+        "cancelar"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Cancelación",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "email",
+          "telefónico"
+        ]
+      },
+      "variantes": [
+        "¿Cómo cancelo mi registro a un evento?",
+        "Me inscribí pero no podré asistir, ¿qué hago?",
+        "¿Existe penalización por no asistir a un evento?",
+        "¿Cómo notifico que no podré ir a un evento?",
+        "¿Puedo dar de baja mi inscripción a un evento?"
+      ]
+    },
+    {
+      "id": "20",
+      "pregunta": "¿Qué servicios ofrece la Cámara de Comercio?",
+      "respuesta": "Ofrecemos una amplia gama de servicios, incluyendo registro mercantil, capacitaciones, asesorías empresariales, eventos de networking y programas de desarrollo empresarial.",
+      "categoria": "Servicios",
+      "keywords": [
+        "servicios",
+        "oferta",
+        "beneficios",
+        "programas",
+        "asistencia"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "capacitaciones": "/desarrollo-empresarial/capacitaciones",
+        "servicios_virtuales": "/servicios-virtuales/expedicion-verificacion-certificados",
+        "tramites": "/tramites/servicios",
+        "calendario": "/calendario"
+      },
+      "variantes": [
+        "¿Qué me ofrece la Cámara de Comercio?",
+        "¿Cuáles son los servicios disponibles para miembros?",
+        "¿En qué me puede ayudar la Cámara de Comercio?",
+        "¿Qué tipo de asistencia brinda la Cámara?",
+        "¿Cuál es la oferta de servicios de la Cámara?"
+      ]
+    },
+    {
+      "id": "21",
+      "pregunta": "¿Cómo puedo acceder a los servicios de asesoramiento empresarial?",
+      "respuesta": "Puedes solicitar una cita con uno de nuestros asesores empresariales a través del portal de miembros o contactándonos directamente.",
+      "categoria": "Servicios",
+      "keywords": [
+        "asesoramiento",
+        "consultoría",
+        "cita",
+        "asesor",
+        "empresarial"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Asesoramiento",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Cómo agendo una cita con un asesor empresarial?",
+        "¿Dónde solicito asesoría para mi empresa?",
+        "¿Cuál es el proceso para recibir consultoría empresarial?",
+        "Necesito asesoramiento para mi negocio, ¿cómo lo obtengo?",
+        "¿Cómo me contacto con un asesor de la Cámara?"
+      ]
+    },
+    {
+      "id": "22",
+      "pregunta": "¿Ofrecen servicios de formación y capacitación?",
+      "respuesta": "Sí, ofrecemos una amplia gama de programas de formación y capacitación para empresarios y empleados.",
+      "categoria": "Formación",
+      "keywords": [
+        "formación",
+        "capacitación",
+        "cursos",
+        "talleres",
+        "educación"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Formación",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Qué programas de capacitación tienen disponibles?",
+        "¿Realizan cursos para empresarios?",
+        "¿Tienen talleres de formación empresarial?",
+        "¿Dónde puedo encontrar información sobre capacitaciones?",
+        "¿Ofrecen entrenamiento para emprendedores?"
+      ]
+    },
+    {
+      "id": "23",
+      "pregunta": "¿Qué tipo de apoyo legal ofrecen?",
+      "respuesta": "Ofrecemos asesoramiento legal básico y referencias a especialistas en diferentes áreas del derecho empresarial. Puedes agendar una consulta legal desde nuestro portal de servicios.",
+      "categoria": "Legal",
+      "keywords": [
+        "legal",
+        "asesoría",
+        "derecho",
+        "jurídico",
+        "normativa"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Legal",
+        "requiere_documentos": true,
+        "canal": [
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "agendar_asesoria": "/tramites/servicios",
+        "consultar_especialistas": "/camara/colaboradores",
+        "guia_servicios": "/servicios-virtuales/instructivos-tramites-virtuales",
+        "tarifas": "/tarifas"
+      },
+      "variantes": [
+        "¿Brindan asesoría jurídica para empresas?",
+        "¿Qué servicios legales están disponibles para miembros?"
+      ]
+    },
+    {
+      "id": "24",
+      "pregunta": "¿Cómo puedo acceder a los recursos en línea para miembros?",
+      "respuesta": "Puedes acceder a los recursos en línea iniciando sesión en el portal de miembros con tus credenciales.",
+      "categoria": "Servicios en línea",
+      "keywords": [
+        "recursos",
+        "en línea",
+        "portal",
+        "miembros",
+        "acceso"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Acceso",
+        "requiere_documentos": false,
+        "canal": [
+          "web"
+        ]
+      },
+      "links": {
+        "portal_miembros": "/servicios-virtuales/expedicion-verificacion-certificados",
+        "biblioteca_digital": "/servicios-virtuales/inscripciones-renovaciones",
+        "guias_usuario": "/servicios-virtuales/instructivos-tramites-virtuales",
+        "recuperar_contraseña": "/servicios-virtuales/empresa"
+      },
+      "variantes": [
+        "¿Dónde encuentro los recursos exclusivos para miembros?",
+        "¿Cómo entro al portal de miembros?",
+        "No puedo acceder a los recursos en línea, ¿qué hago?",
+        "¿Cuál es la dirección del portal de miembros?",
+        "¿Necesito una contraseña especial para los recursos en línea?"
+      ]
+    },
+    {
+      "id": "25",
+      "pregunta": "¿Qué tipos de recursos están disponibles?",
+      "respuesta": "Ofrecemos guías empresariales, plantillas de documentos, estudios de mercado y herramientas de gestión.",
+      "categoria": "Recursos",
+      "keywords": [
+        "recursos",
+        "guías",
+        "plantillas",
+        "estudios",
+        "herramientas"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web"
+        ]
+      },
+      "variantes": [
+        "¿Qué materiales puedo encontrar en el portal de recursos?",
+        "¿Qué documentos y guías ofrecen a los miembros?",
+        "¿Tienen plantillas empresariales disponibles?",
+        "¿Qué herramientas digitales proporcionan?",
+        "¿Qué tipo de estudios puedo consultar como miembro?"
+      ]
+    },
+    {
+      "id": "26",
+      "pregunta": "¿Ofrecen servicios de marketing digital?",
+      "respuesta": "Sí, proporcionamos asesoramiento en marketing digital y recursos para mejorar tu presencia en línea.",
+      "categoria": "Marketing",
+      "keywords": [
+        "marketing",
+        "digital",
+        "online",
+        "presencia",
+        "internet"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Marketing",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Tienen asesoría en marketing digital?",
+        "¿Cómo pueden ayudarme con mi estrategia online?",
+        "¿Brindan apoyo para mejorar mi presencia en internet?",
+        "¿Ofrecen consultoría de marketing para redes sociales?",
+        "¿Puedo recibir orientación sobre publicidad digital?"
+      ]
+    },
+    {
+      "id": "27",
+      "pregunta": "¿Cómo puedo mejorar mi presencia en redes sociales?",
+      "respuesta": "Ofrecemos talleres y asesoramiento personalizado para optimizar tu estrategia en redes sociales.",
+      "categoria": "Marketing",
+      "keywords": [
+        "redes sociales",
+        "social media",
+        "marketing digital",
+        "estrategia"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Asesoramiento",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Tienen cursos sobre manejo de redes sociales?",
+        "¿Cómo optimizo mis perfiles en redes sociales?",
+        "¿Ofrecen asesoría para estrategias de social media?",
+        "¿Puedo recibir ayuda con mi marketing en redes sociales?",
+        "¿Qué recomiendan para aumentar seguidores en redes sociales?"
+      ]
+    },
+    {
+      "id": "28",
+      "pregunta": "¿Qué programas de networking ofrecen?",
+      "respuesta": "Organizamos eventos de networking regulares, incluyendo desayunos empresariales, encuentros sectoriales y eventos temáticos.",
+      "categoria": "Networking",
+      "keywords": [
+        "networking",
+        "eventos",
+        "conexiones",
+        "contactos",
+        "empresarial"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Networking",
+        "requiere_documentos": false,
+        "canal": [
+          "presencial",
+          "web"
+        ]
+      },
+      "variantes": [
+        "¿Qué actividades tienen para conectar con otros empresarios?",
+        "¿Organizan encuentros para hacer contactos de negocios?",
+        "¿Cuáles son sus eventos de networking más populares?",
+        "¿Tienen reuniones para conocer a otros miembros?",
+        "¿Cómo puedo ampliar mi red de contactos a través de la Cámara?"
+      ]
+    },
+    {
+      "id": "29",
+      "pregunta": "¿Cómo puedo participar en los programas de mentoría?",
+      "respuesta": "Los programas de mentoría están disponibles para miembros activos. Puedes aplicar a través del portal de miembros.",
+      "categoria": "Formación",
+      "keywords": [
+        "mentoría",
+        "mentor",
+        "aprendizaje",
+        "desarrollo",
+        "guía"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Mentoría",
+        "requiere_documentos": true,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Cómo consigo un mentor a través de la Cámara?",
+        "¿Cuál es el proceso para entrar al programa de mentores?",
+        "¿Qué requisitos hay para recibir mentoría empresarial?",
+        "¿Dónde me inscribo para el programa de mentores?",
+        "¿Cómo funciona el sistema de mentoría para empresarios?"
+      ]
+    },
+    {
+      "id": "30",
+      "pregunta": "¿Qué tipo de apoyo ofrecen para startups?",
+      "respuesta": "Ofrecemos programas especializados para startups, incluyendo incubación, aceleración y acceso a financiamiento.",
+      "categoria": "Innovación",
+      "keywords": [
+        "startups",
+        "emprendimiento",
+        "innovación",
+        "incubación",
+        "aceleración"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Apoyo Empresarial",
+        "requiere_documentos": true,
+        "canal": [
+          "presencial",
+          "web"
+        ]
+      },
+      "variantes": [
+        "¿Qué programas tienen para emprendedores?",
+        "¿Cómo ayudan a las startups a crecer?",
+        "¿Ofrecen incubación para nuevos negocios?",
+        "¿Tienen programas de aceleración empresarial?",
+        "¿Qué servicios brindan a emprendimientos en fase inicial?"
+      ]
+    },
+    {
+      "id": "31",
+      "pregunta": "¿Cómo puedo acceder a los estudios de mercado?",
+      "respuesta": "Los estudios de mercado están disponibles en el portal de miembros en la sección de recursos.",
+      "categoria": "Recursos",
+      "keywords": [
+        "estudios",
+        "mercado",
+        "investigación",
+        "datos",
+        "análisis"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Recursos Digitales",
+        "requiere_documentos": false,
+        "canal": [
+          "web"
+        ]
+      },
+      "variantes": [
+        "¿Dónde encuentro investigaciones de mercado?",
+        "¿Cómo consulto los análisis de mercado disponibles?",
+        "¿Tienen datos sobre tendencias del mercado?",
+        "¿Puedo acceder a estadísticas del sector?",
+        "¿Dónde están los informes de investigación comercial?"
+      ]
+    },
+    {
+      "id": "32",
+      "pregunta": "¿Ofrecen apoyo para la internacionalización?",
+      "respuesta": "Sí, proporcionamos asesoramiento y recursos para empresas que buscan expandirse internacionalmente.",
+      "categoria": "Servicios",
+      "keywords": [
+        "internacional",
+        "exportación",
+        "expansión",
+        "global",
+        "mercados"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Asesoramiento",
+        "requiere_documentos": true,
+        "canal": [
+          "presencial",
+          "web"
+        ]
+      },
+      "variantes": [
+        "¿Cómo pueden ayudarme a exportar mis productos?",
+        "¿Tienen programas para expandirse a mercados internacionales?",
+        "¿Qué asesoría brindan para negocios globales?",
+        "¿Ofrecen orientación sobre comercio exterior?",
+        "¿Cómo me apoyan para llevar mi empresa al extranjero?"
+      ]
+    },
+    {
+      "id": "33",
+      "pregunta": "¿Qué servicios de certificación ofrecen?",
+      "respuesta": "Ofrecemos varios tipos de certificaciones empresariales y documentos comerciales.",
+      "categoria": "Servicios",
+      "keywords": [
+        "certificación",
+        "documentos",
+        "comercial",
+        "validación",
+        "legal"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Certificación",
+        "requiere_documentos": true,
+        "canal": [
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Qué certificados puedo obtener en la Cámara?",
+        "¿Cuáles son las certificaciones disponibles para empresas?",
+        "¿Emiten documentos comerciales certificados?",
+        "¿Qué tipo de validaciones empresariales ofrecen?",
+        "¿Puedo solicitar certificaciones legales para mi negocio?"
+      ]
+    },
+    {
+      "id": "34",
+      "pregunta": "¿Cómo puedo participar en misiones comerciales?",
+      "respuesta": "Las misiones comerciales se anuncian en nuestro portal y puedes registrarte como participante interesado.",
+      "categoria": "Networking",
+      "keywords": [
+        "misiones",
+        "comercial",
+        "internacional",
+        "negocios",
+        "viajes"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Misiones Comerciales",
+        "requiere_documentos": true,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Cómo me uno a una misión comercial internacional?",
+        "¿Organizan viajes de negocios al exterior?",
+        "¿Cuándo son las próximas misiones empresariales?",
+        "¿Cómo me registro para una misión comercial?",
+        "¿Qué requisitos hay para participar en misiones de negocios?"
+      ]
+    },
+    {
+      "id": "35",
+      "pregunta": "¿Ofrecen herramientas para la gestión de proyectos?",
+      "respuesta": "Sí, proporcionamos acceso a herramientas de gestión de proyectos para nuestros miembros.",
+      "categoria": "Recursos",
+      "keywords": [
+        "herramientas",
+        "gestión",
+        "proyectos",
+        "administración",
+        "planificación"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Recursos Digitales",
+        "requiere_documentos": false,
+        "canal": [
+          "web"
+        ]
+      },
+      "variantes": [
+        "¿Qué software de gestión de proyectos ofrecen?",
+        "¿Tienen plataformas para administrar proyectos?",
+        "¿Qué herramientas digitales tienen para planificación?",
+        "¿Proporcionan acceso a sistemas de gestión empresarial?",
+        "¿Cómo accedo a las herramientas de administración de proyectos?"
+      ]
+    },
+    {
+      "id": "36",
+      "pregunta": "¿Puedo descargar plantillas y documentos empresariales?",
+      "respuesta": "Sí, ofrecemos una variedad de plantillas y documentos empresariales que puedes descargar desde el portal de miembros.",
+      "categoria": "Recursos",
+      "keywords": [
+        "plantillas",
+        "documentos",
+        "formatos",
+        "descargas",
+        "recursos"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Recursos Digitales",
+        "requiere_documentos": false,
+        "canal": [
+          "web"
+        ]
+      },
+      "variantes": [
+        "¿Dónde encuentro formatos de documentos empresariales?",
+        "¿Tienen templates para documentos comerciales?",
+        "¿Ofrecen modelos de contratos para descargar?",
+        "¿Puedo obtener formatos de documentos legales?",
+        "¿Cómo accedo a las plantillas de documentos?"
+      ]
+    },
+    {
+      "id": "37",
+      "pregunta": "¿Hay algún costo para usar los recursos y herramientas en línea?",
+      "respuesta": "La mayoría de los recursos y herramientas están disponibles de forma gratuita para los miembros.",
+      "categoria": "Recursos",
+      "keywords": [
+        "costo",
+        "recursos",
+        "herramientas",
+        "gratuito",
+        "acceso"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "telefónico"
+        ]
+      },
+      "variantes": [
+        "¿Los recursos digitales tienen algún precio?",
+        "¿El acceso a las herramientas online es gratuito?",
+        "¿Debo pagar extra por usar los recursos en línea?",
+        "¿Las plantillas y documentos tienen costo adicional?",
+        "¿Cuánto cuesta acceder a los recursos digitales?"
+      ]
+    },
+    {
+      "id": "38",
+      "pregunta": "¿Cómo puedo unirme a grupos de interés?",
+      "respuesta": "Puedes unirte a grupos de interés a través del portal de miembros y participando en eventos específicos.",
+      "categoria": "Networking",
+      "keywords": [
+        "grupos",
+        "interés",
+        "comunidad",
+        "participación",
+        "networking"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Networking",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Cómo me integro a comunidades empresariales específicas?",
+        "¿Dónde encuentro los grupos temáticos de la Cámara?",
+        "¿Existen grupos por sector o industria?",
+        "¿Cómo participo en círculos empresariales?",
+        "¿Puedo formar parte de comités especializados?"
+      ]
+    },
+    {
+      "id": "39",
+      "pregunta": "¿Qué oportunidades de networking ofrece la Cámara?",
+      "respuesta": "Ofrecemos diversas oportunidades de networking, incluyendo eventos de networking, ferias comerciales y grupos de trabajo por industria.",
+      "categoria": "Networking",
+      "keywords": [
+        "networking",
+        "contactos",
+        "conexiones",
+        "relaciones",
+        "red"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "links": {
+        "calendario_eventos": "/calendario",
+        "proximos_networking": "/convocatorias",
+        "registro_eventos": "/desarrollo-empresarial/capacitaciones",
+        "directorio_empresarial": "/desarrollo-empresarial/diplomados"
+      },
+      "variantes": [
+        "¿Cómo puedo conectar con otros empresarios a través de la Cámara?",
+        "¿Realizan eventos para hacer contactos profesionales?",
+        "¿Qué actividades tienen para ampliar mi red de contactos?",
+        "¿Existen grupos de networking por sector?",
+        "¿Cómo aprovecho la Cámara para hacer nuevos contactos comerciales?"
+      ]
+    },
+    {
+      "id": "40",
+      "pregunta": "¿Cómo puedo conectarme con otros miembros?",
+      "respuesta": "Puedes conectarte con otros miembros a través del portal de miembros y en nuestros eventos de networking.",
+      "categoria": "Networking",
+      "keywords": [
+        "conexión",
+        "miembros",
+        "networking",
+        "contactos",
+        "comunidad"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Networking",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Existe algún directorio de miembros para contactarlos?",
+        "¿Cómo puedo conocer a otros empresarios de la Cámara?",
+        "¿Tienen alguna plataforma para conectar con otros afiliados?",
+        "¿De qué manera puedo establecer contacto con otros miembros?",
+        "¿Hay alguna forma de buscar empresas afiliadas por sector?"
+      ]
+    },
+    {
+      "id": "41",
+      "pregunta": "¿Qué hago si tengo problemas técnicos con el portal de miembros?",
+      "respuesta": "Contacta a nuestro equipo de soporte técnico para obtener ayuda.",
+      "categoria": "Soporte",
+      "keywords": [
+        "problemas",
+        "técnico",
+        "portal",
+        "soporte",
+        "ayuda"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Soporte Técnico",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "telefónico",
+          "email"
+        ]
+      },
+      "variantes": [
+        "¿A quién contacto si no puedo acceder al portal?",
+        "El sitio web no funciona correctamente, ¿qué hago?",
+        "¿Cómo reporto fallos en la plataforma digital?",
+        "¿Tienen mesa de ayuda para problemas con el portal?",
+        "¿Dónde encuentro soporte técnico para la web?"
+      ]
+    },
+    {
+      "id": "42",
+      "pregunta": "¿Ofrecen programas de mentoría?",
+      "respuesta": "Sí, tenemos programas de mentoría donde puedes conectarte con empresarios experimentados.",
+      "categoria": "Formación",
+      "keywords": [
+        "mentoría",
+        "mentor",
+        "aprendizaje",
+        "experiencia",
+        "conexión"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Mentoría",
+        "requiere_documentos": true,
+        "canal": [
+          "presencial",
+          "web"
+        ]
+      },
+      "variantes": [
+        "¿Puedo tener un mentor empresarial a través de la Cámara?",
+        "¿Cómo funciona el programa de mentores?",
+        "¿Conectan emprendedores con empresarios experimentados?",
+        "¿Tienen sistema de acompañamiento empresarial personalizado?",
+        "¿Existe algún programa de asesoría uno a uno con expertos?"
+      ]
+    },
+    {
+      "id": "43",
+      "pregunta": "¿Cómo puedo proponer un nuevo grupo de interés?",
+      "respuesta": "Puedes proponer un nuevo grupo de interés contactando a nuestro equipo de atención al miembro.",
+      "categoria": "Networking",
+      "keywords": [
+        "grupo",
+        "interés",
+        "propuesta",
+        "nuevo",
+        "iniciativa"
+      ],
+      "relevancia": 2,
+      "metadata": {
+        "tipo_servicio": "Propuestas",
+        "requiere_documentos": true,
+        "canal": [
+          "web",
+          "email",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Puedo crear un nuevo comité temático?",
+        "¿Cómo inicio un grupo especializado dentro de la Cámara?",
+        "¿Existe algún proceso para formar nuevas comunidades?",
+        "¿A quién debo dirigirme para proponer un nuevo grupo?",
+        "¿Qué requisitos hay para crear un círculo empresarial?"
+      ]
+    },
+    {
+      "id": "44",
+      "pregunta": "¿Cómo puedo reportar un problema o hacer una sugerencia?",
+      "respuesta": "Puedes reportar problemas o hacer sugerencias a través del formulario de contacto en el portal de miembros.",
+      "categoria": "Soporte",
+      "keywords": [
+        "reportar",
+        "problema",
+        "sugerencia",
+        "feedback",
+        "contacto"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Soporte",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "email"
+        ]
+      },
+      "variantes": [
+        "¿Dónde puedo enviar mis comentarios o sugerencias?",
+        "¿Cómo hago llegar mi feedback a la Cámara?",
+        "¿Existe un buzón de sugerencias virtual?",
+        "¿A quién debo contactar para reportar un inconveniente?",
+        "¿Tienen algún canal para quejas y reclamos?"
+      ]
+    },
+    {
+      "id": "45",
+      "pregunta": "¿Qué programas de capacitación ofrecen?",
+      "respuesta": "Ofrecemos diversos programas de capacitación en áreas como gestión empresarial, marketing digital, finanzas, comercio exterior y habilidades directivas.",
+      "categoria": "Capacitación",
+      "keywords": [
+        "capacitación",
+        "formación",
+        "cursos",
+        "talleres",
+        "programas"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Capacitación",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "links": {
+        "programas_capacitacion": "/desarrollo-empresarial/capacitaciones",
+        "diplomados": "/desarrollo-empresarial/diplomados",
+        "calendario_cursos": "/calendario",
+        "inscripcion": "/convocatorias"
+      },
+      "variantes": [
+        "¿Qué cursos tienen disponibles?",
+        "¿Ofrecen talleres de formación empresarial?",
+        "¿Cuáles son las capacitaciones que brindan?",
+        "¿Tienen programas educativos para empresarios?",
+        "¿Qué tipo de formación puedo recibir en la Cámara?"
+      ]
+    },
+    {
+      "id": "46",
+      "pregunta": "¿Puedo obtener asistencia personalizada para mi negocio?",
+      "respuesta": "Sí, ofrecemos asistencia personalizada y consultoría para ayudarte a alcanzar tus objetivos empresariales.",
+      "categoria": "Servicios",
+      "keywords": [
+        "asistencia",
+        "personalizada",
+        "consultoría",
+        "asesoría",
+        "negocio"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Consultoría",
+        "requiere_documentos": true,
+        "canal": [
+          "presencial",
+          "web"
+        ]
+      },
+      "variantes": [
+        "¿Ofrecen asesoría individual para mi empresa?",
+        "¿Puedo recibir consultoría específica para mi caso?",
+        "¿Cómo solicito ayuda personalizada para mi negocio?",
+        "¿Tienen servicios de asesoramiento a medida?",
+        "¿Brindan apoyo one-to-one para empresarios?"
+      ]
+    },
+    {
+      "id": "47",
+      "pregunta": "¿Hay recursos disponibles para la recuperación empresarial post-pandemia?",
+      "respuesta": "Sí, ofrecemos recursos y asesoramiento para ayudar a las empresas a recuperarse y adaptarse tras la pandemia.",
+      "categoria": "Recursos",
+      "keywords": [
+        "recuperación",
+        "pandemia",
+        "crisis",
+        "adaptación",
+        "recursos"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Asesoramiento",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "variantes": [
+        "¿Qué apoyo ofrecen para empresas afectadas por la pandemia?",
+        "¿Tienen programas de reactivación económica?",
+        "¿Cómo pueden ayudarme a recuperar mi negocio tras la crisis?",
+        "¿Existen recursos específicos para adaptarse al nuevo contexto?",
+        "¿Qué herramientas brindan para la resiliencia empresarial?"
+      ]
+    },
+    {
+      "id": "48",
+      "pregunta": "¿Cómo puedo solicitar una reunión con un asesor empresarial?",
+      "respuesta": "Puedes solicitar una reunión con un asesor empresarial a través del portal de miembros o contactándonos directamente.",
+      "categoria": "Servicios",
+      "keywords": [
+        "reunión",
+        "asesor",
+        "cita",
+        "consulta",
+        "empresarial"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Asesoramiento",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "variantes": [
+        "¿Cómo agendo una cita con un consultor?",
+        "¿Dónde reservo tiempo con un asesor de la Cámara?",
+        "¿Cuál es el proceso para tener una consulta empresarial?",
+        "¿Puedo programar una reunión con un especialista?",
+        "¿Cómo coordino un encuentro con un asesor de negocios?"
+      ]
+    },
+    {
+      "id": "49",
+      "pregunta": "¿Ofrecen programas para fomentar la innovación empresarial?",
+      "respuesta": "Sí, tenemos programas de incubación y aceleración que ayudan a las empresas a innovar y crecer. También organizamos hackathons y talleres de innovación.",
+      "categoria": "Innovación",
+      "keywords": [
+        "innovación",
+        "incubación",
+        "aceleración",
+        "hackathon",
+        "crecimiento"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Innovación",
+        "requiere_documentos": true,
+        "canal": [
+          "presencial",
+          "web"
+        ]
+      },
+      "variantes": [
+        "¿Qué iniciativas tienen para impulsar la innovación?",
+        "¿Organizan actividades para promover la innovación empresarial?",
+        "¿Tienen programas de incubación de ideas innovadoras?",
+        "¿Realizan hackathons u otros eventos de innovación?",
+        "¿Cómo apoyan el desarrollo de soluciones innovadoras?"
+      ]
+    },
+    {
+      "id": "50",
+      "pregunta": "¿Cómo puedo participar en las elecciones de la junta directiva?",
+      "respuesta": "Para participar en las elecciones, debes ser miembro activo, estar al día con tus obligaciones y cumplir con los requisitos establecidos en los estatutos.",
+      "categoria": "Elecciones",
+      "keywords": [
+        "elecciones",
+        "junta directiva",
+        "participación",
+        "voto",
+        "candidatura"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": true,
+        "canal": [
+          "presencial",
+          "web"
+        ]
+      },
+      "links": {
+        "informacion_elecciones": "/camara/elecciones-junta-directiva",
+        "requisitos_candidatos": "/camara/junta-directiva",
+        "junta_actual": "/camara/junta-directiva",
+        "estatutos": "/leyes-transparencia/normas-generales"
+      },
+      "variantes": [
+        "¿Cómo puedo votar en las elecciones de la Cámara?",
+        "¿Cuáles son los requisitos para ser candidato a la junta?",
+        "¿Cuándo son las próximas elecciones de la junta directiva?",
+        "¿Quién puede participar en las elecciones de la Cámara?",
+        "¿Cómo me postulo para la junta directiva?"
+      ]
+    },
+    {
+      "id": "51",
+      "pregunta": "¿Ofrecen recursos para la transformación digital de mi empresa?",
+      "respuesta": "Sí, proporcionamos recursos y asesoramiento para ayudar a las empresas a adoptar nuevas tecnologías y digitalizar sus operaciones.",
+      "categoria": "Innovación",
+      "keywords": [
+        "transformación digital",
+        "tecnología",
+        "digitalización",
+        "innovación",
+        "modernización"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Transformación Digital",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Cómo pueden ayudarme a digitalizar mi negocio?",
+        "¿Tienen programas de transformación tecnológica?",
+        "¿Qué apoyo brindan para modernizar digitalmente mi empresa?",
+        "¿Ofrecen asesoría en digitalización de procesos?",
+        "¿Cómo puedo iniciar la transformación digital de mi compañía?"
+      ]
+    },
+    {
+      "id": "52",
+      "pregunta": "¿Cómo puedo obtener acceso a estudios y análisis sobre tecnología emergente?",
+      "respuesta": "Puedes acceder a estudios y análisis sobre tecnología emergente a través de nuestro portal de miembros, donde regularmente publicamos informes y artículos sobre las últimas tendencias tecnológicas.",
+      "categoria": "Recursos",
+      "keywords": [
+        "estudios",
+        "análisis",
+        "tecnología",
+        "tendencias",
+        "informes"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Recursos Digitales",
+        "requiere_documentos": false,
+        "canal": [
+          "web"
+        ]
+      },
+      "variantes": [
+        "¿Dónde encuentro informes sobre nuevas tecnologías?",
+        "¿Tienen investigaciones sobre tendencias tecnológicas?",
+        "¿Cómo accedo a análisis de tecnologías emergentes?",
+        "¿Publican estudios sobre innovación tecnológica?",
+        "¿Dónde puedo consultar informes de tendencias digitales?"
+      ]
+    },
+    {
+      "id": "53",
+      "pregunta": "¿Qué documentos necesito para obtener un certificado de existencia?",
+      "respuesta": "Para obtener un certificado de existencia solo necesitas el NIT de tu empresa y realizar el pago correspondiente. El certificado se genera automáticamente.",
+      "categoria": "Certificados y Solicitudes",
+      "keywords": [
+        "certificado",
+        "existencia",
+        "documentos",
+        "requisitos",
+        "trámites"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Certificados",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Qué requisitos necesito para un certificado de existencia?",
+        "¿Cómo obtengo un certificado de existencia?",
+        "¿Qué papeles debo presentar para solicitar un certificado de existencia?",
+        "¿Cuál es el proceso para tramitar un certificado de existencia?",
+        "¿Necesito algún documento especial para el certificado de existencia?"
+      ]
+    },
+    {
+      "id": "54",
+      "pregunta": "¿Cuánto tiempo tarda la expedición de un certificado?",
+      "respuesta": "Los certificados digitales se generan inmediatamente después del pago. Para certificados físicos, el tiempo de entrega es de 1 a 2 días hábiles.",
+      "categoria": "Certificados y Solicitudes",
+      "keywords": [
+        "tiempo",
+        "expedición",
+        "certificado",
+        "entrega",
+        "duración"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Certificados",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿En cuánto tiempo me entregan un certificado?",
+        "¿Cuál es el tiempo de espera para recibir un certificado?",
+        "¿Cuánto demora la emisión de un certificado digital?",
+        "¿Los certificados se entregan el mismo día?",
+        "¿Cuánto debo esperar para obtener mi certificado?"
+      ]
+    },
+    {
+      "id": "55",
+      "pregunta": "¿Cómo puedo verificar la autenticidad de un certificado?",
+      "respuesta": "Puedes verificar la autenticidad de cualquier certificado ingresando el código de verificación en nuestro portal web en la sección 'Verificar Certificado'.",
+      "categoria": "Certificados y Solicitudes",
+      "keywords": [
+        "verificación",
+        "autenticidad",
+        "certificado",
+        "validación",
+        "código"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Verificación",
+        "requiere_documentos": false,
+        "canal": [
+          "web"
+        ]
+      },
+      "variantes": [
+        "¿Cómo sé si un certificado es auténtico?",
+        "¿Dónde puedo validar un certificado?",
+        "¿Existe alguna forma de comprobar si un certificado es válido?",
+        "¿Cómo confirmo que un certificado no es falso?",
+        "¿Dónde ingreso el código para verificar un certificado?"
+      ]
+    },
+    {
+      "id": "56",
+      "pregunta": "¿Qué tipos de certificados puedo solicitar?",
+      "respuesta": "Puedes solicitar certificados de existencia y representación legal, matrícula mercantil, registro de marca, histórico de renovaciones y otros documentos comerciales.",
+      "categoria": "Certificados y Solicitudes",
+      "keywords": [
+        "tipos",
+        "certificados",
+        "documentos",
+        "solicitud",
+        "trámites"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Certificados",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Qué certificados emite la Cámara de Comercio?",
+        "¿Cuáles son los certificados disponibles?",
+        "¿Qué clase de documentos certificados puedo obtener?",
+        "¿Qué tipos de constancias empresariales ofrecen?",
+        "¿Cuáles son los documentos oficiales que puedo solicitar?"
+      ]
+    },
+    {
+      "id": "57",
+      "pregunta": "¿Cómo puedo obtener un duplicado de mi registro mercantil?",
+      "respuesta": "Puedes solicitar un duplicado de tu registro mercantil a través de nuestro portal web o en nuestras oficinas presentando tu identificación.",
+      "categoria": "Documentos Empresariales",
+      "keywords": [
+        "duplicado",
+        "registro",
+        "mercantil",
+        "copia",
+        "documento"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Duplicados",
+        "requiere_documentos": true,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Cómo solicito una copia de mi registro mercantil?",
+        "¿Dónde puedo obtener un duplicado de mi registro?",
+        "Perdí mi registro mercantil, ¿cómo consigo otro?",
+        "¿Cuál es el procedimiento para solicitar una copia del registro?",
+        "¿Puedo pedir un duplicado de mi matrícula mercantil en línea?"
+      ]
+    },
+    {
+      "id": "58",
+      "pregunta": "¿Qué hago si pierdo mis documentos empresariales?",
+      "respuesta": "Si pierdes tus documentos empresariales, puedes solicitar copias certificadas a través de nuestro portal web o en nuestras oficinas. Te ayudaremos a recuperar toda la documentación necesaria.",
+      "categoria": "Documentos Empresariales",
+      "keywords": [
+        "pérdida",
+        "documentos",
+        "copias",
+        "certificadas",
+        "recuperación"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Duplicados",
+        "requiere_documentos": true,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Cómo recupero documentos empresariales perdidos?",
+        "¿Qué hacer si extravío documentos de mi empresa?",
+        "Extravié mis papeles comerciales, ¿cómo los reemplazo?",
+        "¿Existe algún procedimiento para reponer documentos perdidos?",
+        "¿Cómo solicito duplicados de documentación empresarial?"
+      ]
+    },
+    {
+      "id": "59",
+      "pregunta": "¿Ofrecen asesoría para la creación de empresas?",
+      "respuesta": "Sí, ofrecemos asesoría completa para la creación de empresas, incluyendo orientación legal, tributaria y administrativa para que puedas iniciar tu negocio correctamente.",
+      "categoria": "Asesorías y Consultorías",
+      "keywords": [
+        "asesoría",
+        "creación",
+        "empresa",
+        "orientación",
+        "inicio"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Asesoría",
+        "requiere_documentos": false,
+        "canal": [
+          "presencial",
+          "virtual"
+        ]
+      },
+      "variantes": [
+        "¿Hay asesoría para crear una empresa?",
+        "¿Cómo puedo recibir orientación para crear mi empresa?",
+        "¿Me pueden ayudar con el proceso de constitución empresarial?",
+        "¿Brindan apoyo para emprendedores que quieren formalizar su negocio?",
+        "¿Tienen servicios de consultoría para nuevas empresas?"
+      ]
+    },
+    {
+      "id": "60",
+      "pregunta": "¿Qué información puedo encontrar en el sitio web de la Cámara?",
+      "respuesta": "En nuestro sitio web puedes encontrar información sobre servicios, eventos, capacitaciones, trámites en línea, noticias, publicaciones y recursos para empresarios.",
+      "categoria": "Sitio Web",
+      "keywords": [
+        "sitio web",
+        "página web",
+        "información",
+        "online",
+        "digital"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web"
+        ]
+      },
+      "links": {
+        "servicios": "/servicios-virtuales/expedicion-verificacion-certificados",
+        "tramites": "/tramites/servicios",
+        "eventos": "/calendario",
+        "capacitaciones": "/desarrollo-empresarial/capacitaciones",
+        "informacion_camara": "/camara/informacion"
+      },
+      "variantes": [
+        "¿Qué secciones tiene el sitio web de la Cámara?",
+        "¿Dónde encuentro información específica en la web?",
+        "¿Qué recursos digitales ofrece la página web?",
+        "¿Cómo navego por el sitio web de la Cámara?",
+        "¿Qué contenido está disponible en línea?"
+      ]
+    },
+    {
+      "id": "61",
+      "pregunta": "¿Ofrecen descuentos para microempresas?",
+      "respuesta": "Sí, ofrecemos tarifas especiales y descuentos para microempresas en varios de nuestros servicios y trámites. Consulta nuestra tabla de tarifas para más detalles.",
+      "categoria": "Tarifas y Pagos",
+      "keywords": [
+        "descuentos",
+        "tarifas",
+        "microempresa",
+        "precios",
+        "beneficios"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Hay tarifas especiales para microempresas?",
+        "¿Existen beneficios económicos para microempresas?",
+        "¿Las empresas pequeñas tienen algún descuento?",
+        "¿Ofrecen precios reducidos para emprendimientos?",
+        "¿Cómo accedo a las tarifas preferenciales para mi microempresa?"
+      ]
+    },
+    {
+      "id": "81",
+      "pregunta": "¿Cuáles son los métodos de pago aceptados?",
+      "respuesta": "Aceptamos pagos con tarjeta de crédito/débito, transferencias bancarias, PSE y pagos en efectivo en puntos autorizados.",
+      "categoria": "Tarifas y Pagos",
+      "keywords": [
+        "pagos",
+        "métodos",
+        "tarjetas",
+        "transferencia",
+        "PSE"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Pagos",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "variantes": [
+        "¿Cómo puedo realizar los pagos?",
+        "¿Qué formas de pago aceptan?",
+        "¿Puedo pagar con tarjeta de crédito?",
+        "¿Aceptan transferencias bancarias?",
+        "¿Cuáles son las opciones disponibles para pagar trámites?"
+      ]
+    },
+    {
+      "id": "16",
+      "pregunta": "¿Tienen eventos virtuales disponibles?",
+      "respuesta": "Sí, ofrecemos una variedad de eventos virtuales incluyendo webinars, talleres en línea y conferencias virtuales. Puedes encontrar toda la programación en nuestro calendario de eventos.",
+      "categoria": "Eventos",
+      "keywords": [
+        "virtuales",
+        "webinars",
+        "talleres",
+        "conferencias",
+        "eventos"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Eventos",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "email"
+        ]
+      },
+      "variantes": [
+        "¿Qué eventos virtuales organizan?",
+        "¿Cuándo son los próximos webinars?",
+        "¿Cómo participo en un webinar?",
+        "¿Qué requisitos necesito para acceder a un evento virtual?",
+        "¿Existen talleres en línea para participar?"
+      ],
+      "links": {
+        "eventos_virtuales": "/eventos/virtuales",
+        "calendario_webinars": "/eventos/webinars",
+        "instrucciones_acceso": "/eventos/guia-acceso-virtual",
+        "grabaciones_anteriores": "/eventos/grabaciones",
+        "soporte_tecnico": "/eventos/soporte-virtual"
+      }
+    },
+    {
+      "id": "65",
+      "pregunta": "¿Cómo puedo participar en licitaciones o convocatorias?",
+      "respuesta": "Puedes participar en licitaciones y convocatorias consultando nuestra sección de convocatorias y registrándote como proveedor interesado.",
+      "categoria": "Oportunidades de Negocio",
+      "keywords": [
+        "licitaciones",
+        "convocatorias",
+        "contratos",
+        "proveedores",
+        "oportunidades"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": true,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "links": {
+        "convocatorias_actuales": "/convocatorias",
+        "registro_proveedores": "/servicios-virtuales/proveedores",
+        "requisitos_participacion": "/tramites/servicios",
+        "calendario_licitaciones": "/calendario"
+      },
+      "variantes": [
+        "¿Dónde encuentro las licitaciones disponibles?",
+        "¿Cómo me registro como proveedor para convocatorias?",
+        "¿Tienen un portal de contratación?",
+        "¿Cómo aplico a las convocatorias de la Cámara?",
+        "Proceso para participar en licitaciones"
+      ]
+    },
+    {
+      "id": "80",
+      "pregunta": "¿Qué es la costumbre mercantil?",
+      "respuesta": "La costumbre mercantil es una práctica comercial generalizada, uniforme y reiterada que se considera fuente de derecho comercial cuando no hay ley aplicable.",
+      "categoria": "Legal",
+      "keywords": [
+        "costumbre mercantil",
+        "prácticas comerciales",
+        "derecho comercial",
+        "usos mercantiles",
+        "tradición"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web"
+        ]
+      },
+      "links": {
+        "costumbre_mercantil": "/leyes-transparencia/costumbre-mercantil",
+        "certificaciones": "/servicios-virtuales/certificados",
+        "normatividad": "/normativa/normatividad",
+        "estudios_juridicos": "/leyes-transparencia/estudios-investigaciones-publicas"
+      },
+      "variantes": [
+        "¿Qué son los usos mercantiles?",
+        "¿Cómo se certifica una costumbre mercantil?",
+        "Importancia de la costumbre mercantil",
+        "¿Cuándo aplica la costumbre mercantil?",
+        "Diferencia entre ley y costumbre mercantil"
+      ]
+    },
+    {
+      "id": "85",
+      "pregunta": "¿Cómo puedo renovar mi registro mercantil?",
+      "respuesta": "Puedes renovar tu registro mercantil en línea a través de nuestra plataforma virtual o presencialmente en nuestras oficinas antes del 31 de marzo de cada año.",
+      "categoria": "Registros",
+      "keywords": [
+        "renovación",
+        "registro mercantil",
+        "actualización",
+        "anual",
+        "matrícula"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Trámites",
+        "requiere_documentos": true,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "links": {
+        "renovacion_virtual": "/renovar",
+        "tarifas_renovacion": "/tarifas",
+        "guia_renovacion": "/fqa",
+        "calendario_renovacion": "/calendario"
+      },
+      "variantes": [
+        "¿Cuándo debo renovar mi matrícula mercantil?",
+        "¿Cómo hago la renovación anual del registro?",
+        "Proceso de renovación de matrícula mercantil",
+        "¿Puedo renovar mi registro en línea?",
+        "¿Qué pasa si no renuevo mi registro mercantil a tiempo?"
+      ]
+    },
+    {
+      "id": "90",
+      "pregunta": "¿Qué servicios virtuales ofrecen?",
+      "respuesta": "Ofrecemos servicios virtuales como expedición de certificados, renovaciones, consultas, radicación de documentos y asesorías en línea.",
+      "categoria": "Servicios Virtuales",
+      "keywords": [
+        "servicios virtuales",
+        "en línea",
+        "digital",
+        "remoto",
+        "internet"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web"
+        ]
+      },
+      "links": {
+        "servicios_virtuales": "/servicios-virtuales/expedicion-verificacion-certificados",
+        "tramites_linea": "/tramites/linea",
+        "certificados_virtuales": "/servicios-virtuales/expedicion-verificacion-certificados",
+        "soporte_virtual": "/pqrs"
+      },
+      "variantes": [
+        "¿Qué trámites puedo hacer por internet?",
+        "¿Cuáles son los servicios digitales disponibles?",
+        "¿Tienen plataforma virtual para trámites?",
+        "¿Qué puedo hacer en línea sin ir a la oficina?",
+        "Servicios remotos de la Cámara de Comercio"
+      ]
+    },
+    {
+      "id": "95",
+      "pregunta": "¿Cómo puedo consultar el estado de un trámite?",
+      "respuesta": "Puedes consultar el estado de tu trámite a través de nuestra plataforma virtual con tu número de radicado o contactando a nuestro servicio de atención al cliente.",
+      "categoria": "Trámites",
+      "keywords": [
+        "consulta",
+        "estado",
+        "trámite",
+        "seguimiento",
+        "radicado"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Consulta",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "telefónico",
+          "presencial"
+        ]
+      },
+      "links": {
+        "consulta_tramites": "/servicios-virtuales/expedicion-verificacion-certificados",
+        "contacto_soporte": "/pqrs",
+        "preguntas_frecuentes": "/fqa",
+        "chat_asistencia": "/"
+      },
+      "variantes": [
+        "¿Dónde veo en qué va mi trámite?",
+        "¿Cómo saber si mi solicitud ya fue procesada?",
+        "Quiero verificar el avance de mi trámite",
+        "¿Tienen sistema de seguimiento de solicitudes?",
+        "¿Cómo rastreo el estado de mi solicitud?"
+      ]
+    },
+    {
+      "id": "65",
+      "pregunta": "¿Cómo puedo presentar una queja o sugerencia?",
+      "respuesta": "Puedes presentar quejas o sugerencias a través de nuestro formulario en línea, por correo electrónico, por teléfono o visitando nuestras oficinas.",
+      "categoria": "Atención al Cliente",
+      "keywords": [
+        "queja",
+        "sugerencia",
+        "reclamo",
+        "petición",
+        "PQRS"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Atención",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico",
+          "email"
+        ]
+      },
+      "links": {
+        "formulario_pqrs": "/formulario-pqrs",
+        "politica_atencion": "/politicas/atencion-cliente",
+        "contacto": "/camara/sedes",
+        "derechos_usuario": "/politicas/atencion-cliente"
+      },
+      "variantes": [
+        "¿Dónde puedo hacer un reclamo?",
+        "¿Cómo hago llegar una sugerencia a la Cámara?",
+        "¿Cuál es el proceso para presentar una queja formal?",
+        "¿Tienen un sistema de PQRS?",
+        "¿A quién debo dirigir mis inconformidades con el servicio?"
+      ]
+    },
+    {
+      "id": "70",
+      "pregunta": "¿Qué información puedo encontrar en el registro mercantil?",
+      "respuesta": "En el registro mercantil puedes encontrar información sobre empresas, como datos de constitución, objeto social, capital, representantes legales y situación financiera.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "registro mercantil",
+        "información",
+        "empresas",
+        "datos",
+        "consulta"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial"
+        ]
+      },
+      "links": {
+        "consulta_registro": "/registros/mercantil",
+        "expedicion_certificados": "/servicios-virtuales/expedicion-verificacion-certificados",
+        "tarifas_consulta": "/tarifas",
+        "normativa": "/normativa/normatividad"
+      },
+      "variantes": [
+        "¿Qué datos contiene el registro mercantil?",
+        "¿Cómo consulto información de una empresa en el registro?",
+        "¿Qué puedo saber de una empresa a través del registro mercantil?",
+        "¿El registro mercantil es público?",
+        "¿Qué tipo de información empresarial está disponible para consulta?"
+      ]
+    },
+    {
+      "id": "9",
+      "pregunta": "¿CUÁLES SON LAS OBLIGACIONES DE LOS COMERCIANTES?",
+      "respuesta": "Las obligaciones de los comerciantes son: 1) Matricularse en el registro mercantil. 2) Inscribir en el registro mercantil todos los actos, libros y documentos sobre los cuales la ley exija esta formalidad. 3) Llevar la contabilidad de sus negocios. 4) Conservar la correspondencia y demás documentos relacionados con sus negocios. 5) Denunciar ante el juez competente la cesación en el pago de sus obligaciones. 6) Abstenerse de ejecutar actos de competencia desleal.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "obligaciones",
+        "comerciantes",
+        "registro mercantil",
+        "contabilidad",
+        "documentos",
+        "competencia desleal"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "normatividad": "/normativa/normatividad",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Qué obligaciones tengo como comerciante?",
+        "¿Cuáles son mis deberes como comerciante?",
+        "¿Qué responsabilidades legales tienen los comerciantes?",
+        "¿Qué debo cumplir como comerciante según la ley?",
+        "Obligaciones legales de los comerciantes"
+      ]
+    },
+    {
+      "id": "10",
+      "pregunta": "¿QUIÉNES CONFORMAN LAS CÁMARAS DE COMERCIO?",
+      "respuesta": "Toda Cámara de Comercio está conformada por los comerciantes matriculados y los comerciantes afiliados. Los matriculados son todos los comerciantes, personas naturales y jurídicas (sociedades), quienes, por ejercer el comercio, están obligados por la ley a tramitar su matrícula y la de sus establecimientos de comercio e inscribir los actos y documentos sujetos a registro. Los afiliados son aquellos comerciantes que, además de cumplir con la obligación anterior, voluntariamente solicitan su afiliación a la Cámara de Comercio, para disfrutar de algunos servicios especiales mediante el pago de una cuota adicional. Igualmente obtienen el derecho a elegir y ser elegidos como miembros de la Junta Directiva.",
+      "categoria": "Información General",
+      "keywords": [
+        "conformación",
+        "cámara de comercio",
+        "matriculados",
+        "afiliados",
+        "junta directiva"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "afiliacion": "/afiliados",
+        "junta_directiva": "/camara/junta-directiva",
+        "beneficios": "/camara/informacion"
+      },
+      "variantes": [
+        "¿Cuál es la diferencia entre matriculados y afiliados?",
+        "¿Cómo está constituida la Cámara de Comercio?",
+        "¿Quiénes integran la Cámara de Comercio?",
+        "Estructura de la Cámara de Comercio",
+        "¿Qué tipos de miembros hay en la Cámara de Comercio?"
+      ]
+    },
+    {
+      "id": "11",
+      "pregunta": "¿QUIÉNES DEBEN MATRICULARSE EN LA CÁMARA DE COMERCIO?",
+      "respuesta": "Deben matricularse en la Cámara de Comercio: 1) El comerciante como persona natural, las sociedades o personas jurídicas (constituidas mediante escritura pública). 2) Los auxiliares de los comerciantes, tales como: los comisionistas, corredores, agentes, factores de comercio y representantes de firmas nacionales o extranjeras. 3) Los empresarios que aspiran a contratar con el Estado, según la Ley 80 de 1993. 4) Las sociedades de economía mixta y las empresas industriales y comerciales del Estado. 5) Los establecimientos de comercio (no hacemos referencia al local comercial). 6) Las sucursales o agencias de las sociedades comerciales. 7) Los fondos de pensiones Jubilación e invalidez.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "matrícula",
+        "registro",
+        "comerciantes",
+        "personas jurídicas",
+        "establecimientos",
+        "sucursales"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "requisitos": "/registros/unico-proponentes",
+        "tarifas": "/tarifas"
+      },
+      "variantes": [
+        "¿Quién está obligado a matricularse en la Cámara de Comercio?",
+        "¿Qué tipo de negocios deben registrarse en la Cámara?",
+        "¿Es obligatorio registrarse en la Cámara de Comercio?",
+        "¿Qué empresas deben tener matrícula mercantil?",
+        "Obligación de matrícula en la Cámara de Comercio"
+      ]
+    },
+    {
+      "id": "12",
+      "pregunta": "¿CUÁL ES LA FINALIDAD DEL REGISTRO MERCANTIL?",
+      "respuesta": "Todo comerciante tiene la obligación de inscribirse en Registro, obteniendo con ello los siguientes beneficios: 1) Publicidad al comerciante y a sus establecimientos comerciales, así como a los documentos sometidos a registro. Con ello se le da garantía a otras personas y al mismo comerciante sobre su actuación como tal. 2) En relación con los libros de comercio (contabilidad, actas y registro de socios o accionistas), su inscripción busca proporcionar una garantía relativa de veracidad sobre lo que en ellos se copie o asiente. 3) Se protege el nombre comercial del establecimiento (solo en la jurisdicción de la Cámara). Es decir, la Cámara de Comercio debe abstenerse de matricular un establecimiento con el mismo nombre de otro ya registrado. 4) El registro facilita la prueba de los documentos en él inscritos, mediante certificaciones expedidas por la Cámara de Comercio. 5) La Cámara de Comercio, en ciertos casos, podrá legítimamente rechazar el registro de un acto o documento cuando éste presente algún vicio de ilegalidad formal.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "finalidad",
+        "registro mercantil",
+        "beneficios",
+        "publicidad",
+        "protección",
+        "nombre comercial"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "certificados": "/servicios-virtuales/expedicion-verificacion-certificados",
+        "normatividad": "/normativa/normatividad"
+      },
+      "variantes": [
+        "¿Para qué sirve el registro mercantil?",
+        "¿Qué beneficios tiene inscribirse en el registro mercantil?",
+        "¿Por qué es importante el registro mercantil?",
+        "Ventajas del registro mercantil",
+        "¿Qué protección ofrece el registro mercantil?"
+      ]
+    },
+    {
+      "id": "13",
+      "pregunta": "¿CUÁLES SON LAS FUNCIONES DE LA CÁMARA DE COMERCIO?",
+      "respuesta": "Las funciones de la Cámara de Comercio son: 1) Representar los intereses generales de todos los comerciantes e industriales ante el gobierno y ante los comerciantes mismos. 2) Llevar el registro público mercantil de todo el comercio y certificar sobre los actos y documentos en él inscritos (Art. 86 del Código de Comercio). 3) Llevar el registro público de proponentes (Artículos 22 y 79 de la Ley 80/93). 4) Llevar la inscripción de entidades sin ánimo de lucro, cooperativas, fundaciones, juntas de acción comunal, cooperativas, fondos de empleados y asociaciones mutuales. 5) Promover el desarrollo de la región que le corresponde.",
+      "categoria": "Información General",
+      "keywords": [
+        "funciones",
+        "cámara de comercio",
+        "registro público",
+        "proponentes",
+        "entidades sin ánimo de lucro",
+        "desarrollo regional"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "registro_proponentes": "/registros/unico-proponentes",
+        "entidades_sin_animo_lucro": "/registros/entidades-sin-animo-lucro",
+        "desarrollo_regional": "/desarrollo-empresarial"
+      },
+      "variantes": [
+        "¿Qué hace la Cámara de Comercio?",
+        "¿Cuáles son las responsabilidades de la Cámara de Comercio?",
+        "¿Qué servicios ofrece la Cámara de Comercio?",
+        "Rol de la Cámara de Comercio",
+        "¿Para qué sirve la Cámara de Comercio?"
+      ]
+    },
+    {
+      "id": "14",
+      "pregunta": "¿QUIÉNES NO SE MATRICULAN EN LA CÁMARA DE COMERCIO?",
+      "respuesta": "No se matriculan en la Cámara de Comercio: 1) Los artistas y los talleres para confeccionar sus propias obras. Esto es distinto de quienes comercian con obras de arte, los cuales deben efectuar su matrícula mercantil. 2) Los profesionales y sus oficinas o consultorios destinados a realizar su profesión. 3) Los agricultores y sus depósitos donde almacenan su propia cosecha para distribuirla en el mercado. Esto es diferente a montar una compraventa de productos agrícolas, la cual se debe matricular.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "excepciones",
+        "matrícula",
+        "artistas",
+        "profesionales",
+        "agricultores"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "normatividad": "/normativa/normatividad",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Quiénes están exentos de matricularse en la Cámara de Comercio?",
+        "¿Qué actividades no requieren matrícula mercantil?",
+        "¿Hay excepciones para el registro en la Cámara de Comercio?",
+        "¿Qué profesiones no necesitan registrarse en la Cámara?",
+        "Actividades exentas de matrícula mercantil"
+      ]
+    },
+    {
+      "id": "15",
+      "pregunta": "¿CUÁNDO SE DEBEN MATRICULAR LOS COMERCIANTES EN LA CÁMARA DE COMERCIO?",
+      "respuesta": "La matrícula debe solicitarse dentro del mes siguiente al momento en que se comienza la actividad mercantil, así: 1) Las personas naturales, dentro del mes siguiente al momento en que se iniciaron en los negocios. 2) Las personas jurídicas o sociedades, dentro del mes siguiente a la fecha de la escritura de constitución o del permiso de funcionamiento. 3) Los establecimientos de comercio también se deben matricular dentro de los 30 días siguientes de su apertura.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "plazo",
+        "matrícula",
+        "registro",
+        "tiempo",
+        "inicio actividad"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "calendario": "/calendario",
+        "normatividad": "/normativa/normatividad"
+      },
+      "variantes": [
+        "¿Cuál es el plazo para matricularse en la Cámara de Comercio?",
+        "¿Tengo un tiempo límite para registrarme como comerciante?",
+        "¿Cuánto tiempo tengo para hacer mi matrícula mercantil?",
+        "Plazos para el registro mercantil",
+        "¿Cuándo debo registrar mi negocio en la Cámara de Comercio?"
+      ]
+    },
+    {
+      "id": "16",
+      "pregunta": "¿EL COMERCIANTE PUEDE MATRICULARSE EN CUALQUIER CÁMARA DE COMERCIO DEL PAÍS?",
+      "respuesta": "NO. Cada Cámara de Comercio tiene una jurisdicción asignada por el gobierno. Por tanto, el comerciante, de acuerdo con el domicilio donde desarrolla su actividad comercial, debe matricularse en la Cámara correspondiente a su jurisdicción. Si posee negocios en más de un municipio, debe consultar si éstos corresponden a diferentes Cámaras y en este caso debe efectuar la matrícula de cada negocio de acuerdo con la jurisdicción de cada Cámara.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "jurisdicción",
+        "domicilio",
+        "matrícula",
+        "territorio",
+        "competencia territorial"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "jurisdiccion": "/camara/jurisdiccion",
+        "registro_mercantil": "/registros/mercantil",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Dónde debo matricularme como comerciante?",
+        "¿Puedo elegir en qué Cámara de Comercio registrarme?",
+        "¿Cómo sé a qué Cámara de Comercio pertenezco?",
+        "Jurisdicción de las Cámaras de Comercio",
+        "¿Qué pasa si tengo negocios en diferentes ciudades?"
+      ]
+    },
+    {
+      "id": "17",
+      "pregunta": "¿CÓMO SE REALIZA LA MATRÍCULA MERCANTIL, SU RENOVACIÓN ANUAL Y LA INSCRIPCIÓN DE OTROS DOCUMENTOS?",
+      "respuesta": "Se diligencia el formulario y se presenta en la Sede Principal de la Cámara de Comercio o en cualquiera de las sedes seccionales en los municipios donde se efectúa la liquidación y se recibe el dinero que debe pagarse por la matrícula o por la renovación. Usted también puede consultar telefónicamente su liquidación llamando a las sedes de la Entidad. Ahí se le indicará el procedimiento para el trámite de otros documentos, tales como: Cambio de Dirección, Cambio de propietario, Cancelación de Establecimiento de Comercio, Cancelación de la matrícula mercantil. Siendo el registro un acto público, la falsedad en los datos será sancionada conforme al Código Penal y la Cámara de Comercio estará obligada a llevar la denuncia correspondiente.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "matrícula",
+        "renovación",
+        "inscripción",
+        "formulario",
+        "trámite",
+        "procedimiento"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "formularios": "/servicios-virtuales/instructivos-tramites-virtuales",
+        "sedes": "/camara/sedes",
+        "tarifas": "/tarifas"
+      },
+      "variantes": [
+        "¿Cómo hago mi matrícula mercantil?",
+        "¿Cuál es el procedimiento para renovar la matrícula?",
+        "¿Dónde puedo hacer los trámites de la Cámara de Comercio?",
+        "Proceso de inscripción en la Cámara de Comercio",
+        "¿Cómo cambiar información en mi registro mercantil?"
+      ]
+    },
+    {
+      "id": "18",
+      "pregunta": "¿PUEDEN LOS MENORES DE EDAD SER COMERCIANTES?",
+      "respuesta": "Los menores de edad pueden ser comerciantes ya que poseen capacidad de goce, las cuales les dan facultad para ser sujetos de derechos y obligaciones. De conformidad con lo anterior, pueden matricularse en el registro mercantil, por lo que el formulario de matrícula deberá ser diligenciado por los representantes legales del menor (Padres o tutores), los cuales deben presentarse personalmente ante la entidad o hacer reconocimiento de firmas en notaria. La representación legal es ejercida por una persona, debe demostrarse este hecho, allegando los documentos correspondientes. Ej. Sentencia ejecutoriada, certificado de defunción del cónyuge.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "menores de edad",
+        "comerciantes",
+        "capacidad de goce",
+        "representantes legales",
+        "tutores"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "normatividad": "/normativa/normatividad",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Un menor puede registrarse como comerciante?",
+        "¿Cómo se registra un menor de edad en la Cámara de Comercio?",
+        "¿Qué requisitos necesita un menor para ser comerciante?",
+        "Registro mercantil para menores de edad",
+        "¿Puede un adolescente tener matrícula mercantil?"
+      ]
+    },
+    {
+      "id": "19",
+      "pregunta": "¿PUEDE UN MENOR DE EDAD EJERCER DIRECTAMENTE EL COMERCIO?",
+      "respuesta": "Los menores de edad directamente no pueden ejercer el comercio, ya que tienen restringida su capacidad de ejercicio, es decir, la facultad para ejercer por si mismo sus derechos, o contraer sus obligaciones. Sólo el menor puede comprometer su pecunio profesional.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "menores de edad",
+        "ejercicio del comercio",
+        "capacidad de ejercicio",
+        "pecunio profesional",
+        "restricciones"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "normatividad": "/normativa/normatividad",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Un menor puede administrar un negocio por sí mismo?",
+        "¿Qué limitaciones tienen los menores como comerciantes?",
+        "¿Puede un menor firmar contratos comerciales?",
+        "Capacidad legal de los menores en el comercio",
+        "¿Qué actividades comerciales puede realizar un menor?"
+      ]
+    },
+    {
+      "id": "20",
+      "pregunta": "¿QUÉ AUTORIZACIÓN ES REQUERIDA A LOS MENORES DE EDAD PARA INSCRIBIRSE EN EL REGISTRO MERCANTIL?",
+      "respuesta": "Las autorizaciones a los menores de edad, no es para que el menor ejerza el comercio por cuenta propia, sino por cuenta ajena o a nombre de otro, de conformidad con el artículo 12 del Código de Comercio (menores de adultos). Esta solicitud la realiza directamente los representantes legales.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "menores de edad",
+        "autorización",
+        "registro mercantil",
+        "representantes legales",
+        "cuenta ajena"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "normatividad": "/normativa/normatividad",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Qué permisos necesita un menor para registrarse en la Cámara?",
+        "¿Cómo autorizar a un menor para actividades comerciales?",
+        "Requisitos para que un menor sea comerciante",
+        "¿Quién debe autorizar a un menor para el registro mercantil?",
+        "Autorizaciones legales para menores comerciantes"
+      ]
+    },
+    {
+      "id": "21",
+      "pregunta": "¿QUÉ ES EL IMPUESTO DE REGISTRO Y QUIÉNES SON SUS BENEFICIARIOS?",
+      "respuesta": "El impuesto de registro es un gravamen creado por el Congreso de la República mediante la Ley 223 de 1995, que afecta a todos los actos, documentos o contratos que deben registrarse ante las Cámara de Comercio y en las oficinas de instrumentos públicos. Las cámaras de comercio únicamente ejercen una función de liquidación y recaudo del citado impuesto.",
+      "categoria": "Impuestos y Tarifas",
+      "keywords": [
+        "impuesto de registro",
+        "gravamen",
+        "recaudo",
+        "liquidación",
+        "Ley 223 de 1995"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "tarifas": "/tarifas",
+        "normatividad": "/normativa/normatividad",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Qué es y para qué sirve el impuesto de registro?",
+        "¿Quién recibe el dinero del impuesto de registro?",
+        "¿Por qué debo pagar impuesto de registro?",
+        "Beneficiarios del impuesto de registro",
+        "¿Cómo se calcula el impuesto de registro?"
+      ]
+    },
+    {
+      "id": "22",
+      "pregunta": "¿QUÉ ES UN ESTABLECIMIENTO DE COMERCIO?",
+      "respuesta": "Es un conjunto de bienes organizados por el empresario o comerciante en un sitio determinado para el desarrollo de sus actividades económicas (Tiendas, supermercados, almacenes bodegas, hoteles, fabricas, plantas industriales, factorías, etc.). Una misma persona podrá tener varios establecimientos de comercio y, a su vez, un solo establecimiento de comercio podrá pertenecer a varias personas, y destinarse al desarrollo de diversas actividades comerciales (artículo 515).",
+      "categoria": "Establecimientos de Comercio",
+      "keywords": [
+        "establecimiento de comercio",
+        "bienes",
+        "actividades económicas",
+        "tiendas",
+        "almacenes",
+        "propiedad"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "normatividad": "/normativa/normatividad",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Qué se considera un establecimiento comercial?",
+        "Definición de establecimiento de comercio",
+        "¿Cuáles son ejemplos de establecimientos de comercio?",
+        "¿Un local comercial es lo mismo que un establecimiento de comercio?",
+        "¿Puede un establecimiento pertenecer a varias personas?"
+      ]
+    },
+    {
+      "id": "23",
+      "pregunta": "¿POR QUÉ ES IMPORTANTE LA MATRÍCULA MERCANTIL DEL ESTABLECIMIENTO DE COMERCIO?",
+      "respuesta": "La matrícula de los establecimientos de comercio es importante porque: 1) Facilita la prueba de su propiedad, mediante el certificado que expide la Cámara de Comercio. 2) Mientras esté vigente la matrícula, no se podrán registrar otros establecimientos de comercio o sociedades con el mismo nombre. 3) Evita multas que puede imponer la Superintendencia de Industria y Comercio o las autoridades locales. 4) Es una fuente de información comercial para quienes deseen conocer los datos del establecimiento (actividad, ubicación, valor, etc.) 5) Permite ingresar a la gran base de datos de la Cámara de Comercio. 6) Facilita la celebración de negocios con los sectores público y privado.",
+      "categoria": "Establecimientos de Comercio",
+      "keywords": [
+        "matrícula mercantil",
+        "establecimiento de comercio",
+        "importancia",
+        "beneficios",
+        "propiedad",
+        "multas"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "certificados": "/servicios-virtuales/expedicion-verificacion-certificados",
+        "tarifas": "/tarifas"
+      },
+      "variantes": [
+        "¿Qué beneficios tiene registrar mi establecimiento de comercio?",
+        "¿Por qué debo matricular mi negocio en la Cámara de Comercio?",
+        "Ventajas de tener matrícula mercantil para mi establecimiento",
+        "¿Qué pasa si no registro mi establecimiento de comercio?",
+        "Beneficios de la matrícula mercantil para establecimientos"
+      ]
+    },
+    {
+      "id": "24",
+      "pregunta": "¿QUÉ TIPOS DE ESTABLECIMIENTOS DE COMERCIO EXISTEN?",
+      "respuesta": "Existen tres tipos de establecimientos de comercio: 1) Establecimientos de comercio: Es un conjunto de bienes organizados por el empresario o comerciante en un sitio determinado para el desarrollo de sus actividades económicas (Tiendas, supermercados, almacenes bodegas, hoteles, fabricas, plantas industriales, factorías, etc.). 2) Sucursales: Son sucursales los establecimientos de comercio abiertos por una sociedad, dentro o fuera de su domicilio, para el desarrollo de los negocios sociales o de parte de ellos, administrados por mandatarios con facultades para representar a la sociedad. 3) Agencias: Es un establecimiento de comercio (llámese tienda, oficina, almacén, fábrica, bodega, planta industrial, factoría, etc.) abierto por una sociedad, dentro o fuera de su domicilio principal para el desarrollo de sus actividades o parte de ellas, cuyo administrador carece de facultades para representarla legalmente.",
+      "categoria": "Establecimientos de Comercio",
+      "keywords": [
+        "tipos",
+        "establecimientos de comercio",
+        "sucursales",
+        "agencias",
+        "representación legal"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "normatividad": "/normativa/normatividad",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Cuál es la diferencia entre sucursal y agencia?",
+        "¿Cómo se clasifican los establecimientos de comercio?",
+        "¿Qué es una sucursal y qué es una agencia?",
+        "Tipos de establecimientos comerciales",
+        "¿Cuándo un establecimiento se considera sucursal?"
+      ]
+    },
+    {
+      "id": "25",
+      "pregunta": "¿QUÉ PERSONAS NATURALES SE DEBEN MATRICULAR EN LA CÁMARA DE COMERCIO?",
+      "respuesta": "Se deben matricular todas las personas naturales que realicen en forma permanente o habitual actividades consideradas como mercantiles, a título de ejemplo: Quien compra mercancías para después venderlas, con ánimo de lucrarse; o quien es propietario de un hotel o droguería, explotando su negocio.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "personas naturales",
+        "matrícula",
+        "actividades mercantiles",
+        "comerciantes",
+        "registro"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "tarifas": "/tarifas",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Cuándo una persona natural debe registrarse en la Cámara?",
+        "¿Qué actividades obligan a una persona a matricularse?",
+        "¿Quiénes son considerados comerciantes como personas naturales?",
+        "Obligación de registro para personas naturales",
+        "¿Necesito matrícula mercantil como persona natural?"
+      ]
+    },
+    {
+      "id": "26",
+      "pregunta": "¿CUÁNDO DEBE RENOVARSE LA MATRÍCULA DE UNA PERSONA NATURAL?",
+      "respuesta": "Entre los meses de enero a marzo de cada año debe renovarse la matrícula, para obtener los beneficios que de ella se derivan y evitar sanciones legales. El plazo vence el 31 de marzo de cada año.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "renovación",
+        "matrícula",
+        "persona natural",
+        "plazo",
+        "fecha límite"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "renovacion": "/servicios-virtuales/inscripciones-renovaciones",
+        "tarifas": "/tarifas",
+        "calendario": "/calendario"
+      },
+      "variantes": [
+        "¿Cuál es la fecha límite para renovar la matrícula mercantil?",
+        "¿Hasta cuándo puedo renovar mi matrícula como persona natural?",
+        "¿Cuándo debo renovar mi registro en la Cámara de Comercio?",
+        "Plazos para renovación de matrícula mercantil",
+        "¿Qué pasa si no renuevo mi matrícula a tiempo?"
+      ]
+    },
+    {
+      "id": "27",
+      "pregunta": "¿CÓMO SE CANCELA LA MATRÍCULA DE UNA PERSONA NATURAL?",
+      "respuesta": "Mediante solicitud escrita reconocida ante notario o juez o presentándose personalmente ante el secretario de la Entidad y cancelando los derechos que ordena la ley. En caso que el comerciante haya fallecido, la solicitud de cancelación la podrá solicitar cualquiera de los herederos, manifestando esta condición, una vez se les haya reconocido tal calidad con la escritura o sentencia donde se apruebe el trabajo de partición, y así mismo deberá aportar certificado de defunción del comerciante fallecido.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "cancelación",
+        "matrícula",
+        "persona natural",
+        "solicitud",
+        "herederos"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Cancelación",
+        "requiere_documentos": true,
+        "canal": [
+          "presencial"
+        ]
+      },
+      "links": {
+        "formularios": "/servicios-virtuales/instructivos-tramites-virtuales",
+        "tarifas": "/tarifas",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Cómo dar de baja mi matrícula mercantil?",
+        "¿Qué debo hacer para cancelar mi registro como comerciante?",
+        "Procedimiento para cancelar la matrícula en la Cámara de Comercio",
+        "¿Qué documentos necesito para cancelar mi matrícula?",
+        "¿Pueden mis herederos cancelar mi matrícula mercantil?"
+      ]
+    },
+    {
+      "id": "28",
+      "pregunta": "¿QUÉ SUJETOS ESTÁN OBILIGADOS A TENER REVISOR FISCAL?",
+      "respuesta": "De conformidad con el artículo 203 del Código de Comercio, deberán tener revisor fiscal: 1) Las sociedades por acciones (anónimas, en comandita por acciones). 2) Las sucursales de compañías extranjeras. 3) Las sociedades en las que, por ley o por los estatutos, la administración no corresponda a todos los socios, cuando así lo disponga cualquier número de socios excluidos de la administración que representen no menos del veinte por ciento del capital. 4) Todas las sociedades comerciales, de cualquier naturaleza, cuyos activos brutos al 31 de diciembre del año inmediatamente anterior sean o excedan el equivalente de cinco mil salarios mínimos y/o cuyos ingresos brutos durante el año inmediatamente anterior sean o excedan el equivalente a tres mil salarios mínimos (Parágrafo 2, artículo 13 Ley 43 de 1990).",
+      "categoria": "Sociedades",
+      "keywords": [
+        "revisor fiscal",
+        "obligación",
+        "sociedades",
+        "activos brutos",
+        "ingresos brutos"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "normatividad": "/normativa/normatividad",
+        "preguntas_frecuentes": "/fqa",
+        "registro_mercantil": "/registros/mercantil"
+      },
+      "variantes": [
+        "¿Quién debe tener revisor fiscal?",
+        "¿Cuándo es obligatorio contar con revisor fiscal?",
+        "¿Mi empresa necesita revisor fiscal?",
+        "Requisitos para tener revisor fiscal",
+        "¿Qué sociedades deben nombrar revisor fiscal?"
+      ]
+    },
+    {
+      "id": "29",
+      "pregunta": "¿QUÉ INFORMACIÓN FINANCIERA DEBO REPORTAR AL MOMENTO DE RENOVAR LA MATRÍCULA MERCANTIL?",
+      "respuesta": "Para renovar la matrícula en un año determinado, debe tener en cuenta la información financiera a 31 de diciembre del año inmediatamente anterior. Si usted no tiene el balance definitivo, puede usar el balance de prueba y una vez tenga el definitivo presentarlo para la re liquidación y actualización correspondiente.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "información financiera",
+        "renovación",
+        "matrícula",
+        "balance",
+        "estados financieros"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "renovacion": "/servicios-virtuales/inscripciones-renovaciones",
+        "tarifas": "/tarifas",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Qué datos financieros necesito para renovar mi matrícula?",
+        "¿Qué balance debo presentar para la renovación?",
+        "¿Puedo renovar sin tener el balance definitivo?",
+        "Información contable requerida para renovación",
+        "¿Qué estados financieros se necesitan para renovar?"
+      ]
+    },
+    {
+      "id": "30",
+      "pregunta": "¿CÓMO SE RENUEVA LA MATRÍCULA MERCANTIL CUANDO SE DEBEN AÑOS ANTERIORES?",
+      "respuesta": "Se debe presentar en cualquiera de las sedes de la Cámara de Comercio el formulario de renovación carátula y anexo para el Anexo Renovación Matrícula más de un Año Pendiente por Renovar tanto para el comerciante como para el establecimiento de comercio y pagar los derechos correspondientes.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "renovación",
+        "años anteriores",
+        "matrícula vencida",
+        "formulario",
+        "pago"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Renovación",
+        "requiere_documentos": true,
+        "canal": [
+          "presencial"
+        ]
+      },
+      "links": {
+        "formularios": "/servicios-virtuales/instructivos-tramites-virtuales",
+        "tarifas": "/tarifas",
+        "sedes": "/camara/sedes"
+      },
+      "variantes": [
+        "¿Qué pasa si no he renovado mi matrícula por varios años?",
+        "¿Cómo poner al día mi matrícula mercantil?",
+        "Renovación de matrícula con años pendientes",
+        "¿Puedo renovar mi matrícula si debo varios años?",
+        "Procedimiento para renovar matrícula atrasada"
+      ]
+    },
+    {
+      "id": "31",
+      "pregunta": "¿ES POSIBLE OBTENER EXENCIONES O DESCUENTOS EN LA RENOVACIÓN DE LA MATRÍCULA MERCANTIL?",
+      "respuesta": "No, la renovación de la matricula mercantil es una obligación que no tiene excepciones ni exenciones de ninguna clase, de conformidad a lo dispuesto por el Código de Comercio y el Decreto 898 de 2002.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "exenciones",
+        "descuentos",
+        "renovación",
+        "matrícula",
+        "obligación"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "tarifas": "/tarifas",
+        "normatividad": "/normativa/normatividad",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Hay descuentos para renovar la matrícula mercantil?",
+        "¿Existen exenciones para la renovación de la matrícula?",
+        "¿Puedo estar exento de pagar la renovación?",
+        "¿Hay tarifas especiales para ciertos tipos de empresas?",
+        "¿Se puede solicitar una reducción en el costo de renovación?"
+      ]
+    },
+    {
+      "id": "32",
+      "pregunta": "¿CUÁLES SON LAS SANCIONES POR NO RENOVAR LA MATRÍCULA MERCANTIL?",
+      "respuesta": "El incumplimiento a la obligación legal de renovar la matrícula mercantil dentro del plazo señalado por la ley, puede acarrear sanciones de carácter pecuniario, impuestas por la Superintendencia de Industria y Comercio. Además, puede ser requerido por las autoridades locales que pueden llegar hasta el sellamiento del local por no tener la matrícula al día.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "sanciones",
+        "multas",
+        "no renovar",
+        "matrícula",
+        "sellamiento"
+      ],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "renovacion": "/servicios-virtuales/inscripciones-renovaciones",
+        "normatividad": "/normativa/normatividad",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Qué pasa si no renuevo mi matrícula mercantil?",
+        "¿Me pueden multar por no renovar la matrícula?",
+        "Consecuencias de no renovar el registro mercantil",
+        "¿Pueden cerrar mi negocio por no renovar la matrícula?",
+        "Penalidades por incumplir la renovación de matrícula"
+      ]
+    },
+    {
+      "id": "33",
+      "pregunta": "¿CUÁL ES F.P.I (FACTOR DE PARIDAD INTERNACIONAL) VIGENTE?",
+      "respuesta": "El valor correspondiente al F.P.I. vigente en la actualidad corresponde a 2.04 fijado por la resolución número 10819 del 4 de marzo de 2009 emitida por la Superintendencia de Industria y Comercio.",
+      "categoria": "Impuestos y Tarifas",
+      "keywords": [
+        "FPI",
+        "Factor de Paridad Internacional",
+        "resolución",
+        "Superintendencia",
+        "valor"
+      ],
+      "relevancia": 2,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "normatividad": "/normativa/normatividad",
+        "tarifas": "/tarifas",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Cuál es el valor actual del Factor de Paridad Internacional?",
+        "¿Cómo se calcula el FPI?",
+        "¿Para qué se utiliza el Factor de Paridad Internacional?",
+        "¿Dónde puedo consultar el FPI vigente?",
+        "¿Cuándo se actualiza el Factor de Paridad Internacional?"
+      ]
+    },
+    {
+      "id": "34",
+      "pregunta": "¿QUÉ DEBO HACER PARA REGISTRAR NOMBRAMIENTOS DE SOCIEDADES?",
+      "respuesta": "Se debe traer el acta de nombramiento firmada por secretario y presidente del órgano que se reúne, la cual debe cumplir la totalidad de las formalidades previstas en los artículos 163, 164 y 189 del Código de Comercio. Además, se requiere allegar la carta de aceptación de las personas nombradas. Al momento de traer el acta, se le informará el valor a pagar, que incluye los derechos de inscripción y el impuesto de registro, el cual se liquida respecto de cada nombramiento.",
+      "categoria": "Sociedades",
+      "keywords": [
+        "nombramientos",
+        "sociedades",
+        "acta",
+        "carta de aceptación",
+        "registro"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Registro",
+        "requiere_documentos": true,
+        "canal": [
+          "presencial"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "tarifas": "/tarifas",
+        "normatividad": "/normativa/normatividad"
+      },
+      "variantes": [
+        "¿Cómo registrar un nuevo representante legal?",
+        "¿Qué documentos necesito para inscribir nombramientos?",
+        "Procedimiento para registrar cambios en la junta directiva",
+        "¿Cómo actualizar los cargos directivos en mi sociedad?",
+        "Requisitos para inscribir nombramientos en la Cámara"
+      ]
+    },
+    {
+      "id": "35",
+      "pregunta": "¿CÓMO REALIZO UN CAMBIO DE NOMBRE DE UN ESTABLECIMIENTO DE COMERCIO?",
+      "respuesta": "Debe diligenciar el formato para cambio de nombre, este formato debe estar diligenciado por el representante legal o persona natural y se debe hacer presentación personal o debe venir con la firma autenticada y reconocimiento de contenido ante un Notario, Juez o Secretario de la Cámara de Comercio. El formato también se encuentra disponible en nuestra página web (Sección Documentos de Apoyo).",
+      "categoria": "Establecimientos de Comercio",
+      "keywords": [
+        "cambio de nombre",
+        "establecimiento",
+        "formato",
+        "firma autenticada",
+        "modificación"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Modificación",
+        "requiere_documentos": true,
+        "canal": [
+          "presencial"
+        ]
+      },
+      "links": {
+        "formularios": "/servicios-virtuales/instructivos-tramites-virtuales",
+        "tarifas": "/tarifas",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Cómo modificar el nombre de mi negocio?",
+        "¿Qué trámite debo hacer para cambiar el nombre de mi establecimiento?",
+        "Procedimiento para cambiar la razón comercial",
+        "¿Puedo cambiar el nombre de mi establecimiento de comercio?",
+        "Requisitos para modificar el nombre comercial"
+      ]
+    },
+    {
+      "id": "36",
+      "pregunta": "¿ES OBLIGATORIO QUE LAS UNIONES TEMPORALES Y LOS CONSORCIOS SE INSCRIBAN ANTE LAS CÁMARA DE COMERCIO?",
+      "respuesta": "Los consorcios y uniones temporales no inscriben en el registro mercantil que llevan las cámaras de comercio, pues no forman una persona jurídica.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "uniones temporales",
+        "consorcios",
+        "inscripción",
+        "registro mercantil",
+        "persona jurídica"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "normatividad": "/normativa/normatividad",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Deben registrarse los consorcios en la Cámara de Comercio?",
+        "¿Las uniones temporales necesitan matrícula mercantil?",
+        "¿Se consideran personas jurídicas los consorcios?",
+        "Registro de uniones temporales y consorcios",
+        "¿Qué tipo de registro necesitan los consorcios?"
+      ]
+    },
+    {
+      "id": "37",
+      "pregunta": "¿CUÁNDO SE CONSIDERA QUE HAY HOMONIMIA?",
+      "respuesta": "La homonimia implica la existencia de dos comerciantes (personas naturales, sociedades comerciales o establecimientos de comercio) con nombres idénticos, sin tener en cuenta la naturaleza jurídica (S.A., Ltda.) o nombres reservados para las instituciones financieras o comunes sin reserva para el uso del público en general. No hay homonimia cuando dos nombres son similares.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "homonimia",
+        "nombres idénticos",
+        "razón social",
+        "denominación",
+        "naturaleza jurídica"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_mercantil": "/registros/mercantil",
+        "normatividad": "/normativa/normatividad",
+        "preguntas_frecuentes": "/fqa"
+      },
+      "variantes": [
+        "¿Qué es la homonimia en el registro mercantil?",
+        "¿Puedo usar un nombre similar a otra empresa?",
+        "¿Cómo saber si hay homonimia con el nombre que quiero usar?",
+        "Diferencia entre nombres similares e idénticos",
+        "¿Qué pasa si hay otro negocio con el mismo nombre?"
+      ]
+    },
+    {
+      "id": "38",
+      "pregunta": "¿QUÉ DEBO HACER PARA REGISTRAR NUEVOS LIBROS?",
+      "respuesta": "Debe diligenciar el formato para inscripción de libros, el cual debe firmar el Representante Legal o el comerciante persona natural, debe traer certificación de la terminación del libro anterior expedida por revisor fiscal o contador público. En caso contrario deberá traer el libro anterior. En ambos se deben pagar los derechos correspondientes.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "libros",
+        "registro",
+        "inscripción",
+        "formato",
+        "certificación"
+      ],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Registro",
+        "requiere_documentos": true,
+        "canal": [
+          "presencial"
+        ]
+      },
+      "links": {
+        "formularios": "/servicios-virtuales/instructivos-tramites-virtuales",
+        "tarifas": "/tarifas",
+        "registro_libros": "/registros/libros"
+      },
+      "variantes": [
+        "¿Cómo registrar libros contables en la Cámara?",
+        "¿Qué documentos necesito para inscribir nuevos libros?",
+        "Procedimiento para registrar libros de comercio",
+        "¿Cómo inscribir libros de actas?",
+        "Requisitos para el registro de libros"
+      ]
+    },
+    {
+      "id": "39",
+      "pregunta": "¿SE ME PERDIERON LOS LIBROS, QUÉ DEBO HACER PARA REGISTRAR UNOS NUEVOS?",
+      "respuesta": "Debe diligenciar el formato para inscripción de libros, el cual debe firmar el Representante Legal o la persona natural, debe presentar copia auténtica de la denuncia, la cual debe tener como mínimo los datos del libro extraviado, como son, el destino del libro y número de registro en la Cámara de Comercio de Magangué; traer los libros nuevos y pagar los derechos de inscripción.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "libros perdidos",
+        "extravío",
+        "denuncia",
+        "registro",
+        "inscripción"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Registro",
+        "requiere_documentos": true,
+        "canal": [
+          "presencial"
+        ]
+      },
+      "links": {
+        "formularios": "/servicios-virtuales/instructivos-tramites-virtuales",
+        "tarifas": "/tarifas",
+        "registro_libros": "/registros/libros"
+      },
+      "variantes": [
+        "¿Qué hacer si extravié mis libros contables?",
+        "Procedimiento en caso de pérdida de libros de comercio",
+        "¿Cómo reemplazar libros extraviados?",
+        "¿Es necesario denunciar la pérdida de libros?",
+        "Registro de nuevos libros por pérdida de los anteriores"
+      ]
+    },
+    {
+      "id": "40",
+      "pregunta": "¿EN LA CONTINUACIÓN DE UN LIBRO YA REGISTRADO SE DEBE MANTENER EL MISMO CÓDIGO O SE PUEDE CAMBIAR?",
+      "respuesta": "Si el libro que traen tiene consecutivo en la numeración respecto al anterior debe mantener el Nombre y el Código asignados, pero si no conserva el consecutivo puede cambiar tanto el código como el nombre del libro.",
+      "categoria": "Registro Mercantil",
+      "keywords": [
+        "continuación de libros",
+        "código",
+        "consecutivo",
+        "numeración",
+        "registro"
+      ],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "requiere_documentos": false,
+        "canal": [
+          "web",
+          "presencial",
+          "telefónico"
+        ]
+      },
+      "links": {
+        "registro_libros": "/registros/libros",
+        "preguntas_frecuentes": "/fqa",
+        "normatividad": "/normativa/normatividad"
+      },
+      "variantes": [
+        "¿Puedo cambiar el código de un libro en su continuación?",
+        "¿Es necesario mantener el mismo nombre en la continuación de un libro?",
+        "Continuidad en la numeración de libros registrados",
+        "¿Qué pasa si cambio el código de un libro en su continuación?",
+        "Requisitos para la continuación de libros registrados"
+      ]
+    }
+  ],
+  "metadata": {
+    "version": "2.1",
+    "ultima_actualizacion": "2024-03-20",
+    "total_preguntas": 95,
+    "categorias": [
+      "Membresía",
+      "Eventos",
+      "Servicios",
+      "Legal",
+      "Formación",
+      "Marketing",
+      "Networking",
+      "Recursos",
+      "Soporte",
+      "Innovación",
+      "Certificados y Solicitudes",
+      "Documentos Empresariales",
+      "Asesorías y Consultorías",
+      "Renovación de Trámites",
+      "Fechas y Recordatorios",
+      "Marcas y Propiedad Intelectual",
+      "Innovación y Tecnología",
+      "Feedback y Mejoras",
+      "Registro Mercantil",
+      "Matrícula Mercantil",
+      "Propiedad Intelectual",
+      "Capacitación",
+      "Financiamiento",
+      "Servicios Legales",
+      "Tarifas y Pagos",
+      "Oportunidades de Negocio",
+      "Servicios Virtuales",
+      "Trámites"
+    ],
+    "canales_disponibles": [
+      "web",
+      "presencial",
+      "telefónico",
+      "email",
+      "chat",
+      "móvil",
+      "virtual"
+    ],
+    "estadisticas": {
+      "preguntas_por_categoria": {
+        "Membresía": 10,
+        "Eventos": 8,
+        "Servicios": 7,
+        "Legal": 5,
+        "Formación": 4,
+        "Marketing": 3,
+        "Networking": 6,
+        "Recursos": 7,
+        "Soporte": 6,
+        "Innovación": 4,
+        "Certificados y Solicitudes": 4,
+        "Documentos Empresariales": 2,
+        "Asesorías y Consultorías": 3,
+        "Renovación de Trámites": 2,
+        "Fechas y Recordatorios": 1,
+        "Marcas y Propiedad Intelectual": 2,
+        "Innovación y Tecnología": 1,
+        "Feedback y Mejoras": 1,
+        "Registro Mercantil": 2,
+        "Matrícula Mercantil": 2,
+        "Propiedad Intelectual": 1,
+        "Capacitación": 1,
+        "Financiamiento": 1,
+        "Servicios Legales": 1,
+        "Tarifas y Pagos": 2,
+        "Oportunidades de Negocio": 1,
+        "Servicios Virtuales": 1,
+        "Trámites": 1
+      },
+      "relevancia_promedio": 4.2
+    }
+  }
+}

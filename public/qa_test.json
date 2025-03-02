@@ -1,0 +1,82 @@
+{
+  "Q&A": [
+    {
+      "id": "1",
+      "pregunta": "¿Cómo puedo convertirme en miembro de la Cámara de Comercio de Magangué?",
+      "respuesta": "Puedes registrarte como miembro completando el formulario de inscripción en nuestro sitio web o visitando nuestras oficinas.",
+      "categoria": "Membresía",
+      "keywords": ["registro", "miembro", "inscripción", "nuevo miembro", "afiliación"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Registro",
+        "requiere_documentos": true,
+        "tiempo_proceso": "2-3 días hábiles"
+      },
+      "variantes": [
+        "¿Cuál es el proceso para hacerme miembro de la Cámara de Comercio?",
+        "¿Cómo me afilio a la Cámara de Comercio de Magangué?",
+        "¿Qué necesito para ser miembro de la Cámara?",
+        "¿Dónde puedo registrarme como miembro?",
+        "¿Cómo inscribirme en la Cámara de Comercio?"
+      ]
+    },
+    {
+      "id": "2",
+      "pregunta": "¿Cuál es el proceso de inscripción a la cámara de comercio?",
+      "respuesta": "El proceso de inscripción a la Cámara de Comercio de Magangué incluye los siguientes pasos: 1) Completar el formulario de registro, 2) Presentar los documentos requeridos (identificación, certificado de existencia para empresas), 3) Pagar la tarifa correspondiente, y 4) Recibir su certificado de membresía. Puede realizar este trámite en línea a través de nuestro sitio web o presencialmente en nuestras oficinas.",
+      "categoria": "Registro",
+      "keywords": ["inscripción", "registro", "afiliación", "proceso", "trámite"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Registro",
+        "requiere_documentos": true,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cómo me inscribo en la cámara de comercio?",
+        "¿Qué necesito para registrarme en la cámara de comercio?",
+        "Pasos para inscribirse en la cámara de comercio",
+        "Requisitos de inscripción en la cámara de comercio",
+        "¿Cómo afiliarse a la cámara de comercio?"
+      ]
+    },
+    {
+      "id": "3",
+      "pregunta": "¿Cuáles son los beneficios de ser miembro?",
+      "respuesta": "Como miembro de la Cámara de Comercio de Magangué, disfrutarás de múltiples beneficios: acceso a capacitaciones y talleres exclusivos, oportunidades de networking, asesoría legal y comercial, visibilidad para tu negocio, descuentos en eventos y servicios, representación ante entidades gubernamentales, y acceso a información comercial privilegiada.",
+      "categoria": "Membresía",
+      "keywords": ["beneficios", "ventajas", "miembro", "afiliado", "servicios"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Información",
+        "actualizado": "2024-01-15"
+      },
+      "variantes": [
+        "¿Qué ventajas obtengo al ser miembro de la Cámara?",
+        "¿Por qué debería afiliarme a la Cámara de Comercio?",
+        "¿Qué me ofrece la membresía a la Cámara de Comercio?",
+        "¿Qué gano al ser miembro de la Cámara?"
+      ]
+    },
+    {
+      "id": "4",
+      "pregunta": "¿Cuáles son los eventos más efectivos para hacer networking?",
+      "respuesta": "Los eventos más efectivos para networking organizados por la Cámara de Comercio de Magangué incluyen: 1) Ferias empresariales sectoriales donde se reúnen empresas de un mismo sector, 2) Ruedas de negocios que conectan compradores y proveedores, 3) Desayunos empresariales mensuales con presentaciones de expertos, 4) Cocteles de nuevos miembros celebrados trimestralmente, 5) Talleres prácticos de desarrollo empresarial, y 6) Congresos anuales de comercio regional. Recomendamos asistir regularmente a estos eventos y llevar tarjetas de presentación para maximizar las oportunidades de conexión.",
+      "categoria": "Eventos",
+      "keywords": ["networking", "eventos", "ruedas de negocios", "ferias", "conexiones empresariales", "oportunidades de negocio"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Eventos",
+        "frecuencia": "Periódica",
+        "requiere_registro": true
+      },
+      "variantes": [
+        "¿Dónde puedo hacer networking efectivo en Magangué?",
+        "¿Qué actividades organiza la Cámara para conectar empresarios?",
+        "¿Cómo puedo conocer nuevos contactos de negocios a través de la Cámara?",
+        "¿Cuáles son los mejores eventos para ampliar mi red de contactos profesionales?",
+        "¿Qué eventos recomienda la Cámara para hacer networking?"
+      ]
+    }
+  ]
+}

@@ -29,7 +29,10 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/app/environments/environment.dev.ts",
+              "src/app/environments/environment.staging.ts",
+              "src/app/environments/environment.prod.ts"
             ],
             "styles": [
               "node_modules/primeng/resources/themes/lara-light-blue/theme.css",

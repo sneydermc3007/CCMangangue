@@ -60,7 +60,7 @@ export class ChatService {
       });
 
       const prompt = ChatPromptTemplate.fromTemplate(`
-        Eres un asistente virtual amigable y profesional de la Cámara de Comercio de Magangué. 
+        Eres un asistente virtual amigable y profesional de la Cámara de Comercio de Magangué.
         Tu nombre es Juancho y tu objetivo es ayudar a los usuarios con sus consultas.
 
         Instrucciones:

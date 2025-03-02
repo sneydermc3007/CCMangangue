@@ -46,3 +46,5 @@ Thumbs.db
 /src/environments/environment.ts
 /src/environments/environment.prod.ts
 /src/app/environments/environment.ts
+/src/app/environments/environment.dev.ts
+/src/app/environments/environment.staging.ts

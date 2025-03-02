@@ -7,7 +7,7 @@ import { ChatOpenAI } from "@langchain/openai";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import { createStuffDocumentsChain } from "langchain/chains/combine_documents";
-import { environment } from '../../environments/environment';
+import { environment } from './../../environments/environment';
 
 interface QAItem {
   pregunta: string;
@@ -48,7 +48,7 @@ export class ChatService {
 
       // 3. Crear el vector store con HuggingFace embeddings
       const embeddings = new HuggingFaceInferenceEmbeddings({
-        apiKey: environment.HUGGINGFACE_API_KEY,
+        apiKey: environment.HF_TOKEN,
         model: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
       });
 
@@ -80,7 +80,7 @@ export class ChatService {
 
       const llm = new ChatOpenAI({
         modelName: "meta-llama/llama-3.1-8b-instruct:free",
-        openAIApiKey: environment.OPENROUTER_API_KEY,
+        openAIApiKey: environment.OPENAI_API,
         configuration: {
           baseURL: "https://openrouter.ai/api/v1"
         }

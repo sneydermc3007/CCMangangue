@@ -1,0 +1,1766 @@
+﻿{
+  "Q&A": [
+    {
+      "id": "1",
+      "pregunta": "¿Cé³mo puedo convertirme en miembro de la Cámara de Comercio de Magangué©?",
+      "respuesta": "Puedes registrarte como miembro completando el formulario de inscripcié³n en nuestro sitio web o visitando nuestras oficinas.",
+      "categoria": "Membresé­a",
+      "keywords": ["registro", "miembro", "inscripcié³n", "nuevo miembro", "afiliacié³n"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Registro",
+        "requiere_documentos": true,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cuál es el proceso para hacerme miembro de la Cámara de Comercio?",
+        "¿Dé³nde puedo inscribirme como miembro de la Cámara de Comercio de Magangué©?",
+        "¿Qué© pasos debo seguir para afiliarme a la Cámara de Comercio?",
+        "Quiero ser parte de la Cámara de Comercio, ¿cé³mo lo hago?",
+        "¿Cé³mo afiliarse a la Cámara de Comercio de Magangué©?"
+      ]
+    },
+    {
+      "id": "2",
+      "pregunta": "¿Cuáles son los beneficios de ser miembro?",
+      "respuesta": "Los beneficios incluyen acceso a eventos exclusivos, oportunidades de networking, recursos empresariales y representacié³n ante entidades gubernamentales.",
+      "categoria": "Membresé­a",
+      "keywords": ["beneficios", "ventajas", "servicios", "miembro", "privilegios"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Informacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial", "telefé³nico"]
+      },
+      "variantes": [
+        "¿Qué© ventajas obtengo al ser miembro de la Cámara de Comercio?",
+        "¿Por qué© deberé­a afiliarme a la Cámara de Comercio?",
+        "¿Qué© me ofrece la membresé­a de la Cámara de Comercio?",
+        "¿Qué© privilegios tienen los miembros de la Cámara de Comercio?",
+        "¿Qué© servicios exclusivos reciben los afiliados a la Cámara?"
+      ]
+    },
+    {
+      "id": "3",
+      "pregunta": "¿Cuánto cuesta la membresé­a?",
+      "respuesta": "El costo de la membresé­a varé­a segéºn el tipo de empresa y la categoré­a de membresé­a. Para más detalles, visita nuestra página de membresé­a.",
+      "categoria": "Membresé­a",
+      "keywords": ["costo", "precio", "tarifa", "membresé­a", "cuota", "pago"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Informacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial", "telefé³nico"]
+      },
+      "variantes": [
+        "¿Cuál es el precio de la afiliacié³n a la Cámara de Comercio?",
+        "¿Cuánto debo pagar para ser miembro?",
+        "¿Cuáles son las tarifas de membresé­a?",
+        "¿Cuánto vale inscribirse en la Cámara de Comercio?",
+        "¿Qué© valor tiene la cuota de afiliacié³n?"
+      ]
+    },
+    {
+      "id": "4",
+      "pregunta": "¿Cé³mo puedo renovar mi membresé­a?",
+      "respuesta": "Puedes renovar tu membresé­a en lé­nea a travé©s de nuestro portal de miembros o contactando a nuestro equipo de atencié³n al cliente.",
+      "categoria": "Membresé­a",
+      "keywords": ["renovacié³n", "renovar", "membresé­a", "actualizacié³n", "extensié³n"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Renovacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial", "telefé³nico"]
+      },
+      "variantes": [
+        "¿Cuál es el proceso para renovar mi afiliacié³n?",
+        "Mi membresé­a está por vencer, ¿cé³mo la renuevo?",
+        "¿Dé³nde puedo extender mi membresé­a?",
+        "¿Qué© debo hacer para actualizar mi membresé­a?",
+        "¿Cé³mo hago para seguir siendo miembro de la Cámara?"
+      ],
+      "links": {
+        "portal_renovacion": "/portal/renovar-membresia",
+        "guia_renovacion": "/ayuda/como-renovar",
+        "tarifas": "/servicios/tarifas-membresia",
+        "contacto": "/soporte/atencion-cliente"
+      }
+    },
+    {
+      "id": "5",
+      "pregunta": "¿Qué© documentos necesito para inscribirme como miembro?",
+      "respuesta": "Necesitarás una copia de la identificacié³n del representante legal, registro mercantil y una carta de solicitud.",
+      "categoria": "Membresé­a",
+      "keywords": ["documentos", "requisitos", "inscripcié³n", "registro", "papeles"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Informacié³n",
+        "requiere_documentos": true,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cuáles son los requisitos documentales para afiliarme?",
+        "¿Qué© papeles debo presentar para ser miembro?",
+        "¿Qué© documentacié³n se requiere para la inscripcié³n?",
+        "¿Qué© debo llevar para registrarme como miembro?",
+        "¿Cuáles son los documentos obligatorios para la afiliacié³n?"
+      ]
+    },
+    {
+      "id": "6",
+      "pregunta": "¿Puedo cancelar mi membresé­a en cualquier momento?",
+      "respuesta": "Sé­, puedes cancelar tu membresé­a en cualquier momento contactando a nuestro equipo de soporte.",
+      "categoria": "Membresé­a",
+      "keywords": ["cancelar", "cancelacié³n", "terminar", "membresé­a", "baja"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Cancelacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial", "telefé³nico"]
+      },
+      "variantes": [
+        "¿Cé³mo puedo dar de baja mi membresé­a?",
+        "¿Existe alguna penalizacié³n por cancelar mi afiliacié³n?",
+        "¿Cuál es el proceso para terminar mi membresé­a?",
+        "Quiero dejar de ser miembro, ¿qué© debo hacer?",
+        "¿Se puede cancelar la afiliacié³n antes de que venza?"
+      ]
+    },
+    {
+      "id": "7",
+      "pregunta": "¿Ofrecen descuentos para pequeé±as empresas?",
+      "respuesta": "Sé­, ofrecemos descuentos especiales para pequeé±as y medianas empresas. Consulta nuestra página de membresé­a para más informacié³n.",
+      "categoria": "Membresé­a",
+      "keywords": ["descuentos", "pymes", "pequeé±as empresas", "tarifas", "precios especiales"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Informacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Hay tarifas reducidas para pymes?",
+        "¿Existen precios especiales para microempresas?",
+        "Tengo una pequeé±a empresa, ¿puedo obtener algéºn descuento?",
+        "¿Las pymes tienen algéºn beneficio econé³mico en la afiliacié³n?",
+        "¿Cé³mo funcionan los descuentos para empresas pequeé±as?"
+      ]
+    },
+    {
+      "id": "8",
+      "pregunta": "¿Puedo transferir mi membresé­a a otra persona?",
+      "respuesta": "No, las membresé­as no son transferibles. Cada miembro debe registrarse individualmente.",
+      "categoria": "Membresé­a",
+      "keywords": ["transferir", "cambio", "titular", "traspaso", "membresé­a"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Informacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial", "telefé³nico"]
+      },
+      "variantes": [
+        "¿Es posible ceder mi membresé­a a otro empresario?",
+        "¿Se puede cambiar el titular de una membresé­a?",
+        "¿Puedo traspasar mi afiliacié³n a otra persona?",
+        "¿La membresé­a es personal o se puede transferir?",
+        "¿Existe alguna forma de cambiar el nombre del afiliado?"
+      ]
+    },
+    {
+      "id": "9",
+      "pregunta": "¿Cé³mo puedo actualizar mis datos de contacto?",
+      "respuesta": "Puedes actualizar tus datos de contacto a travé©s del portal de miembros o contactando a nuestro equipo de soporte.",
+      "categoria": "Soporte",
+      "keywords": ["actualizar", "datos", "contacto", "informacié³n", "cambios"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Actualizacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial", "telefé³nico"]
+      },
+      "variantes": [
+        "¿Dé³nde cambio mi informacié³n de contacto?",
+        "Necesito modificar mis datos personales, ¿cé³mo lo hago?",
+        "¿Cuál es el procedimiento para actualizar mi informacié³n?",
+        "¿Cé³mo notifico un cambio en mis datos de contacto?",
+        "¿Puedo modificar mi direccié³n y telé©fono en mi perfil?"
+      ]
+    },
+    {
+      "id": "10",
+      "pregunta": "¿Qué© pasa si pierdo mi néºmero de membresé­a?",
+      "respuesta": "Puedes recuperar tu néºmero de membresé­a contactando a nuestro equipo de atencié³n al cliente.",
+      "categoria": "Soporte",
+      "keywords": ["pé©rdida", "néºmero", "membresé­a", "recuperar", "olvidé©"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Soporte",
+        "requiere_documentos": true,
+        "canal": ["web", "presencial", "telefé³nico"]
+      },
+      "variantes": [
+        "Olvidé© mi néºmero de afiliacié³n, ¿cé³mo lo recupero?",
+        "¿Dé³nde puedo consultar mi néºmero de membresé­a?",
+        "Extravié© mi informacié³n de miembro, ¿qué© debo hacer?",
+        "¿Cé³mo puedo saber cuál es mi néºmero de membresé­a?",
+        "Perdé­ mi credencial de miembro, ¿cé³mo obtengo el néºmero?"
+      ]
+    },
+    {
+      "id": "11",
+      "pregunta": "¿Dé³nde puedo encontrar informacié³n sobre los pré³ximos eventos?",
+      "respuesta": "Puedes encontrar informacié³n sobre los pré³ximos eventos en nuestro sitio web y en el portal de miembros.",
+      "categoria": "Eventos",
+      "keywords": ["eventos", "calendario", "pré³ximos", "agenda", "programacié³n"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Informacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "email"]
+      },
+      "variantes": [
+        "¿Cé³mo me entero de los eventos que organizan?",
+        "¿Dé³nde está el calendario de eventos?",
+        "¿Cé³mo puedo ver la agenda de actividades?",
+        "¿Tienen alguna programacié³n de eventos disponible?",
+        "¿Dé³nde consulto los pré³ximos eventos de la Cámara?"
+      ]
+    },
+    {
+      "id": "12",
+      "pregunta": "¿Cé³mo me registro para un evento?",
+      "respuesta": "Puedes registrarte para cualquier evento a travé©s de nuestro calendario de eventos en lé­nea o contactando directamente a nuestro equipo de eventos.",
+      "categoria": "Eventos",
+      "keywords": ["registro", "eventos", "inscripcié³n", "participar", "asistir"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Registro",
+        "requiere_documentos": false,
+        "canal": ["web"]
+      },
+      "variantes": [
+        "¿Cuál es el proceso para inscribirme en un evento?",
+        "¿Dé³nde puedo anotarme para asistir a un evento?",
+        "Quiero participar en un evento, ¿cé³mo me inscribo?",
+        "¿Cé³mo confirmo mi asistencia a un evento?",
+        "¿Qué© pasos debo seguir para registrarme en una actividad?"
+      ],
+      "links": {
+        "calendario": "/eventos/calendario",
+        "registro_eventos": "/eventos/registro",
+        "proximos_eventos": "/eventos/proximos",
+        "eventos_virtuales": "/eventos/virtuales",
+        "politicas_cancelacion": "/eventos/politicas"
+      }
+    },
+    {
+      "id": "13",
+      "pregunta": "¿Hay algéºn costo para asistir a los eventos?",
+      "respuesta": "Algunos eventos son gratuitos para los miembros, mientras que otros pueden tener un costo. Consulta los detalles del evento especé­fico para más informacié³n.",
+      "categoria": "Eventos",
+      "keywords": ["costo", "precio", "eventos", "entrada", "gratuito", "pago"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Informacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial", "telefé³nico"]
+      },
+      "variantes": [
+        "¿Los eventos tienen algéºn precio de entrada?",
+        "¿Son gratuitos los eventos para miembros?",
+        "¿Cuánto debo pagar para asistir a un evento?",
+        "¿Todos los eventos tienen costo?",
+        "¿Existen tarifas para participar en los eventos?"
+      ]
+    },
+    {
+      "id": "14",
+      "pregunta": "¿Puedo llevar a un invitado a un evento?",
+      "respuesta": "Sé­, puedes llevar a un invitado. Asegéºrate de registrar a tu invitado cuando te inscribas para el evento.",
+      "categoria": "Eventos",
+      "keywords": ["invitado", "acompaé±ante", "registro", "eventos", "inscripcié³n"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Registro",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Está permitido asistir con acompaé±antes a los eventos?",
+        "¿Puedo ir con un colega a un evento?",
+        "¿Cé³mo registro a un acompaé±ante para un evento?",
+        "¿Los eventos permiten llevar invitados?",
+        "¿Es posible incluir a otra persona en mi registro para un evento?"
+      ]
+    },
+    {
+      "id": "15",
+      "pregunta": "¿Qué© tipo de eventos organiza la Cámara de Comercio?",
+      "respuesta": "Organizamos una variedad de eventos, incluyendo talleres, seminarios, conferencias y eventos de networking.",
+      "categoria": "Eventos",
+      "keywords": ["tipos", "eventos", "talleres", "seminarios", "conferencias", "networking"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Informacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "email", "presencial"]
+      },
+      "variantes": [
+        "¿Cuáles son los formatos de eventos que realizan?",
+        "¿Qué© clase de actividades organiza la Cámara?",
+        "¿Qué© eventos puedo esperar de la Cámara de Comercio?",
+        "¿Organizan talleres o solo conferencias?",
+        "¿Qué© modalidades de eventos tienen disponibles?"
+      ]
+    },
+    {
+      "id": "16",
+      "pregunta": "¿Cé³mo puedo ser ponente en uno de sus eventos?",
+      "respuesta": "Si estás interesado en ser ponente, envé­anos una propuesta detallada a travé©s de nuestro formulario de contacto en el sitio web.",
+      "categoria": "Eventos",
+      "keywords": ["ponente", "speaker", "presentador", "eventos", "conferencia"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Participacié³n",
+        "requiere_documentos": true,
+        "canal": ["web", "email"]
+      },
+      "variantes": [
+        "¿Cuál es el proceso para participar como expositor?",
+        "Me gustaré­a dar una charla en un evento, ¿cé³mo lo solicito?",
+        "¿Cé³mo postularme como conferencista?",
+        "¿Qué© requisitos hay para ser speaker en un evento?",
+        "¿Puedo proponer una presentacié³n para algéºn evento?"
+      ]
+    },
+    {
+      "id": "17",
+      "pregunta": "¿Puedo patrocinar un evento?",
+      "respuesta": "Sé­, ofrecemos oportunidades de patrocinio para nuestros eventos. Contacta a nuestro equipo de eventos para más informacié³n.",
+      "categoria": "Eventos",
+      "keywords": ["patrocinio", "sponsor", "eventos", "publicidad", "marketing"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Patrocinio",
+        "requiere_documentos": true,
+        "canal": ["presencial", "email"]
+      },
+      "variantes": [
+        "¿Cé³mo puedo convertirme en patrocinador de un evento?",
+        "¿Qué© opciones de sponsorship ofrecen para eventos?",
+        "¿Tienen paquetes de patrocinio para empresas?",
+        "Mi empresa quiere patrocinar un evento, ¿cé³mo procedemos?",
+        "¿Cuáles son los beneficios de patrocinar un evento?"
+      ]
+    },
+    {
+      "id": "18",
+      "pregunta": "¿Cé³mo puedo recibir notificaciones sobre nuevos eventos?",
+      "respuesta": "Puedes suscribirte a nuestro boleté­n informativo o activar las notificaciones en el portal de miembros.",
+      "categoria": "Eventos",
+      "keywords": ["notificaciones", "alertas", "eventos", "boleté­n", "newsletter"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Comunicacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "email"]
+      },
+      "variantes": [
+        "¿Cé³mo me mantengo informado sobre los eventos?",
+        "¿Existe alguna alerta para no perderme los eventos?",
+        "¿Puedo recibir avisos cuando haya nuevos eventos?",
+        "¿Cé³mo me suscribo al boleté­n de eventos?",
+        "¿Tienen newsletter para informar sobre pré³ximos eventos?"
+      ]
+    },
+    {
+      "id": "19",
+      "pregunta": "¿Qué© debo hacer si no puedo asistir a un evento despué©s de registrarme?",
+      "respuesta": "Por favor, infé³rmanos lo antes posible para que podamos ajustar la lista de asistencia. Puedes cancelar tu inscripcié³n a travé©s del portal de miembros.",
+      "categoria": "Eventos",
+      "keywords": ["cancelacié³n", "registro", "eventos", "inasistencia", "cancelar"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Cancelacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "email", "telefé³nico"]
+      },
+      "variantes": [
+        "¿Cé³mo cancelo mi registro a un evento?",
+        "Me inscribé­ pero no podré© asistir, ¿qué© hago?",
+        "¿Existe penalizacié³n por no asistir a un evento?",
+        "¿Cé³mo notifico que no podré© ir a un evento?",
+        "¿Puedo dar de baja mi inscripcié³n a un evento?"
+      ]
+    },
+    {
+      "id": "20",
+      "pregunta": "¿Se graban los eventos para que pueda verlos más tarde?",
+      "respuesta": "Sé­, grabamos algunos de nuestros eventos y los ponemos a disposicié³n en el portal de miembros.",
+      "categoria": "Eventos",
+      "keywords": ["grabacié³n", "video", "eventos", "replay", "contenido digital"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Contenido Digital",
+        "requiere_documentos": false,
+        "canal": ["web"]
+      },
+      "variantes": [
+        "¿Puedo ver los eventos pasados en algéºn lugar?",
+        "¿Dé³nde encuentro las grabaciones de los eventos?",
+        "¿Tienen disponibles videos de eventos anteriores?",
+        "¿Existe algéºn archivo de eventos pasados?",
+        "¿Cé³mo accedo a las grabaciones de eventos a los que no pude asistir?"
+      ]
+    },
+    {
+      "id": "21",
+      "pregunta": "¿Qué© servicios ofrece la Cámara de Comercio?",
+      "respuesta": "Ofrecemos servicios como asesoramiento empresarial, formacié³n, apoyo legal, oportunidades de networking y más.",
+      "categoria": "Servicios",
+      "keywords": ["servicios", "asesoramiento", "formacié³n", "legal", "networking"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Informacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial", "telefé³nico"]
+      },
+      "variantes": [
+        "¿Cuáles son los servicios disponibles en la Cámara de Comercio?",
+        "¿Qué© tipo de apoyo brinda la Cámara a los empresarios?",
+        "¿Qué© ofrece la Cámara de Comercio a sus miembros?",
+        "¿Cuál es la oferta de servicios de la Cámara?",
+        "¿En qué© áreas puede ayudarme la Cámara de Comercio?"
+      ]
+    },
+    {
+      "id": "22",
+      "pregunta": "¿Cé³mo puedo acceder a los servicios de asesoramiento empresarial?",
+      "respuesta": "Puedes solicitar una cita con uno de nuestros asesores empresariales a travé©s del portal de miembros o contactándonos directamente.",
+      "categoria": "Servicios",
+      "keywords": ["asesoramiento", "consultoré­a", "cita", "asesor", "empresarial"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Asesoramiento",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cé³mo agendo una cita con un asesor empresarial?",
+        "¿Dé³nde solicito asesoré­a para mi empresa?",
+        "¿Cuál es el proceso para recibir consultoré­a empresarial?",
+        "Necesito asesoramiento para mi negocio, ¿cé³mo lo obtengo?",
+        "¿Cé³mo me contacto con un asesor de la Cámara?"
+      ]
+    },
+    {
+      "id": "23",
+      "pregunta": "¿Ofrecen servicios de formacié³n y capacitacié³n?",
+      "respuesta": "Sé­, ofrecemos una amplia gama de programas de formacié³n y capacitacié³n para empresarios y empleados.",
+      "categoria": "Formacié³n",
+      "keywords": ["formacié³n", "capacitacié³n", "cursos", "talleres", "educacié³n"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Formacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Qué© programas de capacitacié³n tienen disponibles?",
+        "¿Realizan cursos para empresarios?",
+        "¿Tienen talleres de formacié³n empresarial?",
+        "¿Dé³nde puedo encontrar informacié³n sobre capacitaciones?",
+        "¿Ofrecen entrenamiento para emprendedores?"
+      ]
+    },
+    {
+      "id": "24",
+      "pregunta": "¿Qué© tipo de apoyo legal ofrecen?",
+      "respuesta": "Ofrecemos asesoramiento legal básico y referencias a especialistas en diferentes áreas del derecho empresarial. Puedes agendar una consulta legal desde nuestro portal de servicios.",
+      "categoria": "Legal",
+      "keywords": ["legal", "asesoré­a", "derecho", "juré­dico", "normativa"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Legal",
+        "requiere_documentos": true,
+        "canal": ["presencial", "telefé³nico"]
+      },
+      "links": {
+        "agendar_asesoria": "/servicios/asesoria-legal",
+        "consultar_especialistas": "/directorio/abogados",
+        "guia_servicios": "/recursos/guia-servicios-legales",
+        "tarifas": "/servicios/tarifas-asesoria-legal"
+      },
+      "variantes": [
+        "¿Brindan asesoré­a juré­dica para empresas?",
+        "¿Qué© servicios legales están disponibles para miembros?"
+      ]
+    },
+    {
+      "id": "25",
+      "pregunta": "¿Cé³mo puedo acceder a los recursos en lé­nea?",
+      "respuesta": "Puedes acceder a los recursos en lé­nea a travé©s de tu cuenta en el portal de miembros. Encuentra gué­as, documentos y herramientas éºtiles para tu empresa.",
+      "categoria": "Recursos",
+      "keywords": ["recursos", "online", "digital", "acceso", "portal"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Recursos Digitales",
+        "requiere_documentos": false,
+        "canal": ["web"]
+      },
+      "links": {
+        "portal_miembros": "/portal/login",
+        "biblioteca_digital": "/recursos/biblioteca",
+        "guias_usuario": "/ayuda/acceso-recursos",
+        "recuperar_password": "/portal/recuperar-contrasena"
+      },
+      "variantes": [
+        "¿Dé³nde encuentro los recursos digitales de la Cámara?",
+        "¿Cé³mo ingreso al portal de recursos en lé­nea?"
+      ]
+    },
+    {
+      "id": "26",
+      "pregunta": "¿Qué© tipos de recursos están disponibles?",
+      "respuesta": "Ofrecemos gué­as empresariales, plantillas de documentos, estudios de mercado y herramientas de gestié³n.",
+      "categoria": "Recursos",
+      "keywords": ["recursos", "gué­as", "plantillas", "estudios", "herramientas"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Informacié³n",
+        "requiere_documentos": false,
+        "canal": ["web"]
+      },
+      "variantes": [
+        "¿Qué© materiales puedo encontrar en el portal de recursos?",
+        "¿Qué© documentos y gué­as ofrecen a los miembros?",
+        "¿Tienen plantillas empresariales disponibles?",
+        "¿Qué© herramientas digitales proporcionan?",
+        "¿Qué© tipo de estudios puedo consultar como miembro?"
+      ]
+    },
+    {
+      "id": "27",
+      "pregunta": "¿Ofrecen servicios de marketing digital?",
+      "respuesta": "Sé­, proporcionamos asesoramiento en marketing digital y recursos para mejorar tu presencia en lé­nea.",
+      "categoria": "Marketing",
+      "keywords": ["marketing", "digital", "online", "presencia", "internet"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Marketing",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Tienen asesoré­a en marketing digital?",
+        "¿Cé³mo pueden ayudarme con mi estrategia online?",
+        "¿Brindan apoyo para mejorar mi presencia en internet?",
+        "¿Ofrecen consultoré­a de marketing para redes sociales?",
+        "¿Puedo recibir orientacié³n sobre publicidad digital?"
+      ]
+    },
+    {
+      "id": "28",
+      "pregunta": "¿Cé³mo puedo mejorar mi presencia en redes sociales?",
+      "respuesta": "Ofrecemos talleres y asesoramiento personalizado para optimizar tu estrategia en redes sociales.",
+      "categoria": "Marketing",
+      "keywords": ["redes sociales", "social media", "marketing digital", "estrategia"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Asesoramiento",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Tienen cursos sobre manejo de redes sociales?",
+        "¿Cé³mo optimizo mis perfiles en redes sociales?",
+        "¿Ofrecen asesoré­a para estrategias de social media?",
+        "¿Puedo recibir ayuda con mi marketing en redes sociales?",
+        "¿Qué© recomiendan para aumentar seguidores en redes sociales?"
+      ]
+    },
+    {
+      "id": "29",
+      "pregunta": "¿Qué© programas de networking ofrecen?",
+      "respuesta": "Organizamos eventos de networking regulares, incluyendo desayunos empresariales, encuentros sectoriales y eventos temáticos.",
+      "categoria": "Networking",
+      "keywords": ["networking", "eventos", "conexiones", "contactos", "empresarial"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Networking",
+        "requiere_documentos": false,
+        "canal": ["presencial", "web"]
+      },
+      "variantes": [
+        "¿Qué© actividades tienen para conectar con otros empresarios?",
+        "¿Organizan encuentros para hacer contactos de negocios?",
+        "¿Cuáles son sus eventos de networking más populares?",
+        "¿Tienen reuniones para conocer a otros miembros?",
+        "¿Cé³mo puedo ampliar mi red de contactos a travé©s de la Cámara?"
+      ]
+    },
+    {
+      "id": "30",
+      "pregunta": "¿Cé³mo puedo participar en los programas de mentoré­a?",
+      "respuesta": "Los programas de mentoré­a están disponibles para miembros activos. Puedes aplicar a travé©s del portal de miembros.",
+      "categoria": "Formacié³n",
+      "keywords": ["mentoré­a", "mentor", "aprendizaje", "desarrollo", "gué­a"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Mentoré­a",
+        "requiere_documentos": true,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cé³mo consigo un mentor a travé©s de la Cámara?",
+        "¿Cuál es el proceso para entrar al programa de mentores?",
+        "¿Qué© requisitos hay para recibir mentoré­a empresarial?",
+        "¿Dé³nde me inscribo para el programa de mentores?",
+        "¿Cé³mo funciona el sistema de mentoré­a para empresarios?"
+      ]
+    },
+    {
+      "id": "31",
+      "pregunta": "¿Qué© tipo de apoyo ofrecen para startups?",
+      "respuesta": "Ofrecemos programas especializados para startups, incluyendo incubacié³n, aceleracié³n y acceso a financiamiento.",
+      "categoria": "Innovacié³n",
+      "keywords": ["startups", "emprendimiento", "innovacié³n", "incubacié³n", "aceleracié³n"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Apoyo Empresarial",
+        "requiere_documentos": true,
+        "canal": ["presencial", "web"]
+      },
+      "variantes": [
+        "¿Qué© programas tienen para emprendedores?",
+        "¿Cé³mo ayudan a las startups a crecer?",
+        "¿Ofrecen incubacié³n para nuevos negocios?",
+        "¿Tienen programas de aceleracié³n empresarial?",
+        "¿Qué© servicios brindan a emprendimientos en fase inicial?"
+      ]
+    },
+    {
+      "id": "32",
+      "pregunta": "¿Cé³mo puedo acceder a los estudios de mercado?",
+      "respuesta": "Los estudios de mercado están disponibles en el portal de miembros en la seccié³n de recursos.",
+      "categoria": "Recursos",
+      "keywords": ["estudios", "mercado", "investigacié³n", "datos", "análisis"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Recursos Digitales",
+        "requiere_documentos": false,
+        "canal": ["web"]
+      },
+      "variantes": [
+        "¿Dé³nde encuentro investigaciones de mercado?",
+        "¿Cé³mo consulto los análisis de mercado disponibles?",
+        "¿Tienen datos sobre tendencias del mercado?",
+        "¿Puedo acceder a estadé­sticas del sector?",
+        "¿Dé³nde están los informes de investigacié³n comercial?"
+      ]
+    },
+    {
+      "id": "33",
+      "pregunta": "¿Ofrecen apoyo para la internacionalizacié³n?",
+      "respuesta": "Sé­, proporcionamos asesoramiento y recursos para empresas que buscan expandirse internacionalmente.",
+      "categoria": "Servicios",
+      "keywords": ["internacional", "exportacié³n", "expansié³n", "global", "mercados"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Asesoramiento",
+        "requiere_documentos": true,
+        "canal": ["presencial", "web"]
+      },
+      "variantes": [
+        "¿Cé³mo pueden ayudarme a exportar mis productos?",
+        "¿Tienen programas para expandirse a mercados internacionales?",
+        "¿Qué© asesoré­a brindan para negocios globales?",
+        "¿Ofrecen orientacié³n sobre comercio exterior?",
+        "¿Cé³mo me apoyan para llevar mi empresa al extranjero?"
+      ]
+    },
+    {
+      "id": "34",
+      "pregunta": "¿Qué© servicios de certificacié³n ofrecen?",
+      "respuesta": "Ofrecemos varios tipos de certificaciones empresariales y documentos comerciales.",
+      "categoria": "Servicios",
+      "keywords": ["certificacié³n", "documentos", "comercial", "validacié³n", "legal"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Certificacié³n",
+        "requiere_documentos": true,
+        "canal": ["presencial"]
+      },
+      "variantes": [
+        "¿Qué© certificados puedo obtener en la Cámara?",
+        "¿Cuáles son las certificaciones disponibles para empresas?",
+        "¿Emiten documentos comerciales certificados?",
+        "¿Qué© tipo de validaciones empresariales ofrecen?",
+        "¿Puedo solicitar certificaciones legales para mi negocio?"
+      ]
+    },
+    {
+      "id": "35",
+      "pregunta": "¿Cé³mo puedo participar en misiones comerciales?",
+      "respuesta": "Las misiones comerciales se anuncian en nuestro portal y puedes registrarte como participante interesado.",
+      "categoria": "Networking",
+      "keywords": ["misiones", "comercial", "internacional", "negocios", "viajes"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Misiones Comerciales",
+        "requiere_documentos": true,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cé³mo me uno a una misié³n comercial internacional?",
+        "¿Organizan viajes de negocios al exterior?",
+        "¿Cuándo son las pré³ximas misiones empresariales?",
+        "¿Cé³mo me registro para una misié³n comercial?",
+        "¿Qué© requisitos hay para participar en misiones de negocios?"
+      ]
+    },
+    {
+      "id": "36",
+      "pregunta": "¿Ofrecen herramientas para la gestié³n de proyectos?",
+      "respuesta": "Sé­, proporcionamos acceso a herramientas de gestié³n de proyectos para nuestros miembros.",
+      "categoria": "Recursos",
+      "keywords": ["herramientas", "gestié³n", "proyectos", "administracié³n", "planificacié³n"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Recursos Digitales",
+        "requiere_documentos": false,
+        "canal": ["web"]
+      },
+      "variantes": [
+        "¿Qué© software de gestié³n de proyectos ofrecen?",
+        "¿Tienen plataformas para administrar proyectos?",
+        "¿Qué© herramientas digitales tienen para planificacié³n?",
+        "¿Proporcionan acceso a sistemas de gestié³n empresarial?",
+        "¿Cé³mo accedo a las herramientas de administracié³n de proyectos?"
+      ]
+    },
+    {
+      "id": "37",
+      "pregunta": "¿Puedo descargar plantillas y documentos empresariales?",
+      "respuesta": "Sé­, ofrecemos una variedad de plantillas y documentos empresariales que puedes descargar desde el portal de miembros.",
+      "categoria": "Recursos",
+      "keywords": ["plantillas", "documentos", "formatos", "descargas", "recursos"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Recursos Digitales",
+        "requiere_documentos": false,
+        "canal": ["web"]
+      },
+      "variantes": [
+        "¿Dé³nde encuentro formatos de documentos empresariales?",
+        "¿Tienen templates para documentos comerciales?",
+        "¿Ofrecen modelos de contratos para descargar?",
+        "¿Puedo obtener formatos de documentos legales?",
+        "¿Cé³mo accedo a las plantillas de documentos?"
+      ]
+    },
+    {
+      "id": "38",
+      "pregunta": "¿Hay algéºn costo para usar los recursos y herramientas en lé­nea?",
+      "respuesta": "La mayoré­a de los recursos y herramientas están disponibles de forma gratuita para los miembros.",
+      "categoria": "Recursos",
+      "keywords": ["costo", "recursos", "herramientas", "gratuito", "acceso"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Informacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "telefé³nico"]
+      },
+      "variantes": [
+        "¿Los recursos digitales tienen algéºn precio?",
+        "¿El acceso a las herramientas online es gratuito?",
+        "¿Debo pagar extra por usar los recursos en lé­nea?",
+        "¿Las plantillas y documentos tienen costo adicional?",
+        "¿Cuánto cuesta acceder a los recursos digitales?"
+      ]
+    },
+    {
+      "id": "39",
+      "pregunta": "¿Cé³mo puedo unirme a grupos de interé©s?",
+      "respuesta": "Puedes unirte a grupos de interé©s a travé©s del portal de miembros y participando en eventos especé­ficos.",
+      "categoria": "Networking",
+      "keywords": ["grupos", "interé©s", "comunidad", "participacié³n", "networking"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Networking",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cé³mo me integro a comunidades empresariales especé­ficas?",
+        "¿Dé³nde encuentro los grupos temáticos de la Cámara?",
+        "¿Existen grupos por sector o industria?",
+        "¿Cé³mo participo en cé­rculos empresariales?",
+        "¿Puedo formar parte de comité©s especializados?"
+      ]
+    },
+    {
+      "id": "40",
+      "pregunta": "¿Qué© tipo de eventos de networking organizan?",
+      "respuesta": "Organizamos eventos de networking como desayunos empresariales, happy hours y conferencias.",
+      "categoria": "Networking",
+      "keywords": ["networking", "eventos", "desayunos", "conferencias", "encuentros"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Eventos",
+        "requiere_documentos": false,
+        "canal": ["presencial", "web"]
+      },
+      "variantes": [
+        "¿Qué© formatos de encuentros empresariales realizan?",
+        "¿Organizan cocktails o happy hours para networking?",
+        "¿Tienen desayunos de trabajo para conectar empresarios?",
+        "¿Qué© actividades hacen para fomentar contactos de negocios?",
+        "¿Cuáles son los eventos más efectivos para hacer networking?"
+      ]
+    },
+    {
+      "id": "41",
+      "pregunta": "¿Cé³mo puedo conectarme con otros miembros?",
+      "respuesta": "Puedes conectarte con otros miembros a travé©s del portal de miembros y en nuestros eventos de networking.",
+      "categoria": "Networking",
+      "keywords": ["conexié³n", "miembros", "networking", "contactos", "comunidad"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Networking",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Existe algéºn directorio de miembros para contactarlos?",
+        "¿Cé³mo puedo conocer a otros empresarios de la Cámara?",
+        "¿Tienen alguna plataforma para conectar con otros afiliados?",
+        "¿De qué© manera puedo establecer contacto con otros miembros?",
+        "¿Hay alguna forma de buscar empresas afiliadas por sector?"
+      ]
+    },
+    {
+      "id": "42",
+      "pregunta": "¿Qué© hago si tengo problemas té©cnicos con el portal de miembros?",
+      "respuesta": "Contacta a nuestro equipo de soporte té©cnico para obtener ayuda.",
+      "categoria": "Soporte",
+      "keywords": ["problemas", "té©cnico", "portal", "soporte", "ayuda"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Soporte Té©cnico",
+        "requiere_documentos": false,
+        "canal": ["web", "telefé³nico", "email"]
+      },
+      "variantes": [
+        "¿A quié©n contacto si no puedo acceder al portal?",
+        "El sitio web no funciona correctamente, ¿qué© hago?",
+        "¿Cé³mo reporto fallos en la plataforma digital?",
+        "¿Tienen mesa de ayuda para problemas con el portal?",
+        "¿Dé³nde encuentro soporte té©cnico para la web?"
+      ]
+    },
+    {
+      "id": "43",
+      "pregunta": "¿Ofrecen programas de mentoré­a?",
+      "respuesta": "Sé­, tenemos programas de mentoré­a donde puedes conectarte con empresarios experimentados.",
+      "categoria": "Formacié³n",
+      "keywords": ["mentoré­a", "mentor", "aprendizaje", "experiencia", "conexié³n"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Mentoré­a",
+        "requiere_documentos": true,
+        "canal": ["presencial", "web"]
+      },
+      "variantes": [
+        "¿Puedo tener un mentor empresarial a travé©s de la Cámara?",
+        "¿Cé³mo funciona el programa de mentores?",
+        "¿Conectan emprendedores con empresarios experimentados?",
+        "¿Tienen sistema de acompaé±amiento empresarial personalizado?",
+        "¿Existe algéºn programa de asesoré­a uno a uno con expertos?"
+      ]
+    },
+    {
+      "id": "44",
+      "pregunta": "¿Cé³mo puedo proponer un nuevo grupo de interé©s?",
+      "respuesta": "Puedes proponer un nuevo grupo de interé©s contactando a nuestro equipo de atencié³n al miembro.",
+      "categoria": "Networking",
+      "keywords": ["grupo", "interé©s", "propuesta", "nuevo", "iniciativa"],
+      "relevancia": 2,
+      "metadata": {
+        "tipo_servicio": "Propuestas",
+        "requiere_documentos": true,
+        "canal": ["web", "email", "presencial"]
+      },
+      "variantes": [
+        "¿Puedo crear un nuevo comité© temático?",
+        "¿Cé³mo inicio un grupo especializado dentro de la Cámara?",
+        "¿Existe algéºn proceso para formar nuevas comunidades?",
+        "¿A quié©n debo dirigirme para proponer un nuevo grupo?",
+        "¿Qué© requisitos hay para crear un cé­rculo empresarial?"
+      ]
+    },
+    {
+      "id": "45",
+      "pregunta": "¿Cé³mo puedo reportar un problema o hacer una sugerencia?",
+      "respuesta": "Puedes reportar problemas o hacer sugerencias a travé©s del formulario de contacto en el portal de miembros.",
+      "categoria": "Soporte",
+      "keywords": ["reportar", "problema", "sugerencia", "feedback", "contacto"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Soporte",
+        "requiere_documentos": false,
+        "canal": ["web", "email"]
+      },
+      "variantes": [
+        "¿Dé³nde puedo enviar mis comentarios o sugerencias?",
+        "¿Cé³mo hago llegar mi feedback a la Cámara?",
+        "¿Existe un buzé³n de sugerencias virtual?",
+        "¿A quié©n debo contactar para reportar un inconveniente?",
+        "¿Tienen algéºn canal para quejas y reclamos?"
+      ]
+    },
+    {
+      "id": "46",
+      "pregunta": "¿Puedo obtener asistencia personalizada para mi negocio?",
+      "respuesta": "Sé­, ofrecemos asistencia personalizada y consultoré­a para ayudarte a alcanzar tus objetivos empresariales.",
+      "categoria": "Servicios",
+      "keywords": ["asistencia", "personalizada", "consultoré­a", "asesoré­a", "negocio"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Consultoré­a",
+        "requiere_documentos": true,
+        "canal": ["presencial", "web"]
+      },
+      "variantes": [
+        "¿Ofrecen asesoré­a individual para mi empresa?",
+        "¿Puedo recibir consultoré­a especé­fica para mi caso?",
+        "¿Cé³mo solicito ayuda personalizada para mi negocio?",
+        "¿Tienen servicios de asesoramiento a medida?",
+        "¿Brindan apoyo one-to-one para empresarios?"
+      ]
+    },
+    {
+      "id": "47",
+      "pregunta": "¿Hay recursos disponibles para la recuperacié³n empresarial post-pandemia?",
+      "respuesta": "Sé­, ofrecemos recursos y asesoramiento para ayudar a las empresas a recuperarse y adaptarse tras la pandemia.",
+      "categoria": "Recursos",
+      "keywords": ["recuperacié³n", "pandemia", "crisis", "adaptacié³n", "recursos"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Asesoramiento",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial", "telefé³nico"]
+      },
+      "variantes": [
+        "¿Qué© apoyo ofrecen para empresas afectadas por la pandemia?",
+        "¿Tienen programas de reactivacié³n econé³mica?",
+        "¿Cé³mo pueden ayudarme a recuperar mi negocio tras la crisis?",
+        "¿Existen recursos especé­ficos para adaptarse al nuevo contexto?",
+        "¿Qué© herramientas brindan para la resiliencia empresarial?"
+      ]
+    },
+    {
+      "id": "48",
+      "pregunta": "¿Cé³mo puedo solicitar una reunié³n con un asesor empresarial?",
+      "respuesta": "Puedes solicitar una reunié³n con un asesor empresarial a travé©s del portal de miembros o contactándonos directamente.",
+      "categoria": "Servicios",
+      "keywords": ["reunié³n", "asesor", "cita", "consulta", "empresarial"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Asesoramiento",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial", "telefé³nico"]
+      },
+      "variantes": [
+        "¿Cé³mo agendo una cita con un consultor?",
+        "¿Dé³nde reservo tiempo con un asesor de la Cámara?",
+        "¿Cuál es el proceso para tener una consulta empresarial?",
+        "¿Puedo programar una reunié³n con un especialista?",
+        "¿Cé³mo coordino un encuentro con un asesor de negocios?"
+      ]
+    },
+    {
+      "id": "49",
+      "pregunta": "¿Ofrecen programas para fomentar la innovacié³n empresarial?",
+      "respuesta": "Sé­, tenemos programas de incubacié³n y aceleracié³n que ayudan a las empresas a innovar y crecer. Tambié©n organizamos hackathons y talleres de innovacié³n.",
+      "categoria": "Innovacié³n",
+      "keywords": ["innovacié³n", "incubacié³n", "aceleracié³n", "hackathon", "crecimiento"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Innovacié³n",
+        "requiere_documentos": true,
+        "canal": ["presencial", "web"]
+      },
+      "variantes": [
+        "¿Qué© iniciativas tienen para impulsar la innovacié³n?",
+        "¿Organizan actividades para promover la innovacié³n empresarial?",
+        "¿Tienen programas de incubacié³n de ideas innovadoras?",
+        "¿Realizan hackathons u otros eventos de innovacié³n?",
+        "¿Cé³mo apoyan el desarrollo de soluciones innovadoras?"
+      ]
+    },
+    {
+      "id": "50",
+      "pregunta": "¿Cé³mo puedo participar en los programas de tecnologé­a e innovacié³n?",
+      "respuesta": "Puedes inscribirte en nuestros programas de tecnologé­a e innovacié³n a travé©s del portal de miembros o contactando a nuestro equipo de innovacié³n.",
+      "categoria": "Innovacié³n",
+      "keywords": ["tecnologé­a", "innovacié³n", "programas", "inscripcié³n", "participacié³n"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Innovacié³n",
+        "requiere_documentos": true,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cé³mo me inscribo en programas de innovacié³n tecnolé³gica?",
+        "¿Cuál es el proceso para unirse a iniciativas de innovacié³n?",
+        "¿Dé³nde me registro para participar en proyectos tecnolé³gicos?",
+        "¿Qué© requisitos hay para acceder a programas de innovacié³n?",
+        "¿Cé³mo puedo formar parte de las actividades de innovacié³n?"
+      ]
+    },
+    {
+      "id": "51",
+      "pregunta": "¿Ofrecen recursos para la transformacié³n digital de mi empresa?",
+      "respuesta": "Sé­, proporcionamos recursos y asesoramiento para ayudar a las empresas a adoptar nuevas tecnologé­as y digitalizar sus operaciones.",
+      "categoria": "Innovacié³n",
+      "keywords": ["transformacié³n digital", "tecnologé­a", "digitalizacié³n", "innovacié³n", "modernizacié³n"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Transformacié³n Digital",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cé³mo pueden ayudarme a digitalizar mi negocio?",
+        "¿Tienen programas de transformacié³n tecnolé³gica?",
+        "¿Qué© apoyo brindan para modernizar digitalmente mi empresa?",
+        "¿Ofrecen asesoré­a en digitalizacié³n de procesos?",
+        "¿Cé³mo puedo iniciar la transformacié³n digital de mi compaé±é­a?"
+      ]
+    },
+    {
+      "id": "52",
+      "pregunta": "¿Cé³mo puedo obtener acceso a estudios y análisis sobre tecnologé­a emergente?",
+      "respuesta": "Puedes acceder a estudios y análisis sobre tecnologé­a emergente a travé©s de nuestro portal de miembros, donde regularmente publicamos informes y arté­culos sobre las éºltimas tendencias tecnolé³gicas.",
+      "categoria": "Recursos",
+      "keywords": ["estudios", "análisis", "tecnologé­a", "tendencias", "informes"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Recursos Digitales",
+        "requiere_documentos": false,
+        "canal": ["web"]
+      },
+      "variantes": [
+        "¿Dé³nde encuentro informes sobre nuevas tecnologé­as?",
+        "¿Tienen investigaciones sobre tendencias tecnolé³gicas?",
+        "¿Cé³mo accedo a análisis de tecnologé­as emergentes?",
+        "¿Publican estudios sobre innovacié³n tecnolé³gica?",
+        "¿Dé³nde puedo consultar informes de tendencias digitales?"
+      ]
+    },
+    {
+      "id": "53",
+      "pregunta": "¿Qué© documentos necesito para obtener un certificado de existencia?",
+      "respuesta": "Para obtener un certificado de existencia solo necesitas el NIT de tu empresa y realizar el pago correspondiente. El certificado se genera automáticamente.",
+      "categoria": "Certificados y Solicitudes",
+      "keywords": ["certificado", "existencia", "documentos", "requisitos", "trámites"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Certificados",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Qué© requisitos necesito para un certificado de existencia?",
+        "¿Cé³mo obtengo un certificado de existencia?",
+        "¿Qué© papeles debo presentar para solicitar un certificado de existencia?",
+        "¿Cuál es el proceso para tramitar un certificado de existencia?",
+        "¿Necesito algéºn documento especial para el certificado de existencia?"
+      ]
+    },
+    {
+      "id": "54",
+      "pregunta": "¿Cuánto tiempo tarda la expedicié³n de un certificado?",
+      "respuesta": "Los certificados digitales se generan inmediatamente despué©s del pago. Para certificados fé­sicos, el tiempo de entrega es de 1 a 2 dé­as hábiles.",
+      "categoria": "Certificados y Solicitudes",
+      "keywords": ["tiempo", "expedicié³n", "certificado", "entrega", "duracié³n"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Certificados",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿En cuánto tiempo me entregan un certificado?",
+        "¿Cuál es el tiempo de espera para recibir un certificado?",
+        "¿Cuánto demora la emisié³n de un certificado digital?",
+        "¿Los certificados se entregan el mismo dé­a?",
+        "¿Cuánto debo esperar para obtener mi certificado?"
+      ]
+    },
+    {
+      "id": "55",
+      "pregunta": "¿Cé³mo puedo verificar la autenticidad de un certificado?",
+      "respuesta": "Puedes verificar la autenticidad de cualquier certificado ingresando el cé³digo de verificacié³n en nuestro portal web en la seccié³n 'Verificar Certificado'.",
+      "categoria": "Certificados y Solicitudes",
+      "keywords": ["verificacié³n", "autenticidad", "certificado", "validacié³n", "cé³digo"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Verificacié³n",
+        "requiere_documentos": false,
+        "canal": ["web"]
+      },
+      "variantes": [
+        "¿Cé³mo sé© si un certificado es auté©ntico?",
+        "¿Dé³nde puedo validar un certificado?",
+        "¿Existe alguna forma de comprobar si un certificado es válido?",
+        "¿Cé³mo confirmo que un certificado no es falso?",
+        "¿Dé³nde ingreso el cé³digo para verificar un certificado?"
+      ]
+    },
+    {
+      "id": "56",
+      "pregunta": "¿Qué© tipos de certificados puedo solicitar?",
+      "respuesta": "Puedes solicitar certificados de existencia y representacié³n legal, matré­cula mercantil, registro de marca, histé³rico de renovaciones y otros documentos comerciales.",
+      "categoria": "Certificados y Solicitudes",
+      "keywords": ["tipos", "certificados", "documentos", "solicitud", "trámites"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Certificados",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Qué© certificados emite la Cámara de Comercio?",
+        "¿Cuáles son los certificados disponibles?",
+        "¿Qué© clase de documentos certificados puedo obtener?",
+        "¿Qué© tipos de constancias empresariales ofrecen?",
+        "¿Cuáles son los documentos oficiales que puedo solicitar?"
+      ]
+    },
+    {
+      "id": "57",
+      "pregunta": "¿Cé³mo puedo obtener un duplicado de mi registro mercantil?",
+      "respuesta": "Puedes solicitar un duplicado de tu registro mercantil a travé©s de nuestro portal web o en nuestras oficinas presentando tu identificacié³n.",
+      "categoria": "Documentos Empresariales",
+      "keywords": ["duplicado", "registro", "mercantil", "copia", "documento"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Duplicados",
+        "requiere_documentos": true,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cé³mo solicito una copia de mi registro mercantil?",
+        "¿Dé³nde puedo obtener un duplicado de mi registro?",
+        "Perdé­ mi registro mercantil, ¿cé³mo consigo otro?",
+        "¿Cuál es el procedimiento para solicitar una copia del registro?",
+        "¿Puedo pedir un duplicado de mi matré­cula mercantil en lé­nea?"
+      ]
+    },
+    {
+      "id": "58",
+      "pregunta": "¿Qué© hago si pierdo mis documentos empresariales?",
+      "respuesta": "Si pierdes tus documentos empresariales, puedes solicitar copias certificadas a travé©s de nuestro portal web o en nuestras oficinas. Te ayudaremos a recuperar toda la documentacié³n necesaria.",
+      "categoria": "Documentos Empresariales",
+      "keywords": ["pé©rdida", "documentos", "copias", "certificadas", "recuperacié³n"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Duplicados",
+        "requiere_documentos": true,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cé³mo recupero documentos empresariales perdidos?",
+        "¿Qué© hacer si extravé­o documentos de mi empresa?",
+        "Extravié© mis papeles comerciales, ¿cé³mo los reemplazo?",
+        "¿Existe algéºn procedimiento para reponer documentos perdidos?",
+        "¿Cé³mo solicito duplicados de documentacié³n empresarial?"
+      ]
+    },
+    {
+      "id": "59",
+      "pregunta": "¿Ofrecen asesoré­a para la creacié³n de empresas?",
+      "respuesta": "Sé­, ofrecemos asesoré­a completa para la creacié³n de empresas, incluyendo orientacié³n legal, tributaria y administrativa para que puedas iniciar tu negocio correctamente.",
+      "categoria": "Asesoré­as y Consultoré­as",
+      "keywords": ["asesoré­a", "creacié³n", "empresa", "orientacié³n", "inicio"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Asesoré­a",
+        "requiere_documentos": false,
+        "canal": ["presencial", "virtual"]
+      },
+      "variantes": [
+        "¿Hay asesoré­a para crear una empresa?",
+        "¿Cé³mo puedo recibir orientacié³n para crear mi empresa?",
+        "¿Me pueden ayudar con el proceso de constitucié³n empresarial?",
+        "¿Brindan apoyo para emprendedores que quieren formalizar su negocio?",
+        "¿Tienen servicios de consultoré­a para nuevas empresas?"
+      ]
+    },
+    {
+      "id": "60",
+      "pregunta": "¿Qué© tipos de asesoré­a empresarial ofrecen?",
+      "respuesta": "Ofrecemos asesoré­a en áreas como planeacié³n estraté©gica, marketing digital, finanzas, aspectos legales, comercio exterior y transformacié³n digital.",
+      "categoria": "Asesoré­as y Consultoré­as",
+      "keywords": ["asesoré­a", "consultoré­a", "empresarial", "servicios", "apoyo"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Asesoré­a",
+        "requiere_documentos": false,
+        "canal": ["presencial", "virtual"]
+      },
+      "variantes": [
+        "¿Qué© servicios de asesoré­a tienen disponibles?",
+        "¿En qué© áreas brindan asesoré­a empresarial?",
+        "¿Cuáles son las especialidades de sus consultores?",
+        "¿Qué© campos cubren sus servicios de consultoré­a?",
+        "¿Sobre qué© temas puedo recibir asesoramiento profesional?"
+      ]
+    },
+    {
+      "id": "61",
+      "pregunta": "¿Cuándo debo renovar mi registro mercantil?",
+      "respuesta": "La renovacié³n del registro mercantil debe realizarse entre el 1 de enero y el 31 de marzo de cada aé±o. Es importante cumplir con estos plazos para evitar sanciones.",
+      "categoria": "Renovacié³n de Trámites",
+      "keywords": ["renovacié³n", "registro", "mercantil", "plazos", "fechas"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Renovacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "links": {
+        "renovar_ahora": "/tramites/renovacion-mercantil",
+        "calcular_tarifa": "/servicios/calculadora-tarifas",
+        "calendario_renovacion": "/tramites/fechas-importantes",
+        "guia_renovacion": "/ayuda/como-renovar-registro"
+      },
+      "variantes": [
+        "¿Cuál es la fecha lé­mite para renovar el registro mercantil?",
+        "¿En qué© fechas debo renovar mi registro?"
+      ]
+    },
+    {
+      "id": "62",
+      "pregunta": "¿Qué© documentos necesito para renovar mi registro?",
+      "respuesta": "Para renovar tu registro necesitas tu NIT o néºmero de matré­cula mercantil, estados financieros del aé±o anterior y realizar el pago correspondiente.",
+      "categoria": "Renovacié³n de Trámites",
+      "keywords": ["documentos", "renovacié³n", "registro", "requisitos", "trámites"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Renovacié³n",
+        "requiere_documentos": true,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Qué© requisitos necesito para renovar mi registro?",
+        "¿Qué© debo presentar para la renovacié³n del registro?",
+        "¿Cuáles son los papeles necesarios para la renovacié³n mercantil?",
+        "¿Qué© informacié³n debo tener lista para renovar mi matré­cula?",
+        "¿Qué© documentacié³n se requiere en el proceso de renovacié³n?"
+      ]
+    },
+    {
+      "id": "63",
+      "pregunta": "¿Cé³mo me entero de las fechas importantes para mi empresa?",
+      "respuesta": "Puedes consultar nuestro calendario empresarial en el portal web, suscribirte a nuestro boleté­n informativo o activar las notificaciones en nuestra app mé³vil.",
+      "categoria": "Fechas y Recordatorios",
+      "keywords": ["fechas", "calendario", "recordatorios", "plazos", "notificaciones"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Informacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "mé³vil", "email"]
+      },
+      "variantes": [
+        "¿Dé³nde consulto las fechas importantes?",
+        "¿Cé³mo me mantengo informado de los plazos importantes?",
+        "¿Tienen algéºn sistema de alertas para fechas clave?",
+        "¿Cé³mo puedo recibir recordatorios de vencimientos?",
+        "¿Existe un calendario de obligaciones empresariales?"
+      ]
+    },
+    {
+      "id": "64",
+      "pregunta": "¿Cé³mo puedo proteger mi marca comercial?",
+      "respuesta": "Para proteger tu marca, debes registrarla en la Superintendencia de Industria y Comercio. Te asesoramos en todo el proceso de registro y proteccié³n de tu propiedad intelectual.",
+      "categoria": "Marcas y Propiedad Intelectual",
+      "keywords": ["marca", "proteccié³n", "registro", "propiedad intelectual", "comercial"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Asesoré­a",
+        "requiere_documentos": true,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cé³mo registro y protejo mi marca?",
+        "¿Qué© debo hacer para proteger mi marca comercial?",
+        "¿Cuál es el proceso para registrar una marca?",
+        "¿Cé³mo evito que otros usen mi marca comercial?",
+        "¿Qué© pasos debo seguir para asegurar los derechos sobre mi marca?"
+      ]
+    },
+    {
+      "id": "65",
+      "pregunta": "¿Qué© beneficios tiene registrar una marca?",
+      "respuesta": "Registrar tu marca te da derechos exclusivos de uso, proteccié³n legal contra copias o imitaciones, y la posibilidad de licenciar o vender tu marca.",
+      "categoria": "Marcas y Propiedad Intelectual",
+      "keywords": ["beneficios", "registro", "marca", "derechos", "proteccié³n"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Informacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Por qué© debo registrar mi marca?",
+        "¿Cuáles son las ventajas de registrar una marca?",
+        "¿Qué© gano al proteger legalmente mi marca?",
+        "¿Por qué© es importante el registro de marca para mi negocio?",
+        "¿Qué© derechos me otorga tener una marca registrada?"
+      ]
+    },
+    {
+      "id": "66",
+      "pregunta": "¿Qué© programas de innovacié³n ofrecen?",
+      "respuesta": "Ofrecemos programas de transformacié³n digital, innovacié³n empresarial, desarrollo tecnolé³gico y apoyo a startups, incluyendo mentoré­as y acceso a financiamiento.",
+      "categoria": "Innovacié³n y Tecnologé­a",
+      "keywords": ["innovacié³n", "tecnologé­a", "programas", "startups", "transformacié³n digital"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Programas",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Qué© apoyo dan para la innovacié³n empresarial?",
+        "¿Tienen programas de transformacié³n digital?",
+        "¿Qué© iniciativas existen para impulsar la innovacié³n?",
+        "¿Cuáles son sus programas para el desarrollo tecnolé³gico?",
+        "¿Qué© ofrecen para empresas que quieren innovar?"
+      ]
+    },
+    {
+      "id": "67",
+      "pregunta": "¿Cé³mo puedo mejorar este chatbot?",
+      "respuesta": "Valoramos tu opinié³n para mejorar nuestro servicio. Puedes enviar tus sugerencias a travé©s del boté³n de feedback o contactar a nuestro equipo de soporte.",
+      "categoria": "Feedback y Mejoras",
+      "keywords": ["feedback", "mejoras", "sugerencias", "chatbot", "opinié³n"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Feedback",
+        "requiere_documentos": false,
+        "canal": ["web", "email"]
+      },
+      "variantes": [
+        "¿Cé³mo puedo dar feedback sobre el chatbot?",
+        "¿Dé³nde envé­o sugerencias para mejorar el servicio?"
+      ]
+    },
+    {
+      "id": "68",
+      "pregunta": "¿Qué© documentos necesito para registrar mi empresa?",
+      "respuesta": "Para registrar tu empresa necesitas: documento de identidad, RUT, documentos de constitucié³n si es persona juré­dica, y formularios de registro debidamente diligenciados.",
+      "categoria": "Registro Mercantil",
+      "keywords": ["documentos", "registro", "empresa", "requisitos", "constitucié³n"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Registro",
+        "requiere_documentos": true,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Qué© requisitos necesito para registrar mi empresa?",
+        "¿Cuáles son los documentos para el registro empresarial?",
+        "¿Qué© papeles debo presentar para constituir mi empresa?",
+        "¿Cuál es la documentacié³n necesaria para formalizar un negocio?",
+        "¿Qué© necesito llevar para registrar mi compaé±é­a?"
+      ]
+    },
+    {
+      "id": "69",
+      "pregunta": "¿Cuánto cuesta registrar una empresa?",
+      "respuesta": "El costo del registro varé­a segéºn el tipo de empresa y el capital inicial. Puedes consultar nuestra tabla de tarifas actualizada en el portal web.",
+      "categoria": "Registro Mercantil",
+      "keywords": ["costo", "tarifas", "registro", "empresa", "valor"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Registro",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cuál es el valor del registro empresarial?",
+        "¿Qué© tarifas aplican para registrar una empresa?"
+      ]
+    },
+    {
+      "id": "70",
+      "pregunta": "¿Cé³mo verifico el estado de mi matré­cula mercantil?",
+      "respuesta": "Puedes verificar el estado de tu matré­cula mercantil ingresando a nuestro portal web con tu néºmero de matré­cula o NIT, o consultando directamente en nuestras oficinas.",
+      "categoria": "Matré­cula Mercantil",
+      "keywords": ["verificacié³n", "estado", "matré­cula", "consulta", "mercantil"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Consulta",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Dé³nde consulto el estado de mi matré­cula?",
+        "¿Cé³mo sé© si mi matré­cula está activa?",
+        "¿Existe alguna forma de comprobar la vigencia de mi registro?",
+        "¿Cé³mo puedo confirmar si mi matré­cula mercantil está al dé­a?",
+        "¿Dé³nde reviso el estado actual de mi registro comercial?"
+      ]
+    },
+    {
+      "id": "71",
+      "pregunta": "¿Qué© pasa si no renuevo mi matré­cula mercantil a tiempo?",
+      "respuesta": "Si no renuevas tu matré­cula mercantil a tiempo, podré­as enfrentar sanciones econé³micas y la posible cancelacié³n de tu registro. Es importante mantenerla actualizada.",
+      "categoria": "Matré­cula Mercantil",
+      "keywords": ["renovacié³n", "sanciones", "matré­cula", "vencimiento", "consecuencias"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Informacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cuáles son las consecuencias de no renovar la matré­cula?",
+        "¿Qué© sanciones hay por no renovar a tiempo?",
+        "¿Qué© ocurre si se vence el plazo para renovar mi registro?",
+        "¿Hay multas por no renovar la matré­cula mercantil?",
+        "¿Pueden cancelar mi registro si no lo renuevo?"
+      ]
+    },
+    {
+      "id": "72",
+      "pregunta": "¿Cé³mo registro una patente?",
+      "respuesta": "Para registrar una patente, debes presentar la documentacié³n té©cnica de tu invencié³n, realizar el pago correspondiente y cumplir con los requisitos de novedad y nivel inventivo.",
+      "categoria": "Propiedad Intelectual",
+      "keywords": ["patente", "registro", "invencié³n", "propiedad intelectual", "innovacié³n"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Registro",
+        "requiere_documentos": true,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cuál es el proceso para registrar una patente?",
+        "¿Qué© necesito para patentar mi invencié³n?",
+        "¿Cé³mo protejo legalmente una innovacié³n tecnolé³gica?",
+        "¿Cuáles son los pasos para obtener una patente?",
+        "¿Qué© documentacié³n se requiere para registrar una invencié³n?"
+      ]
+    },
+    {
+      "id": "73",
+      "pregunta": "¿Qué© programas de capacitacié³n están disponibles?",
+      "respuesta": "Ofrecemos capacitaciones en gestié³n empresarial, marketing digital, finanzas, innovacié³n y más. Consulta nuestro calendario de eventos para ver las pré³ximas fechas.",
+      "categoria": "Capacitacié³n",
+      "keywords": ["capacitacié³n", "cursos", "formacié³n", "programas", "aprendizaje"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Capacitacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial", "virtual"]
+      },
+      "variantes": [
+        "¿Qué© cursos ofrecen?",
+        "¿Cuáles son los programas de formacié³n disponibles?",
+        "¿Qué© talleres empresariales tienen programados?",
+        "¿Qué© tipo de entrenamientos brindan a los empresarios?",
+        "¿Cuál es la oferta educativa de la Cámara de Comercio?"
+      ]
+    },
+    {
+      "id": "74",
+      "pregunta": "¿Cé³mo puedo acceder a financiamiento para mi empresa?",
+      "respuesta": "Ofrecemos orientacié³n sobre lé­neas de cré©dito, conexié³n con entidades financieras y programas de apoyo econé³mico. Tambié©n brindamos informacié³n sobre convocatorias y fondos disponibles.",
+      "categoria": "Financiamiento",
+      "keywords": ["financiamiento", "cré©dito", "apoyo", "recursos", "econé³mico"],
+      "relevancia": 5,
+      "metadata": {
+        "tipo_servicio": "Asesoré­a",
+        "requiere_documentos": true,
+        "canal": ["presencial", "virtual"]
+      },
+      "variantes": [
+        "¿Qué© opciones de financiamiento hay disponibles?",
+        "¿Cé³mo consigo apoyo econé³mico para mi empresa?",
+        "¿Me pueden ayudar a encontrar inversié³n para mi negocio?",
+        "¿Qué© alternativas de cré©dito empresarial ofrecen?",
+        "¿Cé³mo puedo conocer las convocatorias de financiacié³n?"
+      ],
+      "links": {
+        "lineas_credito": "/financiamiento/creditos",
+        "convocatorias": "/financiamiento/convocatorias",
+        "entidades_aliadas": "/financiamiento/aliados",
+        "calculadora_credito": "/financiamiento/calculadora",
+        "requisitos_financiamiento": "/financiamiento/requisitos",
+        "agendar_asesoria": "/financiamiento/asesoria"
+      }
+    },
+    {
+      "id": "75",
+      "pregunta": "¿Qué© servicios legales ofrecen?",
+      "respuesta": "Brindamos asesoré­a legal en temas comerciales, laborales, tributarios y de propiedad intelectual. Tambié©n ofrecemos servicios de conciliacié³n y arbitraje empresarial.",
+      "categoria": "Servicios Legales",
+      "keywords": ["legal", "asesoré­a", "juré­dico", "derecho", "consultoré­a"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Asesoré­a Legal",
+        "requiere_documentos": false,
+        "canal": ["presencial", "virtual"]
+      },
+      "variantes": [
+        "¿Qué© tipo de asesoré­a legal brindan?",
+        "¿Cuáles son los servicios juré­dicos disponibles?",
+        "¿En qué© áreas del derecho ofrecen orientacié³n?",
+        "¿Tienen abogados especializados en temas empresariales?",
+        "¿Qué© apoyo juré­dico puedo recibir como miembro?"
+      ],
+      "links": {
+        "servicios_legales": "/legal/servicios",
+        "agendar_asesoria": "/legal/agendar-consulta",
+        "centro_conciliacion": "/legal/conciliacion",
+        "tarifas_legales": "/legal/tarifas",
+        "documentos_requeridos": "/legal/requisitos"
+      }
+    },
+    {
+      "id": "76",
+      "pregunta": "¿Cé³mo contacto al servicio de soporte té©cnico?",
+      "respuesta": "Puedes contactar a nuestro soporte té©cnico a travé©s del chat en lé­nea, llamando al (605) 5846175 o enviando un correo a soporte@ccmagangue.org.co.",
+      "categoria": "Soporte",
+      "keywords": ["soporte", "té©cnico", "ayuda", "contacto", "asistencia"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Soporte",
+        "requiere_documentos": false,
+        "canal": ["web", "telefé³nico", "email"]
+      },
+      "variantes": [
+        "¿Dé³nde encuentro ayuda té©cnica?",
+        "¿Cé³mo obtengo asistencia té©cnica?",
+        "¿Cuál es el néºmero de soporte té©cnico?",
+        "¿A qué© correo puedo escribir si tengo problemas té©cnicos?",
+        "¿Cé³mo me comunico con el departamento de soporte?"
+      ],
+      "links": {
+        "chat_en_vivo": "/soporte/chat",
+        "formulario_contacto": "/soporte/contactar",
+        "preguntas_frecuentes": "/ayuda/faq",
+        "horarios_atencion": "/soporte/horarios"
+      }
+    },
+    {
+      "id": "77",
+      "pregunta": "¿Tienen servicio de chat en vivo?",
+      "respuesta": "Sé­, nuestro servicio de chat en vivo está disponible de lunes a viernes de 8:00 AM a 6:00 PM para resolver tus dudas de forma inmediata.",
+      "categoria": "Soporte",
+      "keywords": ["chat", "vivo", "atencié³n", "en lé­nea", "servicio"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Atencié³n al Cliente",
+        "requiere_documentos": false,
+        "canal": ["web"]
+      },
+      "variantes": [
+        "¿Está disponible el chat en lé­nea?",
+        "¿Puedo chatear con un asesor en vivo?",
+        "¿En qué© horario funciona el chat de atencié³n?",
+        "¿Ofrecen asistencia inmediata por chat?",
+        "¿Cé³mo accedo al servicio de chat con asesores?"
+      ]
+    },
+    {
+      "id": "78",
+      "pregunta": "¿Cé³mo reporto un problema con la plataforma web?",
+      "respuesta": "Para reportar problemas con la plataforma, puedes usar el formulario de reporte de incidencias en la seccié³n de soporte o contactar directamente a nuestro equipo té©cnico.",
+      "categoria": "Soporte",
+      "keywords": ["problema", "reporte", "incidencia", "plataforma", "error"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Soporte",
+        "requiere_documentos": false,
+        "canal": ["web", "email"]
+      },
+      "variantes": [
+        "¿Dé³nde reporto fallos de la plataforma?",
+        "¿Cé³mo informo sobre problemas té©cnicos?",
+        "¿Existe un formulario para reportar errores del sitio?",
+        "¿A quié©n notifico si la web no funciona correctamente?",
+        "¿Cé³mo comunico incidencias con el portal?"
+      ]
+    },
+    {
+      "id": "79",
+      "pregunta": "¿Qué© hago si olvidé© mi contraseé±a?",
+      "respuesta": "Si olvidaste tu contraseé±a, haz clic en 'Recuperar contraseé±a' en la página de inicio de sesié³n. Recibirás un correo con instrucciones para restablecerla.",
+      "categoria": "Soporte",
+      "keywords": ["contraseé±a", "recuperar", "acceso", "cuenta", "restablecer"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Soporte",
+        "requiere_documentos": false,
+        "canal": ["web"]
+      },
+      "variantes": [
+        "¿Cé³mo recupero mi contraseé±a?",
+        "¿Qué© hacer si no puedo acceder a mi cuenta?",
+        "¿Dé³nde está la opcié³n para restablecer mi clave?",
+        "Perdé­ mi contraseé±a, ¿cé³mo la recupero?",
+        "¿Existe un proceso para recuperar acceso a mi cuenta?"
+      ],
+      "links": {
+        "recuperar_password": "/portal/recuperar-contrasena",
+        "ayuda_acceso": "/ayuda/problemas-acceso",
+        "contacto_soporte": "/soporte/contactar",
+        "preguntas_frecuentes": "/ayuda/faq-acceso"
+      }
+    },
+    {
+      "id": "80",
+      "pregunta": "¿Ofrecen descuentos para microempresas?",
+      "respuesta": "Sé­, ofrecemos tarifas especiales y descuentos para microempresas en varios de nuestros servicios y trámites. Consulta nuestra tabla de tarifas para más detalles.",
+      "categoria": "Tarifas y Pagos",
+      "keywords": ["descuentos", "tarifas", "microempresa", "precios", "beneficios"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Informacié³n",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Hay tarifas especiales para microempresas?",
+        "¿Existen beneficios econé³micos para microempresas?",
+        "¿Las empresas pequeé±as tienen algéºn descuento?",
+        "¿Ofrecen precios reducidos para emprendimientos?",
+        "¿Cé³mo accedo a las tarifas preferenciales para mi microempresa?"
+      ]
+    },
+    {
+      "id": "81",
+      "pregunta": "¿Cuáles son los mé©todos de pago aceptados?",
+      "respuesta": "Aceptamos pagos con tarjeta de cré©dito/dé©bito, transferencias bancarias, PSE y pagos en efectivo en puntos autorizados.",
+      "categoria": "Tarifas y Pagos",
+      "keywords": ["pagos", "mé©todos", "tarjetas", "transferencia", "PSE"],
+      "relevancia": 4,
+      "metadata": {
+        "tipo_servicio": "Pagos",
+        "requiere_documentos": false,
+        "canal": ["web", "presencial"]
+      },
+      "variantes": [
+        "¿Cé³mo puedo realizar los pagos?",
+        "¿Qué© formas de pago aceptan?",
+        "¿Puedo pagar con tarjeta de cré©dito?",
+        "¿Aceptan transferencias bancarias?",
+        "¿Cuáles son las opciones disponibles para pagar trámites?"
+      ]
+    },
+    {
+      "id": "16",
+      "pregunta": "¿Tienen eventos virtuales disponibles?",
+      "respuesta": "Sé­, ofrecemos una variedad de eventos virtuales incluyendo webinars, talleres en lé­nea y conferencias virtuales. Puedes encontrar toda la programacié³n en nuestro calendario de eventos.",
+      "categoria": "Eventos",
+      "keywords": ["virtuales", "webinars", "talleres", "conferencias", "eventos"],
+      "relevancia": 3,
+      "metadata": {
+        "tipo_servicio": "Eventos",
+        "requiere_documentos": false,
+        "canal": ["web", "email"]
+      },
+      "variantes": [
+        "¿Qué© eventos virtuales organizan?",
+        "¿Cuándo son los pré³ximos webinars?",
+        "¿Cé³mo participo en un webinar?",
+        "¿Qué© requisitos necesito para acceder a un evento virtual?",
+        "¿Existen talleres en lé­nea para participar?"
+      ],
+      "links": {
+        "eventos_virtuales": "/eventos/virtuales",
+        "calendario_webinars": "/eventos/webinars",
+        "instrucciones_acceso": "/eventos/guia-acceso-virtual",
+        "grabaciones_anteriores": "/eventos/grabaciones",
+        "soporte_tecnico": "/eventos/soporte-virtual"
+      }
+    }
+  ],
+  "metadata": {
+    "version": "2.1",
+    "ultima_actualizacion": "2024-03-20",
+    "total_preguntas": 81,
+    "categorias": [
+      "Membresé­a",
+      "Eventos",
+      "Servicios",
+      "Legal",
+      "Formacié³n",
+      "Marketing",
+      "Networking",
+      "Recursos",
+      "Soporte",
+      "Innovacié³n",
+      "Certificados y Solicitudes",
+      "Documentos Empresariales",
+      "Asesoré­as y Consultoré­as",
+      "Renovacié³n de Trámites",
+      "Fechas y Recordatorios",
+      "Marcas y Propiedad Intelectual",
+      "Innovacié³n y Tecnologé­a",
+      "Feedback y Mejoras",
+      "Registro Mercantil",
+      "Matré­cula Mercantil",
+      "Propiedad Intelectual",
+      "Capacitacié³n",
+      "Financiamiento",
+      "Servicios Legales",
+      "Tarifas y Pagos"
+    ],
+    "canales_disponibles": [
+      "web",
+      "presencial",
+      "telefé³nico",
+      "email",
+      "chat",
+      "mé³vil",
+      "virtual"
+    ],
+    "estadisticas": {
+      "preguntas_por_categoria": {
+        "Membresé­a": 10,
+        "Eventos": 8,
+        "Servicios": 7,
+        "Legal": 5,
+        "Formacié³n": 4,
+        "Marketing": 3,
+        "Networking": 6,
+        "Recursos": 7,
+        "Soporte": 6,
+        "Innovacié³n": 4,
+        "Certificados y Solicitudes": 4,
+        "Documentos Empresariales": 2,
+        "Asesoré­as y Consultoré­as": 3,
+        "Renovacié³n de Trámites": 2,
+        "Fechas y Recordatorios": 1,
+        "Marcas y Propiedad Intelectual": 2,
+        "Innovacié³n y Tecnologé­a": 1,
+        "Feedback y Mejoras": 1,
+        "Registro Mercantil": 2,
+        "Matré­cula Mercantil": 2,
+        "Propiedad Intelectual": 1,
+        "Capacitacié³n": 1,
+        "Financiamiento": 1,
+        "Servicios Legales": 1,
+        "Tarifas y Pagos": 2
+      },
+      "relevancia_promedio": 4.2
+    }
+  }
+}
+

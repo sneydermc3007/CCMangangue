@@ -7,19 +7,18 @@
   </div>
 
   <div class="chat-messages">
-    <div *ngFor="let message of messages" 
-         [class.user-message]="message.sender === 'user'"
-         [class.bot-message]="message.sender === 'bot'"
-         class="message-container">
-      
+    <div *ngFor="let message of messages" [class.user-message]="message.sender === 'user'"
+      [class.bot-message]="message.sender === 'bot'" class="message-container">
+
       <div class="message-avatar">
-        <img [src]="message.sender === 'bot' ? botAvatar : userAvatar" 
-             [alt]="message.sender === 'bot' ? 'Bot Avatar' : 'User Avatar'">
+        <img [src]="message.sender === 'bot' ? botAvatar : userAvatar"
+          [alt]="message.sender === 'bot' ? 'Bot Avatar' : 'User Avatar'">
         <span class="sender-name">{{ message.sender === 'bot' ? 'Juancho' : 'Tú' }}</span>
       </div>
 
       <div class="message-content">
-        <p class="message-text">{{ message.text }}</p>
+        <p class="message-text" *ngIf="!message.htmlContent">{{ message.text }}</p>
+        <p class="message-text" *ngIf="message.htmlContent" [innerHTML]="message.htmlContent"></p>
         <span class="message-time">{{ message.timestamp | date:'shortTime' }}</span>
       </div>
     </div>
@@ -32,16 +31,9 @@
   </div>
 
   <div class="chat-input">
-    <textarea
-      [(ngModel)]="newMessage"
-      placeholder="Escribe tu mensaje aquí..."
-      (keydown)="handleKeyPress($event)"
-      [disabled]="isLoading"
-    ></textarea>
-    <button 
-      (click)="sendMessage()" 
-      [disabled]="!newMessage.trim() || isLoading"
-      class="send-button">
+    <textarea [(ngModel)]="newMessage" placeholder="Escribe tu mensaje aquí..." (keydown)="handleKeyPress($event)"
+      [disabled]="isLoading"></textarea>
+    <button (click)="sendMessage()" [disabled]="!newMessage.trim() || isLoading" class="send-button">
       <span *ngIf="!isLoading">Enviar</span>
       <span *ngIf="isLoading">...</span>
     </button>

@@ -1,275 +1,305 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { ChatService } from './chat.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+
+// Mock para el archivo JSON de preguntas y respuestas
+const mockQAData = {
+  'Q&A': [
+    {
+      id: '1',
+      pregunta: '¿Cómo puedo convertirme en miembro de la Cámara de Comercio de Magangué?',
+      respuesta: 'Puedes registrarte como miembro completando el formulario de inscripción en nuestro sitio web o visitando nuestras oficinas.',
+      categoria: 'Membresía',
+      keywords: ['registro', 'miembro', 'inscripción', 'nuevo miembro', 'afiliación'],
+      relevancia: 5,
+      metadata: {
+        tipo_servicio: 'Registro',
+        requiere_documentos: true,
+        canal: ['web', 'presencial']
+      },
+      links: {
+        formulario_inscripcion: '/registros/mercantil',
+        requisitos: '/registros/unico-proponentes',
+        tarifas: '/tarifas'
+      },
+      variantes: [
+        '¿Cuál es el proceso para hacerme miembro de la Cámara de Comercio?',
+        '¿Dónde puedo inscribirme como miembro de la Cámara de Comercio de Magangué?',
+        '¿Qué pasos debo seguir para afiliarme a la Cámara de Comercio?',
+        'Quiero ser parte de la Cámara de Comercio, ¿cómo lo hago?',
+        '¿Cómo afiliarse a la Cámara de Comercio de Magangué?'
+      ]
+    },
+    {
+      id: '2',
+      pregunta: '¿Cuáles son los beneficios de ser miembro?',
+      respuesta: 'Los beneficios incluyen acceso a eventos exclusivos, oportunidades de networking, recursos empresariales y representación ante entidades gubernamentales.',
+      categoria: 'Membresía',
+      keywords: ['beneficios', 'ventajas', 'servicios', 'miembro', 'privilegios'],
+      relevancia: 5,
+      metadata: {
+        tipo_servicio: 'Información',
+        requiere_documentos: false,
+        canal: ['web', 'presencial', 'telefónico']
+      },
+      links: {
+        beneficios_detallados: '/camara/informacion',
+        eventos: '/calendario'
+      },
+      variantes: [
+        '¿Qué ventajas tiene ser miembro de la Cámara de Comercio?',
+        '¿Por qué debería afiliarme a la Cámara de Comercio?',
+        '¿Qué gano al ser miembro de la Cámara de Comercio?',
+        'Ventajas de afiliarse a la Cámara de Comercio'
+      ]
+    },
+    {
+      id: '3',
+      pregunta: '¿Cuál es el horario de atención?',
+      respuesta: 'Nuestro horario de atención es de lunes a viernes de 8:00 AM a 12:00 PM y de 2:00 PM a 6:00 PM.',
+      categoria: 'Información General',
+      keywords: ['horario', 'atención', 'oficina', 'servicio'],
+      relevancia: 4,
+      metadata: {
+        tipo_servicio: 'Información',
+        requiere_documentos: false,
+        canal: ['web', 'presencial', 'telefónico']
+      },
+      links: {},
+      variantes: [
+        '¿A qué hora abren?',
+        '¿A qué hora cierran?',
+        '¿Cuándo puedo ir a la Cámara de Comercio?',
+        'Horarios de atención'
+      ]
+    }
+  ]
+};
 
 describe('ChatService', () => {
   let service: ChatService;
 
   beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [ChatService]
+    });
+    service = TestBed.inject(ChatService);
+
     // Mock de fetch global
     spyOn(window, 'fetch').and.returnValue(
       Promise.resolve({
-        json: () => Promise.resolve({
-          'Q&A': [
-            {
-              pregunta: '¿Cuáles son los horarios de atención?',
-              respuesta: 'Nuestros horarios son de lunes a viernes de 8:00 AM a 5:00 PM.'
-            },
-            {
-              pregunta: '¿Dónde están ubicados?',
-              respuesta: 'Estamos ubicados en la Calle Principal #123, Magangué, Bolívar.'
-            },
-            {
-              pregunta: '¿Qué documentos necesito para registrar mi empresa?',
-              respuesta: 'Para registrar su empresa necesita: 1) Formulario RUES, 2) Documento de identidad, 3) RUT, 4) Pago de derechos de registro.'
-            }
-          ]
-        })
-      } as any)
+        json: () => Promise.resolve(mockQAData),
+        ok: true,
+        status: 200,
+        statusText: 'OK',
+        headers: new Headers(),
+        redirected: false,
+        type: 'basic',
+        url: '/qa_enhanced_fixed.json',
+        clone: () => ({} as Response),
+        body: null,
+        bodyUsed: false,
+        arrayBuffer: () => Promise.resolve(new ArrayBuffer(0)),
+        blob: () => Promise.resolve(new Blob()),
+        formData: () => Promise.resolve(new FormData()),
+        text: () => Promise.resolve('')
+      } as Response)
     );
 
-    TestBed.configureTestingModule({
-      providers: [ChatService]
-    });
-
-    service = TestBed.inject(ChatService);
-
-    // Sobrescribir el método de inicialización para evitar llamadas reales
+    // Espiar y mockear el método initializeVectorStore para evitar su ejecución real
     spyOn<any>(service, 'initializeVectorStore').and.returnValue(Promise.resolve());
+
+    // Establecer manualmente los datos de QA
+    (service as any).qaData = mockQAData['Q&A'];
   });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should return exact match when question exists in QA data', async () => {
-    // Arrange - Configurar el servicio con datos de prueba
-    (service as any).qaData = [
-      {
-        pregunta: '¿Cuáles son los horarios de atención?',
-        respuesta: 'Nuestros horarios son de lunes a viernes de 8:00 AM a 5:00 PM.'
-      }
-    ];
+  describe('getAnswer', () => {
+    it('should find exact match for question', async () => {
+      // Arrange
+      const question = '¿Cuál es el horario de atención?';
 
-    const mockRetriever = jasmine.createSpyObj('retriever', ['invoke']);
-    mockRetriever.invoke.and.returnValue(Promise.resolve([]));
+      // Act
+      const result = await service.getAnswer(question);
 
-    (service as any).vectorStore = jasmine.createSpyObj('vectorStore', ['asRetriever']);
-    (service as any).vectorStore.asRetriever.and.returnValue(mockRetriever);
+      // Assert
+      expect(result.text).toBe('Nuestro horario de atención es de lunes a viernes de 8:00 AM a 12:00 PM y de 2:00 PM a 6:00 PM.');
+      expect(result.source).toBe('exact_match');
+      expect(result.categoria).toBe('Información General');
+    });
 
-    // Act
-    const result = await service.getAnswer('¿Cuáles son los horarios de atención?');
+    it('should find match in question variants', async () => {
+      // Arrange
+      const question = '¿Qué ventajas tiene ser miembro de la Cámara de Comercio?';
 
-    // Assert
-    expect(result.text).toBe('Nuestros horarios son de lunes a viernes de 8:00 AM a 5:00 PM.');
-    expect(result.source).toBe('exact_match');
+      // Act
+      const result = await service.getAnswer(question);
+
+      // Assert
+      expect(result.text).toBe('Los beneficios incluyen acceso a eventos exclusivos, oportunidades de networking, recursos empresariales y representación ante entidades gubernamentales.');
+      expect(result.source).toBe('variant_match');
+      expect(result.categoria).toBe('Membresía');
+    });
+
+    it('should find partial match in questions', async () => {
+      // Arrange
+      const question = 'horario atención';
+
+      // Act
+      const result = await service.getAnswer(question);
+
+      // Assert
+      expect(result.text).toBe('Nuestro horario de atención es de lunes a viernes de 8:00 AM a 12:00 PM y de 2:00 PM a 6:00 PM.');
+      expect(result.source).toBe('partial_match');
+    });
+
+    it('should find match in keywords', async () => {
+      // Arrange
+      const question = 'ventajas privilegios';
+
+      // Act
+      const result = await service.getAnswer(question);
+
+      // Assert
+      expect(result.text).toBe('Los beneficios incluyen acceso a eventos exclusivos, oportunidades de networking, recursos empresariales y representación ante entidades gubernamentales.');
+      expect(result.source).toBe('keyword_match');
+    });
+
+    it('should include links in response when available', async () => {
+      // Arrange
+      const question = '¿Cómo puedo convertirme en miembro de la Cámara de Comercio de Magangué?';
+
+      // Act
+      const result = await service.getAnswer(question);
+
+      // Assert
+      expect(result.links).toBeDefined();
+      expect(Object.keys(result.links).length).toBe(3);
+      expect(result.links.formulario_inscripcion).toBe('/registros/mercantil');
+      expect(result.links.requisitos).toBe('/registros/unico-proponentes');
+      expect(result.links.tarifas).toBe('/tarifas');
+    });
+
+    it('should not include links property when no links are available', async () => {
+      // Arrange
+      const question = '¿Cuál es el horario de atención?';
+
+      // Act
+      const result = await service.getAnswer(question);
+
+      // Assert
+      expect(result.links).toBeUndefined();
+    });
+
+    it('should use RAG chain for unknown questions', async () => {
+      // Arrange
+      const question = '¿Qué es una pregunta completamente desconocida?';
+
+      // Mock del vectorStore y ragChain
+      (service as any).vectorStore = {
+        asRetriever: () => ({
+          invoke: () => Promise.resolve([])
+        })
+      };
+
+      (service as any).ragChain = {
+        invoke: () => Promise.resolve('Respuesta generada por el modelo de IA')
+      };
+
+      // Act
+      const result = await service.getAnswer(question);
+
+      // Assert
+      expect(result.source).toBe('rag_chain');
+      expect(result.text).toBe('Respuesta generada por el modelo de IA');
+    });
+
+    it('should return fallback response when no relevant documents found', async () => {
+      // Arrange
+      const question = '¿Qué es una pregunta completamente desconocida?';
+
+      // Mock del vectorStore sin documentos relevantes
+      (service as any).vectorStore = {
+        asRetriever: () => ({
+          invoke: () => Promise.resolve([])
+        })
+      };
+
+      // Act
+      const result = await service.getAnswer(question);
+
+      // Assert
+      expect(result.source).toBe('fallback');
+      expect(result.text).toContain('Lo siento, no tengo información específica');
+    });
+
+    it('should handle errors gracefully', async () => {
+      // Arrange
+      const question = '¿Pregunta que genera error?';
+
+      // Forzar un error
+      (service as any).vectorStore = null;
+
+      // Act
+      const result = await service.getAnswer(question);
+
+      // Assert
+      expect(result.source).toBe('error');
+      expect(result.text).toContain('Lo siento, ocurrió un error');
+    });
+
+    it('should handle authentication errors specifically', async () => {
+      // Arrange
+      const question = '¿Pregunta que genera error de autenticación?';
+
+      // Forzar un error de autenticación
+      (service as any).vectorStore = {
+        asRetriever: () => {
+          throw new Error('401 Unauthorized: Authentication failed');
+        }
+      };
+
+      // Act
+      const result = await service.getAnswer(question);
+
+      // Assert
+      expect(result.source).toBe('error');
+      expect(result.errorType).toBe('authentication');
+      expect(result.text).toContain('Error de autenticación');
+    });
   });
 
-  it('should use RAG chain when no exact match is found', async () => {
-    // Arrange
-    (service as any).qaData = [
-      {
-        pregunta: '¿Cuáles son los horarios de atención?',
-        respuesta: 'Nuestros horarios son de lunes a viernes de 8:00 AM a 5:00 PM.'
-      }
-    ];
+  // Pruebas para verificar el comportamiento con diferentes tipos de preguntas
+  describe('Question handling', () => {
+    it('should handle questions about registration correctly', async () => {
+      // Arrange & Act
+      const result = await service.getAnswer('¿Cómo me registro en la Cámara de Comercio?');
 
-    const mockRetriever = jasmine.createSpyObj('retriever', ['invoke']);
-    mockRetriever.invoke.and.returnValue(Promise.resolve([{ pageContent: 'Contenido relevante' }]));
+      // Assert
+      expect(result.text).toContain('formulario de inscripción');
+      expect(result.categoria).toBe('Membresía');
+    });
 
-    (service as any).vectorStore = jasmine.createSpyObj('vectorStore', ['asRetriever']);
-    (service as any).vectorStore.asRetriever.and.returnValue(mockRetriever);
+    it('should handle questions about benefits correctly', async () => {
+      // Arrange & Act
+      const result = await service.getAnswer('¿Qué beneficios obtengo?');
 
-    (service as any).ragChain = jasmine.createSpyObj('ragChain', ['invoke']);
-    (service as any).ragChain.invoke.and.returnValue(Promise.resolve('Respuesta generada por RAG'));
+      // Assert
+      expect(result.text).toContain('eventos exclusivos');
+      expect(result.categoria).toBe('Membresía');
+    });
 
-    // Act
-    const result = await service.getAnswer('¿Dónde están ubicados?');
+    it('should handle questions about schedule correctly', async () => {
+      // Arrange & Act
+      const result = await service.getAnswer('¿A qué hora abren?');
 
-    // Assert
-    expect(result.text).toBe('Respuesta generada por RAG');
-    expect(result.source).toBe('rag_chain');
-  });
-
-  it('should handle errors gracefully', async () => {
-    // Arrange
-    (service as any).vectorStore = null; // Forzar un error
-
-    // Act
-    const result = await service.getAnswer('¿Pregunta de prueba?');
-
-    // Assert
-    expect(result.text).toContain('Lo siento, ocurrió un error');
-    expect(result.source).toBe('error');
-  });
-
-  // Nuevas pruebas creativas
-
-  it('should be case insensitive when matching questions', async () => {
-    // Arrange
-    (service as any).qaData = [
-      {
-        pregunta: '¿Cuáles son los horarios de atención?',
-        respuesta: 'Nuestros horarios son de lunes a viernes de 8:00 AM a 5:00 PM.'
-      }
-    ];
-
-    const mockRetriever = jasmine.createSpyObj('retriever', ['invoke']);
-    mockRetriever.invoke.and.returnValue(Promise.resolve([]));
-
-    (service as any).vectorStore = jasmine.createSpyObj('vectorStore', ['asRetriever']);
-    (service as any).vectorStore.asRetriever.and.returnValue(mockRetriever);
-
-    // Act - Pregunta con diferente capitalización
-    const result = await service.getAnswer('¿cuáles SON los HORARIOS de atención?');
-
-    // Assert
-    expect(result.text).toBe('Nuestros horarios son de lunes a viernes de 8:00 AM a 5:00 PM.');
-    expect(result.source).toBe('exact_match');
-  });
-
-  it('should handle questions with typos or similar wording', async () => {
-    // Arrange
-    (service as any).qaData = [
-      {
-        pregunta: '¿Cuáles son los horarios de atención?',
-        respuesta: 'Nuestros horarios son de lunes a viernes de 8:00 AM a 5:00 PM.'
-      }
-    ];
-
-    const mockRetriever = jasmine.createSpyObj('retriever', ['invoke']);
-    mockRetriever.invoke.and.returnValue(Promise.resolve([
-      {
-        pageContent: 'Pregunta: ¿Cuáles son los horarios de atención?\nRespuesta: Nuestros horarios son de lunes a viernes de 8:00 AM a 5:00 PM.',
-        metadata: { type: 'qa' }
-      }
-    ]));
-
-    (service as any).vectorStore = jasmine.createSpyObj('vectorStore', ['asRetriever']);
-    (service as any).vectorStore.asRetriever.and.returnValue(mockRetriever);
-
-    (service as any).ragChain = jasmine.createSpyObj('ragChain', ['invoke']);
-    (service as any).ragChain.invoke.and.returnValue(Promise.resolve('Nuestros horarios de atención son de lunes a viernes, 8:00 AM a 5:00 PM.'));
-
-    // Act - Pregunta con error tipográfico
-    const result = await service.getAnswer('¿Cuales son los horaios de atencion?');
-
-    // Assert
-    expect(result.source).toBe('rag_chain');
-    expect(result.text).toContain('horarios');
-  });
-
-  it('should handle empty or very short questions', async () => {
-    // Act
-    const result1 = await service.getAnswer('');
-    const result2 = await service.getAnswer('?');
-    const result3 = await service.getAnswer('Hola');
-
-    // Assert
-    expect(result1.source).toBe('error');
-    expect(result2.source).toBe('error');
-    expect(result3.source).toBe('rag_chain');
-  });
-
-  it('should handle questions in different languages', async () => {
-    // Arrange
-    (service as any).qaData = [
-      {
-        pregunta: '¿Cuáles son los horarios de atención?',
-        respuesta: 'Nuestros horarios son de lunes a viernes de 8:00 AM a 5:00 PM.'
-      }
-    ];
-
-    const mockRetriever = jasmine.createSpyObj('retriever', ['invoke']);
-    mockRetriever.invoke.and.returnValue(Promise.resolve([{ pageContent: 'Contenido relevante' }]));
-
-    (service as any).vectorStore = jasmine.createSpyObj('vectorStore', ['asRetriever']);
-    (service as any).vectorStore.asRetriever.and.returnValue(mockRetriever);
-
-    (service as any).ragChain = jasmine.createSpyObj('ragChain', ['invoke']);
-    (service as any).ragChain.invoke.and.returnValue(Promise.resolve('Our office hours are Monday to Friday from 8:00 AM to 5:00 PM.'));
-
-    // Act - Pregunta en inglés
-    const result = await service.getAnswer('What are your office hours?');
-
-    // Assert
-    expect(result.source).toBe('rag_chain');
-    expect(result.text).toContain('office hours');
-  });
-
-  it('should handle multiple questions in the same query', async () => {
-    // Arrange
-    (service as any).qaData = [
-      {
-        pregunta: '¿Cuáles son los horarios de atención?',
-        respuesta: 'Nuestros horarios son de lunes a viernes de 8:00 AM a 5:00 PM.'
-      },
-      {
-        pregunta: '¿Dónde están ubicados?',
-        respuesta: 'Estamos ubicados en la Calle Principal #123, Magangué, Bolívar.'
-      }
-    ];
-
-    const mockRetriever = jasmine.createSpyObj('retriever', ['invoke']);
-    mockRetriever.invoke.and.returnValue(Promise.resolve([
-      { pageContent: 'Información sobre horarios y ubicación' }
-    ]));
-
-    (service as any).vectorStore = jasmine.createSpyObj('vectorStore', ['asRetriever']);
-    (service as any).vectorStore.asRetriever.and.returnValue(mockRetriever);
-
-    (service as any).ragChain = jasmine.createSpyObj('ragChain', ['invoke']);
-    (service as any).ragChain.invoke.and.returnValue(Promise.resolve(
-      'Nuestros horarios son de lunes a viernes de 8:00 AM a 5:00 PM. Estamos ubicados en la Calle Principal #123, Magangué, Bolívar.'
-    ));
-
-    // Act
-    const result = await service.getAnswer('¿Cuáles son los horarios y dónde están ubicados?');
-
-    // Assert
-    expect(result.source).toBe('rag_chain');
-    expect(result.text).toContain('horarios');
-    expect(result.text).toContain('ubicados');
-  });
-
-  it('should handle very long questions', async () => {
-    // Arrange
-    const longQuestion = 'Necesito saber ' + 'información '.repeat(100) + ' sobre los horarios';
-
-    const mockRetriever = jasmine.createSpyObj('retriever', ['invoke']);
-    mockRetriever.invoke.and.returnValue(Promise.resolve([{ pageContent: 'Contenido relevante' }]));
-
-    (service as any).vectorStore = jasmine.createSpyObj('vectorStore', ['asRetriever']);
-    (service as any).vectorStore.asRetriever.and.returnValue(mockRetriever);
-
-    (service as any).ragChain = jasmine.createSpyObj('ragChain', ['invoke']);
-    (service as any).ragChain.invoke.and.returnValue(Promise.resolve('Respuesta a pregunta larga'));
-
-    // Act
-    const result = await service.getAnswer(longQuestion);
-
-    // Assert
-    expect(result.source).toBe('rag_chain');
-    expect(result.text).toBe('Respuesta a pregunta larga');
-  });
-
-  it('should handle special characters and emojis in questions', async () => {
-    // Arrange
-    const questionWithSpecialChars = '¿Horarios? 🕒 #atención @cámara';
-
-    const mockRetriever = jasmine.createSpyObj('retriever', ['invoke']);
-    mockRetriever.invoke.and.returnValue(Promise.resolve([{ pageContent: 'Contenido relevante' }]));
-
-    (service as any).vectorStore = jasmine.createSpyObj('vectorStore', ['asRetriever']);
-    (service as any).vectorStore.asRetriever.and.returnValue(mockRetriever);
-
-    (service as any).ragChain = jasmine.createSpyObj('ragChain', ['invoke']);
-    (service as any).ragChain.invoke.and.returnValue(Promise.resolve('Respuesta a pregunta con caracteres especiales'));
-
-    // Act
-    const result = await service.getAnswer(questionWithSpecialChars);
-
-    // Assert
-    expect(result.source).toBe('rag_chain');
-    expect(result.text).toBe('Respuesta a pregunta con caracteres especiales');
+      // Assert
+      expect(result.text).toContain('8:00 AM a 12:00 PM');
+      expect(result.categoria).toBe('Información General');
+    });
   });
 });

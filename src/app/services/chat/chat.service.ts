@@ -23,6 +23,7 @@ interface QAItem {
   relevancia?: number;
   metadata?: any;
   variantes?: string[];
+  links?: {[key: string]: string};
 }
 
 // Clase personalizada para usar nuestro servidor proxy
@@ -390,7 +391,8 @@ export class ChatService {
         return {
           text: exactMatch.respuesta,
           source: 'exact_match',
-          categoria: exactMatch.categoria || 'General'
+          categoria: exactMatch.categoria || 'General',
+          links: exactMatch.links || {}
         };
       }
 
@@ -408,7 +410,8 @@ export class ChatService {
         return {
           text: variantMatch.respuesta,
           source: 'variant_match',
-          categoria: variantMatch.categoria || 'General'
+          categoria: variantMatch.categoria || 'General',
+          links: variantMatch.links || {}
         };
       }
 
@@ -434,7 +437,8 @@ export class ChatService {
         return {
           text: bestPartialMatch.respuesta,
           source: 'partial_match',
-          categoria: bestPartialMatch.categoria || 'General'
+          categoria: bestPartialMatch.categoria || 'General',
+          links: bestPartialMatch.links || {}
         };
       }
 
@@ -481,7 +485,8 @@ export class ChatService {
         return {
           text: bestKeywordMatch.respuesta,
           source: 'keyword_match',
-          categoria: bestKeywordMatch.categoria || 'General'
+          categoria: bestKeywordMatch.categoria || 'General',
+          links: bestKeywordMatch.links || {}
         };
       }
 
@@ -520,11 +525,21 @@ export class ChatService {
         context: relevantDocs
       });
 
+      // Extraer enlaces de los documentos relevantes
+      const links: Record<string, string> = {};
+      relevantDocs.forEach(doc => {
+        if (doc.metadata && doc.metadata['links']) {
+          // Combinar los enlaces de todos los documentos relevantes
+          Object.assign(links, doc.metadata['links']);
+        }
+      });
+
       console.log('Respuesta generada por RAG chain');
       return {
         text: response || 'Lo siento, no pude generar una respuesta.',
         source: 'rag_chain',
-        documentos: relevantDocs.length
+        documentos: relevantDocs.length,
+        links: Object.keys(links).length > 0 ? links : undefined
       };
 
     } catch (error: any) {

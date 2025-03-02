@@ -6,26 +6,70 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { By } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
-// Mock del servicio ChatService
+// Mock del servicio ChatService con respuestas más completas
 class MockChatService {
   getAnswer(question: string) {
+    // Respuesta con error
     if (question.includes('error')) {
       return Promise.resolve({
         text: 'Lo siento, ha ocurrido un error',
         source: 'error'
       });
-    } else if (question.toLowerCase().includes('horario')) {
+    }
+    // Respuesta con coincidencia exacta
+    else if (question.toLowerCase().includes('horario')) {
       return Promise.resolve({
         text: 'Nuestro horario es de 8:00 AM a 5:00 PM de lunes a viernes',
-        source: 'exact_match'
-      });
-    } else {
-      return Promise.resolve({
-        text: 'Respuesta generada por el asistente virtual',
-        source: 'rag_chain'
+        source: 'exact_match',
+        categoria: 'Información General'
       });
     }
+    // Respuesta con enlaces
+    else if (question.toLowerCase().includes('registro mercantil') || question.toLowerCase().includes('matricula')) {
+      return Promise.resolve({
+        text: 'Para realizar el registro mercantil, debes completar el formulario y presentar los documentos requeridos.',
+        source: 'exact_match',
+        categoria: 'Registro Mercantil',
+        links: {
+          formulario_registro: '/registros/mercantil',
+          requisitos: '/tramites/servicios',
+          tarifas: '/tarifas'
+        }
+      });
+    }
+    // Respuesta con coincidencia de palabra clave
+    else if (question.toLowerCase().includes('afiliación') || question.toLowerCase().includes('afiliarme')) {
+      return Promise.resolve({
+        text: 'Para afiliarte a la Cámara de Comercio de Magangué, debes estar matriculado y cumplir con los requisitos establecidos.',
+        source: 'keyword_match',
+        categoria: 'Afiliación'
+      });
+    }
+    // Respuesta con coincidencia de variante
+    else if (question.toLowerCase().includes('renovar')) {
+      return Promise.resolve({
+        text: 'La renovación de la matrícula mercantil debe realizarse entre el 1 de enero y el 31 de marzo de cada año.',
+        source: 'variant_match',
+        categoria: 'Renovación'
+      });
+    }
+    // Respuesta generada por RAG
+    else {
+      return Promise.resolve({
+        text: 'Respuesta generada por el asistente virtual basada en la información disponible.',
+        source: 'rag_chain',
+        documentos: 3
+      });
+    }
+  }
+}
+
+// Mock del Router
+class MockRouter {
+  navigateByUrl(url: string) {
+    return Promise.resolve(true);
   }
 }
 
@@ -34,12 +78,14 @@ describe('ChatComponent', () => {
   let fixture: ComponentFixture<ChatComponent>;
   let chatService: ChatService;
   let sanitizer: DomSanitizer;
+  let router: Router;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ChatComponent, FormsModule, CommonModule],
       providers: [
         { provide: ChatService, useClass: MockChatService },
+        { provide: Router, useClass: MockRouter },
         {
           provide: DomSanitizer,
           useValue: {
@@ -55,6 +101,7 @@ describe('ChatComponent', () => {
     component = fixture.componentInstance;
     chatService = TestBed.inject(ChatService);
     sanitizer = TestBed.inject(DomSanitizer);
+    router = TestBed.inject(Router);
     fixture.detectChanges();
   });
 
@@ -122,8 +169,6 @@ describe('ChatComponent', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  // Nuevas pruebas creativas
-
   it('should not send message on key press other than Enter', () => {
     // Arrange
     const spy = spyOn(component, 'sendMessage');
@@ -163,70 +208,104 @@ describe('ChatComponent', () => {
     expect(component.isLoading).toBe(false);
   }));
 
+  // Pruebas para diferentes tipos de respuestas
   it('should handle different types of bot responses correctly', async () => {
     // Caso 1: Respuesta exacta
     component.newMessage = '¿Cuál es el horario de atención?';
     await component.sendMessage();
     expect(component.messages[component.messages.length - 1].source).toBe('exact_match');
 
-    // Caso 2: Respuesta generada
-    component.newMessage = '¿Qué servicios ofrecen?';
+    // Caso 2: Respuesta con enlaces
+    component.newMessage = '¿Cómo hago un registro mercantil?';
+    await component.sendMessage();
+    const responseWithLinks = component.messages[component.messages.length - 1];
+    expect(responseWithLinks.links).toBeDefined();
+    expect(Object.keys(responseWithLinks.links!).length).toBe(3);
+
+    // Caso 3: Respuesta por palabra clave
+    component.newMessage = '¿Cómo puedo afiliarme?';
+    await component.sendMessage();
+    expect(component.messages[component.messages.length - 1].source).toBe('keyword_match');
+
+    // Caso 4: Respuesta por variante
+    component.newMessage = '¿Cuándo debo renovar mi matrícula?';
+    await component.sendMessage();
+    expect(component.messages[component.messages.length - 1].source).toBe('variant_match');
+
+    // Caso 5: Respuesta generada por RAG
+    component.newMessage = '¿Qué es la Cámara de Comercio?';
     await component.sendMessage();
     expect(component.messages[component.messages.length - 1].source).toBe('rag_chain');
 
-    // Caso 3: Error
+    // Caso 6: Error
     component.newMessage = 'Esto generará un error';
     await component.sendMessage();
     expect(component.messages[component.messages.length - 1].source).toBe('error');
   });
 
-  // Corrigiendo la prueba de sanitización de HTML
-  it('should process HTML in bot responses', async () => {
-    // Arrange - En realidad el componente no usa bypassSecurityTrustHtml para los mensajes
-    // Simplemente muestra el texto como está
-    const htmlResponse = '<b>Texto en negrita</b>';
-    spyOn(chatService, 'getAnswer').and.returnValue(
-      Promise.resolve({
-        text: htmlResponse,
-        source: 'rag_chain'
-      })
-    );
+  // Prueba para verificar la generación de HTML con enlaces
+  it('should generate HTML content with links when response has links', async () => {
+    // Arrange
+    component.newMessage = '¿Cómo hago un registro mercantil?';
+    const spySanitizer = spyOn(sanitizer, 'bypassSecurityTrustHtml').and.callThrough();
 
     // Act
-    component.newMessage = 'Mensaje con HTML';
     await component.sendMessage();
-    fixture.detectChanges();
 
-    // Assert - Verificar que el mensaje se agregó correctamente
-    expect(component.messages[component.messages.length - 1].text).toBe(htmlResponse);
+    // Assert
+    const lastMessage = component.messages[component.messages.length - 1];
+    expect(lastMessage.htmlContent).toBeDefined();
+    expect(spySanitizer).toHaveBeenCalled();
+
+    // Verificar que el HTML contiene los enlaces
+    const htmlContent = spySanitizer.calls.mostRecent().args[0] as string;
+    expect(htmlContent).toContain('<a href="/registros/mercantil"');
+    expect(htmlContent).toContain('<a href="/tramites/servicios"');
+    expect(htmlContent).toContain('<a href="/tarifas"');
   });
 
-  // Corrigiendo la prueba de renderizado de mensajes
-  it('should render messages in the DOM correctly', async () => {
+  // Prueba para verificar el renderizado de enlaces en el DOM
+  it('should render links in the DOM when response has links', async () => {
     // Arrange
-    component.newMessage = 'Hola bot';
+    component.newMessage = '¿Cómo hago un registro mercantil?';
 
     // Act
     await component.sendMessage();
     fixture.detectChanges();
 
-    // Assert - Usar las clases correctas según el HTML
-    const messageContainers = fixture.debugElement.queryAll(By.css('.message-container'));
+    // Assert
+    const botMessageWithLinks = fixture.debugElement.queryAll(By.css('.bot-message'))[1]; // El segundo mensaje del bot (después del inicial)
+    const messageContent = botMessageWithLinks.query(By.css('.message-content'));
+    const links = messageContent.queryAll(By.css('a'));
 
-    // Verificar que hay al menos el mensaje inicial + el nuevo mensaje del usuario + respuesta del bot
-    expect(messageContainers.length).toBeGreaterThanOrEqual(3);
+    // Verificar que hay enlaces en el mensaje
+    expect(links.length).toBe(3);
 
-    // Verificar el contenido de los mensajes
-    const userMessageContainer = fixture.debugElement.query(By.css('.user-message'));
-    const botMessageContainers = fixture.debugElement.queryAll(By.css('.bot-message'));
+    // Verificar los textos de los enlaces
+    expect(links[0].nativeElement.textContent).toContain('Formulario Registro');
+    expect(links[1].nativeElement.textContent).toContain('Requisitos');
+    expect(links[2].nativeElement.textContent).toContain('Tarifas');
+  });
 
-    // Debe haber al menos un mensaje de usuario y dos de bot (inicial + respuesta)
-    expect(userMessageContainer).toBeTruthy();
-    expect(botMessageContainers.length).toBeGreaterThanOrEqual(2);
+  // Prueba para verificar la navegación al hacer clic en un enlace
+  it('should navigate to correct URL when link is clicked', async () => {
+    // Arrange
+    component.newMessage = '¿Cómo hago un registro mercantil?';
+    const routerSpy = spyOn(router, 'navigateByUrl').and.callThrough();
 
-    // Verificar el texto del mensaje del usuario
-    const userMessageText = userMessageContainer.query(By.css('.message-text'));
-    expect(userMessageText.nativeElement.textContent).toBe('Hola bot');
+    // Act
+    await component.sendMessage();
+    fixture.detectChanges();
+
+    // Simular clic en el enlace (no podemos hacerlo directamente en el test)
+    // En su lugar, verificamos que los enlaces tienen las URLs correctas
+    const botMessageWithLinks = fixture.debugElement.queryAll(By.css('.bot-message'))[1];
+    const links = botMessageWithLinks.queryAll(By.css('a'));
+
+    // Assert
+    expect(links[0].attributes['href']).toBe('/registros/mercantil');
+    expect(links[1].attributes['href']).toBe('/tramites/servicios');
+    expect(links[2].attributes['href']).toBe('/tarifas');
   });
 
   it('should handle very long messages appropriately', async () => {

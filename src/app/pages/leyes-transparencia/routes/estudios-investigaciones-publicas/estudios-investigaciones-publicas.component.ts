@@ -4,6 +4,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { TableModule } from 'primeng/table';
 
 import { SharedModule } from '../../../../shared/shared.module';
+import { link } from 'fs';
 
 @Component({
   selector: 'app-estudios-investigaciones-publicas',

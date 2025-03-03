@@ -6,9 +6,13 @@
     </button>
   </div>
 
-  <div class="chat-messages">
-    <div *ngFor="let message of messages" [class.user-message]="message.sender === 'user'"
-      [class.bot-message]="message.sender === 'bot'" class="message-container">
+  <div class="chat-messages" #chatMessagesContainer>
+    <div *ngFor="let message of messages; let i = index" 
+      [class.user-message]="message.sender === 'user'"
+      [class.bot-message]="message.sender === 'bot'" 
+      [class.clarification-message]="message.isClarification"
+      [attr.data-index]="i"
+      class="message-container">
 
       <div class="message-avatar">
         <img [src]="message.sender === 'bot' ? botAvatar : userAvatar"
@@ -17,8 +21,13 @@
       </div>
 
       <div class="message-content">
-        <p class="message-text" *ngIf="!message.htmlContent">{{ message.text }}</p>
-        <p class="message-text" *ngIf="message.htmlContent" [innerHTML]="message.htmlContent"></p>
+        <div *ngIf="message.isClarification && message.sender === 'user'" class="clarification-indicator">
+          <span class="clarification-icon">🔄</span>
+          <span class="clarification-text">Aclaración</span>
+        </div>
+        <p class="message-text" *ngIf="!message.htmlContent && message.text">{{ message.text }}</p>
+        <div class="message-text" *ngIf="message.htmlContent" [innerHTML]="message.htmlContent"></div>
+        <span *ngIf="message.isTyping" class="typing-cursor"></span>
         <span class="message-time">{{ message.timestamp | date:'shortTime' }}</span>
       </div>
     </div>
@@ -31,8 +40,15 @@
   </div>
 
   <div class="chat-input">
-    <textarea [(ngModel)]="newMessage" placeholder="Escribe tu mensaje aquí..." (keydown)="handleKeyPress($event)"
-      [disabled]="isLoading"></textarea>
+    <textarea 
+      #messageTextarea
+      [(ngModel)]="newMessage" 
+      placeholder="Escribe tu mensaje aquí..." 
+      (keydown)="handleKeyPress($event)"
+      (input)="adjustTextareaHeight($event)"
+      [disabled]="isLoading"
+      rows="1">
+    </textarea>
     <button (click)="sendMessage()" [disabled]="!newMessage.trim() || isLoading" class="send-button">
       <span *ngIf="!isLoading">Enviar</span>
       <span *ngIf="isLoading">...</span>

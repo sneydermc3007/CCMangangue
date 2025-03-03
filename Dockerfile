@@ -19,9 +19,13 @@ WORKDIR /usr/app
 # Copiar la carpeta de salida de la etapa de construcción
 COPY --from=build /app/dist/camara-comercio ./dist
 
-# Instalar únicamente dependencias de producción
+# Copiar archivos necesarios para la ejecución
 COPY package*.json ./
 RUN npm ci --only=production
+
+# Configurar variables de entorno
+ENV PORT=4000
+ENV NODE_ENV=production
 
 # Comando para iniciar la aplicación SSR
 CMD ["node", "dist/server/server.mjs"]

@@ -47,6 +47,7 @@ export const routes: Routes = [
     children: [
       { path: '', loadComponent: () => import('./pages/tramites/tramites.component').then(m => m.TramitesComponent) },
       { path: 'servicios', loadComponent: () => import('./pages/tramites/routes/servicios/servicios.component').then(m => m.ServiciosComponent) },
+      { path: 'servicios/:titulo', loadComponent: () => import('./pages/tramites/routes/servicios/servicios.component').then(m => m.ServiciosComponent) },
       { path: 'linea', loadComponent: () => import('./pages/tramites/routes/tramites-linea/tramites-linea.component').then(m => m.TramitesLineaComponent) },
     ]
   },

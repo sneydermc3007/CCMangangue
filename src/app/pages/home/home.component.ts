@@ -165,7 +165,7 @@ export class HomeComponent implements OnInit {
     { title: 'Crea tu Empresa Aquí', url: 'servicios-virtuales/empresa' },
     { title: 'Modelo de Actas y Documentos', url: 'actas-documentos' },
     { title: 'Conoce Nuestros Registros', url: 'tramites/servicios' },
-    { title: 'Crea tu Empresa en Linea', url: 'https://www.vue.gov.co/' },
+    { title: 'Crea tu Empresa en Linea', url: 'tramites/linea' },
     { title: 'Consulta de expedientes', url: 'registros/consulta-expedientes' },
     { title: 'Radica Aquí PQRSF', url: 'http://ccmagangue.docxflow.com/public/sucursal' },
   ];

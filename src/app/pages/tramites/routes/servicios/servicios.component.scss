@@ -35,6 +35,18 @@ section {
             border-bottom: 5px solid $quaternary-color;
             border-radius: 10px;
 
+            &.p-highlight {
+                .p-panelmenu-header-content {
+                    padding: 1rem;
+                    background-color: $quaternary-color;
+                    border-radius: 5px;
+                    border: none;
+                    transition: max-height 0.5s ease, opacity 0.5s ease;
+                    
+                    a { color: $white; }
+                }
+            }
+
             &-content:hover {
                 padding: 1rem;
                 background-color: $quaternary-color;

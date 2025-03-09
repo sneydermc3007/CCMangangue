@@ -91,6 +91,10 @@ export class HeaderComponent {
   public goHome() {
     this.router.navigate(['/']);
   }
+  
+  openExternalLink() {
+    window.open('https://www.vue.gov.co/', '_blank');
+  }
 
   toggleSidebar() {
     this.sideBarVisible = !this.sideBarVisible;

@@ -92,8 +92,8 @@ export class HeaderComponent {
     this.router.navigate(['/']);
   }
   
-  openExternalLink() {
-    window.open('https://www.vue.gov.co/', '_blank');
+  openExternalLink(url : string) {
+    window.open(url, '_blank');
   }
 
   toggleSidebar() {

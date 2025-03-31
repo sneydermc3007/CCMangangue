@@ -51,8 +51,9 @@
         </nav>
     </div>
     <div class="right-segment">
-        <p-button (click)="openExternalLink()" styleClass="tramites" label="Trámites en línea" />
+        <p-button (click)="openExternalLink('https://www.vue.gov.co/')" styleClass="tramites" label="Trámites en línea" />
         <p-button routerLink="/renovar" styleClass="renovar" label="Renovar Ahora" />
+        <p-button (click)="openExternalLink('http://consultas.ccmagangue.org.co/')" styleClass="consultas" label="Consultas" />
     </div>
 
     <button style="display: none;" (click)="toggleSidebar()">
@@ -62,8 +63,9 @@
 
 <p-sidebar [(visible)]="sideBarVisible" [baseZIndex]="10000" [modal]="true" [dismissable]="true" position="left">    
     <div class="top-segment">
-        <p-button routerLink="/tramites/linea" styleClass="tramites" label="Trámites en línea"></p-button>
+        <p-button (click)="openExternalLink('https://www.vue.gov.co/')" styleClass="tramites" label="Trámites en línea"></p-button>
         <p-button routerLink="/renovar" styleClass="renovar" label="Renovar Ahora"></p-button>
+        <p-button (click)="openExternalLink('http://consultas.ccmagangue.org.co/')" styleClass="consultas" label="Consultas" />
     </div>
     
     <nav>

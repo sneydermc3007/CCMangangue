@@ -159,6 +159,11 @@ header {
     &.p-button { background: $quaternary-color; }
   }
 
+  .consultas {
+    &.p-button { background: #FF8000 }
+    animation: wobble 3s ease-in-out infinite;
+  }
+
   .p-button {
     position: relative;
     padding: 10px 20px;
@@ -272,6 +277,12 @@ header {
 @keyframes grow {
   0% { transform: scale(1); }
   100% { transform: scale(1.2); }
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
 }
 
 @media screen and (max-width: 974px) and (min-width: 768px) {

@@ -60,6 +60,7 @@ main {
   }
 }
 
-:host ::ng-deep .custom-carousel {
-  max-width: 1400px;
+:host ::ng-deep p-carousel {
+  width: 100%;
+  .custom-carousel { max-width: 1400px; }
 }

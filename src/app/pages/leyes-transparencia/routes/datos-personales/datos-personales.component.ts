@@ -24,7 +24,7 @@ export class DatosPersonalesComponent {
     { nombre: 'Clausula Formación Empresarial', url: 'pdfs/ClausulaFormacionEmpresarial.pdf'},
     { nombre: 'Documento de seguridad de la Cámara de Comercio', url: 'pdfs/DocumentoSeguridadCC.pdf'},
     { nombre: 'Formato de Solicitud de Bases de Datos Empresarial a la Medida', url: 'pdfs/FormatoSolicitudDB_Empresarial.pdf'},
-    { nombre: 'Manual de Políticas y Procedimientos de Protección de Datos Personales', url: 'pdfs/ManualPoliticasProcedimientosProteccion.pdf'},
+    { nombre: 'Política de Seguridad de la Información Cámara de Comercio de Magangué.', url: 'pdfs/ManualPoliticasProcedimientosProteccion.pdf'},
     { nombre: "Solicitud de Acceso a Datos Personales", url: 'pdfs/SolicitudAcessoDatosPersonales.pdf'},
     { nombre: "Solicitud de Rectificación o Actualización de Datos", url: 'pdfs/SolicitudRectificacionActualizacionDatosPersonales.pdf'},
     { nombre: "Solicitud de Revocación de Autorización de Datos Personales", url: 'pdfs/SolicitudRevocacionAutorizacionDatosPersonales.pdf'},

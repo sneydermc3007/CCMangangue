@@ -74,14 +74,14 @@
             [autoplayInterval]="3000"
             [showIndicators]="false"
             styleClass="custom-carousel"
-            >
+        >
             <ng-template pTemplate="item" let-documento>
               <div class="documento-item">
                 <i class="fa-solid fa-file-pdf fa-2xl"></i>
-                <h3>{{ documento.nombre }}</h3>
+                <h3>{{ documento.nombre | shortenText:50 }}</h3>
                 <button pButton type="button" icon="pi pi-download" label="DESCARGAR" (click)="descargar(documento.url)"></button>
               </div>
             </ng-template>
-          </p-carousel>
+        </p-carousel>
     </section>
 </main>

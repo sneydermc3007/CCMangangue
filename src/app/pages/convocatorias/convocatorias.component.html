@@ -20,12 +20,13 @@
           </div>
           <img src="{{item.imagen}}" alt="Convocatoria" />
           <div class="card-content">
-            <h3>{{ item.titulo | shortenText: 37 }}</h3>
-            <p>{{ item.descripcion | shortenText: 70 }}</p>
-            <a href="#" class="card-link">Saber más</a>
+            <h3>{{ item.titulo | shortenText: 50 }}</h3>
+            <p>{{ item.resumen | shortenText: 90 }}</p>
+            <a (click)="goTo(item.id)" class="card-link">Saber más</a>
           </div>
         </div>
       }
     </div>
   </section>
+  <router-outlet></router-outlet>
 </main>

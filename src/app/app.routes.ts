@@ -6,7 +6,6 @@ import { NormatividadesComponent } from './shared/normatividades/normatividades.
 export const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'chat-test', loadChildren: () => import('./components/chat/chat-auto-test.module').then(m => m.ChatAutoTestModule) },
-  { path: 'convocatorias', loadComponent: () => import('./pages/convocatorias/convocatorias.component').then(m => m.ConvocatoriasComponent) },
   { path: 'renovar', loadComponent: () => import('./pages/renovar/renovar.component').then(m => m.RenovarComponent) },
   { path: 'fqa',  loadComponent: () => import('./pages/preguntas-respuestas/preguntas-respuestas.component').then(m => m.PreguntasRespuestasComponent) },
   { path: 'pqrs', loadComponent: () => import('./pages/pqrs/pqrs.component').then(m => m.PqrsComponent) },
@@ -16,6 +15,9 @@ export const routes: Routes = [
   { path: 'tarifas', loadComponent: () => import('./pages/tarifas/tarifas.component').then(m => m.TarifasComponent) },
   { path: 'glosario', loadComponent: () => import('./pages/glosario/glosario.component').then(m => m.GlosarioComponent) },
   { path: 'slide/:id', loadComponent: () => import('./components/slide/slide.component').then(m => m.SlideComponent) },
+
+  { path: 'convocatorias', loadComponent: () => import('./pages/convocatorias/convocatorias.component').then(m => m.ConvocatoriasComponent) },
+  { path: 'convocatorias/:id', loadComponent: () => import('./pages/convocatorias/routes/convocatoria-detail/convocatoria-detail.component').then(m => m.ConvocatoriaDetailComponent) },
 
   {
     path: 'leyes-transparencia',

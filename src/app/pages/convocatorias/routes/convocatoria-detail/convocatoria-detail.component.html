@@ -1,0 +1,9 @@
+@if (convocatoria) {
+    <div class="pagina-detail">
+        <div class="pagina-container">
+        <h1 class="pagina-title">{{ convocatoria.titulo }}</h1>
+        <img [src]="convocatoria.imagen" alt="{{ convocatoria.titulo }}" class="pagina-image" />
+        <div class="pagina-content" [innerHTML]="convocatoria.contenido"></div>
+        </div>
+    </div>
+}

@@ -17,6 +17,7 @@ import { ToggleButtonModule } from 'primeng/togglebutton';
 import { ToastModule } from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
 import { EditorModule } from 'primeng/editor';
+import { CalendarModule } from 'primeng/calendar';
 
 import { SharedModule } from './../../shared/shared.module';
 import { ComponentsModule } from '../components/components.module';
@@ -28,6 +29,7 @@ import { AdminVideosComponent } from './routes/admin-videos/admin-videos.compone
 import { AdminEventosComponent } from './routes/admin-eventos/admin-eventos.component';
 import { AdminUsuariosComponent } from './routes/admin-usuarios/admin-usuarios.component';
 import { AdminSlidesComponent } from './routes/admin-slides/admin-slides.component';
+import { AdminConvocatoriasComponent } from './routes/admin-convocatorias/admin-convocatorias.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { AdminSlidesComponent } from './routes/admin-slides/admin-slides.compone
     AdminEventosComponent,
     AdminUsuariosComponent,
     AdminSlidesComponent,
+    AdminConvocatoriasComponent,
   ],
   imports: [
     CommonModule,
@@ -55,6 +58,7 @@ import { AdminSlidesComponent } from './routes/admin-slides/admin-slides.compone
     ToastModule,
     MessagesModule,
     EditorModule,
+    CalendarModule,
     ComponentsModule,
     SharedModule,
   ],

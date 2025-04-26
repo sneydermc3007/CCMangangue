@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AdminPanelComponent {
 
-  cards = ['Slides', 'Noticias', 'Videos', 'Eventos', 'Usuarios', 'Leyes de Transparencia']
+  cards = ['Slides', 'Noticias', 'Videos', 'Eventos', 'Usuarios', 'Leyes de Transparencia', 'Convocatorias']
 
   constructor(private router: Router) {}
 

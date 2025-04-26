@@ -1,0 +1,119 @@
+<h2 class="section-title">
+    <i class="fa-solid fa-image fa-xl"></i> Convocatorias
+</h2>
+
+<section class="tabs">
+    <div class="card">
+        <p-tabView>
+            <p-tabPanel header="Listar">
+                <p-table [value]="convocatorias" [paginator]="true" [rows]="10">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Fecha</th>
+                            <th>Imagen</th>
+                            <th>Resumen</th>
+                            <!-- <th>Contenido</th> -->
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-convocatoria>
+                        <tr>
+                            <td>{{ convocatoria.titulo }}</td>
+                            <td>{{ convocatoria.fecha }}</td>
+                            <td><img [src]="convocatoria.imagen" alt="Portada" width="50"></td>
+                            <td>{{ convocatoria.resumen }}</td>
+                            <!-- <td>{{ convocatoria.contenido }}</td> -->
+                            <td>
+                                <span class="estado" [ngClass]="{
+                                  'activo': convocatoria.estado === 'activo',
+                                  'inactivo': convocatoria.estado === 'inactivo',
+                                }">{{ convocatoria.estado }}</span>
+                              </td>
+                            <td>
+                                <button pButton icon="pi pi-pencil"></button>
+                                <button pButton icon="pi pi-trash" class="p-button-danger" (click)="deleteConvocatoria(convocatoria.id)"></button>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </p-tabPanel>
+
+            <p-tabPanel header="Crear">
+                <form [formGroup]="convocatoriaForm" (ngSubmit)="onSubmit()">
+                    <div class="p-fluid">
+                        <div class="p-field">
+                            <label for="titulo">Titulo</label>
+                            <input id="titulo" pInputText formControlName="titulo" />
+                        </div>
+
+                        <div class="p-field">
+                            <label for="fecha">Fecha</label>
+                            <p-calendar formControlName="fecha" />
+                        </div>
+
+                        <div class="p-field">
+                            <label for="imagen">Imagen</label>
+                            <input id="imagen" pInputText formControlName="imagen" />
+                        </div>
+
+                        <div class="p-field">
+                            <label for="resumen">Resumen</label>
+                            <textarea id="resumen" pInputTextarea formControlName="resumen"></textarea>
+                        </div>
+
+                        <div class="p-field">
+                            <label for="contenido">Contenido</label>
+                            <p-editor formControlName="contenido" [style]="{ height: '300px' }">
+                                <ng-template pTemplate="header">
+                                    <span class="ql-formats">
+                                        <select class="ql-header" title="Heading" tabindex="-1">
+                                            <option selected></option>
+                                            <option value="1"></option>
+                                            <option value="2"></option>
+                                            <option value="3"></option>
+                                            <option value="4"></option>
+                                            <option value="5"></option>
+                                            <option value="6"></option>
+                                        </select>
+                                        <button class="ql-bold" aria-label="Bold"></button>
+                                        <button class="ql-italic" aria-label="Italic"></button>
+                                        <button class="ql-underline" aria-label="Underline"></button>
+                                        <button class="ql-strike" aria-label="Strike"></button>
+                                        <button class="ql-blockquote" aria-label="Blockquote"></button>
+                                        <button class="ql-link" aria-label="Insert Link"></button>
+                                        <button class="ql-list" value="ordered" aria-label="Ordered List"></button>
+                                        <button class="ql-list" value="bullet" aria-label="Unordered List"></button>
+                                        <button class="ql-indent" value="-1" aria-label="Decrease Indent"></button>
+                                        <button class="ql-indent" value="+1" aria-label="Increase Indent"></button>
+                                        <select class="ql-align"></select>
+                                        <select class="ql-color"></select>
+                                        <select class="ql-background"></select>
+                                        <button class="ql-clean" aria-label="Remove Styles"></button>
+                                    </span>
+                                </ng-template>
+                            </p-editor>
+                        </div>
+
+                        <div class="p-field">
+                            <label for="estado">Estado</label>
+                            <p-dropdown [options]="estadoOptions" formControlName="estado"></p-dropdown>
+                        </div>
+
+                        <button [disabled]="!convocatoriaForm.valid" pButton label="Guardar" type="submit"></button>
+                    </div>
+                </form>
+            </p-tabPanel>
+        </p-tabView>
+    </div>
+</section>
+
+
+<p-toast 
+    [showTransformOptions]="'translateY(100%)'"
+    [showTransitionOptions]="'1000ms'" 
+    [hideTransitionOptions]="'1000ms'"
+    [showTransformOptions]="'translateX(100%)'"
+/>
+<app-return-admin></app-return-admin>

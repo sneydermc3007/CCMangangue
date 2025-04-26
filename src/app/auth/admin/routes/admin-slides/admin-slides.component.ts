@@ -141,15 +141,15 @@ export class AdminSlidesComponent implements OnInit {
 
   onSubmitPage() {
     if (this.pageForm.valid) {
-        const updatedPage = this.pageForm.value;
-        this._slides.updatePage(updatedPage.pagina_id, updatedPage).subscribe({
-            next: () => {
-                this.msg.add({ severity: 'success', summary: 'Éxito', detail: 'Página actualizada' });
-                this.editPageModalVisible = false;
-                this.loadSlides();
-            },
-            error: (err) => console.error(err),
-        });
+      const updatedPage = this.pageForm.value;
+      this._slides.updatePage(updatedPage.pagina_id, updatedPage).subscribe({
+        next: () => {
+          this.msg.add({ severity: 'success', summary: 'Éxito', detail: 'Página actualizada' });
+          this.editPageModalVisible = false;
+          this.loadSlides();
+        },
+        error: (err) => console.error(err),
+      });
     }
   }
 }

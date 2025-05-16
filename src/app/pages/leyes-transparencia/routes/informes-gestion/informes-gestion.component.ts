@@ -11,6 +11,7 @@ import { SharedModule } from '../../../../shared/shared.module';
 })
 export class InformesGestionComponent {
   public informes = [
+    { label: 'Informe de Gestión 2024', archivo: 'docs/INFORMES_GESTION/Informe-gestion-CCM-2024.pdf'},
     { label: 'Informe de Gestión 2023', archivo: 'https://ccmagangue.org.co/media/pdf/informe-de-gestion-2023.pdf'},
     { label: 'Informe de Gestión 2022', archivo: 'https://ccmagangue.org.co/media/pdf/informe-de-gestion-2022.pdf'},
     { label: 'Informe de Gestión 2021', archivo: 'https://ccmagangue.org.co/media/pdf/informe-de-gestion-2021.pdf'},
